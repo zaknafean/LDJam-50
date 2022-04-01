@@ -35,7 +35,7 @@ anchor_right = 0.0
 margin_top = 399.0
 margin_right = 584.0
 margin_bottom = 440.0
-text = "Godot Toolbox Project - LD50"
+text = "Godot Toolbox Project - LD50 - Part 2"
 
 [node name="BaseBackground" parent="." index="1" instance=ExtResource( 5 )]
 
