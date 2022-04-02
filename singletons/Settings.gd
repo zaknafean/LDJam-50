@@ -17,7 +17,6 @@ var alertnessValue = 1000
 var sanityValue = 100
 var score = 0
 
-
 func _ready():
 	pass
 
