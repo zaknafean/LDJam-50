@@ -27,6 +27,7 @@ extents = Vector2( 15.5, 23.5 )
 script = ExtResource( 6 )
 
 [node name="TileMap" type="TileMap" parent="."]
+modulate = Color( 0.5, 0.5, 0.5, 1 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
@@ -67,5 +68,14 @@ width = 2.0
 
 [node name="Sleep_Gremlin" parent="." instance=ExtResource( 7 )]
 position = Vector2( 453, 140 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="StatsLabel" type="Label" parent="CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Alert: 1000
+Sanity: 100
+Score: 0"
 
 [editable path="Interactables/SpriteClickable"]
