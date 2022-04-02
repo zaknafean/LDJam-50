@@ -94,11 +94,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/dialogic/Example Assets/History/HistoryRow.gd"
 }, {
-"base": "Area2D",
-"class": "Hurt_Box",
-"language": "GDScript",
-"path": "res://Utilities/Attachable_Tools/Hurt_Box.gd"
-}, {
 "base": "Reference",
 "class": "IPC",
 "language": "GDScript",
@@ -185,8 +180,8 @@ _global_script_classes=[ {
 "path": "res://addons/godot_editor_discord_presence/Discord RPC/ipc/pipe/WindowsPipe.gd"
 } ]
 _global_script_class_icons={
-"BackgroundClickable": "res://assets/icons/button-finger.png",
-"BackgroundCollidable": "res://assets/icons/foot-plaster.png",
+"BackgroundClickable": "",
+"BackgroundCollidable": "",
 "BaseLevel": "res://assets/icons/theater-curtains.png",
 "DTS": "",
 "Dialogic": "",
@@ -202,7 +197,6 @@ _global_script_class_icons={
 "DiscordRPCEnum": "",
 "Event": "",
 "HistoryRow": "",
-"Hurt_Box": "",
 "IPC": "",
 "IPCModule": "",
 "IPCPayload": "",
@@ -213,7 +207,7 @@ _global_script_class_icons={
 "RichPresenceButton": "",
 "RichPresenceModule": "",
 "Screen": "",
-"SpriteClickable": "res://assets/icons/person.png",
+"SpriteClickable": "",
 "StreamPeerUnix": "",
 "URLUtil": "",
 "UUID": "",
