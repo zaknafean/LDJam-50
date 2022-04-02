@@ -94,11 +94,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/dialogic/Example Assets/History/HistoryRow.gd"
 }, {
-"base": "Area2D",
-"class": "Hurt_Box",
-"language": "GDScript",
-"path": "res://Utilities/Attachable_Tools/Hurt_Box.gd"
-}, {
 "base": "Reference",
 "class": "IPC",
 "language": "GDScript",
@@ -202,7 +197,6 @@ _global_script_class_icons={
 "DiscordRPCEnum": "",
 "Event": "",
 "HistoryRow": "",
-"Hurt_Box": "",
 "IPC": "",
 "IPCModule": "",
 "IPCPayload": "",

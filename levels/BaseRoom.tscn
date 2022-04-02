@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Tilesets/EnvironmentTileset.tres" type="TileSet" id=2]
 [ext_resource path="res://enemies/ChaseEnemy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/floorWood.png" type="Texture" id=5]
 [ext_resource path="res://levels/BaseLevel.gd" type="Script" id=7]
 
+<<<<<<< Updated upstream
 [sub_resource type="NavigationPolygon" id=8]
 vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64 )
 polygons = [ PoolIntArray( 0, 1, 2 ) ]
@@ -334,12 +335,23 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 18/z_index = 0
 
 [node name="BaseRoom" type="YSort"]
+=======
+[node name="BaseRoom" type="Node2D"]
+>>>>>>> Stashed changes
 script = ExtResource( 7 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
 [node name="TileMap" type="TileMap" parent="Navigation2D"]
-tile_set = SubResource( 7 )
+tile_set = ExtResource( 2 )
+format = 1
+
+[node name="BackLayerMap" type="TileMap" parent="Navigation2D"]
+tile_set = ExtResource( 2 )
+format = 1
+
+[node name="AlphaLayerMap" type="TileMap" parent="Navigation2D"]
+modulate = Color( 1, 1, 1, 0.45098 )
 format = 1
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
