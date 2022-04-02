@@ -447,74 +447,74 @@ position = Vector2( 27, -3 )
 [node name="DialogEvent" parent="Interactables/SpriteClickable2/EventQueue" index="0" instance=ExtResource( 4 )]
 DIALOG = "TestEvent"
 
-[node name="SpriteClickable3" parent="Interactables" instance=ExtResource( 2 )]
+[node name="DoorNorthClickable" parent="Interactables" instance=ExtResource( 2 )]
 canHighlight = true
 canClick = true
 
-[node name="Sprite" parent="Interactables/SpriteClickable3" index="0"]
+[node name="Sprite" parent="Interactables/DoorNorthClickable" index="0"]
 material = SubResource( 20 )
 position = Vector2( 160, 12 )
 texture = ExtResource( 5 )
 
-[node name="CollisionShape2D" parent="Interactables/SpriteClickable3" index="1"]
+[node name="CollisionShape2D" parent="Interactables/DoorNorthClickable" index="1"]
 position = Vector2( 159, 11 )
 shape = SubResource( 21 )
 
-[node name="InteractionPosition" parent="Interactables/SpriteClickable3" index="2"]
+[node name="InteractionPosition" parent="Interactables/DoorNorthClickable" index="2"]
 position = Vector2( 176, 88 )
 
-[node name="SpriteClickable4" parent="Interactables" instance=ExtResource( 2 )]
+[node name="DoorEastClickable" parent="Interactables" instance=ExtResource( 2 )]
 canHighlight = true
 canClick = true
 
-[node name="Sprite" parent="Interactables/SpriteClickable4" index="0"]
+[node name="Sprite" parent="Interactables/DoorEastClickable" index="0"]
 material = SubResource( 22 )
 position = Vector2( 476, 124 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 7 )
 
-[node name="CollisionShape2D" parent="Interactables/SpriteClickable4" index="1"]
+[node name="CollisionShape2D" parent="Interactables/DoorEastClickable" index="1"]
 position = Vector2( 475.25, 120.313 )
 shape = SubResource( 25 )
 
-[node name="InteractionPosition" parent="Interactables/SpriteClickable4" index="2"]
+[node name="InteractionPosition" parent="Interactables/DoorEastClickable" index="2"]
 position = Vector2( 450, 190 )
 
-[node name="SpriteClickable5" parent="Interactables" instance=ExtResource( 2 )]
+[node name="DoorSouthClickable" parent="Interactables" instance=ExtResource( 2 )]
 canHighlight = true
 canClick = true
 
-[node name="Sprite" parent="Interactables/SpriteClickable5" index="0"]
+[node name="Sprite" parent="Interactables/DoorSouthClickable" index="0"]
 modulate = Color( 1, 1, 1, 0.588235 )
 material = SubResource( 23 )
 position = Vector2( 470, 330 )
 scale = Vector2( -1, 1 )
 texture = ExtResource( 5 )
 
-[node name="CollisionShape2D" parent="Interactables/SpriteClickable5" index="1"]
+[node name="CollisionShape2D" parent="Interactables/DoorSouthClickable" index="1"]
 position = Vector2( 472.375, 329.75 )
 shape = SubResource( 26 )
 
-[node name="InteractionPosition" parent="Interactables/SpriteClickable5" index="2"]
+[node name="InteractionPosition" parent="Interactables/DoorSouthClickable" index="2"]
 position = Vector2( 466, 364 )
 
-[node name="SpriteClickable6" parent="Interactables" instance=ExtResource( 2 )]
+[node name="DoorWestClickable" parent="Interactables" instance=ExtResource( 2 )]
 position = Vector2( -113, 252 )
 canHighlight = true
 canClick = true
 
-[node name="Sprite" parent="Interactables/SpriteClickable6" index="0"]
+[node name="Sprite" parent="Interactables/DoorWestClickable" index="0"]
 modulate = Color( 1, 1, 1, 0.588235 )
 material = SubResource( 24 )
 position = Vector2( 4, -9 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 7 )
 
-[node name="CollisionShape2D" parent="Interactables/SpriteClickable6" index="1"]
+[node name="CollisionShape2D" parent="Interactables/DoorWestClickable" index="1"]
 position = Vector2( 3, -10.625 )
 shape = SubResource( 27 )
 
-[node name="InteractionPosition" parent="Interactables/SpriteClickable6" index="2"]
+[node name="InteractionPosition" parent="Interactables/DoorWestClickable" index="2"]
 position = Vector2( 30, 33 )
 
 [node name="Line2D" type="Line2D" parent="."]
@@ -526,7 +526,7 @@ position = Vector2( 253, 228 )
 
 [editable path="Interactables/SpriteClickable"]
 [editable path="Interactables/SpriteClickable2"]
-[editable path="Interactables/SpriteClickable3"]
-[editable path="Interactables/SpriteClickable4"]
-[editable path="Interactables/SpriteClickable5"]
-[editable path="Interactables/SpriteClickable6"]
+[editable path="Interactables/DoorNorthClickable"]
+[editable path="Interactables/DoorEastClickable"]
+[editable path="Interactables/DoorSouthClickable"]
+[editable path="Interactables/DoorWestClickable"]
