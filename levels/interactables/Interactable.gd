@@ -35,9 +35,6 @@ func runEvent():
 	
 	for event in myEvents:
 		
-		if !Settings.questCheck(event.quest_id, event.quest_value):
-			continue
-		
 		if event.event_type == Settings.EVENTS.DIALOG:
 			Settings.curGameState = Settings.GAME_STATES.DIALOG
 			var new_dialog = Dialogic.start(event.DIALOG)

@@ -2,7 +2,5 @@
 
 [ext_resource path="res://levels/interactables/Event.gd" type="Script" id=1]
 
-[node name="Event" type="Node2D" groups=[
-"events",
-]]
+[node name="Event" type="Node2D" groups=["events"]]
 script = ExtResource( 1 )

@@ -3,7 +3,7 @@ extends Node2D
 class_name BaseLevel, "res://assets/icons/theater-curtains.png"
 
 onready var player := $Player
-#onready var camera = $Player/Camera2D
+onready var camera = $Player/Camera2D
 onready var playerLine = $Line2D
 
 var currentEvent : Interactable = null
@@ -19,21 +19,18 @@ export (bool) var freezeInput = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var clickables = $Interactables.get_children()
-	
+	var _err
 	for event in clickables:
-		event.connect('mouse_entered', self, '_on_Area2D_mouse_entered', [event])
-		event.connect('mouse_exited', self, '_on_Area2D_mouse_exited', [event])
-		event.connect('reroute_player', self, '_on_reroute_player')
+		_err = event.connect('mouse_entered', self, '_on_Area2D_mouse_entered', [event])
+		_err = event.connect('mouse_exited', self, '_on_Area2D_mouse_exited', [event])
+		_err = event.connect('reroute_player', self, '_on_reroute_player')
 	
-	player.connect("arrived", self, '_on_player_arrived')
+	_err = player.connect("arrived", self, '_on_player_arrived')
 	
 	isHighlightAll = false
 
 
 func _on_Area2D_mouse_entered(clickable):
-	#if !Settings.questCheck(clickable.quest_requirement.x, clickable.quest_requirement.y):
-	#	return
-	
 	if clickable != currentEvent:
 		_on_Area2D_mouse_exited(currentEvent)
 	if clickable.canClick:
