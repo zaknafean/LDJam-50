@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=6]
 [ext_resource path="res://levels/BaseLevel.gd" type="Script" id=7]
 [ext_resource path="res://assets/floorWood.png" type="Texture" id=8]
+[ext_resource path="res://assets/doorNorthBlueClosed.png" type="Texture" id=9]
+[ext_resource path="res://assets/doorEastBlueClosed.png" type="Texture" id=10]
 
 [sub_resource type="NavigationPolygon" id=8]
 vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64 )
@@ -353,6 +355,38 @@ shader_param/brightness = 1.0
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 15, 13 )
 
+[sub_resource type="ShaderMaterial" id=20]
+resource_local_to_scene = true
+shader = ExtResource( 6 )
+shader_param/brightness = 1.0
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 33, 61.75 )
+
+[sub_resource type="ShaderMaterial" id=22]
+resource_local_to_scene = true
+shader = ExtResource( 6 )
+shader_param/brightness = 1.0
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 24.75, 85.6875 )
+
+[sub_resource type="ShaderMaterial" id=23]
+resource_local_to_scene = true
+shader = ExtResource( 6 )
+shader_param/brightness = 1.0
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 30.625, 63.75 )
+
+[sub_resource type="ShaderMaterial" id=24]
+resource_local_to_scene = true
+shader = ExtResource( 6 )
+shader_param/brightness = 1.0
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 25, 85.625 )
+
 [node name="LivingRoom" type="Node2D"]
 script = ExtResource( 7 )
 
@@ -413,11 +447,86 @@ position = Vector2( 27, -3 )
 [node name="DialogEvent" parent="Interactables/SpriteClickable2/EventQueue" index="0" instance=ExtResource( 2 )]
 DIALOG = "TestEvent"
 
+[node name="SpriteClickable3" parent="Interactables" instance=ExtResource( 1 )]
+canHighlight = true
+canClick = true
+
+[node name="Sprite" parent="Interactables/SpriteClickable3" index="0"]
+material = SubResource( 20 )
+position = Vector2( 160, 12 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" parent="Interactables/SpriteClickable3" index="1"]
+position = Vector2( 159, 11 )
+shape = SubResource( 21 )
+
+[node name="InteractionPosition" parent="Interactables/SpriteClickable3" index="2"]
+position = Vector2( 176, 88 )
+
+[node name="SpriteClickable4" parent="Interactables" instance=ExtResource( 1 )]
+canHighlight = true
+canClick = true
+
+[node name="Sprite" parent="Interactables/SpriteClickable4" index="0"]
+material = SubResource( 22 )
+position = Vector2( 476, 124 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" parent="Interactables/SpriteClickable4" index="1"]
+position = Vector2( 475.25, 120.313 )
+shape = SubResource( 25 )
+
+[node name="InteractionPosition" parent="Interactables/SpriteClickable4" index="2"]
+position = Vector2( 450, 190 )
+
+[node name="SpriteClickable5" parent="Interactables" instance=ExtResource( 1 )]
+canHighlight = true
+canClick = true
+
+[node name="Sprite" parent="Interactables/SpriteClickable5" index="0"]
+modulate = Color( 1, 1, 1, 0.588235 )
+material = SubResource( 23 )
+position = Vector2( 470, 330 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" parent="Interactables/SpriteClickable5" index="1"]
+position = Vector2( 472.375, 329.75 )
+shape = SubResource( 26 )
+
+[node name="InteractionPosition" parent="Interactables/SpriteClickable5" index="2"]
+position = Vector2( 466, 364 )
+
+[node name="SpriteClickable6" parent="Interactables" instance=ExtResource( 1 )]
+position = Vector2( -113, 252 )
+canHighlight = true
+canClick = true
+
+[node name="Sprite" parent="Interactables/SpriteClickable6" index="0"]
+modulate = Color( 1, 1, 1, 0.588235 )
+material = SubResource( 24 )
+position = Vector2( 4, -9 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" parent="Interactables/SpriteClickable6" index="1"]
+position = Vector2( 3, -10.625 )
+shape = SubResource( 27 )
+
+[node name="InteractionPosition" parent="Interactables/SpriteClickable6" index="2"]
+position = Vector2( 30, 33 )
+
 [node name="Line2D" type="Line2D" parent="."]
 width = 2.0
 
 [node name="ChaseEnemy" parent="." instance=ExtResource( 3 )]
+visible = false
 position = Vector2( 253, 228 )
 
 [editable path="Interactables/SpriteClickable"]
 [editable path="Interactables/SpriteClickable2"]
+[editable path="Interactables/SpriteClickable3"]
+[editable path="Interactables/SpriteClickable4"]
+[editable path="Interactables/SpriteClickable5"]
+[editable path="Interactables/SpriteClickable6"]
