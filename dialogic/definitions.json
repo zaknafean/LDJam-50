@@ -1,0 +1,20 @@
+{
+	"glossary": [
+		{
+			"extra": "",
+			"id": "1648903175-460",
+			"name": "coffee",
+			"text": "The last stand, liquid courage... ",
+			"title": "coffee",
+			"type": 1
+		}
+	],
+	"variables": [
+		{
+			"id": "1648903270-144",
+			"name": "bronze key",
+			"type": 0,
+			"value": "false"
+		}
+	]
+}
