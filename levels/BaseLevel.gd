@@ -29,7 +29,7 @@ func _ready():
 		_err = event.connect('reroute_player', self, '_on_reroute_player')
 	
 	isHighlightAll = false
-	tilemap.modulate = Color(.5, .5, .5, 1)
+#	tilemap.modulate = Color(.5, .5, .5, 1)
 
 
 func _on_Area2D_mouse_entered(clickable):

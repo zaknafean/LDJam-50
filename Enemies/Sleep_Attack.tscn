@@ -32,7 +32,7 @@ shape = SubResource( 1 )
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 emitting = false
 amount = 31
-lifetime = 0.62
+lifetime = 0.4
 explosiveness = 0.83
 lifetime_randomness = 0.32
 texture = ExtResource( 1 )
@@ -51,6 +51,9 @@ scale_amount = 1.39
 scale_amount_random = 0.49
 scale_amount_curve = SubResource( 3 )
 color_ramp = SubResource( 4 )
+
+[node name="Tween" type="Tween" parent="."]
+playback_process_mode = 0
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_Area2D_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_Area2D_mouse_exited"]
