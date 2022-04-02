@@ -144,11 +144,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/toolbox_project/scenes/screens/Screen.gd"
 }, {
-"base": "Node2D",
-"class": "SleepEnemies",
-"language": "GDScript",
-"path": "res://Enemies/Sleep_Gremlin.gd"
-}, {
 "base": "Interactable",
 "class": "SpriteClickable",
 "language": "GDScript",
@@ -212,10 +207,7 @@ _global_script_class_icons={
 "RichPresenceButton": "",
 "RichPresenceModule": "",
 "Screen": "",
-
-"SleepEnemies": "",
-"SpriteClickable": "res://assets/icons/person.png",
-
+"SpriteClickable": "",
 "StreamPeerUnix": "",
 "URLUtil": "",
 "UUID": "",
