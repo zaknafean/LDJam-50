@@ -333,7 +333,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 18/shapes = [  ]
 18/z_index = 0
 
-[node name="BaseRoom" type="Node2D"]
+[node name="BaseRoom" type="YSort"]
 script = ExtResource( 7 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]

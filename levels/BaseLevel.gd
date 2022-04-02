@@ -4,8 +4,9 @@ class_name BaseLevel, "res://assets/icons/theater-curtains.png"
 
 onready var player := $Player
 onready var camera = $Player/Camera2D
-onready var playerLine = $Line2D
-onready var statLabel = $CanvasLayer/StatsLabel
+onready var playerLine := $Line2D
+onready var statLabel := $CanvasLayer/StatsLabel
+onready var tilemap : TileMap = $Navigation2D/TileMap
 
 var currentEvent : Interactable = null
 var queuedEvent : Interactable = null
@@ -20,15 +21,15 @@ export (bool) var freezeInput = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var clickables = $Interactables.get_children()
-	var _err
+	var _err = player.connect("arrived", self, '_on_player_arrived')
+	
 	for event in clickables:
 		_err = event.connect('mouse_entered', self, '_on_Area2D_mouse_entered', [event])
 		_err = event.connect('mouse_exited', self, '_on_Area2D_mouse_exited', [event])
 		_err = event.connect('reroute_player', self, '_on_reroute_player')
 	
-	_err = player.connect("arrived", self, '_on_player_arrived')
-	
 	isHighlightAll = false
+	tilemap.modulate = Color(.5, .5, .5, 1)
 
 
 func _on_Area2D_mouse_entered(clickable):
@@ -105,9 +106,11 @@ func process_event(event : Interactable) -> bool:
 	return eventResult
 
 
-func _process(delta):
+func _process(_delta):
 	statLabel.text = str('Alert: ', Settings.alertnessValue, '\n', 'Sanity: ', Settings.sanityValue, '\n', 'Score: ', Settings.score);
-
+	
+	if Settings.sanityValue <= 0 or Settings.alertnessValue <= 0:
+		print('you have lost')
 
 func _unhandled_input(event):
 	if freezeInput or Settings.curGameState != Settings.GAME_STATES.PLAY:
