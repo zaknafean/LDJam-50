@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://levels/interactables/Interactable.tscn" type="PackedScene" id=1]
+[ext_resource path="res://levels/interactables/collidable/BackgroundCollidable.gd" type="Script" id=2]
+
+[node name="BackgroundCollidable" instance=ExtResource( 1 )]
+collision_layer = 2048
+collision_mask = 0
+script = ExtResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_BackgroundCollidable_body_entered"]
