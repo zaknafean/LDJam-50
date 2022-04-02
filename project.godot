@@ -213,7 +213,9 @@ _global_script_class_icons={
 "RichPresenceButton": "",
 "RichPresenceModule": "",
 "Screen": "",
+
 "SpriteClickable": "res://assets/icons/person.png",
+
 "StreamPeerUnix": "",
 "URLUtil": "",
 "UUID": "",
