@@ -1,0 +1,126 @@
+{
+	"events": [
+		{
+			"animation": "bouncing_in.gd",
+			"animation_length": 2,
+			"animation_wait": false,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It's still following me...\nI need to stay awake coffee!"
+		},
+		{
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I must have left it in the kitchen"
+		},
+		{
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Get key?"
+		},
+		{
+			"choice": "Yes",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"definition": "1648903270-144",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Picked up the bronze key."
+		},
+		{
+			"choice": "No",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Leave it alone for now."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Every door needs a key."
+		},
+		{
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Open the door?"
+		},
+		{
+			"choice": "No",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "Yes",
+			"condition": "",
+			"definition": "1648903270-144",
+			"event_id": "dialogic_011",
+			"value": "true"
+		},
+		{
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The door creaks open"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1648902867.json",
+		"name": "George Speaks"
+	}
+}
