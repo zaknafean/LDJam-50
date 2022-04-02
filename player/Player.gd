@@ -26,16 +26,18 @@ func _process(delta):
 		
 		if abs(walk_dir.y) > abs(walk_dir.x):
 			if walk_dir.y > 0:
-				sprite_dir = "down"
+				#sprite_dir = "down"
+				pass
 			else:
-				sprite_dir = "up"
+				#sprite_dir = "up"
+				pass
 		else:
 			if walk_dir.x > 0:
 				sprite_dir = "right"
 			else:
 				sprite_dir = "left"
 		
-		#anim_switch('walk', 1)
+		anim_switch('walk', 1)
 		if distance_to_walk <= distance_to_next_point:
 			# The player does not have enough movement left to get to the next point.
 			position += position.direction_to(path[0]) * distance_to_walk
@@ -46,7 +48,7 @@ func _process(delta):
 			path.remove(0)
 			
 			if path.empty():
-				#anim_switch("idle", .5)
+				anim_switch("idle", .5)
 				emit_signal("arrived")
 		# Update the distance to walk
 		distance_to_walk -= distance_to_next_point
@@ -55,6 +57,7 @@ func _process(delta):
 		Settings.alertnessValue -= delta * 5
 	elif Settings.alertnessValue > 0:
 		Settings.alertnessValue -= delta * 1
+
 
 func anim_switch(animation, speed = 1):
 	var newanim = str(animation,'_',sprite_dir)
