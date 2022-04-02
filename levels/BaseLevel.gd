@@ -105,8 +105,8 @@ func process_event(event : Interactable) -> bool:
 	return eventResult
 
 
-func _process(delta):
-	statLabel.text = str('Alert: ', Settings.alertnessValue, '\n', 'Sanity: ', Settings.sanityValue, '\n', 'Score: ', Settings.score);
+# func _process(delta):
+	# statLabel.text = str('Alert: ', Settings.alertnessValue, '\n', 'Sanity: ', Settings.sanityValue, '\n', 'Score: ', Settings.score);
 
 
 func _unhandled_input(event):
