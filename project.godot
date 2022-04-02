@@ -212,7 +212,9 @@ _global_script_class_icons={
 "RichPresenceButton": "",
 "RichPresenceModule": "",
 "Screen": "",
+
 "SleepEnemies": "",
+
 "SpriteClickable": "res://assets/icons/person.png",
 "StreamPeerUnix": "",
 "URLUtil": "",
@@ -225,6 +227,7 @@ _global_script_class_icons={
 [application]
 
 config/name="LudumDare50"
+run/main_scene="res://levels/BaseLevel.tscn"
 config/icon="res://icon.png"
 
 [autoload]

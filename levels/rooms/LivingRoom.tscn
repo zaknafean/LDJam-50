@@ -1,0 +1,168 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://assets/Tilesets/EnvironmentTileset.tres" type="TileSet" id=1]
+[ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/BlueCrateSprite.png" type="Texture" id=3]
+[ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=4]
+[ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/doorEastBlueClosed.png" type="Texture" id=6]
+[ext_resource path="res://assets/doorNorthBlueClosed.png" type="Texture" id=7]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/brightness = 1.0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 15.5, 23.5 )
+
+[sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/brightness = 1.0
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 33, 61.75 )
+
+[sub_resource type="ShaderMaterial" id=5]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/brightness = 1.0
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 24.75, 85.6875 )
+
+[sub_resource type="ShaderMaterial" id=7]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/brightness = 1.0
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 30.625, 63.75 )
+
+[sub_resource type="ShaderMaterial" id=9]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/brightness = 1.0
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 25, 85.625 )
+
+[node name="LivingRoom"]
+
+[node name="TileMap" parent="Navigation2D" index="0"]
+tile_data = PoolIntArray( -262144, 35, 0, -262143, 26, 0, -262142, 26, 0, -262141, 26, 0, -262140, 26, 0, -262139, 26, 0, -262138, 26, 0, -262137, 26, 0, -262136, 26, 0, -262135, 26, 0, -262134, 26, 0, -262133, 26, 0, -262132, 46, 0, -196608, 36, 0, -196607, 41, 0, -196606, 34, 0, -196605, 34, 0, -196604, 34, 0, -196603, 34, 0, -196602, 34, 0, -196601, 34, 0, -196600, 34, 0, -196599, 34, 0, -196598, 34, 0, -196597, 33, 0, -196596, 47, 0, -196595, 46, 0, -131072, 37, 0, -131071, 40, 0, -131070, 42, 0, -131069, 19, 0, -131068, 19, 0, -131067, 19, 0, -131066, 19, 0, -131065, 19, 0, -131064, 19, 0, -131063, 19, 0, -131062, 19, 0, -131061, 32, 0, -131060, 20, 0, -131059, 47, 0, -131058, 46, 0, -6, 21, 0, -5, 26, 0, -4, 26, 0, -3, 26, 0, -2, 26, 0, -1, 26, 0, -65536, 38, 0, -65535, 39, 0, -65534, 43, 0, -65533, 44, 0, -65532, 30, 0, -65531, 30, 0, -65530, 30, 0, -65529, 30, 0, -65528, 30, 0, -65527, 30, 0, -65526, 30, 0, -65525, 31, 0, -65524, 20, 0, -65523, 20, 0, -65522, 47, 0, -65521, 46, 0, 65530, 22, 0, 65531, 27, 0, 65532, 34, 0, 65533, 34, 0, 65534, 34, 0, 65535, 34, 0, 0, 34, 0, 1, 34, 0, 2, 34, 0, 3, 33, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 2, 0, 11, 2, 0, 12, 4, 0, 13, 20, 0, 14, 20, 0, 15, 47, 0, 16, 46, 0, 131066, 23, 0, 131067, 28, 0, 131068, 19, 0, 131069, 19, 0, 131070, 19, 0, 131071, 19, 0, 65536, 19, 0, 65537, 19, 0, 65538, 19, 0, 65539, 32, 0, 65540, 6, 0, 65541, 6, 0, 65542, 6, 0, 65543, 6, 0, 65544, 6, 0, 65545, 6, 0, 65546, 6, 0, 65547, 6, 0, 65548, 6, 0, 65549, 4, 0, 65550, 20, 0, 65551, 20, 0, 65552, 47, 0, 65553, 46, 0, 196602, 24, 0, 196603, 29, 0, 196604, 30, 0, 196605, 30, 0, 196606, 30, 0, 196607, 30, 0, 131072, 30, 0, 131073, 30, 0, 131074, 30, 0, 131075, 31, 0, 131076, 6, 0, 131077, 6, 0, 131078, 6, 0, 131079, 6, 0, 131080, 6, 0, 131081, 6, 0, 131082, 6, 0, 131083, 6, 0, 131084, 6, 0, 131085, 6, 0, 131086, 4, 0, 131087, 20, 0, 131088, 20, 0, 131089, 47, 0, 131090, 46, 0, 262138, 25, 0, 262139, 0, 0, 262140, 1, 0, 262141, 1, 0, 262142, 1, 0, 262143, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 6, 0, 196613, 6, 0, 196614, 6, 0, 196615, 6, 0, 196616, 6, 0, 196617, 6, 0, 196618, 6, 0, 196619, 6, 0, 196620, 6, 0, 196621, 6, 0, 196622, 6, 0, 196623, 4, 0, 196624, 20, 0, 196625, 20, 0, 196626, 47, 0, 196627, 46, 0, 327675, 9, 0, 327676, 5, 0, 327677, 6, 0, 327678, 6, 0, 327679, 6, 0, 262144, 6, 0, 262145, 6, 0, 262146, 6, 0, 262147, 6, 0, 262148, 6, 0, 262149, 6, 0, 262150, 6, 0, 262151, 6, 0, 262152, 6, 0, 262153, 6, 0, 262154, 6, 0, 262155, 6, 0, 262156, 6, 0, 262157, 6, 0, 262158, 6, 0, 262159, 6, 0, 262160, 4, 0, 262161, 20, 0, 262162, 20, 0, 262163, 47, 0, 262164, 46, 0, 393212, 9, 0, 393213, 5, 0, 393214, 6, 0, 393215, 6, 0, 327680, 6, 0, 327681, 6, 0, 327682, 6, 0, 327683, 6, 0, 327684, 6, 0, 327685, 6, 0, 327686, 6, 0, 327687, 6, 0, 327688, 6, 0, 327689, 6, 0, 327690, 6, 0, 327691, 6, 0, 327692, 6, 0, 327693, 6, 0, 327694, 6, 0, 327695, 6, 0, 327696, 6, 0, 327697, 4, 0, 327698, 20, 0, 327699, 20, 0, 327700, 47, 0, 458749, 9, 0, 458750, 5, 0, 458751, 6, 0, 393216, 6, 0, 393217, 6, 0, 393218, 6, 0, 393219, 6, 0, 393220, 6, 0, 393221, 6, 0, 393222, 6, 0, 393223, 6, 0, 393224, 6, 0, 393225, 6, 0, 393226, 6, 0, 393227, 6, 0, 393228, 6, 0, 393229, 6, 0, 393230, 6, 0, 393231, 6, 0, 393232, 6, 0, 393233, 6, 0, 393234, 4, 0, 393235, 20, 0, 393236, 20, 0, 524286, 9, 0, 524287, 12, 0, 458752, 14, 0, 458753, 14, 0, 458754, 14, 0, 458755, 17, 0, 458756, 6, 0, 458757, 6, 0, 458758, 6, 0, 458759, 6, 0, 458760, 6, 0, 458761, 6, 0, 458762, 6, 0, 458763, 6, 0, 458764, 6, 0, 458765, 6, 0, 458766, 6, 0, 458767, 6, 0, 458768, 6, 0, 458769, 6, 0, 458770, 6, 0, 458771, 4, 0, 458772, 20, 0, 524291, 11, 0, 524292, 5, 0, 524293, 6, 0, 524294, 6, 0, 524295, 6, 0, 524296, 6, 0, 524297, 6, 0, 524298, 6, 0, 524299, 6, 0, 524300, 6, 0, 524301, 6, 0, 524302, 6, 0, 524303, 6, 0, 524304, 6, 0, 524305, 6, 0, 524306, 6, 0, 524307, 6, 0, 524308, 4, 0, 589828, 9, 0, 589829, 12, 0, 589830, 13, 0, 589831, 13, 0, 589832, 13, 0, 589833, 13, 0, 589834, 13, 0, 589835, 13, 0, 589836, 13, 0, 589837, 13, 0, 589838, 13, 0, 589839, 13, 0, 589840, 13, 0, 589841, 13, 0, 589842, 13, 0, 589843, 13, 0, 589844, 13, 0 )
+
+[node name="BackLayerMap" parent="Navigation2D" index="1"]
+tile_data = PoolIntArray( -196597, 33, 0, -196596, 54, 0, -131060, 55, 0, -65524, 56, 0, 12, 48, 0, 65549, 48, 0, 131086, 48, 0, 196623, 48, 0, 262160, 48, 0, 327697, 48, 0, 327701, 59, 0, 393234, 48, 0, 393236, 50, 0, 393237, 60, 0, 458771, 48, 0, 458772, 51, 0, 458773, 61, 0, 524308, 49, 0, 524309, 62, 0, 589845, 63, 0 )
+
+[node name="AlphaLayerMap" parent="Navigation2D" index="2"]
+tile_set = ExtResource( 1 )
+tile_data = PoolIntArray( 65531, 47, 0, 65532, 46, 0, 131067, 20, 0, 131068, 47, 0, 131069, 46, 0, 196603, 55, 0, 196604, 20, 0, 196605, 47, 0, 196606, 46, 0, 262139, 48, 0, 262140, 20, 0, 262141, 20, 0, 262142, 47, 0, 262143, 26, 0, 196608, 26, 0, 196609, 26, 0, 196610, 45, 0, 196611, 46, 0, 327676, 48, 0, 327677, 20, 0, 327678, 20, 0, 327679, 27, 0, 262144, 34, 0, 262145, 34, 0, 262146, 33, 0, 262147, 47, 0, 262148, 46, 0, 393213, 48, 0, 393214, 20, 0, 393215, 28, 0, 327680, 19, 0, 327681, 19, 0, 327682, 32, 0, 327683, 55, 0, 327684, 47, 0, 327685, 26, 0, 327686, 26, 0, 327687, 26, 0, 327688, 26, 0, 327689, 26, 0, 327690, 26, 0, 327691, 26, 0, 327692, 26, 0, 327693, 26, 0, 327694, 26, 0, 327695, 26, 0, 327696, 26, 0, 327697, 26, 0, 327698, 26, 0, 327699, 26, 0, 327700, 45, 0, 458750, 49, 0, 458751, 29, 0, 393216, 30, 0, 393217, 30, 0, 393218, 31, 0, 393219, 55, 0, 393220, 51, 0, 393221, 27, 0, 393222, 34, 0, 393223, 34, 0, 393224, 34, 0, 393225, 34, 0, 393226, 34, 0, 393227, 34, 0, 393228, 34, 0, 393229, 34, 0, 393230, 34, 0, 393231, 34, 0, 393232, 34, 0, 393233, 34, 0, 393234, 34, 0, 393235, 34, 0, 393236, 33, 0, 458755, 48, 0, 458756, 51, 0, 458757, 28, 0, 458758, 20, 0, 458759, 19, 0, 458760, 19, 0, 458761, 19, 0, 458762, 19, 0, 458763, 19, 0, 458764, 19, 0, 458765, 19, 0, 458766, 19, 0, 458767, 19, 0, 458768, 19, 0, 458769, 19, 0, 458770, 19, 0, 458771, 19, 0, 458772, 32, 0, 524292, 49, 0, 524293, 29, 0, 524294, 30, 0, 524295, 30, 0, 524296, 30, 0, 524297, 30, 0, 524298, 30, 0, 524299, 30, 0, 524300, 30, 0, 524301, 30, 0, 524302, 30, 0, 524303, 30, 0, 524304, 30, 0, 524305, 30, 0, 524306, 30, 0, 524307, 30, 0, 524308, 31, 0 )
+
+[node name="SpriteClickable" parent="Interactables" index="0" instance=ExtResource( 2 )]
+position = Vector2( 587, 83 )
+canHighlight = true
+canClick = true
+
+[node name="Sprite" parent="Interactables/SpriteClickable" index="0"]
+material = SubResource( 1 )
+position = Vector2( 2, 35 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" parent="Interactables/SpriteClickable" index="1"]
+position = Vector2( 1.5, 26.5 )
+shape = SubResource( 2 )
+
+[node name="InteractionPosition" parent="Interactables/SpriteClickable" index="2"]
+position = Vector2( 1, 59 )
+
+[node name="DialogEvent" parent="Interactables/SpriteClickable/EventQueue" index="0" instance=ExtResource( 5 )]
+
+[node name="DoorNorthClickable" parent="Interactables" index="1" instance=ExtResource( 2 )]
+position = Vector2( 313, -69 )
+canHighlight = true
+canClick = true
+
+[node name="Sprite" parent="Interactables/DoorNorthClickable" index="0"]
+material = SubResource( 3 )
+position = Vector2( 160, 12 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" parent="Interactables/DoorNorthClickable" index="1"]
+position = Vector2( 159, 11 )
+shape = SubResource( 4 )
+
+[node name="InteractionPosition" parent="Interactables/DoorNorthClickable" index="2"]
+position = Vector2( 176, 88 )
+
+[node name="DoorEastClickable" parent="Interactables" index="2" instance=ExtResource( 2 )]
+position = Vector2( 496, 14 )
+canHighlight = true
+canClick = true
+
+[node name="Sprite" parent="Interactables/DoorEastClickable" index="0"]
+material = SubResource( 5 )
+position = Vector2( 476, 124 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" parent="Interactables/DoorEastClickable" index="1"]
+position = Vector2( 475.25, 120.313 )
+shape = SubResource( 6 )
+
+[node name="InteractionPosition" parent="Interactables/DoorEastClickable" index="2"]
+position = Vector2( 450, 190 )
+
+[node name="EventQueue" parent="Interactables/DoorEastClickable" index="3"]
+position = Vector2( 358, -55 )
+
+[node name="DoorSouthClickable" parent="Interactables" index="3" instance=ExtResource( 2 )]
+position = Vector2( 349, 184 )
+canHighlight = true
+canClick = true
+
+[node name="Sprite" parent="Interactables/DoorSouthClickable" index="0"]
+modulate = Color( 1, 1, 1, 0.588235 )
+material = SubResource( 7 )
+position = Vector2( 470, 330 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" parent="Interactables/DoorSouthClickable" index="1"]
+position = Vector2( 472.375, 329.75 )
+shape = SubResource( 8 )
+
+[node name="InteractionPosition" parent="Interactables/DoorSouthClickable" index="2"]
+position = Vector2( 466, 364 )
+
+[node name="EventQueue" parent="Interactables/DoorSouthClickable" index="3"]
+position = Vector2( 386, 468 )
+
+[node name="DoorWestClickable" parent="Interactables" index="4" instance=ExtResource( 2 )]
+position = Vector2( -167, 290 )
+canHighlight = true
+canClick = true
+
+[node name="Sprite" parent="Interactables/DoorWestClickable" index="0"]
+modulate = Color( 1, 1, 1, 0.588235 )
+material = SubResource( 9 )
+position = Vector2( 4, -9 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" parent="Interactables/DoorWestClickable" index="1"]
+position = Vector2( 3, -10.625 )
+shape = SubResource( 10 )
+
+[node name="InteractionPosition" parent="Interactables/DoorWestClickable" index="2"]
+position = Vector2( 30, 33 )
+
+[node name="ChaseEnemy" parent="." index="4"]
+position = Vector2( 420, 471 )
+
+[editable path="Interactables/SpriteClickable"]
+[editable path="Interactables/DoorNorthClickable"]
+[editable path="Interactables/DoorEastClickable"]
+[editable path="Interactables/DoorSouthClickable"]
+[editable path="Interactables/DoorWestClickable"]
