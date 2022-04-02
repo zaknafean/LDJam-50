@@ -105,7 +105,7 @@ func process_event(event : Interactable) -> bool:
 
 
 func _unhandled_input(event):
-	if freezeInput:
+	if freezeInput or Settings.curGameState != Settings.GAME_STATES.PLAY:
 		return
 		
 	if event.is_echo():
