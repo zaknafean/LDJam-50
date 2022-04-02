@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/floorWood.png-521e2e1e9453a6f8e2bbf92c286fdb68.stex"
+path="res://.import/irongoelm-256.png-4e762c03cd6c83ca451ae3e3b0eac866.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/floorWood.png"
-dest_files=[ "res://.import/floorWood.png-521e2e1e9453a6f8e2bbf92c286fdb68.stex" ]
+source_file="res://assets/irongoelm-256.png"
+dest_files=[ "res://.import/irongoelm-256.png-4e762c03cd6c83ca451ae3e3b0eac866.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
