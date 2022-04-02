@@ -11,8 +11,6 @@ var sprite_dir = "down"			#where we are actually facing. A string for anim
 var facing_dir = Vector2.DOWN	#where we are facing in vector notation
 var move_dir = Vector2.ZERO		#where we want to go
 
-var tiredValue = 100
-var sanityValue = 100
 
 signal arrived
 
@@ -52,11 +50,12 @@ func _process(delta):
 				emit_signal("arrived")
 		# Update the distance to walk
 		distance_to_walk -= distance_to_next_point
-		
-		if tiredValue > 0 :
-			print(tiredValue)
-			tiredValue -= delta * 2
-
+	
+	if Settings.tiredValue > 0 and path.size() == 0:
+		Settings.tiredValue -= delta * 5
+	elif Settings.tiredValue > 0:
+		Settings.tiredValue -= delta * 1
+	print('Tired: ',Settings.tiredValue)
 
 func anim_switch(animation, speed = 1):
 	var newanim = str(animation,'_',sprite_dir)
