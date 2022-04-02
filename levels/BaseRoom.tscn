@@ -20,6 +20,7 @@ format = 1
 
 [node name="AlphaLayerMap" type="TileMap" parent="Navigation2D"]
 modulate = Color( 1, 1, 1, 0.45098 )
+z_index = 2
 tile_set = ExtResource( 2 )
 format = 1
 

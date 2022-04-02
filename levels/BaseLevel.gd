@@ -7,6 +7,8 @@ onready var camera = $Player/Camera2D
 onready var playerLine := $Line2D
 onready var statLabel := $CanvasLayer/StatsLabel
 onready var tilemap : TileMap = $Navigation2D/TileMap
+onready var backmap : TileMap = $Navigation2D/BackLayerMap
+onready var alphamap : TileMap = $Navigation2D/AlphaLayerMap
 
 var currentEvent : Interactable = null
 var queuedEvent : Interactable = null
@@ -30,6 +32,8 @@ func _ready():
 	
 	isHighlightAll = false
 	tilemap.modulate = Color(.5, .5, .5, 1)
+	backmap.modulate = Color(.5, .5, .5, 1)
+	alphamap.modulate = Color(.5, .5, .5, .5)
 
 
 func _on_Area2D_mouse_entered(clickable):

@@ -118,6 +118,7 @@ position = Vector2( 358, -55 )
 
 [node name="DoorSouthClickable" parent="Interactables" index="3" instance=ExtResource( 2 )]
 position = Vector2( 349, 184 )
+z_index = 1
 canHighlight = true
 canClick = true
 
