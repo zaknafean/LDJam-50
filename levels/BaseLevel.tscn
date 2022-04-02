@@ -1,0 +1,134 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/grunge-tileset.png" type="Texture" id=2]
+[ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=4]
+[ext_resource path="res://assets/BlueCrateSprite.png" type="Texture" id=5]
+[ext_resource path="res://levels/BaseLevel.gd" type="Script" id=6]
+[ext_resource path="res://enemies/ChaseEnemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/SkyBG03.png" type="Texture" id=8]
+[ext_resource path="res://assets/SkyBG02.png" type="Texture" id=9]
+[ext_resource path="res://assets/SkyBG01.png" type="Texture" id=10]
+[ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/lights/wall_light.png" type="Texture" id=12]
+
+[sub_resource type="NavigationPolygon" id=2]
+vertices = PoolVector2Array( -320, 256, -320, 130, 685, 128, 692, 258 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -320, 256, -320, 130, 685, 128, 692, 258 ) ]
+
+[sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/brightness = 1.0
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 15.5, 23.5 )
+
+[sub_resource type="ShaderMaterial" id=5]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/brightness = 1.0
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 15, 13 )
+
+[node name="BaseLevel" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="Grunge-tileset" type="Sprite" parent="."]
+position = Vector2( 289, 81 )
+texture = ExtResource( 2 )
+
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+navpoly = SubResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 49, 122 )
+SPEED = 75
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( 3, -44 )
+current = true
+zoom = Vector2( 0.75, 0.75 )
+
+[node name="Interactables" type="Node2D" parent="."]
+
+[node name="SpriteClickable" parent="Interactables" instance=ExtResource( 3 )]
+position = Vector2( 245, 94 )
+canHighlight = true
+canClick = true
+
+[node name="Sprite" parent="Interactables/SpriteClickable" index="0"]
+material = SubResource( 3 )
+position = Vector2( 2, 35 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" parent="Interactables/SpriteClickable" index="1"]
+position = Vector2( 1.5, 26.5 )
+shape = SubResource( 4 )
+
+[node name="InteractionPosition" parent="Interactables/SpriteClickable" index="2"]
+position = Vector2( 1, 59 )
+
+[node name="DialogEvent" parent="Interactables/SpriteClickable/EventQueue" index="0" instance=ExtResource( 11 )]
+
+[node name="SpriteClickable2" parent="Interactables" instance=ExtResource( 3 )]
+position = Vector2( 124, 146 )
+canHighlight = true
+canClick = true
+
+[node name="Sprite" parent="Interactables/SpriteClickable2" index="0"]
+material = SubResource( 5 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" parent="Interactables/SpriteClickable2" index="1"]
+position = Vector2( 0, 3 )
+shape = SubResource( 6 )
+
+[node name="InteractionPosition" parent="Interactables/SpriteClickable2" index="2"]
+position = Vector2( 27, -3 )
+
+[node name="DialogEvent" parent="Interactables/SpriteClickable2/EventQueue" index="0" instance=ExtResource( 11 )]
+DIALOG = "TestEvent"
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 2.0
+
+[node name="ChaseEnemy" parent="." instance=ExtResource( 7 )]
+position = Vector2( -63, 118 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1280, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 10 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 1.1, 1.1 )
+motion_mirroring = Vector2( 1280, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+texture = ExtResource( 9 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 1.2, 1.2 )
+motion_mirroring = Vector2( 1280, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="Light2D" type="Light2D" parent="Sprite"]
+position = Vector2( 81, 83 )
+texture = ExtResource( 12 )
+texture_scale = 0.16
+
+[editable path="Interactables/SpriteClickable"]
+[editable path="Interactables/SpriteClickable2"]
