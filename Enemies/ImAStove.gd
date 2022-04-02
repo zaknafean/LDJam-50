@@ -20,7 +20,7 @@ func _on_Hit_Box_body_entered(body):
 func animate_spawns():
 	var spawns = $Attacks.get_children()
 	for atk in spawns:
-		tween.interpolate_property(atk, 'position', atk.global_position, targets[spot].global_position, .5, Tween.TRANS_BOUNCE, Tween.EASE_IN_OUT)
+		tween.interpolate_property(atk, 'position', atk.global_position, targets[spot].global_position, .5, Tween.TRANS_BOUNCE, Tween.EASE_IN)
 		tween.start()
 		spot = spot + 1
 

@@ -202,28 +202,28 @@ align = 1
 [node name="Target_Locations" type="Node2D" parent="."]
 
 [node name="Position2D1" type="Position2D" parent="Target_Locations"]
-position = Vector2( 66, -54 )
+position = Vector2( 25, -54 )
 
 [node name="Position2D6" type="Position2D" parent="Target_Locations"]
-position = Vector2( 61, -92 )
+position = Vector2( 62, -105 )
 
 [node name="Position2D7" type="Position2D" parent="Target_Locations"]
-position = Vector2( 36, -66 )
+position = Vector2( 38, -85 )
 
 [node name="Position2D8" type="Position2D" parent="Target_Locations"]
-position = Vector2( -53, -89 )
+position = Vector2( -44, -106 )
 
 [node name="Position2D2" type="Position2D" parent="Target_Locations"]
-position = Vector2( 0, -91 )
+position = Vector2( 6, -105 )
 
 [node name="Position2D3" type="Position2D" parent="Target_Locations"]
-position = Vector2( 9, -51 )
+position = Vector2( -2, -69 )
 
 [node name="Position2D4" type="Position2D" parent="Target_Locations"]
-position = Vector2( -34, -57 )
+position = Vector2( -34, -71 )
 
 [node name="Position2D5" type="Position2D" parent="Target_Locations"]
-position = Vector2( -64, -48 )
+position = Vector2( -18, -45 )
 
 [node name="Attacks" type="Node" parent="."]
 
@@ -235,9 +235,7 @@ anims/Idle = SubResource( 7 )
 anims/RESET = SubResource( 8 )
 
 [node name="Tween" type="Tween" parent="."]
-repeat = true
 playback_process_mode = 0
-playback/repeat = true
 
 [connection signal="body_entered" from="Hit_Box" to="." method="_on_Hit_Box_body_entered"]
 
