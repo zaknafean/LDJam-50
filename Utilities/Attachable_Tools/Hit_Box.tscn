@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="Hit_Box" type="Area2D" groups=["hit_box"]]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

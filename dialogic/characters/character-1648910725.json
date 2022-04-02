@@ -1,0 +1,21 @@
+{
+	"color": "#ffffffff",
+	"description": "The Inevitable Sleep Demon, Big Chasey Chasey",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1648910725.json",
+	"mirror_portraits": false,
+	"name": "It Is Coming",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}
