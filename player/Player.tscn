@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/aggySprite.png" type="Texture" id=1]
 [ext_resource path="res://player/Player.gd" type="Script" id=2]
 [ext_resource path="res://assets/lights/basic_light_circle.png" type="Texture" id=3]
+[ext_resource path="res://assets/lights/glow_ring.png" type="Texture" id=4]
 
 [sub_resource type="Animation" id=4]
 length = 0.001
@@ -38,6 +39,61 @@ tracks/0/keys = {
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 12, 12 )
 
+[sub_resource type="Animation" id=6]
+resource_name = "DangerLight"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.772549, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 1.47, 1.0 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
 collision_mask = 5
@@ -58,8 +114,19 @@ anims/Run_Left = SubResource( 5 )
 position = Vector2( 0, 20 )
 shape = SubResource( 3 )
 
+[node name="DangerLight2D" type="Light2D" parent="."]
+position = Vector2( 0, -14.116 )
+scale = Vector2( 1.164, 1.024 )
+texture = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DangerLight2D"]
+autoplay = "DangerLight"
+anims/DangerLight = SubResource( 6 )
+anims/RESET = SubResource( 7 )
+
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 4.54747e-13, -19 )
-scale = Vector2( 2.08333, 1.42361 )
+position = Vector2( 0, -11.5 )
+scale = Vector2( 2.53472, 2.17882 )
 texture = ExtResource( 3 )
 texture_scale = 0.45
+energy = 0.6

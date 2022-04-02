@@ -105,7 +105,6 @@ func process_event(event : Interactable) -> bool:
 		
 	return eventResult
 
-
 func _process(_delta):
 	statLabel.text = str('Alert: ', Settings.alertnessValue, '\n', 'Sanity: ', Settings.sanityValue, '\n', 'Score: ', Settings.score);
 	
