@@ -51,11 +51,10 @@ func _process(delta):
 		# Update the distance to walk
 		distance_to_walk -= distance_to_next_point
 	
-	if Settings.tiredValue > 0 and path.size() == 0:
-		Settings.tiredValue -= delta * 5
-	elif Settings.tiredValue > 0:
-		Settings.tiredValue -= delta * 1
-	print('Tired: ',Settings.tiredValue)
+	if Settings.alertnessValue > 0 and path.size() == 0:
+		Settings.alertnessValue -= delta * 5
+	elif Settings.alertnessValue > 0:
+		Settings.alertnessValue -= delta * 1
 
 func anim_switch(animation, speed = 1):
 	var newanim = str(animation,'_',sprite_dir)

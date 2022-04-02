@@ -5,6 +5,7 @@ class_name BaseLevel, "res://assets/icons/theater-curtains.png"
 onready var player := $Player
 onready var camera = $Player/Camera2D
 onready var playerLine = $Line2D
+onready var statLabel = $CanvasLayer/StatsLabel
 
 var currentEvent : Interactable = null
 var queuedEvent : Interactable = null
@@ -102,6 +103,10 @@ func process_event(event : Interactable) -> bool:
 		eventResult = true
 		
 	return eventResult
+
+
+func _process(delta):
+	statLabel.text = str('Alert: ', Settings.alertnessValue, '\n', 'Sanity: ', Settings.sanityValue, '\n', 'Score: ', Settings.score);
 
 
 func _unhandled_input(event):
