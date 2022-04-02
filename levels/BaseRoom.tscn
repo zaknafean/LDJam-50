@@ -1,13 +1,9 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=1]
-[ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://enemies/ChaseEnemy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://player/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/BlueCrateSprite.png" type="Texture" id=5]
-[ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=6]
+[ext_resource path="res://assets/floorWood.png" type="Texture" id=5]
 [ext_resource path="res://levels/BaseLevel.gd" type="Script" id=7]
-[ext_resource path="res://assets/floorWood.png" type="Texture" id=8]
 
 [sub_resource type="NavigationPolygon" id=8]
 vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64 )
@@ -59,7 +55,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="TileSet" id=7]
 0/name = "floorWood.png 0"
-0/texture = ExtResource( 8 )
+0/texture = ExtResource( 5 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 192, 0, 64, 64 )
@@ -74,7 +70,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 0/shapes = [  ]
 0/z_index = 0
 1/name = "floorWood.png 1"
-1/texture = ExtResource( 8 )
+1/texture = ExtResource( 5 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 256, 0, 64, 64 )
@@ -89,7 +85,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 1/shapes = [  ]
 1/z_index = 0
 2/name = "floorWood.png 2"
-2/texture = ExtResource( 8 )
+2/texture = ExtResource( 5 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 320, 0, 64, 64 )
@@ -104,7 +100,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 2/shapes = [  ]
 2/z_index = 0
 3/name = "floorWood.png 3"
-3/texture = ExtResource( 8 )
+3/texture = ExtResource( 5 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 384, 0, 64, 64 )
@@ -119,7 +115,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 3/shapes = [  ]
 3/z_index = 0
 4/name = "floorWood.png 4"
-4/texture = ExtResource( 8 )
+4/texture = ExtResource( 5 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 448, 0, 64, 64 )
@@ -134,7 +130,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 4/shapes = [  ]
 4/z_index = 0
 5/name = "floorWood.png 5"
-5/texture = ExtResource( 8 )
+5/texture = ExtResource( 5 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 256, 64, 64, 64 )
@@ -149,7 +145,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 5/shapes = [  ]
 5/z_index = 0
 6/name = "floorWood.png 6"
-6/texture = ExtResource( 8 )
+6/texture = ExtResource( 5 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 320, 64, 64, 64 )
@@ -164,7 +160,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 6/shapes = [  ]
 6/z_index = 0
 7/name = "floorWood.png 7"
-7/texture = ExtResource( 8 )
+7/texture = ExtResource( 5 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 384, 64, 64, 64 )
@@ -179,7 +175,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 7/shapes = [  ]
 7/z_index = 0
 8/name = "floorWood.png 8"
-8/texture = ExtResource( 8 )
+8/texture = ExtResource( 5 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 448, 64, 64, 64 )
@@ -194,7 +190,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 8/shapes = [  ]
 8/z_index = 0
 9/name = "floorWood.png 9"
-9/texture = ExtResource( 8 )
+9/texture = ExtResource( 5 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 192, 64, 64, 64 )
@@ -208,7 +204,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 9/shapes = [  ]
 9/z_index = 0
 10/name = "floorWood.png 10"
-10/texture = ExtResource( 8 )
+10/texture = ExtResource( 5 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 512, 64, 64, 64 )
@@ -223,7 +219,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 10/shapes = [  ]
 10/z_index = 0
 11/name = "floorWood.png 11"
-11/texture = ExtResource( 8 )
+11/texture = ExtResource( 5 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 128, 320, 64, 64 )
@@ -237,7 +233,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 11/shapes = [  ]
 11/z_index = 0
 12/name = "floorWood.png 12"
-12/texture = ExtResource( 8 )
+12/texture = ExtResource( 5 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 192, 320, 64, 64 )
@@ -251,7 +247,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 12/shapes = [  ]
 12/z_index = 0
 13/name = "floorWood.png 13"
-13/texture = ExtResource( 8 )
+13/texture = ExtResource( 5 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 256, 320, 64, 64 )
@@ -265,7 +261,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 13/shapes = [  ]
 13/z_index = 0
 14/name = "floorWood.png 14"
-14/texture = ExtResource( 8 )
+14/texture = ExtResource( 5 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 320, 320, 64, 64 )
@@ -279,7 +275,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 14/shapes = [  ]
 14/z_index = 0
 15/name = "floorWood.png 15"
-15/texture = ExtResource( 8 )
+15/texture = ExtResource( 5 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 384, 320, 64, 64 )
@@ -293,7 +289,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 15/shapes = [  ]
 15/z_index = 0
 16/name = "floorWood.png 16"
-16/texture = ExtResource( 8 )
+16/texture = ExtResource( 5 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 448, 320, 64, 64 )
@@ -307,7 +303,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 16/shapes = [  ]
 16/z_index = 0
 17/name = "floorWood.png 17"
-17/texture = ExtResource( 8 )
+17/texture = ExtResource( 5 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 512, 320, 64, 64 )
@@ -322,7 +318,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 17/shapes = [  ]
 17/z_index = 0
 18/name = "floorWood.png 18"
-18/texture = ExtResource( 8 )
+18/texture = ExtResource( 5 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 768, 320, 64, 64 )
@@ -337,35 +333,17 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 18/shapes = [  ]
 18/z_index = 0
 
-[sub_resource type="ShaderMaterial" id=3]
-resource_local_to_scene = true
-shader = ExtResource( 6 )
-shader_param/brightness = 1.0
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 15.5, 23.5 )
-
-[sub_resource type="ShaderMaterial" id=5]
-resource_local_to_scene = true
-shader = ExtResource( 6 )
-shader_param/brightness = 1.0
-
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 15, 13 )
-
-[node name="UnknownRoom" type="Node2D"]
+[node name="BaseRoom" type="Node2D"]
 script = ExtResource( 7 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
 [node name="TileMap" type="TileMap" parent="Navigation2D"]
-position = Vector2( -11, 8 )
 tile_set = SubResource( 7 )
 format = 1
-tile_data = PoolIntArray( 131067, 0, 0, 131068, 3, 0, 131069, 4, 0, 131071, 0, 0, 65536, 1, 0, 65537, 4, 0, 65539, 0, 0, 65540, 1, 0, 65541, 1, 0, 65542, 4, 0, 196603, 9, 0, 196604, 5, 0, 196605, 6, 0, 196606, 4, 0, 196607, 9, 0, 131072, 5, 0, 131073, 6, 0, 131074, 4, 0, 131075, 9, 0, 131076, 5, 0, 131077, 6, 0, 131078, 6, 0, 131079, 4, 0, 262140, 9, 0, 262141, 5, 0, 262142, 6, 0, 262143, 2, 0, 196608, 3, 0, 196609, 6, 0, 196610, 6, 0, 196611, 2, 0, 196612, 2, 0, 196613, 6, 0, 196614, 6, 0, 196615, 6, 0, 196616, 4, 0, 327677, 9, 0, 327678, 5, 0, 327679, 6, 0, 262144, 6, 0, 262145, 6, 0, 262146, 6, 0, 262147, 6, 0, 262148, 7, 0, 262149, 7, 0, 262150, 7, 0, 262151, 7, 0, 262152, 7, 0, 262153, 4, 0, 393214, 9, 0, 393215, 5, 0, 327680, 7, 0, 327681, 7, 0, 327682, 7, 0, 327683, 7, 0, 327684, 7, 0, 327685, 7, 0, 327686, 8, 0, 327687, 8, 0, 327688, 8, 0, 327689, 8, 0, 327690, 10, 0, 458751, 9, 0, 393216, 12, 0, 393217, 12, 0, 393218, 12, 0, 393219, 12, 0, 393220, 12, 0, 393221, 12, 0, 393222, 17, 0, 393223, 6, 0, 393224, 6, 0, 393225, 6, 0, 393226, 6, 0, 393227, 4, 0, 458758, 9, 0, 458759, 5, 0, 458760, 6, 0, 458761, 6, 0, 458762, 6, 0, 458763, 6, 0, 458764, 4, 0, 524295, 9, 0, 524296, 5, 0, 524297, 6, 0, 524298, 6, 0, 524299, 6, 0, 524300, 6, 0, 524301, 4, 0, 589832, 11, 0, 589833, 12, 0, 589834, 12, 0, 589835, 12, 0, 589836, 12, 0, 589837, 12, 0 )
 
-[node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 593, 435 )
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 289, 342 )
 SPEED = 75
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -375,49 +353,17 @@ zoom = Vector2( 0.75, 0.75 )
 
 [node name="Interactables" type="Node2D" parent="."]
 
-[node name="SpriteClickable" parent="Interactables" instance=ExtResource( 1 )]
-position = Vector2( 20, 78 )
-canHighlight = true
-canClick = true
-
-[node name="Sprite" parent="Interactables/SpriteClickable" index="0"]
-material = SubResource( 3 )
-position = Vector2( 2, 35 )
-texture = ExtResource( 5 )
-
-[node name="CollisionShape2D" parent="Interactables/SpriteClickable" index="1"]
-position = Vector2( 1.5, 26.5 )
-shape = SubResource( 4 )
-
-[node name="InteractionPosition" parent="Interactables/SpriteClickable" index="2"]
-position = Vector2( 1, 59 )
-
-[node name="DialogEvent" parent="Interactables/SpriteClickable/EventQueue" index="0" instance=ExtResource( 2 )]
-
-[node name="SpriteClickable2" parent="Interactables" instance=ExtResource( 1 )]
-position = Vector2( -227, 114 )
-canHighlight = true
-canClick = true
-
-[node name="Sprite" parent="Interactables/SpriteClickable2" index="0"]
-material = SubResource( 5 )
-texture = ExtResource( 5 )
-
-[node name="CollisionShape2D" parent="Interactables/SpriteClickable2" index="1"]
-position = Vector2( 0, 3 )
-shape = SubResource( 6 )
-
-[node name="InteractionPosition" parent="Interactables/SpriteClickable2" index="2"]
-position = Vector2( 27, -3 )
-
-[node name="DialogEvent" parent="Interactables/SpriteClickable2/EventQueue" index="0" instance=ExtResource( 2 )]
-DIALOG = "TestEvent"
-
 [node name="Line2D" type="Line2D" parent="."]
 width = 2.0
 
 [node name="ChaseEnemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 718, 523 )
+position = Vector2( 156, 315 )
 
-[editable path="Interactables/SpriteClickable"]
-[editable path="Interactables/SpriteClickable2"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="StatsLabel" type="Label" parent="CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Alert: 1000
+Sanity: 100
+Score: 0"

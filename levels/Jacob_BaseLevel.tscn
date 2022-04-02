@@ -69,6 +69,3 @@ width = 2.0
 position = Vector2( 453, 140 )
 
 [editable path="Interactables/SpriteClickable"]
-[editable path="Sleep_Gremlin"]
-[editable path="Sleep_Gremlin/Hurt_Box"]
-[editable path="Sleep_Gremlin/Hit_Box"]
