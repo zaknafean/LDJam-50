@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://assets/sleepCreepSprite.png" type="Texture" id=1]
 [ext_resource path="res://enemies/ChaseEnemy.gd" type="Script" id=2]
 [ext_resource path="res://utilities/attachable_tools/Hit_Box.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/effects/Flame.png" type="Texture" id=4]
+[ext_resource path="res://assets/effects/splode.png" type="Texture" id=5]
 
 [sub_resource type="Curve" id=18]
 _data = [ Vector2( 0, 0.161364 ), 0.0, 7.875, 0, 0, Vector2( 0.103896, 0.586364 ), 2.7, 2.7, 0, 0, Vector2( 0.327922, 0.913636 ), 1.01818, 1.01818, 0, 0, Vector2( 0.987013, 0.770455 ), -1.162, 0.0, 0, 0 ]
@@ -140,6 +141,15 @@ _data = [ Vector2( 0, 0.797727 ), 0.0, 7.75385, 0, 0, Vector2( 0.474026, 0.52840
 offsets = PoolRealArray( 0.00350877, 0.221053, 0.410526, 0.533333, 0.685083, 0.828729, 0.906077, 0.928177, 1 )
 colors = PoolColorArray( 0.975586, 0, 0, 0.101961, 0.776367, 0.121491, 0.00909805, 1, 0.584961, 0.011425, 0.011425, 0.914607, 0.647059, 0.188235, 0.188235, 0.6, 0.393555, 0.0169106, 0.0169106, 1, 0.116211, 0.00363159, 0.00363159, 0.343137, 0, 0, 0, 0.219608, 0.141176, 0.0352941, 0.00784314, 0.117647, 0.176471, 0.0470588, 0.0117647, 0 )
 
+[sub_resource type="Curve" id=20]
+min_value = 0.5
+max_value = 2.0
+_data = [ Vector2( 0, 0.731818 ), 0.0, 0.15, 0, 0, Vector2( 0.779221, 1.03182 ), 1.36316, 1.36316, 0, 0, Vector2( 1, 2 ), 9.71247, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=21]
+offsets = PoolRealArray( 0, 0.494737, 1 )
+colors = PoolColorArray( 0.412598, 0.412598, 0.412598, 1, 0.405762, 0.405762, 0.405762, 0.792157, 1, 1, 1, 0 )
+
 [node name="ChaseEnemy" type="KinematicBody2D"]
 collision_layer = 4
 collision_mask = 0
@@ -148,10 +158,11 @@ script = ExtResource( 2 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 hframes = 3
-vframes = 4
+vframes = 6
 frame = 1
 
 [node name="FormidableFog" type="CPUParticles2D" parent="Sprite"]
+visible = false
 position = Vector2( 50, -33 )
 z_index = -1
 amount = 10
@@ -229,6 +240,34 @@ color = Color( 0.803922, 0.803922, 0.803922, 1 )
 color_ramp = SubResource( 17 )
 hue_variation = 0.03
 hue_variation_random = 0.1
+
+[node name="RoomEnter" type="CPUParticles2D" parent="."]
+position = Vector2( 57, -14 )
+z_index = -1
+emitting = false
+amount = 35
+lifetime = 1.1
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.78
+texture = ExtResource( 5 )
+emission_shape = 1
+emission_sphere_radius = 67.6
+direction = Vector2( 1, -3 )
+gravity = Vector2( 0, 30 )
+initial_velocity = 128.14
+initial_velocity_random = 0.97
+angular_velocity = 295.16
+angular_velocity_random = 1.0
+orbit_velocity = -0.42
+orbit_velocity_random = 0.07
+scale_amount = 0.99
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 20 )
+color = Color( 0.321569, 0.176471, 0.254902, 1 )
+color_ramp = SubResource( 21 )
+hue_variation = 0.04
+hue_variation_random = 0.75
 
 [connection signal="body_entered" from="Hit_Box" to="." method="_on_Hit_Box_body_entered"]
 [connection signal="timeout" from="EatTimer" to="." method="_on_EatTimer_timeout"]
