@@ -9,6 +9,71 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Interactable",
+"class": "BackgroundClickable",
+"language": "GDScript",
+"path": "res://levels/interactables/clickable/BackgroundClickable.gd"
+}, {
+"base": "Interactable",
+"class": "BackgroundCollidable",
+"language": "GDScript",
+"path": "res://levels/interactables/collidable/BackgroundCollidable.gd"
+}, {
+"base": "Node2D",
+"class": "BaseRoom",
+"language": "GDScript",
+"path": "res://levels/BaseLevel.gd"
+}, {
+"base": "Reference",
+"class": "DTS",
+"language": "GDScript",
+"path": "res://addons/dialogic/Localization/translation_service.gd"
+}, {
+"base": "Node",
+"class": "Dialogic",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicClass.gd"
+}, {
+"base": "Reference",
+"class": "DialogicAnimaPropertiesHelper",
+"language": "GDScript",
+"path": "res://addons/dialogic/Nodes/Anima/DialogicAnimaPropertiesHelper.gd"
+}, {
+"base": "Node",
+"class": "DialogicAnimaResources",
+"language": "GDScript",
+"path": "res://addons/dialogic/Nodes/Anima/DialogicAnimaResources.gd"
+}, {
+"base": "Control",
+"class": "DialogicBackgroundMusic",
+"language": "GDScript",
+"path": "res://addons/dialogic/Nodes/BackgroundMusic.gd"
+}, {
+"base": "Node",
+"class": "DialogicCustomEvents",
+"language": "GDScript",
+"path": "res://addons/dialogic/Nodes/DialogicCustomEvents.gd"
+}, {
+"base": "Node",
+"class": "DialogicDefinitionsUtil",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicDefinitionsUtil.gd"
+}, {
+"base": "Node",
+"class": "DialogicParser",
+"language": "GDScript",
+"path": "res://addons/dialogic/Parser/DialogicParser.gd"
+}, {
+"base": "Reference",
+"class": "DialogicResources",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicResources.gd"
+}, {
+"base": "Reference",
+"class": "DialogicUtil",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicUtil.gd"
+}, {
 "base": "Node",
 "class": "DiscordRPC",
 "language": "GDScript",
@@ -18,6 +83,16 @@ _global_script_classes=[ {
 "class": "DiscordRPCEnum",
 "language": "GDScript",
 "path": "res://addons/godot_editor_discord_presence/Discord RPC/DiscordRPCEnum.gd"
+}, {
+"base": "Node2D",
+"class": "Event",
+"language": "GDScript",
+"path": "res://levels/interactables/Event.gd"
+}, {
+"base": "PanelContainer",
+"class": "HistoryRow",
+"language": "GDScript",
+"path": "res://addons/dialogic/Example Assets/History/HistoryRow.gd"
 }, {
 "base": "Reference",
 "class": "IPC",
@@ -44,6 +119,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/godot_editor_discord_presence/Discord RPC/util/IPCUtil.gd"
 }, {
+"base": "Area2D",
+"class": "Interactable",
+"language": "GDScript",
+"path": "res://levels/interactables/Interactable.gd"
+}, {
 "base": "Reference",
 "class": "RichPresence",
 "language": "GDScript",
@@ -63,6 +143,16 @@ _global_script_classes=[ {
 "class": "Screen",
 "language": "GDScript",
 "path": "res://addons/toolbox_project/scenes/screens/Screen.gd"
+}, {
+"base": "Node2D",
+"class": "SleepEnemies",
+"language": "GDScript",
+"path": "res://enemies/Sleep_Gremlin.gd"
+}, {
+"base": "Interactable",
+"class": "SpriteClickable",
+"language": "GDScript",
+"path": "res://levels/interactables/clickable/SpriteClickable.gd"
 }, {
 "base": "",
 "class": "StreamPeerUnix",
@@ -95,17 +185,35 @@ _global_script_classes=[ {
 "path": "res://addons/godot_editor_discord_presence/Discord RPC/ipc/pipe/WindowsPipe.gd"
 } ]
 _global_script_class_icons={
+"BackgroundClickable": "",
+"BackgroundCollidable": "",
+"BaseRoom": "res://assets/icons/theater-curtains.png",
+"DTS": "",
+"Dialogic": "",
+"DialogicAnimaPropertiesHelper": "",
+"DialogicAnimaResources": "",
+"DialogicBackgroundMusic": "",
+"DialogicCustomEvents": "",
+"DialogicDefinitionsUtil": "",
+"DialogicParser": "",
+"DialogicResources": "",
+"DialogicUtil": "",
 "DiscordRPC": "",
 "DiscordRPCEnum": "",
+"Event": "",
+"HistoryRow": "",
 "IPC": "",
 "IPCModule": "",
 "IPCPayload": "",
 "IPCPipe": "",
 "IPCUtil": "",
+"Interactable": "",
 "RichPresence": "",
 "RichPresenceButton": "",
 "RichPresenceModule": "",
 "Screen": "",
+"SleepEnemies": "",
+"SpriteClickable": "",
 "StreamPeerUnix": "",
 "URLUtil": "",
 "UUID": "",
@@ -117,6 +225,7 @@ _global_script_class_icons={
 [application]
 
 config/name="LudumDare50"
+run/main_scene="res://screens/ScreenSplash.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -130,10 +239,51 @@ SignalMngr="*res://addons/toolbox_project/autoloads/SignalMngr.gd"
 PersistenceMngr="*res://addons/toolbox_project/autoloads/PersistenceMngr.gd"
 SoundMngr="*res://addons/toolbox_project/autoloads/SoundMngr.gd"
 ControlMngr="*res://addons/toolbox_project/autoloads/ControlMngr.gd"
+Settings="*res://singletons/Settings.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/godot_editor_discord_presence/plugin.cfg", "res://addons/imrp/plugin.cfg", "res://addons/silent_wolf/plugin.cfg", "res://addons/toolbox_project/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg", "res://addons/godot_editor_discord_presence/plugin.cfg", "res://addons/imrp/plugin.cfg", "res://addons/silent_wolf/plugin.cfg", "res://addons/toolbox_project/plugin.cfg" )
+
+[input]
+
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777221,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":true,"doubleclick":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":88,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_secondaryclick={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+ui_primaryclick={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+game_pause={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777217,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_physics/layer_1="World"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Enemy"
 
 [physics]
 

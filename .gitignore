@@ -13,3 +13,4 @@ builds/
 bin/
 *.rar
 android/
+*.import

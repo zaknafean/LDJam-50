@@ -1,0 +1,171 @@
+{
+	"files": [
+
+	],
+	"folders": {
+		"Characters": {
+			"files": [
+				"character-1648902615.json",
+				"character-1648910671.json",
+				"character-1648910676.json",
+				"character-1648910725.json",
+				"character-1648910758.json",
+				"character-1648910802.json",
+				"character-1648910934.json",
+				"character-1648911702.json"
+			],
+			"folders": {
+
+			},
+			"metadata": {
+				"color": null,
+				"folded": false
+			}
+		},
+		"Definitions": {
+			"files": [
+				"1648903175-460",
+				"1648903270-144",
+				"1648912610-301",
+				"1648912643-219",
+				"1648912713-430",
+				"1648912799-679",
+				"1648912870-228",
+				"1648912916-347",
+				"1648912966-545",
+				"1648913084-980",
+				"1648959575-593",
+				"1648959582-704"
+			],
+			"folders": {
+
+			},
+			"metadata": {
+				"color": null,
+				"folded": false
+			}
+		},
+		"Themes": {
+			"files": [
+				"default-theme.cfg",
+				"theme-1648902659.cfg",
+				"theme-1648948398.cfg"
+			],
+			"folders": {
+
+			},
+			"metadata": {
+				"color": null,
+				"folded": false
+			}
+		},
+		"Timelines": {
+			"files": [
+				"timeline-1648908097.json",
+				"timeline-1648902867.json",
+				"timeline-1648946605.json"
+			],
+			"folders": {
+				"Doors": {
+					"files": [
+						"timeline-1648944594.json",
+						"timeline-1648944602.json",
+						"timeline-1648944607.json",
+						"timeline-1648944611.json",
+						"timeline-1648944615.json",
+						"timeline-1648944982.json",
+						"timeline-1648953658.json",
+						"timeline-1648953668.json",
+						"timeline-1648953676.json",
+						"timeline-1648953734.json",
+						"timeline-1648953743.json",
+						"timeline-1648953750.json",
+						"timeline-1648954775.json",
+						"timeline-1648954783.json",
+						"timeline-1648954788.json",
+						"timeline-1648955105.json",
+						"timeline-1648955113.json",
+						"timeline-1648955120.json",
+						"timeline-1648955243.json",
+						"timeline-1648955250.json",
+						"timeline-1648955255.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": false
+					}
+				},
+				"Lighting": {
+					"files": [
+						"timeline-1648944806.json",
+						"timeline-1648944814.json",
+						"timeline-1648944820.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": false
+					}
+				},
+				"Other Interactables": {
+					"files": [
+						"timeline-1648957481.json",
+						"timeline-1648957497.json",
+						"timeline-1648957760.json",
+						"timeline-1648957775.json",
+						"timeline-1648957806.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": false
+					}
+				},
+				"Stimulants": {
+					"files": [
+						"timeline-1648943860.json",
+						"timeline-1648944180.json",
+						"timeline-1648944450.json",
+						"timeline-1648944472.json",
+						"timeline-1648944480.json",
+						"timeline-1648944490.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": false
+					}
+				},
+				"The Cat": {
+					"files": [
+						"timeline-1648946765.json",
+						"timeline-1648946773.json",
+						"timeline-1648946779.json",
+						"timeline-1648946791.json",
+						"timeline-1648946802.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": false
+					}
+				}
+			},
+			"metadata": {
+				"color": null,
+				"folded": false
+			}
+		}
+	}
+}
