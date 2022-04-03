@@ -201,17 +201,18 @@ DIALOG = "RandomRoom"
 [node name="BedClickable" parent="Interactables" index="4" instance=ExtResource( 5 )]
 position = Vector2( 1042, -74 )
 
-[node name="LightSwitchClickable" parent="Interactables/BedClickable" index="4" instance=ExtResource( 14 )]
-position = Vector2( -169, 80 )
+[node name="LightSwitchClickable" parent="Interactables" index="5" instance=ExtResource( 14 )]
+position = Vector2( 873, 6 )
 
-[node name="FloorLampClickable" parent="Interactables/BedClickable" index="5" instance=ExtResource( 12 )]
-position = Vector2( 352, 204 )
+[node name="FloorLampClickable" parent="Interactables" index="6" instance=ExtResource( 12 )]
+position = Vector2( 1394, 130 )
 
-[node name="WindowClickable" parent="Interactables/BedClickable/FloorLampClickable" index="4" instance=ExtResource( 9 )]
-position = Vector2( -1001, -96 )
+[node name="WindowClickable" parent="Interactables" index="7" instance=ExtResource( 9 )]
+position = Vector2( 263, -23 )
+z_index = 0
 
-[node name="CurtainsClickable" parent="Interactables/BedClickable/FloorLampClickable/WindowClickable" index="4" instance=ExtResource( 13 )]
-position = Vector2( 72, 53 )
+[node name="CurtainsClickable" parent="Interactables" index="8" instance=ExtResource( 13 )]
+position = Vector2( 261, -37 )
 
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 419, 169 )

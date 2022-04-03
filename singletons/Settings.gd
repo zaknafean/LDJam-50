@@ -11,6 +11,7 @@ enum GAME_STATES {
 	BATTLE,
 }
 
+var my_id := ''
 var curGameState = GAME_STATES.PLAY
 
 var difficulty = 1
@@ -21,7 +22,19 @@ var score = 0
 
 
 func _ready():
-	pass
+	SilentWolf.configure({
+		"api_key": "5dSUku8afu1tQfihzvY9Ua3JJE7P6AYS5y9iq60h",
+		"game_id": "LD50",
+		"game_version": "0.0.1",
+		"log_level": 1
+	})
+	
+	# If no id is loaded, get the device id
+	if my_id == '':
+		my_id = OS.get_unique_id();
+		# if no device id, generate an id
+		if my_id == '':
+			my_id = str('{',UUID.generate_uuid_v4(),'}')
 
 
 func new_game():
@@ -46,5 +59,5 @@ func _process(delta):
 	score += delta
 	if roomsExplored >= 3 and roomsExplored < 10:
 		difficulty = 2
-	elif roomsExplored >= 10:
+	elif roomsExplored >= 8:
 		difficulty = 3

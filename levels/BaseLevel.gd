@@ -144,8 +144,7 @@ func _process(_delta):
 	statLabel.text = str('Room: ', name, '\n', 'Alert: ', Settings.alertnessValue, '\n', 'Sanity: ', Settings.sanityValue, '\n', 'Score: ', Settings.score, '\n', 'State: ', Settings.curGameState, '\n', 'Rooms: ', Settings.roomsExplored, '\n', 'Difficulty: ', Settings.difficulty);
 	
 	if Settings.sanityValue <= 0 or Settings.alertnessValue <= 0:
-		#print('you have lost')
-		pass
+		SignalMngr.emit_signal("level_won")
 
 
 func _unhandled_input(event):

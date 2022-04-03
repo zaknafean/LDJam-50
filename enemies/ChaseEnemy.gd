@@ -58,7 +58,7 @@ func _process(delta):
 func activate(delay: int):
 	yield(get_tree().create_timer(delay), "timeout")
 	amActive = true
-	curSpeed = SPEED + (Settings.roomsExplored * 3)
+	curSpeed = SPEED + (Settings.roomsExplored * 3.5)
 	show()
 	$RoomEnter.emitting = true
 	#Particle effects and shizzle go here
