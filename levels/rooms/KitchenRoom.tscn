@@ -7,9 +7,9 @@
 [ext_resource path="res://assets/doorNorthBlueClosed.png" type="Texture" id=5]
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=6]
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Enemies/Sleep_Gremlin.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Enemies/Lamp.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Enemies/ImAStove.tscn" type="PackedScene" id=10]
+[ext_resource path="res://enemies/Sleep_Gremlin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://enemies/Lamp.tscn" type="PackedScene" id=9]
+[ext_resource path="res://enemies/ImAStove.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
