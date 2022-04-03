@@ -14,27 +14,31 @@ shader_param/brightness = 1.0
 extents = Vector2( 52.5, 29.5 )
 
 [node name="WindowClickable" instance=ExtResource( 2 )]
+position = Vector2( 2, 1 )
+z_index = 1
 collision_layer = 1
 collision_mask = 2
 canHighlight = true
 canClick = true
-isOneShot = true
 
 [node name="Sprite" parent="." index="0"]
 material = SubResource( 1 )
-position = Vector2( -121.625, -81.7499 )
+position = Vector2( -1, 1 )
 scale = Vector2( 0.0897499, 0.0897499 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( -122.5, -127.5 )
+position = Vector2( -3, 18 )
 shape = SubResource( 2 )
 
+[node name="InteractionPosition" parent="." index="2"]
+position = Vector2( -3, 109 )
+
 [node name="EventQueue" parent="." index="3"]
-position = Vector2( -122, 18 )
+position = Vector2( 25, -5 )
 
 [node name="DialogEvent" parent="EventQueue" index="0" instance=ExtResource( 1 )]
-position = Vector2( 2, 150 )
+position = Vector2( -58, 44 )
 z_index = 1
 difficulty = -1
 DIALOG = "Window"
