@@ -8,7 +8,7 @@ const unknownRoom = preload("res://levels/rooms/UnknownRoom.tscn")
 const unlikedRoom = preload("res://levels/rooms/UnlikedRoom.tscn")
 
 var curRoomString
-var curRoom
+var curRoom : BaseRoom
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -33,9 +33,24 @@ func start_level():
 	if StateMngr.start_level_id == 1:
 		pass
 	add_child(curRoom)
+	yield(get_tree(), "idle_frame")
+	curRoom._set_spawns('s')
 
 
-func change_room(newRoom: String, directionFrom: String):
+func change_room(newRoom: String, directionFrom: String, delay=2):
+	var doorLocation
+	if directionFrom == 'w':
+		doorLocation = curRoom.get_node("Interactables/DoorWestClickable").interactionPosition
+	if directionFrom == 'e':
+		doorLocation = curRoom.get_node("Interactables/DoorEastClickable").interactionPosition
+	if directionFrom == 'n':
+		doorLocation = curRoom.get_node("Interactables/DoorSouthClickable").interactionPosition
+	if directionFrom == 's':
+		doorLocation = curRoom.get_node("Interactables/DoorNorthClickable").interactionPosition
+	
+	var timeToDoor = doorLocation.distance_to(curRoom.enemy.global_position) / curRoom.enemy.SPEED
+	var newDelay = clamp(timeToDoor, 1, 25)
+	
 	if curRoomString == newRoom:
 		print('error you went in a loop somehow')
 		return
@@ -63,7 +78,7 @@ func change_room(newRoom: String, directionFrom: String):
 	curRoomString = newRoom
 	add_child(curRoom)
 	yield(get_tree(), "idle_frame")
-	curRoom._set_spawns(directionFrom)
+	curRoom._set_spawns(directionFrom, newDelay)
 
 
 func _on_game_started():

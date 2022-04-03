@@ -36,3 +36,6 @@ func adjust_alertness(value: int):
 func adjust_sanity(value: int):
 	sanityValue += value
 	print('Sanity Adjusted: ', sanityValue)
+
+func _process(delta):
+	score += delta

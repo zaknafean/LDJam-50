@@ -26,15 +26,12 @@ func _on_Hit_Box_body_exited(body):
 	$Label.visible = false
 
 func attack_position():
-	print('stay on target')
 	targets = []
 	for i in count:
-		print('picking targets')
 		var pick
 		pick = randi() % count + 1
 		var cur_target = get_node('Target_Locations/Position2D'+str(pick))
 		targets.append(cur_target)
-		print(targets)
 	$AnimationPlayer.play("Attacking")
 
 func spawn_attacks():
