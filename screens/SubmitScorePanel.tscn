@@ -1,0 +1,184 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://addons/toolbox_project/assets/theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/fonts/neon_sans/NeonSans.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/fonts/jura/JuraMedium.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://screens/SubmitScorePanel.gd" type="Script" id=8]
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.0352941, 0.105882, 0.341176, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="DynamicFont" id=4]
+size = 48
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 48
+outline_size = 1
+outline_color = Color( 0.0745098, 0, 1, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.133333, 0.12549, 0.164706, 0.682353 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+expand_margin_top = 9.0
+shadow_size = 3
+shadow_offset = Vector2( 2, 2 )
+
+[node name="SubmitScorePanel" type="PopupPanel"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -215.0
+margin_top = 20.0
+margin_right = 215.0
+margin_bottom = -20.0
+size_flags_horizontal = 5
+size_flags_vertical = 5
+theme = ExtResource( 1 )
+custom_styles/panel = SubResource( 6 )
+popup_exclusive = true
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -213.0
+margin_top = 2.0
+margin_right = 213.0
+margin_bottom = -2.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/margin_right = 25
+custom_constants/margin_top = 20
+custom_constants/margin_left = 25
+custom_constants/margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 25.0
+margin_top = 20.0
+margin_right = 401.0
+margin_bottom = 656.0
+
+[node name="ScoreLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+margin_right = 376.0
+margin_bottom = 6.0
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center]Score![/center]
+[center][color=green]100[/color][/center]"
+text = "Score!
+100"
+fit_content_height = true
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+margin_top = 22.0
+margin_right = 376.0
+margin_bottom = 47.0
+custom_constants/separation = 25
+
+[node name="InitialsLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+margin_top = 63.0
+margin_right = 376.0
+margin_bottom = 91.0
+size_flags_vertical = 5
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Enter initials[/center]"
+text = "Enter initials"
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InitialsInput" type="LineEdit" parent="MarginContainer/VBoxContainer"]
+margin_top = 107.0
+margin_right = 376.0
+margin_bottom = 128.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 5 )
+align = 1
+max_length = 3
+expand_to_text_length = true
+placeholder_text = "ABC"
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+margin_top = 144.0
+margin_right = 376.0
+margin_bottom = 169.0
+custom_constants/separation = 25
+
+[node name="SubmitScoreButton" type="Button" parent="MarginContainer/VBoxContainer"]
+margin_top = 185.0
+margin_right = 376.0
+margin_bottom = 212.0
+size_flags_vertical = 5
+text = "Submit Score"
+expand_icon = true
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+margin_top = 228.0
+margin_right = 376.0
+margin_bottom = 252.0
+custom_constants/separation = 24
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer"]
+margin_top = 268.0
+margin_right = 376.0
+margin_bottom = 593.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+custom_styles/panel = SubResource( 3 )
+
+[node name="StatusMessage" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_constants/line_separation = 2
+custom_constants/shadow_as_outline = 0
+bbcode_enabled = true
+bbcode_text = "[center]Only your highest score is saved.
+But you can check how well you did by submitting your current score.[/center]"
+text = "Only your highest score is saved.
+But you can check how well you did by submitting your current score."
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseButton" type="Button" parent="MarginContainer/VBoxContainer"]
+margin_top = 609.0
+margin_right = 376.0
+margin_bottom = 636.0
+size_flags_vertical = 5
+text = "Return to menu"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="about_to_show" from="." to="." method="_on_SubmitScorePanel_about_to_show"]
+[connection signal="popup_hide" from="." to="." method="_on_SubmitScorePanel_popup_hide"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/SubmitScoreButton" to="." method="_on_SubmitScoreButton_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CloseButton" to="." method="_on_CloseButton_pressed"]
