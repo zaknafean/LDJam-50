@@ -4,6 +4,7 @@ onready var tween = $Tween
 var can_attack :bool = true
 
 func _ready():
+	look_for_kills = false
 	count = 8
 
 func spawn_attacks():
