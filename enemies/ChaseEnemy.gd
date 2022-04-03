@@ -6,7 +6,8 @@ onready var anim := $AnimationPlayer
 var playerRef
 var delayTimer
 var VELOCITY
-var SPEED = 25
+var SPEED := 25.0
+var curSpeed := 25.0
 
 var amEating = false
 var amActive = false
@@ -24,8 +25,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if Settings.curGameState == Settings.GAME_STATES.PLAY and !amEating and amActive:
-		VELOCITY = (playerRef.position - position).normalized() * SPEED
+	if (Settings.curGameState == Settings.GAME_STATES.PLAY or Settings.curGameState == Settings.GAME_STATES.BATTLE or Settings.curGameState == Settings.GAME_STATES.DIALOG) and !amEating and amActive:
+		
+		if Settings.curGameState == Settings.GAME_STATES.BATTLE or Settings.curGameState == Settings.GAME_STATES.DIALOG:
+			curSpeed = (SPEED + (Settings.roomsExplored * 3)) / 3
+		else: 
+			curSpeed = SPEED + (Settings.roomsExplored * 3)
+		print(curSpeed)
+		VELOCITY = (playerRef.position - position).normalized() * curSpeed
 		var _collision = move_and_slide(VELOCITY)
 		var walk_dir = VELOCITY.normalized()
 		#print(walk_dir)
@@ -48,6 +55,7 @@ func _process(_delta):
 func activate(delay: int):
 	yield(get_tree().create_timer(delay), "timeout")
 	amActive = true
+	curSpeed = SPEED + (Settings.roomsExplored * 3)
 	show()
 	#Particle effects and shizzle go here
 

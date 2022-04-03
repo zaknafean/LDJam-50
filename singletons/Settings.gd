@@ -42,7 +42,5 @@ func adjust_sanity(value: int):
 	print('Sanity Adjusted: ', sanityValue)
 
 
-
-
 func _process(delta):
 	score += delta

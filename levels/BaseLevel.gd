@@ -38,6 +38,14 @@ func _ready():
 	alphamap.modulate = Color(.5, .5, .5, .5)
 	
 	Settings.curGameState = Settings.GAME_STATES.PLAY
+	
+	if Settings.difficulty == 1:
+		$Difficulty2.queue_free()
+		$Difficulty3.queue_free()
+	elif Settings.difficulty == 2:
+		$Difficulty3.queue_free()
+	elif Settings.difficulty == 3:
+		pass
 
 
 func _set_spawns(directionFrom: String, delay=2):
