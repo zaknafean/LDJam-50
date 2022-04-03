@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://utilities/attachable_tools/Hit_Box.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Im_A_Monster.png" type="Texture" id=2]
@@ -122,6 +122,47 @@ tracks/3/keys = {
 "values": [ true ]
 }
 
+[sub_resource type="Animation" id=7]
+resource_name = "Idle"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Gremlin:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 2, -2 ), Vector2( 0, 0 ), Vector2( -2, -2 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Gremlin:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 5.0, 0.0, -5.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
 [sub_resource type="Animation" id=5]
 length = 0.001
 tracks/0/type = "value"
@@ -184,6 +225,30 @@ tracks/4/keys = {
 "update": 0,
 "values": [ true ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("Gremlin:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Gremlin:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
 [node name="Sleep_Gremlin" type="Node2D"]
 light_mask = 0
@@ -195,7 +260,6 @@ __meta__ = {
 [node name="Gremlin" type="KinematicBody2D" parent="."]
 
 [node name="Sprite" type="Sprite" parent="Gremlin"]
-visible = false
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
 
@@ -212,12 +276,14 @@ shape = SubResource( 3 )
 
 [node name="Label" type="Label" parent="."]
 visible = false
-margin_left = -135.0
-margin_top = -90.0
-margin_right = 136.0
-margin_bottom = -59.0
-text = "I am going to attack you with sleep things!!!
-               bwahhahahahaha"
+margin_left = -65.0
+margin_top = -126.0
+margin_right = 60.0
+margin_bottom = -44.0
+text = "Be-Boop ... Be-Doop-Boop"
+align = 1
+valign = 2
+autowrap = true
 
 [node name="Target_Locations" type="Node2D" parent="."]
 
@@ -239,9 +305,10 @@ position = Vector2( 0, -122 )
 [node name="Attacks" type="Node" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "RESET"
+autoplay = "Idle"
 anims/Attacking = SubResource( 4 )
 anims/Dying = SubResource( 6 )
+anims/Idle = SubResource( 7 )
 anims/RESET = SubResource( 5 )
 
 [node name="RoomEnter" parent="." instance=ExtResource( 4 )]
