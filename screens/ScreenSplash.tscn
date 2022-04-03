@@ -35,25 +35,13 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="UI/UIBox/VBoxContainer" index="0"]
 margin_right = 840.0
-
-margin_bottom = 484.0
+margin_bottom = 404.0
 size_flags_vertical = 3
-texture = ExtResource( 3 )
-stretch_mode = 4
-
-[node name="Label" type="Label" parent="UI/UIBox/VBoxContainer" index="1"]
-margin_top = 500.0
-margin_right = 840.0
-margin_bottom = 560.0
-
-custom_fonts/font = SubResource( 2 )
-text = "A Tearcell Studio Jam Submission"
-align = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="UI/UIBox/VBoxContainer" index="1"]
-margin_top = 76.0
+margin_top = 420.0
 margin_right = 840.0
-margin_bottom = 140.0
+margin_bottom = 484.0
 
 [node name="TextureRect" type="TextureRect" parent="UI/UIBox/VBoxContainer/MarginContainer" index="0"]
 margin_right = 840.0
@@ -61,11 +49,18 @@ margin_bottom = 64.0
 texture = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="UI/UIBox/VBoxContainer/MarginContainer" index="1"]
-margin_left = 75.0
 margin_top = 9.0
 margin_right = 840.0
 margin_bottom = 55.0
 text = "Made with Godot"
+
+[node name="Label" type="Label" parent="UI/UIBox/VBoxContainer" index="2"]
+margin_top = 500.0
+margin_right = 840.0
+margin_bottom = 560.0
+custom_fonts/font = SubResource( 2 )
+text = "A Tearcell Studio Jam Submission"
+align = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="UI" index="1"]
 margin_top = 600.0
