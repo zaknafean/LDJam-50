@@ -33,7 +33,7 @@ func _on_SubmitScoreButton_pressed():
 		"name": str(initials)
 	}
 	
-	var newScore = Settings.trueScore
+	var newScore = Settings.score
 	get_tree().paused = false
 	var _score_id = yield(SilentWolf.Scores.persist_score(Settings.my_id, newScore, 'main', metadata), "sw_score_posted")
 	
@@ -45,12 +45,14 @@ func _on_SubmitScoreButton_pressed():
 		newMessage = str("[center][color=green]Score recieved successfully\nYour rank would be ",position,"![/color][/center]")
 	message.visible = true
 	message.bbcode_text = newMessage
-	Settings.lastScoreUpdate = 0
 	$MarginContainer/VBoxContainer/SubmitScoreButton.disabled = true
 	#scoreSubmitPopup.get_node("MarginContainer/VBoxContainer/InitialsLabel").editable = false
 	
 	#MarginContainer/VBoxContainer/HBoxContainer/SendScoresButton.disabled = true
 
+
+func _process(delta):
+	score.bbcode_text = str("[center][color=white]Immortalize your work...[/color][/center]\n[center][color=green]",int(Settings.score),"[/color][/center]")
 
 
 func is_blacklisted(name):
@@ -62,11 +64,63 @@ func is_blacklisted(name):
 		return true
 	if name == 'sex':
 		return true
+	if name == 'a55':
+		return true
+	if name == 'kkk':
+		return true
+	if name == 'azz':
+		return true
+	if name == 'tit':
+		return true
+	if name == 'bra':
+		return true
+	if name == 'cok':
+		return true
+	if name == 'kok':
+		return true
+	if name == 'c0k':
+		return true
+	if name == 'k0k':
+		return true    
+	if name == 'dik':
+		return true
+	if name == 'd1k':
+		return true
+	if name == 'fat':
+		return true
+	if name == 'f4g':
+		return true
+	if name == 'fuk':
+		return true
+	if name == 'gey':
+		return true
+	if name == 'g4y':
+		return true
+	if name == 'hiv':
+		return true
+	if name == 'jap':
+		return true
+	if name == 'jiz':
+		return true
+	if name == 'lez':
+		return true
+	if name == 's3x':
+		return true
+	if name == 'xxx':
+		return true
+	if name == 'vag':
+		return true
+	if name == 'wtf':
+		return true
+	if name == 'wop':
+		return true
 	return false
 
 
 func _on_SubmitScorePanel_about_to_show():
-	score.bbcode_text = str("[center][color=white]Score![/color][/center]\n[center][color=green]",int(Settings.trueScore),"[/color][/center]")
+
+	score.bbcode_text = str("[center][color=white]Immortalize your work...[/color][/center]\n[center][color=green]",int(Settings.score),"[/color][/center]")
+
 	get_tree().paused = true
 
 

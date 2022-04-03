@@ -115,3 +115,6 @@ func _on_BtnQuit_pressed():
 func _on_BtnSettings_pressed():
 	_on_BtnResume_pressed()
 	ScreenMngr.push_screen(C.SCREEN_OPTIONS_MENU)
+
+func _on_BtnScore_pressed():
+	$SubmitScorePanel.popup()

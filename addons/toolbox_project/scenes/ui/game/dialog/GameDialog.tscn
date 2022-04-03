@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://addons/toolbox_project/assets/theme.tres" type="Theme" id=1]
 [ext_resource path="res://addons/toolbox_project/scenes/ui/components/LabelBig.tscn" type="PackedScene" id=2]
 [ext_resource path="res://addons/toolbox_project/scenes/ui/game/dialog/GameDialog.gd" type="Script" id=3]
+[ext_resource path="res://screens/SubmitScorePanel.tscn" type="PackedScene" id=4]
 
 [node name="GameDialog" type="CanvasLayer"]
 pause_mode = 2
@@ -23,15 +24,12 @@ __meta__ = {
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Popup" type="PanelContainer" parent="CenterContainer"]
-margin_left = 312.0
-margin_top = 276.0
-margin_right = 712.0
-margin_bottom = 324.0
+margin_left = 440.0
+margin_top = 336.0
+margin_right = 840.0
+margin_bottom = 384.0
 rect_min_size = Vector2( 400, 0 )
 size_flags_vertical = 4
 theme = ExtResource( 1 )
@@ -40,10 +38,11 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/Popup"]
+visible = false
 margin_left = 24.0
 margin_top = 24.0
 margin_right = 376.0
-margin_bottom = 455.0
+margin_bottom = 395.0
 size_flags_vertical = 4
 __meta__ = {
 "_edit_use_anchors_": false
@@ -52,50 +51,58 @@ __meta__ = {
 [node name="LabelBig" parent="CenterContainer/Popup/VBoxContainer" instance=ExtResource( 2 )]
 anchor_right = 0.0
 margin_right = 352.0
-margin_bottom = 41.0
+margin_bottom = 70.0
 text = "GameDialog"
 
 [node name="BtnResume" type="Button" parent="CenterContainer/Popup/VBoxContainer"]
-margin_top = 57.0
+margin_top = 86.0
 margin_right = 352.0
-margin_bottom = 106.0
+margin_bottom = 113.0
 text = "Resume"
 
-[node name="BtnRetry" type="Button" parent="CenterContainer/Popup/VBoxContainer"]
-margin_top = 122.0
+[node name="BtnScore" type="Button" parent="CenterContainer/Popup/VBoxContainer"]
+margin_top = 129.0
 margin_right = 352.0
-margin_bottom = 171.0
+margin_bottom = 156.0
+text = "Submit Score"
+
+[node name="BtnRetry" type="Button" parent="CenterContainer/Popup/VBoxContainer"]
+margin_top = 172.0
+margin_right = 352.0
+margin_bottom = 199.0
 text = "Restart Level"
 
 [node name="BtnNext" type="Button" parent="CenterContainer/Popup/VBoxContainer"]
-margin_top = 187.0
+margin_top = 215.0
 margin_right = 352.0
-margin_bottom = 236.0
+margin_bottom = 242.0
 text = "Next Level"
 
 [node name="BtnSettings" type="Button" parent="CenterContainer/Popup/VBoxContainer"]
-margin_top = 252.0
+margin_top = 258.0
 margin_right = 352.0
-margin_bottom = 301.0
+margin_bottom = 285.0
 text = "Settings"
 
 [node name="BtnMenu" type="Button" parent="CenterContainer/Popup/VBoxContainer"]
-margin_top = 317.0
+margin_top = 301.0
 margin_right = 352.0
-margin_bottom = 366.0
+margin_bottom = 328.0
 text = "Back to menu"
 
 [node name="BtnQuit" type="Button" parent="CenterContainer/Popup/VBoxContainer"]
-margin_top = 382.0
+margin_top = 344.0
 margin_right = 352.0
-margin_bottom = 431.0
+margin_bottom = 371.0
 text = "Quit game"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-bus = "Music"
+
+[node name="SubmitScorePanel" parent="." instance=ExtResource( 4 )]
 
 [connection signal="pressed" from="InvisibleWall" to="." method="_on_InvisibleWall_pressed"]
 [connection signal="pressed" from="CenterContainer/Popup/VBoxContainer/BtnResume" to="." method="_on_BtnResume_pressed"]
+[connection signal="pressed" from="CenterContainer/Popup/VBoxContainer/BtnScore" to="." method="_on_BtnScore_pressed"]
 [connection signal="pressed" from="CenterContainer/Popup/VBoxContainer/BtnRetry" to="." method="_on_BtnRetry_pressed"]
 [connection signal="pressed" from="CenterContainer/Popup/VBoxContainer/BtnNext" to="." method="_on_BtnNext_pressed"]
 [connection signal="pressed" from="CenterContainer/Popup/VBoxContainer/BtnSettings" to="." method="_on_BtnSettings_pressed"]

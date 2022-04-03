@@ -59,5 +59,5 @@ func _process(delta):
 	score += delta
 	if roomsExplored >= 3 and roomsExplored < 10:
 		difficulty = 2
-	elif roomsExplored >= 10:
+	elif roomsExplored >= 8:
 		difficulty = 3

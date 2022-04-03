@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tilesets/EnvironmentTileset.tres" type="TileSet" id=2]
@@ -14,8 +14,12 @@
 [ext_resource path="res://levels/interactables/clickable/FloorLampClickable.tscn" type="PackedScene" id=12]
 [ext_resource path="res://levels/interactables/clickable/CurtainsClickable.tscn" type="PackedScene" id=13]
 [ext_resource path="res://levels/interactables/clickable/LightSwitchClickable.tscn" type="PackedScene" id=14]
-[ext_resource path="res://levels/interactables/clickable/CoffeeTableClickable.tscn" type="PackedScene" id=15]
-[ext_resource path="res://levels/interactables/clickable/CaffeinePillsClickable.tscn" type="PackedScene" id=16]
+
+[ext_resource path="res://levels/noninteractables/Vent.tscn" type="PackedScene" id=15]
+[ext_resource path="res://levels/noninteractables/FishPoster.tscn" type="PackedScene" id=16]
+[ext_resource path="res://levels/noninteractables/SideWallPhoto.tscn" type="PackedScene" id=17]
+[ext_resource path="res://levels/noninteractables/Rug.tscn" type="PackedScene" id=18]
+[ext_resource path="res://levels/noninteractables/SideWallBookshelf.tscn" type="PackedScene" id=19]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -232,13 +236,34 @@ position = Vector2( 419, 169 )
 position = Vector2( 334, 296 )
 
 [node name="Lamp2" parent="Difficulty2" index="1" instance=ExtResource( 10 )]
-position = Vector2( 745, 87 )
+position = Vector2( 765, 90 )
 
 [node name="ImAStove" parent="Difficulty3" index="0" instance=ExtResource( 11 )]
 position = Vector2( 278, 148 )
 
 [node name="Lamp" parent="Difficulty3" index="1" instance=ExtResource( 10 )]
 position = Vector2( 1103, 303 )
+
+[node name="PeekingRug" parent="." index="8" instance=ExtResource( 18 )]
+position = Vector2( 530, 94 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="FishPoster" parent="." index="9" instance=ExtResource( 16 )]
+position = Vector2( 707, -28 )
+scale = Vector2( 1.25, 1.25 )
+z_index = 1
+
+[node name="SideWallPhoto" parent="." index="10" instance=ExtResource( 17 )]
+position = Vector2( 1349, 74 )
+
+[node name="Vent" parent="." index="11" instance=ExtResource( 15 )]
+position = Vector2( 1170, -16 )
+z_index = 1
+
+[node name="SideWallBookshelf" parent="." index="12" instance=ExtResource( 19 )]
+position = Vector2( 1225, 326 )
+scale = Vector2( 1.4, 1.4 )
+z_index = 1
 
 [editable path="Interactables/DoorNorthClickable"]
 [editable path="Interactables/DoorEastClickable"]
