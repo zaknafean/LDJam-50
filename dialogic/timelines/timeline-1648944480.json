@@ -1,0 +1,97 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1648902659.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You stare at yourself in the mirror."
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0.25,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hey there, you attractive awake person!\nDid I ever tell you about what happened at the store the other day?\nOh man, it was so funny."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "There is an uncomfortable pause as your reflection fails to talk back to you."
+		},
+		{
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So the cashier asked me if I brought my own bag..."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You realize you are not listening to yourself talk."
+		},
+		{
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "...and that's when I decided that I really wanted to contribute to helping save..."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Are you this boring all of the time?\nYour reflection in the mirror looks disappointed in you."
+		},
+		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 0.75,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1648944480.json",
+		"name": "Talking"
+	}
+}

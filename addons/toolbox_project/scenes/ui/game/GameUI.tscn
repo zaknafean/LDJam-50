@@ -13,6 +13,7 @@ script = ExtResource( 3 )
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 1
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
@@ -24,9 +25,9 @@ __meta__ = {
 [node name="TopLeft" type="Control" parent="MarginContainer"]
 margin_left = 10.0
 margin_top = 10.0
-margin_right = 1014.0
-margin_bottom = 590.0
-mouse_filter = 2
+margin_right = 1270.0
+margin_bottom = 710.0
+mouse_filter = 1
 theme = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -37,9 +38,6 @@ anchor_right = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 50
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="IconIntValue" parent="MarginContainer/TopLeft/HBoxContainer" instance=ExtResource( 1 )]
 margin_top = 2.0
@@ -53,6 +51,7 @@ rect_min_size = Vector2( 20, 0 )
 [node name="AnimatedIcon" parent="MarginContainer/TopLeft/HBoxContainer/IconIntValue/IconHolder" index="0" instance=ExtResource( 2 )]
 position = Vector2( 8, 0 )
 scale = Vector2( 3, 3 )
+frame = 0
 
 [node name="Label" parent="MarginContainer/TopLeft/HBoxContainer/IconIntValue" index="1"]
 margin_left = 26.0
@@ -69,8 +68,9 @@ size_flags_horizontal = 1
 [node name="TopRight" type="Control" parent="MarginContainer"]
 margin_left = 10.0
 margin_top = 10.0
-margin_right = 1014.0
-margin_bottom = 590.0
+margin_right = 1270.0
+margin_bottom = 710.0
+mouse_filter = 1
 theme = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false

@@ -2,6 +2,14 @@
 	"glossary": [
 		{
 			"extra": "",
+			"id": "1648912643-219",
+			"name": "blender",
+			"text": "Both loud AND distracting.",
+			"title": "blender",
+			"type": 1
+		},
+		{
+			"extra": "",
 			"id": "1648903175-460",
 			"name": "coffee",
 			"text": "The last stand, liquid courage... ",
@@ -18,34 +26,10 @@
 		},
 		{
 			"extra": "",
-			"id": "1648912643-219",
-			"name": "blender",
-			"text": "Both loud AND distracting.",
-			"title": "blender",
-			"type": 1
-		},
-		{
-			"extra": "",
 			"id": "1648912713-430",
 			"name": "bronze key",
 			"text": "I don't have a lock like this in my apartment...",
 			"title": "bronze key",
-			"type": 1
-		},
-		{
-			"extra": "",
-			"id": "1648912799-679",
-			"name": "television",
-			"text": "All the entertainment and none of the jam...",
-			"title": "television",
-			"type": 1
-		},
-		{
-			"extra": "",
-			"id": "1648912870-228",
-			"name": "bed",
-			"text": "sleepsleepsleepsleepsleepsleepsleepsleepsleepsleepsleepsleepsleepsleepsleepsleepsleepsle",
-			"title": "bed",
 			"type": 1
 		},
 		{
@@ -63,18 +47,34 @@
 			"text": "This room doesn't belong here. I don't know it. None of this stuff is mine and I only recognize some of it.",
 			"title": "I don't know this room",
 			"type": 1
+		},
+		{
+			"extra": "",
+			"id": "1648912799-679",
+			"name": "television",
+			"text": "All the entertainment and none of the jam...",
+			"title": "television",
+			"type": 1
+		},
+		{
+			"extra": "",
+			"id": "1648912870-228",
+			"name": "bed",
+			"text": "sleepsleepsleepsleepsleepsleepsleepsleepsleepsleepsleepsleepsleepsleepsleepsleepsleepsle",
+			"title": "bed",
+			"type": 1
 		}
 	],
 	"variables": [
 		{
-			"id": "1648903270-144",
-			"name": "bronze key",
+			"id": "1648912916-347",
+			"name": "tongs",
 			"type": 0,
 			"value": "false"
 		},
 		{
-			"id": "1648912916-347",
-			"name": "tongs",
+			"id": "1648903270-144",
+			"name": "bronze key",
 			"type": 0,
 			"value": "false"
 		}
