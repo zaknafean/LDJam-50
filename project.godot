@@ -147,7 +147,7 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "SleepEnemies",
 "language": "GDScript",
-"path": "res://Enemies/Sleep_Gremlin.gd"
+"path": "res://enemies/Sleep_Gremlin.gd"
 }, {
 "base": "Interactable",
 "class": "SpriteClickable",
@@ -185,8 +185,8 @@ _global_script_classes=[ {
 "path": "res://addons/godot_editor_discord_presence/Discord RPC/ipc/pipe/WindowsPipe.gd"
 } ]
 _global_script_class_icons={
-"BackgroundClickable": "res://assets/icons/button-finger.png",
-"BackgroundCollidable": "res://assets/icons/foot-plaster.png",
+"BackgroundClickable": "",
+"BackgroundCollidable": "",
 "BaseRoom": "res://assets/icons/theater-curtains.png",
 "DTS": "",
 "Dialogic": "",
@@ -213,7 +213,7 @@ _global_script_class_icons={
 "RichPresenceModule": "",
 "Screen": "",
 "SleepEnemies": "",
-"SpriteClickable": "res://assets/icons/person.png",
+"SpriteClickable": "",
 "StreamPeerUnix": "",
 "URLUtil": "",
 "UUID": "",
