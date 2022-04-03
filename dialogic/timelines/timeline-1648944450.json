@@ -83,6 +83,10 @@
 			"z_index": 0
 		},
 		{
+			"emit_signal": "TVOn",
+			"event_id": "dialogic_040"
+		},
+		{
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -91,7 +95,7 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": false,
-			"wait_seconds": 3
+			"wait_seconds": 2
 		},
 		{
 			"character": "character-1648902615.json",

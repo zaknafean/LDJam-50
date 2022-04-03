@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/TVOFF.png" type="Texture" id=3]
+[ext_resource path="res://assets/TV2.png" type="Texture" id=3]
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=4]
+[ext_resource path="res://levels/interactables/clickable/TelevisionClickable.gd" type="Script" id=5]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
@@ -11,24 +12,70 @@ shader = ExtResource( 4 )
 shader_param/brightness = 1.0
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 46, 11 )
+extents = Vector2( 82, 19 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "TVOn"
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4, 4.2, 4.4, 4.6, 4.8, 5, 5.2, 5.4, 5.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 21, 20 ]
+}
 
 [node name="TelevisionClickable" instance=ExtResource( 2 )]
 collision_layer = 1
 collision_mask = 2
+script = ExtResource( 5 )
 canHighlight = true
 canClick = true
-isOneShot = true
 
 [node name="Sprite" parent="." index="0"]
 material = SubResource( 1 )
+position = Vector2( 40, -40 )
+scale = Vector2( 1.83333, 1.83333 )
 texture = ExtResource( 3 )
+hframes = 27
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( 1, 21 )
+position = Vector2( 41, -5 )
 shape = SubResource( 2 )
+
+[node name="InteractionPosition" parent="." index="2"]
+position = Vector2( 56, 44 )
+
+[node name="EventQueue" parent="." index="3"]
+position = Vector2( 76, 53 )
 
 [node name="DialogEvent" parent="EventQueue" index="0" instance=ExtResource( 1 )]
 position = Vector2( 9, 50 )
 difficulty = -1
 DIALOG = "Television"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
+root_node = NodePath("../Sprite")
+anims/RESET = SubResource( 3 )
+anims/TVOn = SubResource( 4 )

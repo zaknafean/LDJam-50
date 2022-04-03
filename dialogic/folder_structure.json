@@ -114,14 +114,15 @@
 						"timeline-1648957497.json",
 						"timeline-1648957760.json",
 						"timeline-1648957775.json",
-						"timeline-1648957806.json"
+						"timeline-1648957806.json",
+						"timeline-1649014906.json"
 					],
 					"folders": {
 
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"Stimulants": {
@@ -138,7 +139,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"The Cat": {
