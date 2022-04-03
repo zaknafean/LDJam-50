@@ -32,6 +32,7 @@ func _ready():
 		_err = event.connect('reroute_player', self, '_on_reroute_player')
 	
 	isHighlightAll = false
+
 	tilemap.modulate = Color(.5, .5, .5, 1)
 	backmap.modulate = Color(.5, .5, .5, 1)
 	alphamap.modulate = Color(.5, .5, .5, .5)
@@ -49,6 +50,7 @@ func _set_spawns(directionFrom: String, _delay=2):
 		player.global_position = $Interactables/DoorSouthClickable.interactionPosition
 	if directionFrom == 's':
 		player.global_position = $Interactables/DoorNorthClickable.interactionPosition
+
 
 
 func _on_Area2D_mouse_entered(clickable):

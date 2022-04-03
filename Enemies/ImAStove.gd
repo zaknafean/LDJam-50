@@ -1,6 +1,7 @@
 extends SleepEnemies
 
 onready var tween = $Tween
+var can_attack :bool = true
 
 func _ready():
 	count = 8
@@ -12,7 +13,7 @@ func spawn_attacks():
 	$Attacks.add_child(attack)
 
 func _on_Hit_Box_body_entered(body):
-	if body is KinematicBody2D and Settings.curGameState != Settings.GAME_STATES.BATTLE:
+	if (body is KinematicBody2D) and (Settings.curGameState != Settings.GAME_STATES.BATTLE) and (can_attack != false):
 		Settings.curGameState = Settings.GAME_STATES.BATTLE
 		$Label.visible = true
 		attack_position()
@@ -31,3 +32,9 @@ func terminator():
 func byeeeeee():
 	$Label.visible = false
 	$AnimationPlayer.stop()
+	can_attack = false
+	$Timer.start()
+
+func _on_Timer_timeout():
+	$AnimationPlayer.play("Idle")
+	can_attack = true
