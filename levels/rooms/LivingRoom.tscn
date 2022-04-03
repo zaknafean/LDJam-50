@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/doorEastBlueClosed.png" type="Texture" id=6]
 [ext_resource path="res://assets/doorNorthBlueClosed.png" type="Texture" id=7]
+[ext_resource path="res://Enemies/Sleep_Gremlin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemies/Lamp.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Enemies/ImAStove.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -151,6 +154,21 @@ position = Vector2( 522, 127 )
 
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 670, 337 )
+
+[node name="Lamp" parent="Difficulty2" index="0" instance=ExtResource( 9 )]
+position = Vector2( 348, 66 )
+
+[node name="Sleep_Gremlin" parent="Difficulty2" index="1" instance=ExtResource( 8 )]
+position = Vector2( 880, 204 )
+
+[node name="ImAStove" parent="Difficulty3" index="0" instance=ExtResource( 10 )]
+position = Vector2( 271, 266 )
+
+[node name="ImAStove2" parent="Difficulty3" index="1" instance=ExtResource( 10 )]
+position = Vector2( 413, 53 )
+
+[node name="Lamp" parent="Difficulty3" index="2" instance=ExtResource( 9 )]
+position = Vector2( 704, 402 )
 
 [editable path="Interactables/DoorNorthClickable"]
 [editable path="Interactables/DoorEastClickable"]

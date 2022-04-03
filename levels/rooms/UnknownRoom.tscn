@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tilesets/EnvironmentTileset.tres" type="TileSet" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=6]
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=8]
+[ext_resource path="res://Enemies/Sleep_Gremlin.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Enemies/Lamp.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Enemies/ImAStove.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
@@ -184,6 +187,24 @@ DIALOG = "LivingRoomNorth"
 
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 1922, 465 )
+
+[node name="Lamp" parent="Difficulty2" index="0" instance=ExtResource( 10 )]
+position = Vector2( 676, -51 )
+
+[node name="Sleep_Gremlin" parent="Difficulty2" index="1" instance=ExtResource( 9 )]
+position = Vector2( 668, 331 )
+
+[node name="Sleep_Gremlin2" parent="Difficulty2" index="2" instance=ExtResource( 9 )]
+position = Vector2( 1449, 472 )
+
+[node name="ImAStove" parent="Difficulty3" index="0" instance=ExtResource( 11 )]
+position = Vector2( 1550, 71 )
+
+[node name="ImAStove2" parent="Difficulty3" index="1" instance=ExtResource( 11 )]
+position = Vector2( 1100, 388 )
+
+[node name="ImAStove3" parent="Difficulty3" index="2" instance=ExtResource( 11 )]
+position = Vector2( 1603, 317 )
 
 [editable path="Interactables/SpriteClickable"]
 [editable path="Interactables/DoorNorthClickable"]
