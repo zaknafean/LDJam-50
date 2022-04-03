@@ -25,7 +25,6 @@ func _process(_delta):
 	else:
 		return
 
-
 func _on_Hit_Box_body_entered(body):
 	if body is KinematicBody2D and Settings.curGameState != Settings.GAME_STATES.BATTLE:
 		body.path = []
@@ -43,6 +42,7 @@ func attack_position():
 		pick = randi() % count + 1
 		var cur_target = get_node('Target_Locations/Position2D'+str(pick))
 		targets.append(cur_target)
+	$Label.text = 'I am going to attack you with sleep things!!! BWAHAHAHA SLEEP THINGS!!'
 	$AnimationPlayer.play("Attacking")
 
 func spawn_attacks():
@@ -62,11 +62,11 @@ func can_free_player():
 		$AnimationPlayer.play("Dying")
 		terminator()
 
-
 func terminator():
 	$Label.text = "I'll be back Bwahahaha!!"
 	$Label.visible = true
 
 func byeeeeee():
+	Settings.score += 25 * Settings.difficulty
 	queue_free()
 
