@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://assets/StoveStandin.png" type="Texture" id=1]
+[ext_resource path="res://enemies/ImAStove.gd" type="Script" id=1]
 [ext_resource path="res://utilities/attachable_tools/Hit_Box.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Enemies/ImAStove.gd" type="Script" id=3]
+[ext_resource path="res://assets/StoveStandin.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 23, 18.75 )
@@ -182,7 +182,7 @@ tracks/1/keys = {
 }
 
 [node name="ImAStove" type="Node2D"]
-script = ExtResource( 3 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -193,7 +193,7 @@ collision_mask = 2
 
 [node name="Sprite" type="Sprite" parent="Stove"]
 scale = Vector2( 0.035, 0.035 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stove"]
 shape = SubResource( 1 )

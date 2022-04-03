@@ -8,8 +8,6 @@ var rotation_speed = PI
 var follow = Vector2.ZERO
 
 func _ready():
-	print(self.position)
-#	$Attacks.position = self.position
 	$Label.visible = false
 	$AnimationPlayer.play("Moving")
 	count = 8
@@ -21,6 +19,7 @@ func _ready():
 func _on_Hit_Box_body_entered(body):
 	if (body is KinematicBody2D) and (Settings.curGameState != Settings.GAME_STATES.BATTLE) and (can_attack != false):
 		Settings.curGameState = Settings.GAME_STATES.BATTLE
+		print(Settings.curGameState, 'lamp state')
 		$Label.visible = true
 		attack_position()
 
