@@ -32,7 +32,7 @@ func setup():
 func runEvent():
 	if antiSpam:
 		return
-	
+	myEvents = $EventQueue.get_children()
 	for event in myEvents:
 		if event.difficulty == Settings.difficulty or event.difficulty == -1:
 			if event.event_type == Settings.EVENTS.DIALOG:
@@ -59,7 +59,10 @@ func after_dialog(_timeline_name):
 
 func signal_router(inputString):
 	var tokenizedArray = inputString.split(',')
-	
+	if tokenizedArray[0] == 'TVOn':
+		$AnimationPlayer.play('TVOn')
+		$EventQueue.get_child(0).queue_free()
+		 
 	if tokenizedArray[0] == 'setflag':
 		if get_parent().get_parent().has_method('_on_Area2D_mouse_entered'):
 			Settings.locationData.curMeatScene = get_parent().get_parent().filename
