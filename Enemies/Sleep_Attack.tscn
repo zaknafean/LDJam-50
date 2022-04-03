@@ -8,13 +8,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 148, 133 )
 
-<<<<<<< HEAD
+
 [node name="Sleep_Attack" type="Sprite" groups=["attack"]]
 scale = Vector2( 0.2, 0.2 )
-=======
-[node name="Sleep_Attack" type="Node2D" groups=["attack"]]
-scale = Vector2( 0.25, 0.25 )
->>>>>>> main
+
 z_index = 5
 script = ExtResource( 5 )
 
@@ -24,11 +21,9 @@ texture = ExtResource( 2 )
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-<<<<<<< HEAD
-position = Vector2( -4.76837e-06, -3.57628e-06 )
+position = Vector2( -4.768, -3.576 )
 scale = Vector2( 2.2, 2.2 )
-=======
->>>>>>> main
+
 shape = SubResource( 1 )
 
 [node name="AttackSuccess" parent="." instance=ExtResource( 1 )]
