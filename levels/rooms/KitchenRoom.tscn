@@ -51,7 +51,6 @@ tile_data = PoolIntArray( -262135, 35, 0, -262134, 45, 0, -262133, 45, 0, -26213
 tile_data = PoolIntArray( -65521, 20, 0, 14, 67, 0, 15, 20, 0, 16, 20, 0, 65551, 67, 0, 65552, 20, 0, 65553, 20, 0, 131088, 67, 0, 131089, 20, 0, 131090, 20, 0, 196625, 67, 0, 196626, 20, 0, 196627, 20, 0, 262162, 67, 0, 262163, 20, 0, 262164, 20, 0, 327699, 67, 0, 327700, 20, 0, 327701, 64, 0, 393236, 67, 0, 458773, 49, 0 )
 
 [node name="AlphaLayerMap" parent="Navigation2D" index="2"]
-modulate = Color( 1, 1, 1, 0.45098 )
 tile_data = PoolIntArray( -65534, 47, 0, -65533, 46, 0, 2, 20, 0, 3, 47, 0, 4, 45, 0, 5, 45, 0, 6, 46, 0, 65538, 20, 0, 65539, 20, 0, 65540, 27, 0, 65541, 33, 0, 65542, 54, 0, 65543, 58, 0, 131074, 67, 0, 131075, 20, 0, 131076, 28, 0, 131077, 32, 0, 131078, 55, 0, 131079, 52, 0, 131080, 58, 0, 196611, 49, 0, 196612, 29, 0, 196613, 31, 0, 196614, 56, 0, 196615, 20, 0, 196616, 52, 0, 196617, 58, 0, 262150, 67, 0, 262151, 20, 0, 262152, 20, 0, 262153, 52, 0, 262154, 26, 0, 262155, 26, 0, 262156, 26, 0, 262157, 26, 0, 262158, 26, 0, 262159, 26, 0, 262160, 26, 0, 262161, 26, 0, 262162, 26, 0, 262163, 26, 0, 262164, 26, 0, 262165, 26, 0, 327687, 67, 0, 327688, 20, 0, 327689, 51, 0, 327690, 27, 0, 327691, 34, 0, 327692, 34, 0, 327693, 34, 0, 327694, 34, 0, 327695, 34, 0, 327696, 34, 0, 327697, 34, 0, 327698, 34, 0, 327699, 34, 0, 327700, 34, 0, 327701, 33, 0, 393224, 67, 0, 393225, 50, 0, 393226, 28, 0, 393227, 19, 0, 393228, 19, 0, 393229, 19, 0, 393230, 19, 0, 393231, 19, 0, 393232, 19, 0, 393233, 19, 0, 393234, 19, 0, 393235, 19, 0, 393236, 19, 0, 393237, 32, 0, 458761, 49, 0, 458762, 29, 0, 458763, 30, 0, 458764, 30, 0, 458765, 30, 0, 458766, 30, 0, 458767, 30, 0, 458768, 30, 0, 458769, 30, 0, 458770, 30, 0, 458771, 30, 0, 458772, 30, 0, 458773, 31, 0 )
 
 [node name="Player" parent="." index="1"]
@@ -81,6 +80,10 @@ DIALOG = "Unopenable"
 difficulty = 2
 DIALOG = "UnlikedRoomNorth"
 
+[node name="DialogEvent3" parent="Interactables/DoorNorthClickable/EventQueue" index="2" instance=ExtResource( 7 )]
+difficulty = 3
+DIALOG = "RandomRoom"
+
 [node name="DoorEastClickable" parent="Interactables" index="1" instance=ExtResource( 2 )]
 position = Vector2( 640, 24 )
 canHighlight = true
@@ -108,6 +111,10 @@ DIALOG = "LivingRoomEast"
 [node name="DialogEvent2" parent="Interactables/DoorEastClickable/EventQueue" index="1" instance=ExtResource( 7 )]
 difficulty = 2
 DIALOG = "LivingRoomEast"
+
+[node name="DialogEvent3" parent="Interactables/DoorEastClickable/EventQueue" index="2" instance=ExtResource( 7 )]
+difficulty = 3
+DIALOG = "RandomRoom"
 
 [node name="DoorSouthClickable" parent="Interactables" index="2" instance=ExtResource( 2 )]
 position = Vector2( 567, 122 )
@@ -139,6 +146,10 @@ DIALOG = "HallwayRoomEast"
 difficulty = 2
 DIALOG = "Unopenable"
 
+[node name="DialogEvent3" parent="Interactables/DoorSouthClickable/EventQueue" index="2" instance=ExtResource( 7 )]
+difficulty = 3
+DIALOG = "RandomRoom"
+
 [node name="DoorWestClickable" parent="Interactables" index="3" instance=ExtResource( 2 )]
 position = Vector2( 499, 317 )
 z_index = 1
@@ -165,6 +176,10 @@ DIALOG = "Unopenable"
 [node name="DialogEvent2" parent="Interactables/DoorWestClickable/EventQueue" index="1" instance=ExtResource( 7 )]
 difficulty = 2
 DIALOG = "UnknownRoomWest"
+
+[node name="DialogEvent3" parent="Interactables/DoorWestClickable/EventQueue" index="2" instance=ExtResource( 7 )]
+difficulty = 3
+DIALOG = "RandomRoom"
 
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 723, 402 )
