@@ -14,7 +14,9 @@ func _ready():
 func _on_ShowScoresButton_pressed():
 	var leaderboard = "main"
 	
+
 	statusLabel.bbcode_text = str("[center][color=yellow]Retrieving Scores from work-central.net[/color][/center]")
+
 	var scores = []
 	if SilentWolf.Scores.leaderboards:
 		if leaderboard == 'main' and SilentWolf.Scores.leaderboards.has('main'):
@@ -36,7 +38,9 @@ func _on_ShowScoresButton_pressed():
 	var counter = 1
 	
 	for entry in scores:
+
 		var curInitials = 'agy'
+
 		var curScore = 0
 		
 		if entry.has('metadata'):
@@ -52,7 +56,6 @@ func _on_ShowScoresButton_pressed():
 			scoreList.append_bbcode(str("[color=yellow] <== Your best score[/color]"))
 		scoreList.append_bbcode('\n')
 		counter = counter + 1
-	
 
 
 func _on_BtnBack_pressed():

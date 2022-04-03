@@ -1,14 +1,17 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/doorEastBlueClosed.png" type="Texture" id=3]
+[ext_resource path="res://levels/interactables/clickable/Oven(Non-Monstrous)Clickable.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/doorNorthBlueClosed.png" type="Texture" id=5]
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=6]
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://enemies/Sleep_Gremlin.tscn" type="PackedScene" id=8]
 [ext_resource path="res://enemies/Lamp.tscn" type="PackedScene" id=9]
 [ext_resource path="res://enemies/ImAStove.tscn" type="PackedScene" id=10]
+[ext_resource path="res://levels/interactables/clickable/CoffeeClickable.tscn" type="PackedScene" id=11]
+[ext_resource path="res://levels/interactables/clickable/LightSwitchClickable.tscn" type="PackedScene" id=12]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -181,11 +184,20 @@ DIALOG = "UnknownRoomWest"
 difficulty = 3
 DIALOG = "RandomRoom"
 
+[node name="Oven(Non-Monstrous)Clickable" parent="Interactables" index="4" instance=ExtResource( 4 )]
+position = Vector2( 828, -12 )
+
+[node name="CoffeeClickable" parent="Interactables" index="5" instance=ExtResource( 11 )]
+position = Vector2( 257, 147 )
+
+[node name="LightSwitchClickable" parent="Interactables" index="6" instance=ExtResource( 12 )]
+position = Vector2( 733, 84 )
+
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 723, 402 )
 
 [node name="ImAStove" parent="Difficulty2" index="0" instance=ExtResource( 10 )]
-position = Vector2( 826, -6 )
+position = Vector2( 849, 36 )
 
 [node name="Lamp" parent="Difficulty2" index="1" instance=ExtResource( 9 )]
 position = Vector2( 727, 328 )
@@ -197,7 +209,7 @@ position = Vector2( 625, 158 )
 position = Vector2( 998, 331 )
 
 [node name="ImAStove2" parent="Difficulty3" index="2" instance=ExtResource( 10 )]
-position = Vector2( 973, 117 )
+position = Vector2( 402, 157 )
 
 [node name="Lamp" parent="Difficulty3" index="3" instance=ExtResource( 9 )]
 position = Vector2( 1279, 358 )

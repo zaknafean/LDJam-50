@@ -11,26 +11,31 @@ shader = ExtResource( 4 )
 shader_param/brightness = 1.0
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 225.5, 194.5 )
+extents = Vector2( 78.25, 33.75 )
 
 [node name="CurtainsClickable" instance=ExtResource( 2 )]
 collision_layer = 1
 collision_mask = 2
 canHighlight = true
 canClick = true
-isOneShot = true
 
 [node name="Sprite" parent="." index="0"]
 material = SubResource( 1 )
-position = Vector2( 6.00024, 6.10352e-05 )
-scale = Vector2( 0.2185, 0.2185 )
+position = Vector2( 3.62497, 13.75 )
+scale = Vector2( 0.08575, 0.08575 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( 2.5, -15.5 )
+position = Vector2( -0.5, -34.25 )
 shape = SubResource( 2 )
 
+[node name="InteractionPosition" parent="." index="2"]
+position = Vector2( 0, 118 )
+
+[node name="EventQueue" parent="." index="3"]
+position = Vector2( 50, 58 )
+
 [node name="DialogEvent" parent="EventQueue" index="0" instance=ExtResource( 1 )]
-position = Vector2( 0, 233 )
+position = Vector2( -110, 11 )
 difficulty = -1
 DIALOG = "Curtains"

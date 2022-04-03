@@ -50,8 +50,10 @@ func _on_SubmitScoreButton_pressed():
 	
 	#MarginContainer/VBoxContainer/HBoxContainer/SendScoresButton.disabled = true
 
+
 func _process(delta):
 	score.bbcode_text = str("[center][color=white]Immortalize your work...[/color][/center]\n[center][color=green]",int(Settings.score),"[/color][/center]")
+
 
 func is_blacklisted(name):
 	if name == 'ass':
@@ -116,7 +118,9 @@ func is_blacklisted(name):
 
 
 func _on_SubmitScorePanel_about_to_show():
+
 	score.bbcode_text = str("[center][color=white]Immortalize your work...[/color][/center]\n[center][color=green]",int(Settings.score),"[/color][/center]")
+
 	get_tree().paused = true
 
 

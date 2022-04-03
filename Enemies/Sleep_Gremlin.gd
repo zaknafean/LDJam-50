@@ -12,6 +12,8 @@ var attack_instance
 var targets = []
 var spot = 0
 var look_for_kills :bool 
+var kill_items = 0
+var kill_count = 0
 
 func _ready():
 	look_for_kills = false
@@ -20,7 +22,7 @@ func _ready():
 	$Label.visible = false
 
 func _process(_delta):
-	if look_for_kills == true:
+	if (look_for_kills == true) and (kill_items == kill_count):
 		can_free_player()
 	else:
 		return
@@ -50,10 +52,22 @@ func spawn_attacks():
 	var attack = attack_instance.instance()
 	attack.position = targets[spot].global_position
 	$Attacks.add_child(attack)
+	attack.connect('attack_arrived', self, '_on_attack_arrived')
+	attack.connect('attack_destroyed', self, '_on_attack_destroyed')
 	spot = spot + 1
 
-func insert_dead_baby_joke():
+func _on_attack_arrived():
+	print('arrived')
 	look_for_kills = true
+	kill_items = kill_items + 1
+
+func _on_attack_destroyed():
+	print('killed')
+	kill_count = kill_count + 1
+
+func insert_dead_baby_joke():
+	pass
+	#look_for_kills = true
 
 func can_free_player():
 	var pool = $Attacks.get_children()
