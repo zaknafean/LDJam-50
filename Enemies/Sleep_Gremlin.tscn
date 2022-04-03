@@ -1,8 +1,9 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/Im_A_Monster.png" type="Texture" id=1]
-[ext_resource path="res://Utilities/Attachable_Tools/Hit_Box.tscn" type="PackedScene" id=2]
+[ext_resource path="res://utilities/attachable_tools/Hit_Box.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemies/Sleep_Gremlin.gd" type="Script" id=4]
+
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 21.0

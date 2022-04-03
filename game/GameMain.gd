@@ -37,7 +37,7 @@ func start_level():
 	curRoom._set_spawns('s')
 
 
-func change_room(newRoom: String, directionFrom: String, delay=2):
+func change_room(newRoom: String, directionFrom: String, _delay=2):
 	var doorLocation
 	if directionFrom == 'w':
 		doorLocation = curRoom.get_node("Interactables/DoorWestClickable").interactionPosition
