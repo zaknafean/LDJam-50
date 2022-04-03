@@ -2,7 +2,7 @@
 	"events": [
 		{
 			"event_id": "dialogic_024",
-			"set_theme": "default-theme.cfg"
+			"set_theme": "theme-1648902659.cfg"
 		},
 		{
 			"animation": "1-fade_in.gd",
@@ -30,10 +30,6 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "This food looks delicious."
-		},
-		{
-			"event_id": "dialogic_024",
-			"set_theme": "theme-1648902659.cfg"
 		},
 		{
 			"audio": "play",
