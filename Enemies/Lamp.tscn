@@ -22,7 +22,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 1, 1.6, 2, 2.5, 3, 3.4 ),
+"times": PoolRealArray( 1, 1.4, 1.8, 2.2, 2.6, 3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "values": [ {
 "args": [  ],
@@ -99,12 +99,9 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 3.7 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "can_you_dig_it"
-} ]
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Label:visible")
@@ -129,9 +126,12 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 1.5 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "values": [ {
+"args": [  ],
+"method": "terminator"
+}, {
 "args": [  ],
 "method": "byeeeeee"
 } ]
@@ -287,6 +287,7 @@ shape = SubResource( 7 )
 position = Vector2( 1, -57 )
 rotation = 4.71239
 scale = Vector2( 1, 2 )
+enabled = false
 texture = ExtResource( 3 )
 energy = 2.0
 shadow_enabled = true

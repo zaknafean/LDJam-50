@@ -48,11 +48,12 @@ func spawn_attacks():
 	var attack = attack_instance.instance()
 	attack.position = targets[spot].position
 	$Target_Locations.add_child(attack)
+	attack.connect('attack_arrived', self, '_on_attack_arrived')
+	attack.connect('attack_destroyed', self, '_on_attack_destroyed')
 	spot = spot + 1
-	print('spawing')
+
 
 func can_you_dig_it():
-	insert_dead_baby_joke()
 	$AnimationPlayer.play("Moving")
 
 func terminator():

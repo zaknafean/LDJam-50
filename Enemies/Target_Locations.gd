@@ -1,6 +1,6 @@
 extends Node2D
 
-var rotation_speed = 1.5
+var rotation_speed = 2
 
 
 func _process(delta):
