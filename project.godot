@@ -218,6 +218,7 @@ _global_script_class_icons={
 "RichPresenceButton": "",
 "RichPresenceModule": "",
 "Screen": "",
+"SleepEnemies": "",
 "SpriteClickable": "res://assets/icons/person.png",
 "StreamPeerUnix": "",
 "URLUtil": "",

@@ -18,7 +18,7 @@ _data = [ Vector2( 0, 0.323864 ), 0.0, 0.0, 0, 0, Vector2( 0.269608, 1 ), 0.0, 0
 offsets = PoolRealArray( 0, 0.127072, 0.248619, 0.541436, 0.646409, 0.729282, 0.906077, 1 )
 colors = PoolColorArray( 0.815686, 0.854902, 0.568627, 1, 0.458824, 0.654902, 0.262745, 1, 0.27451, 0.509804, 0.196078, 1, 0.25098, 0.152941, 0.317647, 1, 0.25098, 0.152941, 0.317647, 1, 0.635294, 0.243137, 0.54902, 1, 0.117647, 0.113725, 0.223529, 0.317647, 0, 0, 0, 0 )
 
-[node name="Sleep_Attack" type="Sprite"]
+[node name="Sleep_Attack" type="Sprite" groups=["attack"]]
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 3 )
 script = ExtResource( 5 )
