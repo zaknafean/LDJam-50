@@ -51,9 +51,7 @@
 		},
 		"Timelines": {
 			"files": [
-				"timeline-1648908097.json",
-				"timeline-1648902867.json",
-				"timeline-1648946605.json"
+
 			],
 			"folders": {
 				"Doors": {
@@ -93,7 +91,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"Lighting": {
@@ -149,7 +147,9 @@
 						"timeline-1648946773.json",
 						"timeline-1648946779.json",
 						"timeline-1648946791.json",
-						"timeline-1648946802.json"
+						"timeline-1648946802.json",
+						"timeline-1649010068.json",
+						"timeline-1649010125.json"
 					],
 					"folders": {
 
