@@ -5,6 +5,20 @@
 			"set_theme": "theme-1648902659.cfg"
 		},
 		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It's a jar of caffeine pills you forgot that you had."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://assets/sound/pill-bottle.wav",
+			"volume": 0
+		},
+		{
 			"animation": "1-fade_in.gd",
 			"animation_length": 0.25,
 			"animation_wait": true,
@@ -27,20 +41,6 @@
 		},
 		{
 			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "It's a jar of caffeine pills you forgot that you had."
-		},
-		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://assets/sound/pill-bottle.wav",
-			"volume": 0
-		},
-		{
-			"character": "",
 			"event_id": "dialogic_010",
 			"options": [
 
@@ -59,13 +59,18 @@
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Down the hatch!\nUgh, shouldn't have swallowed these dry."
+			"text": "Down the hatch!"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 1
 		},
 		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You feel much more awake...and jittery!"
+			"text": "You feel much more awake...and anxious!"
 		},
 		{
 			"animation": "4-fade_out.gd",
@@ -89,8 +94,18 @@
 			"z_index": 0
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"100"
+				],
+				"method_name": "adjust_alertness",
+				"target_node_path": "/root/Settings"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"choice": "That feels like a bad idea.",
@@ -101,7 +116,7 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.3
 		},
 		{
 			"event_id": "dialogic_013"
