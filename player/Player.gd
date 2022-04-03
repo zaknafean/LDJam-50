@@ -11,7 +11,6 @@ var sprite_dir = "down"			#where we are actually facing. A string for anim
 var facing_dir = Vector2.DOWN	#where we are facing in vector notation
 var move_dir = Vector2.ZERO		#where we want to go
 
-
 signal arrived
 
 
