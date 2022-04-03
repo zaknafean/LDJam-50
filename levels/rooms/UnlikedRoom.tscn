@@ -63,9 +63,6 @@ tile_data = PoolIntArray( 65544, 20, 0, 131080, 20, 0, 131081, 20, 0, 196617, 20
 [node name="Player" parent="." index="1"]
 position = Vector2( 1138, 510 )
 
-[node name="Camera2D" parent="Player" index="5"]
-current = false
-
 [node name="DoorNorthClickable" parent="Interactables" index="0" instance=ExtResource( 6 )]
 position = Vector2( 810, 48 )
 canHighlight = true
@@ -89,6 +86,10 @@ DIALOG = "LivingRoomNorth"
 [node name="DialogEvent2" parent="Interactables/DoorNorthClickable/EventQueue" index="1" instance=ExtResource( 7 )]
 difficulty = 2
 DIALOG = "LivingRoomNorth"
+
+[node name="DialogEvent3" parent="Interactables/DoorNorthClickable/EventQueue" index="2" instance=ExtResource( 7 )]
+difficulty = 3
+DIALOG = "RandomRoom"
 
 [node name="DoorEastClickable" parent="Interactables" index="1" instance=ExtResource( 6 )]
 position = Vector2( 1232, 434 )
@@ -117,6 +118,10 @@ DIALOG = "LivingRoomEast"
 [node name="DialogEvent2" parent="Interactables/DoorEastClickable/EventQueue" index="1" instance=ExtResource( 7 )]
 difficulty = 2
 DIALOG = "Unopenable"
+
+[node name="DialogEvent3" parent="Interactables/DoorEastClickable/EventQueue" index="2" instance=ExtResource( 7 )]
+difficulty = 3
+DIALOG = "RandomRoom"
 
 [node name="DoorSouthClickable" parent="Interactables" index="2" instance=ExtResource( 6 )]
 position = Vector2( 934, 628 )
@@ -147,6 +152,10 @@ DIALOG = "LivingRoomNorth"
 [node name="DialogEvent2" parent="Interactables/DoorSouthClickable/EventQueue" index="1" instance=ExtResource( 7 )]
 difficulty = 2
 DIALOG = "LivingRoomNorth"
+
+[node name="DialogEvent3" parent="Interactables/DoorSouthClickable/EventQueue" index="2" instance=ExtResource( 7 )]
+difficulty = 3
+DIALOG = "RandomRoom"
 
 [node name="DoorWestClickable" parent="Interactables" index="3" instance=ExtResource( 6 )]
 position = Vector2( 71, 596 )

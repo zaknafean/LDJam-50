@@ -83,6 +83,10 @@ DIALOG = "LivingRoomNorth"
 difficulty = 2
 DIALOG = "LivingRoomNorth"
 
+[node name="DialogEvent3" parent="Interactables/DoorNorthClickable/EventQueue" index="2" instance=ExtResource( 6 )]
+difficulty = 3
+DIALOG = "RandomRoom"
+
 [node name="DoorEastClickable" parent="Interactables" index="1" instance=ExtResource( 5 )]
 position = Vector2( 1573, 83 )
 canHighlight = true
@@ -110,6 +114,10 @@ DIALOG = "BedRoomEast"
 [node name="DialogEvent2" parent="Interactables/DoorEastClickable/EventQueue" index="1" instance=ExtResource( 6 )]
 difficulty = 2
 DIALOG = "BedRoomEast"
+
+[node name="DialogEvent3" parent="Interactables/DoorEastClickable/EventQueue" index="2" instance=ExtResource( 6 )]
+difficulty = 3
+DIALOG = "RandomRoom"
 
 [node name="DoorSouthClickable" parent="Interactables" index="2" instance=ExtResource( 5 )]
 position = Vector2( 447, -12 )
@@ -141,6 +149,10 @@ DIALOG = "Unopenable"
 difficulty = 2
 DIALOG = "UnlikedRoomSouth"
 
+[node name="DialogEvent3" parent="Interactables/DoorSouthClickable/EventQueue" index="2" instance=ExtResource( 6 )]
+difficulty = 3
+DIALOG = "RandomRoom"
+
 [node name="DoorWestClickable" parent="Interactables" index="3" instance=ExtResource( 5 )]
 position = Vector2( 392, 227 )
 z_index = 1
@@ -167,6 +179,10 @@ DIALOG = "KitchenRoomNorth"
 [node name="DialogEvent2" parent="Interactables/DoorWestClickable/EventQueue" index="1" instance=ExtResource( 6 )]
 difficulty = 2
 DIALOG = "KitchenRoomNorth"
+
+[node name="DialogEvent3" parent="Interactables/DoorWestClickable/EventQueue" index="2" instance=ExtResource( 6 )]
+difficulty = 3
+DIALOG = "RandomRoom"
 
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 1913, 238 )
