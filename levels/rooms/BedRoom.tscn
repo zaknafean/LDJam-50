@@ -4,10 +4,10 @@
 [ext_resource path="res://assets/tilesets/EnvironmentTileset.tres" type="TileSet" id=2]
 [ext_resource path="res://assets/doorNorthBlueClosed.png" type="Texture" id=3]
 [ext_resource path="res://assets/doorEastBlueClosed.png" type="Texture" id=4]
+[ext_resource path="res://enemies/Sleep_Gremlin.tscn" type="PackedScene" id=5]
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=6]
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=8]
-[ext_resource path="res://enemies/Sleep_Gremlin.tscn" type="PackedScene" id=9]
 [ext_resource path="res://enemies/Lamp.tscn" type="PackedScene" id=10]
 [ext_resource path="res://enemies/ImAStove.tscn" type="PackedScene" id=11]
 
@@ -192,20 +192,23 @@ DIALOG = "RandomRoom"
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 419, 169 )
 
-[node name="Sleep_Gremlin" parent="Difficulty2" index="0" instance=ExtResource( 9 )]
-position = Vector2( 857, 436 )
+[node name="Lamp" parent="Difficulty2" index="0" instance=ExtResource( 10 )]
+position = Vector2( 334, 296 )
 
-[node name="Lamp" parent="Difficulty2" index="1" instance=ExtResource( 10 )]
-position = Vector2( 730, -14 )
+[node name="Lamp2" parent="Difficulty2" index="1" instance=ExtResource( 10 )]
+position = Vector2( 745, 87 )
 
-[node name="Sleep_Gremlin" parent="Difficulty3" index="0" instance=ExtResource( 9 )]
-position = Vector2( 340, 108 )
+[node name="Sleep_Gremlin" parent="Difficulty2" index="2" instance=ExtResource( 5 )]
+position = Vector2( 570, 100 )
 
-[node name="ImAStove" parent="Difficulty3" index="1" instance=ExtResource( 11 )]
-position = Vector2( 535, 314 )
+[node name="ImAStove" parent="Difficulty3" index="0" instance=ExtResource( 11 )]
+position = Vector2( 278, 148 )
 
-[node name="Lamp" parent="Difficulty3" index="2" instance=ExtResource( 10 )]
+[node name="Lamp" parent="Difficulty3" index="1" instance=ExtResource( 10 )]
 position = Vector2( 1103, 303 )
+
+[node name="Sleep_Gremlin" parent="Difficulty3" index="2" instance=ExtResource( 5 )]
+position = Vector2( 691, 420 )
 
 [editable path="Interactables/DoorNorthClickable"]
 [editable path="Interactables/DoorEastClickable"]

@@ -196,6 +196,12 @@ position = Vector2( 625, 158 )
 [node name="ImAStove" parent="Difficulty3" index="1" instance=ExtResource( 10 )]
 position = Vector2( 998, 331 )
 
+[node name="ImAStove2" parent="Difficulty3" index="2" instance=ExtResource( 10 )]
+position = Vector2( 973, 117 )
+
+[node name="Lamp" parent="Difficulty3" index="3" instance=ExtResource( 9 )]
+position = Vector2( 1279, 358 )
+
 [editable path="Interactables/DoorNorthClickable"]
 [editable path="Interactables/DoorEastClickable"]
 [editable path="Interactables/DoorSouthClickable"]

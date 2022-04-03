@@ -35,7 +35,17 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="UI/UIBox/VBoxContainer" index="0"]
 margin_right = 840.0
-margin_bottom = 60.0
+
+margin_bottom = 484.0
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="UI/UIBox/VBoxContainer" index="1"]
+margin_top = 500.0
+margin_right = 840.0
+margin_bottom = 560.0
+
 custom_fonts/font = SubResource( 2 )
 text = "A Tearcell Studio Jam Submission"
 align = 1
