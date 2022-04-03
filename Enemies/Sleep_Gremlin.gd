@@ -4,7 +4,7 @@ class_name SleepEnemies
 
 var count = 0
 
-var sleep_attack :NodePath = "res://Enemies/Sleep_Attack.tscn"
+var sleep_attack :NodePath = "res://enemies/Sleep_Attack.tscn"
 var attack_count = 0
 var attack_instance
 var targets = []

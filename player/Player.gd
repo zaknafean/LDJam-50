@@ -72,3 +72,4 @@ func anim_switch(animation, speed = 1):
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == 'hit_right' or anim_name == 'hit_left':
 		taking_damage = false
+		anim_switch("idle", .5)
