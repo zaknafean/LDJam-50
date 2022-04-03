@@ -11,10 +11,10 @@
 
 			],
 			"portrait": "",
-			"question": "What a lovely lamp.\nYou LOVE this lamp."
+			"question": "The lamp seems unfamiliar."
 		},
 		{
-			"choice": "Show your love and turn it on.",
+			"choice": "More light is better!",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -29,9 +29,19 @@
 			"volume": 0
 		},
 		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "",
+				"target_node_path": ""
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": false,
-			"wait_seconds": 1
+			"wait_seconds": 0.3
 		},
 		{
 			"character": "",
@@ -41,10 +51,20 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
-			"choice": "You don't want to wear it out.",
+			"call_node": {
+				"arguments": [
+					"20"
+				],
+				"method_name": "adjust_sanity",
+				"target_node_path": "/root/Settings"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"choice": "Reminds me of that cat...",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -52,7 +72,7 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"event_id": "dialogic_013"
