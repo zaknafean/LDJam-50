@@ -8,6 +8,7 @@ var rotation_speed = PI
 var follow = Vector2.ZERO
 
 func _ready():
+	look_for_kills = false
 	$Label.visible = false
 	$AnimationPlayer.play("Moving")
 	count = 8
@@ -24,7 +25,8 @@ func _on_Hit_Box_body_entered(body):
 		attack_position()
 
 func can_free_player():
-	if $Attacks.get_child_count() == 0:
+	var pool = $Attacks.get_children()
+	if pool.size() == 0:
 		Settings.curGameState = Settings.GAME_STATES.PLAY
 		$AnimationPlayer.play("Dying")
 	else:
@@ -37,8 +39,10 @@ func spawn_attacks():
 	$Target_Locations.add_child(attack)
 	spot = spot + 1
 
-func _on_tween_completed():
-	pass
+func can_you_dig_it():
+	$AnimationPlayer.stop()
+	insert_dead_baby_joke()
+	$AnimationPlayer.play("Moving")
 
 func terminator():
 	$Label.text = "Shucks...lights out for me!"
@@ -51,7 +55,9 @@ func byeeeeee():
 	
 	var newguy = Sprite.new()
 	newguy.position = $lampity/Sprite.global_position
-	newguy.texture = load("res://assets/I_love_lamp.png")
+	newguy.texture = load("res://assets/LampHop3.png")
+	newguy.hframes = 6
+	newguy.frame = 0
 	newguy.scale = $lampity/Sprite.scale
 	get_parent().add_child(newguy)
 	

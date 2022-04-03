@@ -29,8 +29,8 @@ func animate_spawns():
 		spot = spot + 1
 
 func can_free_player():
-	if $Attacks.get_child_count() == 0:
+	var pool = $Attacks.get_children()
+	if pool.size() == 0:
 		Settings.curGameState = Settings.GAME_STATES.PLAY
 		$AnimationPlayer.play("Dying")
-	else:
-		$Timer.start()
+

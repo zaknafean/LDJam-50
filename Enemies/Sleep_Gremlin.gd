@@ -11,9 +11,10 @@ var attack_count = 0
 var attack_instance
 var targets = []
 var spot = 0
-var look_for_kills :bool = false
+var look_for_kills :bool 
 
 func _ready():
+	look_for_kills = false
 	count = 5
 	randomize()
 	$Label.visible = false
@@ -55,7 +56,8 @@ func insert_dead_baby_joke():
 	look_for_kills = true
 
 func can_free_player():
-	if $Attacks.get_child_count() == 0:
+	var pool = $Attacks.get_children()
+	if pool.size() == 0:
 		Settings.curGameState = Settings.GAME_STATES.PLAY
 		$AnimationPlayer.play("Dying")
 		terminator()
