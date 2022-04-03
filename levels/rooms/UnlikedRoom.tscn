@@ -1,12 +1,15 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Tilesets/EnvironmentTileset.tres" type="TileSet" id=2]
 [ext_resource path="res://assets/doorNorthBlueClosed.png" type="Texture" id=3]
 [ext_resource path="res://assets/doorEastBlueClosed.png" type="Texture" id=4]
+[ext_resource path="res://enemies/Sleep_Gremlin.tscn" type="PackedScene" id=5]
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=6]
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=8]
+[ext_resource path="res://enemies/Lamp.tscn" type="PackedScene" id=9]
+[ext_resource path="res://enemies/ImAStove.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -60,9 +63,6 @@ tile_data = PoolIntArray( 65544, 20, 0, 131080, 20, 0, 131081, 20, 0, 196617, 20
 [node name="Player" parent="." index="1"]
 position = Vector2( 1138, 510 )
 
-[node name="Camera2D" parent="Player" index="5"]
-current = false
-
 [node name="DoorNorthClickable" parent="Interactables" index="0" instance=ExtResource( 6 )]
 position = Vector2( 810, 48 )
 canHighlight = true
@@ -86,6 +86,10 @@ DIALOG = "LivingRoomNorth"
 [node name="DialogEvent2" parent="Interactables/DoorNorthClickable/EventQueue" index="1" instance=ExtResource( 7 )]
 difficulty = 2
 DIALOG = "LivingRoomNorth"
+
+[node name="DialogEvent3" parent="Interactables/DoorNorthClickable/EventQueue" index="2" instance=ExtResource( 7 )]
+difficulty = 3
+DIALOG = "RandomRoom"
 
 [node name="DoorEastClickable" parent="Interactables" index="1" instance=ExtResource( 6 )]
 position = Vector2( 1232, 434 )
@@ -114,6 +118,10 @@ DIALOG = "LivingRoomEast"
 [node name="DialogEvent2" parent="Interactables/DoorEastClickable/EventQueue" index="1" instance=ExtResource( 7 )]
 difficulty = 2
 DIALOG = "Unopenable"
+
+[node name="DialogEvent3" parent="Interactables/DoorEastClickable/EventQueue" index="2" instance=ExtResource( 7 )]
+difficulty = 3
+DIALOG = "RandomRoom"
 
 [node name="DoorSouthClickable" parent="Interactables" index="2" instance=ExtResource( 6 )]
 position = Vector2( 934, 628 )
@@ -145,6 +153,10 @@ DIALOG = "LivingRoomNorth"
 difficulty = 2
 DIALOG = "LivingRoomNorth"
 
+[node name="DialogEvent3" parent="Interactables/DoorSouthClickable/EventQueue" index="2" instance=ExtResource( 7 )]
+difficulty = 3
+DIALOG = "RandomRoom"
+
 [node name="DoorWestClickable" parent="Interactables" index="3" instance=ExtResource( 6 )]
 position = Vector2( 71, 596 )
 z_index = 1
@@ -174,6 +186,51 @@ DIALOG = "Unopenable"
 
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 1073, 404 )
+
+[node name="ImAStove" parent="Difficulty2" index="0" instance=ExtResource( 10 )]
+position = Vector2( 1000, 184 )
+
+[node name="ImAStove4" parent="Difficulty2" index="1" instance=ExtResource( 10 )]
+position = Vector2( 225, 625 )
+
+[node name="ImAStove2" parent="Difficulty2" index="2" instance=ExtResource( 10 )]
+position = Vector2( 1591, 622 )
+
+[node name="ImAStove3" parent="Difficulty2" index="3" instance=ExtResource( 10 )]
+position = Vector2( 1396, 873 )
+
+[node name="Lamp" parent="Difficulty3" index="0" instance=ExtResource( 9 )]
+position = Vector2( 451, 435 )
+
+[node name="Lamp2" parent="Difficulty3" index="1" instance=ExtResource( 9 )]
+position = Vector2( 1038, 683 )
+
+[node name="Lamp3" parent="Difficulty3" index="2" instance=ExtResource( 9 )]
+position = Vector2( 2206, 1178 )
+
+[node name="Lamp4" parent="Difficulty3" index="3" instance=ExtResource( 9 )]
+position = Vector2( 1565, 432 )
+
+[node name="Lamp5" parent="Difficulty3" index="4" instance=ExtResource( 9 )]
+position = Vector2( 594, 67 )
+
+[node name="Sleep_Gremlin" parent="Difficulty3" index="5" instance=ExtResource( 5 )]
+position = Vector2( 557, 503 )
+
+[node name="Sleep_Gremlin2" parent="Difficulty3" index="6" instance=ExtResource( 5 )]
+position = Vector2( 343, 501 )
+
+[node name="Sleep_Gremlin3" parent="Difficulty3" index="7" instance=ExtResource( 5 )]
+position = Vector2( 984, 312 )
+
+[node name="Sleep_Gremlin4" parent="Difficulty3" index="8" instance=ExtResource( 5 )]
+position = Vector2( 1303, 498 )
+
+[node name="Sleep_Gremlin5" parent="Difficulty3" index="9" instance=ExtResource( 5 )]
+position = Vector2( 1276, 725 )
+
+[node name="Sleep_Gremlin6" parent="Difficulty3" index="10" instance=ExtResource( 5 )]
+position = Vector2( 1744, 862 )
 
 [editable path="Interactables/DoorNorthClickable"]
 [editable path="Interactables/DoorEastClickable"]

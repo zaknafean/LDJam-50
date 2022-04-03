@@ -61,5 +61,7 @@ func byeeeeee():
 	newguy.scale = $lampity/Sprite.scale
 	get_parent().add_child(newguy)
 	
+	Settings.score += 35 * Settings.difficulty
+	
 	queue_free()
 

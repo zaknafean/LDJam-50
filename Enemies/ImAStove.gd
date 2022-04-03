@@ -52,5 +52,7 @@ func byeeeeee():
 	newguy.scale = $Stove/Sprite.scale
 	get_parent().add_child(newguy)
 	
+	Settings.score += 15 * Settings.difficulty
+	
 	queue_free()
 	

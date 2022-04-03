@@ -1,12 +1,16 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://addons/toolbox_project/scenes/screens/Screen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/toolbox_project/scenes/ui/components/UIBox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://addons/toolbox_project/scenes/ui/background/BackgroundBase.tscn" type="PackedScene" id=3]
-[ext_resource path="res://addons/toolbox_project/scenes/ui/components/LabelBig.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/fonts/sofija.regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://addons/toolbox_project/scenes/ui/menu/controls/ControlMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://addons/toolbox_project/scenes/ui/menu/MenuButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://addons/toolbox_project/defaults/screens/ScreenOptionsControlsMenu.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 4 )
 
 [node name="ScreenOptionsControlsMenu" instance=ExtResource( 1 )]
 script = ExtResource( 7 )
@@ -27,14 +31,15 @@ margin_top = 20.0
 margin_right = 1200.0
 margin_bottom = 700.0
 
-[node name="LabelBig" parent="MenuLayer/UIBox/VBoxContainer" index="0" instance=ExtResource( 4 )]
-anchor_right = 0.0
+[node name="Label" type="Label" parent="MenuLayer/UIBox/VBoxContainer" index="0"]
 margin_right = 1120.0
-margin_bottom = 70.0
+margin_bottom = 60.0
+custom_fonts/font = SubResource( 1 )
 text = "CONTROLS"
+align = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MenuLayer/UIBox/VBoxContainer" index="1"]
-margin_top = 86.0
+margin_top = 76.0
 margin_right = 1120.0
 margin_bottom = 618.0
 size_flags_horizontal = 3
