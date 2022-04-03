@@ -8,7 +8,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "This is the hallway door."
+			"text": "This door leads to the kitchen."
 		},
 		{
 			"character": "",
@@ -20,7 +20,7 @@
 			"question": "Open the Door?"
 		},
 		{
-			"choice": "Halls well that ends well.",
+			"choice": "That's where the coffee lives!",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -40,16 +40,10 @@
 			"wait_seconds": 4
 		},
 		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "The hallway is long and narrow.\nYou can't see the end.\nBetter start walking..."
-		},
-		{
 			"call_node": {
 				"arguments": [
-					"hallwayroom",
-					"n"
+					"kitchen",
+					"s"
 				],
 				"method_name": "change_room",
 				"target_node_path": "/root/ScreenGame/GameMain"
@@ -57,7 +51,7 @@
 			"event_id": "dialogic_042"
 		},
 		{
-			"choice": "Hallway? That's hallotta work.",
+			"choice": "But I'm not hungry.",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -73,7 +67,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1648944611.json",
-		"name": "HallwayRoomNorth"
+		"file": "timeline-1648953676.json",
+		"name": "KitchenRoomSouth"
 	}
 }

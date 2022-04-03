@@ -8,7 +8,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "This is the hallway door."
+			"text": "This door leads to the bedroom."
 		},
 		{
 			"character": "",
@@ -20,7 +20,7 @@
 			"question": "Open the Door?"
 		},
 		{
-			"choice": "Halls well that ends well.",
+			"choice": "My bed is in there. That sounds nice...",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -31,25 +31,19 @@
 			"audio_bus": "Master",
 			"event_id": "dialogic_030",
 			"event_name": "AudioEvent",
-			"file": "res://assets/sound/creaky-door-one.wav",
+			"file": "res://assets/sound/creaky-door-three.wav",
 			"volume": 0
 		},
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": false,
-			"wait_seconds": 4
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "The hallway is long and narrow.\nYou can't see the end.\nBetter start walking..."
+			"wait_seconds": 1
 		},
 		{
 			"call_node": {
 				"arguments": [
-					"hallwayroom",
-					"n"
+					"bedroom",
+					"e"
 				],
 				"method_name": "change_room",
 				"target_node_path": "/root/ScreenGame/GameMain"
@@ -57,7 +51,7 @@
 			"event_id": "dialogic_042"
 		},
 		{
-			"choice": "Hallway? That's hallotta work.",
+			"choice": "I'm trying NOT to sleep.",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -73,7 +67,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1648944611.json",
-		"name": "HallwayRoomNorth"
+		"file": "timeline-1648954775.json",
+		"name": "BedRoomEast"
 	}
 }

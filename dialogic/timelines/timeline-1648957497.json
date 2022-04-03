@@ -5,39 +5,35 @@
 			"set_theme": "theme-1648902659.cfg"
 		},
 		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Maybe watching something will help keep me focused."
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_010",
-			"options": [
-
-			],
-			"portrait": "",
-			"question": "Power up this idiot box?"
-		},
-		{
-			"choice": "It's late-night talk show time!",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
 			"audio": "play",
 			"audio_bus": "Master",
 			"event_id": "dialogic_030",
 			"event_name": "AudioEvent",
-			"file": "res://assets/sound/crowd-laugh.wav",
-			"volume": 10
+			"file": "res://assets/sound/wobbling-oven.wav",
+			"volume": 0
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Your oven doesn't look right."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It looks..."
 		},
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": false,
-			"wait_seconds": 2
+			"wait_seconds": 5
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "...monstrous?"
 		},
 		{
 			"animation": "1-fade_in.gd",
@@ -64,12 +60,17 @@
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I'm not sure I got that joke. I'll think about it for a while."
+			"text": "I must be imagining things."
+		},
+		{
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "There's no way my oven is turning into a monster."
 		},
 		{
 			"animation": "4-fade_out.gd",
-			"animation_length": 0.25,
-			"animation_wait": true,
+			"animation_length": 0.75,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
 			"character": "character-1648902615.json",
@@ -88,41 +89,13 @@
 			"z_index": 0
 		},
 		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://assets/sound/ambient-hum.wav",
-			"volume": 5
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "You leave the television on and it hums behind you."
-		},
-		{
 			"event_id": "dialogic_022",
 			"transition_duration": 1
-		},
-		{
-			"choice": "Wait, I'm not a dummy.",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"event_id": "dialogic_022",
-			"transition_duration": 1
-		},
-		{
-			"event_id": "dialogic_013"
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1648944450.json",
-		"name": "Television"
+		"file": "timeline-1648957497.json",
+		"name": "Oven (Monstrous)"
 	}
 }

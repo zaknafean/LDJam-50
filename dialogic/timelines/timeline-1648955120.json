@@ -49,7 +49,7 @@
 			"call_node": {
 				"arguments": [
 					"hallwayroom",
-					"n"
+					"s"
 				],
 				"method_name": "change_room",
 				"target_node_path": "/root/ScreenGame/GameMain"
@@ -73,7 +73,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1648944611.json",
-		"name": "HallwayRoomNorth"
+		"file": "timeline-1648955120.json",
+		"name": "HallwayRoomSouth"
 	}
 }
