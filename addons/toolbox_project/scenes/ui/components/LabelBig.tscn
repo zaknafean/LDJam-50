@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://addons/toolbox_project/assets/theme.tres" type="Theme" id=1]
-[ext_resource path="res://addons/toolbox_project/assets/font/FontBig.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/fonts/sofija.regular.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
-size = 22
+size = 60
 extra_spacing_bottom = 10
 font_data = ExtResource( 2 )
 
@@ -21,3 +21,6 @@ custom_fonts/font = SubResource( 1 )
 text = "HEADLINE"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

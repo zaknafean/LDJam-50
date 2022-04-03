@@ -11,6 +11,7 @@ const unlikedRoom = preload("res://levels/rooms/UnlikedRoom.tscn")
 var curRoomString
 var curRoom : BaseRoom
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 		# Connect Signals
@@ -73,9 +74,9 @@ func change_room(newRoom: String, directionFrom: String, _delay=2):
 		curRoom = hallwayRoom.instance()
 	elif newRoom == 'kitchen':
 		curRoom = kitchenRoom.instance()
-	elif newRoom == 'unknown':
+	elif newRoom == 'unknownroom':
 		curRoom = unknownRoom.instance()
-	elif newRoom == 'unliked':
+	elif newRoom == 'unlikedroom':
 		curRoom = unlikedRoom.instance()
 	
 	Settings.roomsExplored += 1

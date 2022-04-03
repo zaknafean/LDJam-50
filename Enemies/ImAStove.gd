@@ -4,7 +4,18 @@ onready var tween = $Tween
 var can_attack :bool = true
 
 func _ready():
+	look_for_kills = false
 	count = 8
+
+func attack_position():
+	targets = []
+	for i in count:
+		var pick
+		pick = randi() % count + 1
+		var cur_target = get_node('Target_Locations/Position2D'+str(pick))
+		targets.append(cur_target)
+	$Label.text = "I'm an ANGRY stove...Or your hallucinating!"
+	$AnimationPlayer.play("Attacking")
 
 func spawn_attacks():
 	attack_instance = load(str(sleep_attack))
@@ -14,6 +25,7 @@ func spawn_attacks():
 
 func _on_Hit_Box_body_entered(body):
 	if (body is KinematicBody2D) and (Settings.curGameState != Settings.GAME_STATES.BATTLE) and (can_attack != false):
+		body.path = []
 		Settings.curGameState = Settings.GAME_STATES.BATTLE
 		$Label.visible = true
 		attack_position()
@@ -26,15 +38,19 @@ func animate_spawns():
 		spot = spot + 1
 
 func terminator():
-	$Label.text = "Phew, I'm tired.  Time for a nap!"
+	$Label.text = "Phew, I'm tired.  Time for a nap. You better RUN!"
 	$Label.visible = true
 
 func byeeeeee():
 	$Label.visible = false
 	$AnimationPlayer.stop()
 	can_attack = false
-	$Timer.start()
-
-func _on_Timer_timeout():
-	$AnimationPlayer.play("Idle")
-	can_attack = true
+	
+	var newguy = Sprite.new()
+	newguy.position = self.global_position
+	newguy.texture = load("res://assets/Stove.png")
+	newguy.scale = $Stove/Sprite.scale
+	get_parent().add_child(newguy)
+	
+	queue_free()
+	

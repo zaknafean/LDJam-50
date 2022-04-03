@@ -15,6 +15,7 @@ func terminator():
 
 func _on_Hit_Box_body_entered(body):
 	if body is KinematicBody2D and Settings.curGameState != Settings.GAME_STATES.BATTLE:
+		body.path = []
 		Settings.curGameState = Settings.GAME_STATES.BATTLE
 		$Label.visible = true
 		whodonit = body
@@ -26,3 +27,10 @@ func animate_spawns():
 		tween.interpolate_property(atk, 'position', atk.position, whodonit.position, .5, Tween.TRANS_BOUNCE, Tween.EASE_IN)
 		tween.start()
 		spot = spot + 1
+
+func can_free_player():
+	var pool = $Attacks.get_children()
+	if pool.size() == 0:
+		Settings.curGameState = Settings.GAME_STATES.PLAY
+		$AnimationPlayer.play("Dying")
+

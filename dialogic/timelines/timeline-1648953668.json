@@ -37,7 +37,7 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": false,
-			"wait_seconds": 4
+			"wait_seconds": 1
 		},
 		{
 			"call_node": {

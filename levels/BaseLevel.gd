@@ -32,10 +32,11 @@ func _ready():
 		_err = event.connect('reroute_player', self, '_on_reroute_player')
 	
 	isHighlightAll = false
-
-	tilemap.modulate = Color(.5, .5, .5, 1)
-	backmap.modulate = Color(.5, .5, .5, 1)
-	alphamap.modulate = Color(.5, .5, .5, .5)
+	
+	for child in $Navigation2D.get_children():
+		var rValue = .4 + Settings.difficulty / 10.0
+		var bgValue = .6 - Settings.difficulty / 10.0
+		child.modulate = Color(rValue, bgValue, bgValue, child.modulate.a)
 	
 	Settings.curGameState = Settings.GAME_STATES.PLAY
 	
@@ -63,7 +64,6 @@ func _set_spawns(directionFrom: String, delay=2):
 		enemy.global_position = $Interactables/DoorNorthClickable.interactionPosition
 	
 	enemy.activate(delay)
-
 
 
 func _on_Area2D_mouse_entered(clickable):

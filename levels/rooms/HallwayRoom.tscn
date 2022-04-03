@@ -1,23 +1,14 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/doorNorthBlueClosed.png" type="Texture" id=2]
 [ext_resource path="res://assets/doorEastBlueClosed.png" type="Texture" id=3]
-[ext_resource path="res://assets/BlueCrateSprite.png" type="Texture" id=4]
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=5]
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=7]
 [ext_resource path="res://enemies/Sleep_Gremlin.tscn" type="PackedScene" id=8]
 [ext_resource path="res://enemies/Lamp.tscn" type="PackedScene" id=9]
 [ext_resource path="res://enemies/ImAStove.tscn" type="PackedScene" id=10]
-
-[sub_resource type="ShaderMaterial" id=1]
-resource_local_to_scene = true
-shader = ExtResource( 7 )
-shader_param/brightness = 1.0
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 15.5, 23.5 )
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -68,26 +59,7 @@ tile_data = PoolIntArray( 5, 54, 0, 6, 46, 0, 65541, 55, 0, 65542, 47, 0, 65543,
 [node name="Player" parent="." index="1"]
 position = Vector2( 1679, 297 )
 
-[node name="SpriteClickable" parent="Interactables" index="0" instance=ExtResource( 5 )]
-position = Vector2( 1070, 258 )
-canHighlight = true
-canClick = true
-
-[node name="Sprite" parent="Interactables/SpriteClickable" index="0"]
-material = SubResource( 1 )
-position = Vector2( 2, 35 )
-texture = ExtResource( 4 )
-
-[node name="CollisionShape2D" parent="Interactables/SpriteClickable" index="1"]
-position = Vector2( 1.5, 26.5 )
-shape = SubResource( 2 )
-
-[node name="InteractionPosition" parent="Interactables/SpriteClickable" index="2"]
-position = Vector2( 1, 59 )
-
-[node name="DialogEvent" parent="Interactables/SpriteClickable/EventQueue" index="0" instance=ExtResource( 6 )]
-
-[node name="DoorNorthClickable" parent="Interactables" index="1" instance=ExtResource( 5 )]
+[node name="DoorNorthClickable" parent="Interactables" index="0" instance=ExtResource( 5 )]
 position = Vector2( 1062, 112 )
 canHighlight = true
 canClick = true
@@ -107,7 +79,11 @@ position = Vector2( 164, 103 )
 [node name="DialogEvent" parent="Interactables/DoorNorthClickable/EventQueue" index="0" instance=ExtResource( 6 )]
 DIALOG = "LivingRoomNorth"
 
-[node name="DoorEastClickable" parent="Interactables" index="2" instance=ExtResource( 5 )]
+[node name="DialogEvent2" parent="Interactables/DoorNorthClickable/EventQueue" index="1" instance=ExtResource( 6 )]
+difficulty = 2
+DIALOG = "LivingRoomNorth"
+
+[node name="DoorEastClickable" parent="Interactables" index="1" instance=ExtResource( 5 )]
 position = Vector2( 1573, 83 )
 canHighlight = true
 canClick = true
@@ -131,7 +107,11 @@ position = Vector2( 453, 10 )
 [node name="DialogEvent" parent="Interactables/DoorEastClickable/EventQueue" index="0" instance=ExtResource( 6 )]
 DIALOG = "BedRoomEast"
 
-[node name="DoorSouthClickable" parent="Interactables" index="3" instance=ExtResource( 5 )]
+[node name="DialogEvent2" parent="Interactables/DoorEastClickable/EventQueue" index="1" instance=ExtResource( 6 )]
+difficulty = 2
+DIALOG = "BedRoomEast"
+
+[node name="DoorSouthClickable" parent="Interactables" index="2" instance=ExtResource( 5 )]
 position = Vector2( 447, -12 )
 z_index = 1
 canHighlight = true
@@ -157,7 +137,11 @@ position = Vector2( 429, 447 )
 [node name="DialogEvent" parent="Interactables/DoorSouthClickable/EventQueue" index="0" instance=ExtResource( 6 )]
 DIALOG = "Unopenable"
 
-[node name="DoorWestClickable" parent="Interactables" index="4" instance=ExtResource( 5 )]
+[node name="DialogEvent2" parent="Interactables/DoorSouthClickable/EventQueue" index="1" instance=ExtResource( 6 )]
+difficulty = 2
+DIALOG = "UnlikedRoomSouth"
+
+[node name="DoorWestClickable" parent="Interactables" index="3" instance=ExtResource( 5 )]
 position = Vector2( 392, 227 )
 z_index = 1
 canHighlight = true
@@ -180,6 +164,10 @@ position = Vector2( 30, 33 )
 [node name="DialogEvent" parent="Interactables/DoorWestClickable/EventQueue" index="0" instance=ExtResource( 6 )]
 DIALOG = "KitchenRoomNorth"
 
+[node name="DialogEvent2" parent="Interactables/DoorWestClickable/EventQueue" index="1" instance=ExtResource( 6 )]
+difficulty = 2
+DIALOG = "KitchenRoomNorth"
+
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 1913, 238 )
 
@@ -198,7 +186,6 @@ position = Vector2( 1448, 337 )
 [node name="Sleep_Gremlin2" parent="Difficulty3" index="2" instance=ExtResource( 8 )]
 position = Vector2( 837, 305 )
 
-[editable path="Interactables/SpriteClickable"]
 [editable path="Interactables/DoorNorthClickable"]
 [editable path="Interactables/DoorEastClickable"]
 [editable path="Interactables/DoorSouthClickable"]

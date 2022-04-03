@@ -25,25 +25,14 @@
 		},
 		"Definitions": {
 			"files": [
-				"1648903175-460",
-				"1648903270-144",
-				"1648912610-301",
-				"1648912643-219",
-				"1648912713-430",
-				"1648912799-679",
-				"1648912870-228",
-				"1648912916-347",
-				"1648912966-545",
-				"1648913084-980",
-				"1648959575-593",
-				"1648959582-704"
+
 			],
 			"folders": {
 
 			},
 			"metadata": {
 				"color": null,
-				"folded": true
+				"folded": false
 			}
 		},
 		"Themes": {
@@ -118,7 +107,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"Other Interactables": {
@@ -134,7 +123,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"Stimulants": {
@@ -151,7 +140,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"The Cat": {
@@ -167,7 +156,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				}
 			},

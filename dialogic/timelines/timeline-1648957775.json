@@ -32,7 +32,7 @@
 			"question": "Close the curtains and hoard your light?"
 		},
 		{
-			"choice": "The precious light is mine!",
+			"choice": "If I can't leave, neither can the light.",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -54,10 +54,20 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
-			"choice": "Keep them open so the room doesn't feel too closed up.",
+			"call_node": {
+				"arguments": [
+					"5"
+				],
+				"method_name": "adjust_sanity",
+				"target_node_path": "/root/Settings"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"choice": "Maybe someone will see, maybe they'll help.",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -71,7 +81,7 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"event_id": "dialogic_013"
@@ -115,7 +125,7 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": false,
-			"wait_seconds": 3
+			"wait_seconds": 0.5
 		},
 		{
 			"character": "",
@@ -126,17 +136,27 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": false,
-			"wait_seconds": 2
+			"wait_seconds": 0.5
 		},
 		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Or demons either. Yet."
+			"text": "Or demons either. But they're already inside."
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"25"
+				],
+				"method_name": "adjust_alertness",
+				"target_node_path": "/root/Settings"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
 			"choice": "Better not to know.",
@@ -153,7 +173,7 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"event_id": "dialogic_013"
@@ -181,7 +201,7 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"event_id": "dialogic_013"
