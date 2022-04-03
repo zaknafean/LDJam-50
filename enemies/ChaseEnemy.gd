@@ -59,7 +59,7 @@ func anim_switch(animation, speed = 1):
 
 
 func _on_Hit_Box_body_entered(body):
-	if body.name == "Player" and !amEating:
+	if body.name == "Player" and !amEating and amActive:
 		print("EATING")
 		Settings.adjust_sanity(-25)
 		eatTimer.start()
