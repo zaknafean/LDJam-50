@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=4]
 [ext_resource path="res://assets/BlueCrateSprite.png" type="Texture" id=5]
 [ext_resource path="res://levels/BaseLevel.gd" type="Script" id=6]
-[ext_resource path="res://Enemies/ImAStove.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemies/Lamp.tscn" type="PackedScene" id=7]
 
 [sub_resource type="NavigationPolygon" id=2]
 vertices = PoolVector2Array( 1, 161, 11, 128, 573, 128, 577, 160 )
@@ -22,7 +22,7 @@ shader_param/brightness = 1.0
 extents = Vector2( 15.5, 23.5 )
 
 [node name="BaseLevel" type="Node2D"]
-position = Vector2( 2, -1 )
+position = Vector2( 0, 49 )
 script = ExtResource( 6 )
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -81,9 +81,9 @@ text = "Alert: 1000
 Sanity: 100
 Score: 0"
 
-[node name="ImAStove" parent="." instance=ExtResource( 8 )]
-position = Vector2( 178, 135 )
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Lamp" parent="." instance=ExtResource( 7 )]
+position = Vector2( 211, 122 )
 
 [editable path="Interactables/SpriteClickable"]
