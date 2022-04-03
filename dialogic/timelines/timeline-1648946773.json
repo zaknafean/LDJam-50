@@ -90,6 +90,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Your cat stalks away, leaving you alone."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		}
 	],
 	"metadata": {

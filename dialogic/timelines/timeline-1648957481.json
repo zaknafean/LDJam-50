@@ -8,13 +8,13 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Your cat scurries away before you can even get close to it."
+			"text": "This is where you cook the food."
 		},
 		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Ungrateful cat."
+			"text": "Pipin' hot tasty food."
 		},
 		{
 			"event_id": "dialogic_022",
@@ -23,7 +23,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1648946779.json",
-		"name": "Ambivalent Cat"
+		"file": "timeline-1648957481.json",
+		"name": "Oven (Non-Monstrous)"
 	}
 }
