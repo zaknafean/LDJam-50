@@ -24,11 +24,22 @@ func _on_Hit_Box_body_entered(body):
 		$Label.visible = true
 		attack_position()
 
+func attack_position():
+	targets = []
+	for i in count:
+		var pick
+		pick = randi() % count + 1
+		var cur_target = get_node('Target_Locations/Position2D'+str(pick))
+		targets.append(cur_target)
+	$AnimationPlayer.play("Attacking")
+
+
 func can_free_player():
 	var pool = $Attacks.get_children()
 	if pool.size() == 0:
 		Settings.curGameState = Settings.GAME_STATES.PLAY
 		$AnimationPlayer.play("Dying")
+		print('free player')
 	else:
 		pass
 
@@ -38,9 +49,9 @@ func spawn_attacks():
 	attack.position = targets[spot].position
 	$Target_Locations.add_child(attack)
 	spot = spot + 1
+	print('spawing')
 
 func can_you_dig_it():
-	$AnimationPlayer.stop()
 	insert_dead_baby_joke()
 	$AnimationPlayer.play("Moving")
 
@@ -60,6 +71,8 @@ func byeeeeee():
 	newguy.frame = 0
 	newguy.scale = $lampity/Sprite.scale
 	get_parent().add_child(newguy)
+	
+	Settings.score += 35 * Settings.difficulty
 	
 	queue_free()
 

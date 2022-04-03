@@ -19,8 +19,8 @@ func _ready():
 		D.e("Game", ["Signal game_started is already connected"])
 	if SignalMngr.connect("restart_level", self, "restart_level") != OK:
 		D.e("Game", ["Signal restart_level is already connected"])
-	if SignalMngr.connect("next_level", self, "next_level")!= OK:
-		D.e("Game", ["Signal next_level is already connected"])
+	#if SignalMngr.connect("next_level", self, "next_level")!= OK:
+	#	D.e("Game", ["Signal next_level is already connected"])
 		
 	start_level()
 
@@ -39,6 +39,49 @@ func start_level():
 	curRoom._set_spawns('s')
 
 
+func random_room():
+	randomize()
+	var randValue = randi() % 5 + 1
+	print(randValue)
+	
+	if curRoom:
+		remove_child(curRoom)
+		curRoom.queue_free()
+	else:
+		print("Error: curRoom doesn't exist whith shouldn't be possible")
+		return
+	
+	if randValue == 0:
+		curRoom = livingRoom.instance()
+	elif randValue == 1:
+		curRoom = bedRoom.instance()
+	elif randValue == 2:
+		curRoom = hallwayRoom.instance()
+	elif randValue == 3:
+		curRoom = kitchenRoom.instance()
+	elif randValue == 4:
+		curRoom = unknownRoom.instance()
+	elif randValue == 5:
+		curRoom = unlikedRoom.instance()
+	
+	var randValue2 = randi() % 4 + 1
+	var directionFrom = 'x'
+	if randValue2 == 0:
+		directionFrom = 'w'
+	elif randValue2 == 1:
+		directionFrom = 'e'
+	elif randValue2 == 2:
+		directionFrom = 's'
+	else:
+		directionFrom = 'n'
+	
+	
+	
+	add_child(curRoom)
+	yield(get_tree(), "idle_frame")
+	curRoom._set_spawns(directionFrom, 2)
+
+
 func change_room(newRoom: String, directionFrom: String, _delay=2):
 	var doorLocation
 	if directionFrom == 'w':
@@ -52,7 +95,7 @@ func change_room(newRoom: String, directionFrom: String, _delay=2):
 	
 	var timeToDoor = doorLocation.distance_to(curRoom.enemy.global_position) / curRoom.enemy.SPEED
 	var newDelay = clamp(timeToDoor, 1, 10)
-	print(timeToDoor)
+	
 	if curRoomString == newRoom:
 		print('error you went in a loop somehow')
 		return
