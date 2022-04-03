@@ -75,8 +75,6 @@ func random_room():
 	else:
 		directionFrom = 'n'
 	
-	
-	
 	add_child(curRoom)
 	yield(get_tree(), "idle_frame")
 	curRoom._set_spawns(directionFrom, 2)

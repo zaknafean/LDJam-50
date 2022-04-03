@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://addons/toolbox_project/scenes/screens/Screen.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/toolbox_project/scenes/ui/components/UIBox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/toolbox_project/scenes/ui/background/BackgroundBase.tscn" type="PackedScene" id=3]
+[ext_resource path="res://screens/ScoringScreen.gd" type="Script" id=4]
+[ext_resource path="res://addons/toolbox_project/scenes/ui/menu/MenuButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://addons/silent_wolf/Scores/assets/fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+font_data = ExtResource( 6 )
+
+[node name="ScreenScoring" instance=ExtResource( 1 )]
+script = ExtResource( 4 )
+
+[node name="BaseBackground" parent="." index="0" instance=ExtResource( 3 )]
+
+[node name="MenuLayer" type="CanvasLayer" parent="." index="1"]
+
+[node name="UIBox" parent="MenuLayer" index="0" instance=ExtResource( 2 )]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuLayer/UIBox" index="0"]
+margin_left = 220.0
+margin_top = 80.0
+margin_right = 1060.0
+margin_bottom = 640.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatusLabel" type="RichTextLabel" parent="MenuLayer/UIBox/VBoxContainer" index="0"]
+margin_right = 840.0
+margin_bottom = 100.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+
+[node name="ScoringPanel" type="ScrollContainer" parent="MenuLayer/UIBox/VBoxContainer" index="1"]
+margin_top = 116.0
+margin_right = 840.0
+margin_bottom = 516.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+
+[node name="ScoreLabel" type="RichTextLabel" parent="MenuLayer/UIBox/VBoxContainer/ScoringPanel" index="0"]
+margin_right = 824.0
+margin_bottom = 396.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuLayer/UIBox/VBoxContainer" index="2"]
+margin_top = 532.0
+margin_right = 840.0
+margin_bottom = 559.0
+custom_constants/margin_right = 225
+custom_constants/margin_left = 225
+
+[node name="BtnBack" parent="MenuLayer/UIBox/VBoxContainer/MarginContainer" index="0" instance=ExtResource( 5 )]
+margin_left = 225.0
+margin_right = 615.0
+margin_bottom = 27.0
+text = "Back"
+pushes_screen = false
+screen_to_push_in_config = ""
+pops_screen = true
