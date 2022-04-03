@@ -11,10 +11,10 @@
 
 			],
 			"portrait": "",
-			"question": "The lamp seems unfamiliar."
+			"question": "I don't know this room. Open the Door?"
 		},
 		{
-			"choice": "More light is better!",
+			"choice": "I need to know.",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -25,46 +25,33 @@
 			"audio_bus": "Master",
 			"event_id": "dialogic_030",
 			"event_name": "AudioEvent",
-			"file": "res://assets/sound/light-switch-on-lamp.wav",
+			"file": "res://assets/sound/creaky-door-one.wav",
 			"volume": 0
-		},
-		{
-			"call_node": {
-				"arguments": [
-
-				],
-				"method_name": "",
-				"target_node_path": ""
-			},
-			"event_id": "dialogic_042"
 		},
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": false,
-			"wait_seconds": 0.3
+			"wait_seconds": 2
 		},
 		{
-			"character": "",
+			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Turning on table lamps always cheers you up."
-		},
-		{
-			"event_id": "dialogic_022",
-			"transition_duration": 0.5
+			"text": "Where am I?!"
 		},
 		{
 			"call_node": {
 				"arguments": [
-					"20"
+					"unknownroom",
+					"n"
 				],
-				"method_name": "adjust_sanity",
-				"target_node_path": "/root/Settings"
+				"method_name": "change_room",
+				"target_node_path": "/root/ScreenGame/GameMain"
 			},
 			"event_id": "dialogic_042"
 		},
 		{
-			"choice": "Reminds me of that cat...",
+			"choice": "I don't want to know.",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -80,7 +67,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1648944814.json",
-		"name": "Table Lamp"
+		"file": "timeline-1648999139.json",
+		"name": "UnknownRoomWest"
 	}
 }

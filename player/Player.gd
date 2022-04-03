@@ -25,19 +25,11 @@ func _process(delta):
 		var distance_to_next_point = position.distance_to(path[0])
 		var walk_dir = position.direction_to(path[0])
 		
-		if abs(walk_dir.y) > abs(walk_dir.x):
-			if walk_dir.y > 0:
-				#sprite_dir = "down"
-				pass
-			else:
-				#sprite_dir = "up"
-				pass
+		if walk_dir.x > 0:
+			sprite_dir = "right"
 		else:
-			if walk_dir.x > 0:
-				sprite_dir = "right"
-			else:
-				sprite_dir = "left"
-		
+			sprite_dir = "left"
+	
 		anim_switch('walk', 1)
 		if distance_to_walk <= distance_to_next_point:
 			# The player does not have enough movement left to get to the next point.
@@ -72,3 +64,4 @@ func anim_switch(animation, speed = 1):
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == 'hit_right' or anim_name == 'hit_left':
 		taking_damage = false
+		anim_switch("idle", .5)

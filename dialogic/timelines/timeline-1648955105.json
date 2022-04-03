@@ -14,7 +14,7 @@
 			"question": "This is the hallway door. Open the Door?"
 		},
 		{
-			"choice": "Halls well that ends well.",
+			"choice": "Nowhere but forward.",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -31,7 +31,7 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": false,
-			"wait_seconds": 4
+			"wait_seconds": 3
 		},
 		{
 			"character": "",
@@ -43,7 +43,7 @@
 			"call_node": {
 				"arguments": [
 					"hallwayroom",
-					"e"
+					"n"
 				],
 				"method_name": "change_room",
 				"target_node_path": "/root/ScreenGame/GameMain"
@@ -51,7 +51,7 @@
 			"event_id": "dialogic_042"
 		},
 		{
-			"choice": "Hallway? That's hallotta work.",
+			"choice": "Too dangerous, not yet.",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -59,7 +59,7 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"event_id": "dialogic_013"
