@@ -1,6 +1,6 @@
 extends Node2D
 
-class_name BaseLevel, "res://assets/icons/theater-curtains.png"
+class_name BaseRoom, "res://assets/icons/theater-curtains.png"
 
 onready var player := $Player
 onready var camera = $Player/Camera2D
@@ -37,19 +37,24 @@ func _ready():
 	backmap.modulate = Color(.5, .5, .5, 1)
 	alphamap.modulate = Color(.5, .5, .5, .5)
 	
-	enemy.hide()
 	Settings.curGameState = Settings.GAME_STATES.PLAY
 
 
-func _set_spawns(directionFrom: String, _delay=2):
+func _set_spawns(directionFrom: String, delay=2):
 	if directionFrom == 'w':
 		player.global_position = $Interactables/DoorEastClickable.interactionPosition
+		enemy.global_position = $Interactables/DoorEastClickable.interactionPosition
 	if directionFrom == 'e':
 		player.global_position = $Interactables/DoorWestClickable.interactionPosition
+		enemy.global_position = $Interactables/DoorWestClickable.interactionPosition
 	if directionFrom == 'n':
 		player.global_position = $Interactables/DoorSouthClickable.interactionPosition
+		enemy.global_position = $Interactables/DoorSouthClickable.interactionPosition
 	if directionFrom == 's':
 		player.global_position = $Interactables/DoorNorthClickable.interactionPosition
+		enemy.global_position = $Interactables/DoorNorthClickable.interactionPosition
+	
+	enemy.activate(delay)
 
 
 
@@ -125,6 +130,7 @@ func process_event(event : Interactable) -> bool:
 		eventResult = true
 		
 	return eventResult
+
 
 func _process(_delta):
 	statLabel.text = str('Alert: ', Settings.alertnessValue, '\n', 'Sanity: ', Settings.sanityValue, '\n', 'Score: ', Settings.score, '\n', 'State: ', Settings.curGameState);

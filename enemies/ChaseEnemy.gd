@@ -9,6 +9,7 @@ var VELOCITY
 var SPEED = 25
 
 var amEating = false
+var amActive = false
 
 var sprite_dir = "right"			#where we are actually facing. A string for anim
 var facing_dir = Vector2.DOWN	#where we are facing in vector notation
@@ -18,11 +19,12 @@ var move_dir = Vector2.ZERO		#where we want to go
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	playerRef = get_parent().get_node('Player')
+	hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if Settings.curGameState == Settings.GAME_STATES.PLAY and !amEating:
+	if Settings.curGameState == Settings.GAME_STATES.PLAY and !amEating and amActive:
 		VELOCITY = (playerRef.position - position).normalized() * SPEED
 		var _collision = move_and_slide(VELOCITY)
 		var walk_dir = VELOCITY.normalized()
@@ -41,6 +43,13 @@ func _process(_delta):
 				sprite_dir = "left"
 		
 		anim_switch('run', 1)
+
+
+func activate(delay: int):
+	yield(get_tree().create_timer(delay), "timeout")
+	amActive = true
+	show()
+	#Particle effects and shizzle go here
 
 
 func anim_switch(animation, speed = 1):
