@@ -8,13 +8,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "This is where you cook the food."
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Pipin' hot tasty food."
+			"text": "When was the last time I cooked?\nWhen was the last time I ate?"
 		},
 		{
 			"event_id": "dialogic_022",

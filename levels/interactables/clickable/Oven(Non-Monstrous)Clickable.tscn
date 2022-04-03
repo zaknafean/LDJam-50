@@ -2,7 +2,7 @@
 
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/BlueCrateSprite.png" type="Texture" id=3]
+[ext_resource path="res://assets/Stove.png" type="Texture" id=3]
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=4]
 
 [sub_resource type="ShaderMaterial" id=1]
@@ -13,20 +13,28 @@ shader_param/brightness = 1.0
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 15.5, 17 )
 
-[node name="CoffeeClickable" instance=ExtResource( 2 )]
+[node name="Oven(Non-Monstrous)Clickable" instance=ExtResource( 2 )]
 collision_layer = 1
 collision_mask = 2
 canHighlight = true
 canClick = true
-isOneShot = true
 
 [node name="Sprite" parent="." index="0"]
 material = SubResource( 1 )
+position = Vector2( -1.04347, -0.999998 )
+scale = Vector2( 0.978261, 0.978261 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2( 0.5, -1 )
 shape = SubResource( 2 )
 
+[node name="InteractionPosition" parent="." index="2"]
+position = Vector2( 0, 63 )
+
+[node name="EventQueue" parent="." index="3"]
+position = Vector2( 57, 25 )
+
 [node name="DialogEvent" parent="EventQueue" index="0" instance=ExtResource( 1 )]
-DIALOG = "Coffee"
+position = Vector2( 48, 52 )
+DIALOG = "Oven (Non-Monstrous)"
