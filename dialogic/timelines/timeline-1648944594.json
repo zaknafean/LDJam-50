@@ -1,0 +1,27 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1648902659.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This door leads to the kitchen.\nThat's where the coffee lives."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://assets/sound/creaky-door-one.wav",
+			"volume": 0
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1648944594.json",
+		"name": "Kitchen"
+	}
+}
