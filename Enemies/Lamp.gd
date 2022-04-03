@@ -15,13 +15,20 @@ func _ready():
 	randomize()
 	tween.connect("tween_completed", self, '_on_tween_completed()')
 
-
 func _on_Hit_Box_body_entered(body):
 	if (body is KinematicBody2D) and (Settings.curGameState != Settings.GAME_STATES.BATTLE) and (can_attack != false):
+		body.path = []
 		Settings.curGameState = Settings.GAME_STATES.BATTLE
 		print(Settings.curGameState, 'lamp state')
 		$Label.visible = true
 		attack_position()
+
+func can_free_player():
+	if $Attacks.get_child_count() == 0:
+		Settings.curGameState = Settings.GAME_STATES.PLAY
+		$AnimationPlayer.play("Dying")
+	else:
+		pass
 
 func spawn_attacks():
 	attack_instance = load(str(sleep_attack))
@@ -41,9 +48,12 @@ func byeeeeee():
 	$Label.visible = false
 	$AnimationPlayer.stop()
 	can_attack = false
-	$Timer.start()
+	
+	var newguy = Sprite.new()
+	newguy.position = $lampity/Sprite.global_position
+	newguy.texture = load("res://assets/I_love_lamp.png")
+	newguy.scale = $lampity/Sprite.scale
+	get_parent().add_child(newguy)
+	
+	queue_free()
 
-
-func _on_Timer_timeout():
-	$AnimationPlayer.play("Moving")
-	can_attack = true

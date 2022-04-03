@@ -5,13 +5,12 @@
 [ext_resource path="res://assets/curtain.png" type="Texture" id=3]
 [ext_resource path="res://enemies/Whispering_Window.gd" type="Script" id=4]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 108, 113.641 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Attacking"
-length = 10.0
+length = 3.5
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
 tracks/0/interp = 1
@@ -19,8 +18,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "values": [ {
 "args": [  ],
 "method": "spawn_attacks"
@@ -30,27 +29,6 @@ tracks/0/keys = {
 }, {
 "args": [  ],
 "method": "spawn_attacks"
-}, {
-"args": [  ],
-"method": "can_free_player"
-}, {
-"args": [  ],
-"method": "can_free_player"
-}, {
-"args": [  ],
-"method": "can_free_player"
-}, {
-"args": [  ],
-"method": "can_free_player"
-}, {
-"args": [  ],
-"method": "can_free_player"
-}, {
-"args": [  ],
-"method": "can_free_player"
-}, {
-"args": [  ],
-"method": "can_free_player"
 } ]
 }
 
@@ -122,6 +100,10 @@ anims/Dying = SubResource( 3 )
 
 [node name="Tween" type="Tween" parent="."]
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.15
+
 [connection signal="body_entered" from="Hit_Box" to="." method="_on_Hit_Box_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 [editable path="Hit_Box"]
