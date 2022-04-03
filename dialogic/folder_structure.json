@@ -12,7 +12,8 @@
 				"character-1648910758.json",
 				"character-1648910802.json",
 				"character-1648910934.json",
-				"character-1648911702.json"
+				"character-1648911702.json",
+				"character-1648996131.json"
 			],
 			"folders": {
 
@@ -42,7 +43,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": false
+				"folded": true
 			}
 		},
 		"Themes": {
@@ -56,7 +57,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": false
+				"folded": true
 			}
 		},
 		"Timelines": {
@@ -95,7 +96,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"Lighting": {

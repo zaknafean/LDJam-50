@@ -2,7 +2,7 @@
 
 [ext_resource path="res://levels/interactables/events/DialogEvent.gd" type="Script" id=1]
 
-[node name="DialogEvent" type="Node2D" groups=[
-"events",
-]]
+[node name="DialogEvent" type="Node2D" groups=["events"]]
 script = ExtResource( 1 )
+quest_id = null
+quest_value = null

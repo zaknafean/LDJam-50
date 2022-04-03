@@ -4,6 +4,7 @@ const livingRoom = preload("res://levels/rooms/LivingRoom.tscn")
 const bathRoom = preload("res://levels/rooms/BathRoom.tscn")
 const kitchenRoom = preload("res://levels/rooms/KitchenRoom.tscn")
 const bedRoom = preload("res://levels/rooms/BedRoom.tscn")
+const hallwayRoom = preload("res://levels/rooms/HallwayRoom.tscn")
 const unknownRoom = preload("res://levels/rooms/UnknownRoom.tscn")
 const unlikedRoom = preload("res://levels/rooms/UnlikedRoom.tscn")
 
@@ -37,7 +38,7 @@ func start_level():
 	curRoom._set_spawns('s')
 
 
-func change_room(newRoom: String, directionFrom: String, delay=2):
+func change_room(newRoom: String, directionFrom: String, _delay=2):
 	var doorLocation
 	if directionFrom == 'w':
 		doorLocation = curRoom.get_node("Interactables/DoorWestClickable").interactionPosition
@@ -49,8 +50,8 @@ func change_room(newRoom: String, directionFrom: String, delay=2):
 		doorLocation = curRoom.get_node("Interactables/DoorNorthClickable").interactionPosition
 	
 	var timeToDoor = doorLocation.distance_to(curRoom.enemy.global_position) / curRoom.enemy.SPEED
-	var newDelay = clamp(timeToDoor, 1, 25)
-	
+	var newDelay = clamp(timeToDoor, 1, 10)
+	print(timeToDoor)
 	if curRoomString == newRoom:
 		print('error you went in a loop somehow')
 		return
@@ -62,12 +63,14 @@ func change_room(newRoom: String, directionFrom: String, delay=2):
 		print("Error: curRoom doesn't exist whith shouldn't be possible")
 		return
 	
-	if newRoom == 'living':
+	if newRoom == 'livingroom':
 		curRoom = livingRoom.instance()
-	elif newRoom == 'bath':
+	elif newRoom == 'bathroom':
 		curRoom = bathRoom.instance()
-	elif newRoom == 'bed':
+	elif newRoom == 'bedroom':
 		curRoom = bedRoom.instance()
+	elif newRoom == 'hallwayroom':
+		curRoom = hallwayRoom.instance()
 	elif newRoom == 'kitchen':
 		curRoom = kitchenRoom.instance()
 	elif newRoom == 'unknown':
@@ -75,6 +78,7 @@ func change_room(newRoom: String, directionFrom: String, delay=2):
 	elif newRoom == 'unliked':
 		curRoom = unlikedRoom.instance()
 	
+	Settings.roomsExplored += 1
 	curRoomString = newRoom
 	add_child(curRoom)
 	yield(get_tree(), "idle_frame")

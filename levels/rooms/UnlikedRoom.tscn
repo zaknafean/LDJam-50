@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Tilesets/EnvironmentTileset.tres" type="TileSet" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=6]
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=8]
+[ext_resource path="res://Enemies/Sleep_Gremlin.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Enemies/Lamp.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Enemies/ImAStove.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
@@ -64,7 +67,6 @@ format = 1
 tile_data = PoolIntArray( -65529, 54, 0, -65528, 46, 0, 7, 55, 0, 8, 47, 0, 9, 46, 0, 65543, 56, 0, 65545, 47, 0, 65546, 46, 0, 131079, 48, 0, 131082, 47, 0, 131083, 46, 0, 196616, 48, 0, 196619, 47, 0, 196620, 46, 0, 262152, 26, 0, 262153, 48, 0, 262154, 20, 0, 262155, 20, 0, 262156, 47, 0, 393215, 27, 0, 327680, 34, 0, 327689, 34, 0, 327690, 34, 0, 327691, 34, 0, 327692, 64, 0, 458751, 28, 0, 393216, 19, 0, 393217, 19, 0, 393225, 19, 0, 393226, 19, 0, 393227, 19, 0, 393228, 64, 0, 524287, 30, 0, 458752, 30, 0, 458753, 30, 0, 458754, 30, 0, 458761, 30, 0, 458762, 30, 0, 458763, 30, 0, 458764, 30, 0 )
 
 [node name="AlphaLayerMap" parent="Navigation2D" index="3"]
-z_index = 2
 tile_data = PoolIntArray( 65544, 20, 0, 131080, 20, 0, 131081, 20, 0, 196617, 20, 0, 196618, 20, 0, 327679, 46, 0, 262153, 26, 0, 262154, 39, 0, 262155, 39, 0, 262156, 26, 0, 393215, 47, 0, 327680, 46, 0, 327690, 48, 0, 327691, 20, 0, 458751, 55, 0, 393216, 47, 0, 393217, 46, 0, 393227, 48, 0, 524287, 56, 0, 458752, 20, 0, 458753, 47, 0, 458754, 46, 0, 458764, 48, 0, 589823, 67, 0, 524288, 20, 0, 524289, 20, 0, 524290, 47, 0, 524291, 45, 0, 524292, 45, 0, 524293, 45, 0, 524294, 45, 0, 524295, 45, 0, 524296, 45, 0, 524297, 45, 0, 524298, 45, 0, 524299, 45, 0, 524300, 45, 0, 524301, 45, 0, 524302, 45, 0, 524303, 46, 0, 589824, 67, 0, 589825, 20, 0, 589826, 51, 0, 589827, 27, 0, 589828, 34, 0, 589829, 34, 0, 589830, 34, 0, 589831, 34, 0, 589832, 34, 0, 589833, 34, 0, 589834, 34, 0, 589835, 34, 0, 589836, 34, 0, 589837, 34, 0, 589838, 32, 0, 589839, 47, 0, 589840, 46, 0, 655361, 67, 0, 655362, 51, 0, 655363, 28, 0, 655364, 19, 0, 655365, 19, 0, 655366, 19, 0, 655367, 19, 0, 655368, 19, 0, 655369, 19, 0, 655370, 19, 0, 655371, 19, 0, 655372, 19, 0, 655373, 19, 0, 655374, 32, 0, 655375, 55, 0, 655376, 47, 0, 655377, 46, 0, 720898, 66, 0, 720899, 29, 0, 720900, 30, 0, 720901, 30, 0, 720902, 30, 0, 720903, 30, 0, 720904, 30, 0, 720905, 30, 0, 720906, 30, 0, 720907, 30, 0, 720908, 30, 0, 720909, 30, 0, 720910, 31, 0, 720911, 56, 0, 720912, 20, 0, 720913, 47, 0, 720914, 46, 0, 786447, 67, 0, 786448, 20, 0, 786449, 20, 0, 786450, 47, 0, 786451, 45, 0, 786452, 45, 0, 786453, 45, 0, 786454, 45, 0, 786455, 45, 0, 786456, 45, 0, 786457, 45, 0, 786458, 45, 0, 786459, 46, 0, 851984, 67, 0, 851985, 20, 0, 851986, 51, 0, 851987, 27, 0, 851988, 34, 0, 851989, 34, 0, 851990, 34, 0, 851991, 34, 0, 851992, 34, 0, 851993, 34, 0, 851994, 32, 0, 851995, 47, 0, 851996, 46, 0, 917521, 67, 0, 917522, 51, 0, 917523, 28, 0, 917524, 19, 0, 917525, 19, 0, 917526, 19, 0, 917527, 19, 0, 917528, 19, 0, 917529, 19, 0, 917530, 32, 0, 917531, 20, 0, 917532, 47, 0, 917533, 46, 0, 983058, 66, 0, 983059, 29, 0, 983060, 30, 0, 983061, 30, 0, 983062, 30, 0, 983063, 30, 0, 983064, 30, 0, 983065, 30, 0, 983066, 31, 0, 983067, 20, 0, 983068, 20, 0, 983069, 47, 0, 983070, 46, 0, 1048603, 67, 0, 1048604, 20, 0, 1048605, 20, 0, 1048606, 47, 0, 1048607, 46, 0, 1114140, 67, 0, 1114141, 20, 0, 1114142, 20, 0, 1114143, 52, 0, 1114144, 45, 0, 1114145, 45, 0, 1114146, 45, 0, 1114147, 45, 0, 1114148, 45, 0, 1114149, 45, 0, 1114150, 46, 0, 1179677, 67, 0, 1179678, 20, 0, 1179679, 64, 0, 1179680, 27, 0, 1179681, 34, 0, 1179682, 34, 0, 1179683, 34, 0, 1179684, 34, 0, 1179685, 33, 0, 1245214, 67, 0, 1245215, 64, 0, 1245216, 28, 0, 1245217, 19, 0, 1245218, 19, 0, 1245219, 19, 0, 1245220, 19, 0, 1245221, 32, 0, 1310751, 66, 0, 1310752, 29, 0, 1310753, 30, 0, 1310754, 30, 0, 1310755, 30, 0, 1310756, 30, 0, 1310757, 31, 0 )
 
 [node name="Player" parent="." index="1"]
@@ -109,6 +111,9 @@ shape = SubResource( 4 )
 [node name="InteractionPosition" parent="Interactables/DoorNorthClickable" index="2"]
 position = Vector2( 164, 103 )
 
+[node name="DialogEvent" parent="Interactables/DoorNorthClickable/EventQueue" index="0" instance=ExtResource( 7 )]
+DIALOG = "LivingRoomNorth"
+
 [node name="DoorEastClickable" parent="Interactables" index="2" instance=ExtResource( 6 )]
 position = Vector2( 1232, 434 )
 canHighlight = true
@@ -129,6 +134,9 @@ position = Vector2( 443, 193 )
 
 [node name="EventQueue" parent="Interactables/DoorEastClickable" index="3"]
 position = Vector2( 453, 10 )
+
+[node name="DialogEvent" parent="Interactables/DoorEastClickable/EventQueue" index="0" instance=ExtResource( 7 )]
+DIALOG = "LivingRoomEast"
 
 [node name="DoorSouthClickable" parent="Interactables" index="3" instance=ExtResource( 6 )]
 position = Vector2( 934, 628 )
@@ -153,6 +161,9 @@ position = Vector2( 466, 364 )
 [node name="EventQueue" parent="Interactables/DoorSouthClickable" index="3"]
 position = Vector2( 429, 447 )
 
+[node name="DialogEvent" parent="Interactables/DoorSouthClickable/EventQueue" index="0" instance=ExtResource( 7 )]
+DIALOG = "LivingRoomNorth"
+
 [node name="DoorWestClickable" parent="Interactables" index="4" instance=ExtResource( 6 )]
 position = Vector2( 71, 596 )
 z_index = 1
@@ -173,8 +184,29 @@ shape = SubResource( 10 )
 [node name="InteractionPosition" parent="Interactables/DoorWestClickable" index="2"]
 position = Vector2( 30, 33 )
 
+[node name="DialogEvent" parent="Interactables/DoorWestClickable/EventQueue" index="0" instance=ExtResource( 7 )]
+DIALOG = "LivingRoomEast"
+
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 1073, 404 )
+
+[node name="Sleep_Gremlin" parent="Difficulty2" index="0" instance=ExtResource( 9 )]
+position = Vector2( 865, 314 )
+
+[node name="Sleep_Gremlin2" parent="Difficulty2" index="1" instance=ExtResource( 9 )]
+position = Vector2( 1516, 639 )
+
+[node name="ImAStove" parent="Difficulty3" index="0" instance=ExtResource( 11 )]
+position = Vector2( 552, 546 )
+
+[node name="ImAStove2" parent="Difficulty3" index="1" instance=ExtResource( 11 )]
+position = Vector2( 1511, 933 )
+
+[node name="Lamp" parent="Difficulty3" index="2" instance=ExtResource( 10 )]
+position = Vector2( 2090, 967 )
+
+[node name="Lamp2" parent="Difficulty3" index="3" instance=ExtResource( 10 )]
+position = Vector2( 1058, 619 )
 
 [editable path="Interactables/SpriteClickable"]
 [editable path="Interactables/DoorNorthClickable"]

@@ -38,6 +38,14 @@ func _ready():
 	alphamap.modulate = Color(.5, .5, .5, .5)
 	
 	Settings.curGameState = Settings.GAME_STATES.PLAY
+	
+	if Settings.difficulty == 1:
+		$Difficulty2.queue_free()
+		$Difficulty3.queue_free()
+	elif Settings.difficulty == 2:
+		$Difficulty3.queue_free()
+	elif Settings.difficulty == 3:
+		pass
 
 
 func _set_spawns(directionFrom: String, delay=2):
@@ -133,10 +141,11 @@ func process_event(event : Interactable) -> bool:
 
 
 func _process(_delta):
-	statLabel.text = str('Alert: ', Settings.alertnessValue, '\n', 'Sanity: ', Settings.sanityValue, '\n', 'Score: ', Settings.score, '\n', 'State: ', Settings.curGameState);
+	statLabel.text = str('Alert: ', Settings.alertnessValue, '\n', 'Sanity: ', Settings.sanityValue, '\n', 'Score: ', Settings.score, '\n', 'State: ', Settings.curGameState, '\n', 'Rooms: ', Settings.roomsExplored, '\n', 'Difficulty: ', Settings.difficulty);
 	
 	if Settings.sanityValue <= 0 or Settings.alertnessValue <= 0:
-		print('you have lost')
+		#print('you have lost')
+		pass
 
 
 func _unhandled_input(event):

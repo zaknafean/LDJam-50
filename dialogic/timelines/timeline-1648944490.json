@@ -101,13 +101,13 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": false,
-			"wait_seconds": 6
+			"wait_seconds": 2
 		},
 		{
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "On second thought, I think this might just make me more tired..."
+			"text": "T-that's enough! I have to keep moving!"
 		},
 		{
 			"animation": "4-fade_out.gd",
@@ -131,8 +131,18 @@
 			"z_index": 0
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"150"
+				],
+				"method_name": "adjust_alertness",
+				"target_node_path": "/root/Settings"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"choice": "I'm tired just thinking about exercising.",
@@ -142,14 +152,14 @@
 			"value": ""
 		},
 		{
-			"character": "",
+			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "...or about anything.\nMaybe I'm just tired."
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"choice": "That sounds...exhausting.",
@@ -160,7 +170,7 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"event_id": "dialogic_013"

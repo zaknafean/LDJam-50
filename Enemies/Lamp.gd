@@ -43,3 +43,8 @@ func byeeeeee():
 	$AnimationPlayer.stop()
 	can_attack = false
 	$Timer.start()
+
+
+func _on_Timer_timeout():
+	$AnimationPlayer.play("Moving")
+	can_attack = true

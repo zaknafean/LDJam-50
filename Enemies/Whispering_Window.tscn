@@ -1,0 +1,126 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Utilities/Attachable_Tools/Hit_Box.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/window.png" type="Texture" id=2]
+[ext_resource path="res://assets/curtain.png" type="Texture" id=3]
+[ext_resource path="res://Enemies/Whispering_Window.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 108, 113.641 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Attacking"
+length = 10.0
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "spawn_attacks"
+}, {
+"args": [  ],
+"method": "spawn_attacks"
+}, {
+"args": [  ],
+"method": "spawn_attacks"
+}, {
+"args": [  ],
+"method": "can_free_player"
+}, {
+"args": [  ],
+"method": "can_free_player"
+}, {
+"args": [  ],
+"method": "can_free_player"
+}, {
+"args": [  ],
+"method": "can_free_player"
+}, {
+"args": [  ],
+"method": "can_free_player"
+}, {
+"args": [  ],
+"method": "can_free_player"
+}, {
+"args": [  ],
+"method": "can_free_player"
+} ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Dying"
+
+[node name="Whispering_Window" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Window" type="KinematicBody2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="window" type="Sprite" parent="Window"]
+scale = Vector2( 0.07, 0.07 )
+texture = ExtResource( 2 )
+
+[node name="curtains" type="Sprite" parent="Window"]
+scale = Vector2( 0.07, 0.07 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Window"]
+
+[node name="Hit_Box" parent="." instance=ExtResource( 1 )]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="Hit_Box" index="0"]
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -117.0
+margin_top = -124.0
+margin_right = 123.0
+margin_bottom = -76.0
+text = "Pssst...sleepy head... come over here
+and count some sheeps?  You know
+you wanna."
+align = 1
+
+[node name="Target_Locations" type="Node2D" parent="."]
+
+[node name="Position2D1" type="Position2D" parent="Target_Locations"]
+position = Vector2( -201, 1 )
+
+[node name="Position2D2" type="Position2D" parent="Target_Locations"]
+position = Vector2( -106, -210 )
+
+[node name="Position2D3" type="Position2D" parent="Target_Locations"]
+position = Vector2( 123, -205 )
+
+[node name="Position2D4" type="Position2D" parent="Target_Locations"]
+position = Vector2( 210, 1 )
+
+[node name="Position2D5" type="Position2D" parent="Target_Locations"]
+position = Vector2( 192, -101 )
+
+[node name="Position2D6" type="Position2D" parent="Target_Locations"]
+position = Vector2( 0, -222 )
+
+[node name="Position2D7" type="Position2D" parent="Target_Locations"]
+position = Vector2( -162, -107 )
+
+[node name="Attacks" type="Node" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Attacking = SubResource( 2 )
+anims/Dying = SubResource( 3 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="body_entered" from="Hit_Box" to="." method="_on_Hit_Box_body_entered"]
+
+[editable path="Hit_Box"]

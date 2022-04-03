@@ -8,7 +8,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "The coffeepot is full of warm, delicious coffee. It smells amazing."
+			"text": "Warm, delicious coffee. It smells amazing."
 		},
 		{
 			"animation": "1-fade_in.gd",
@@ -35,7 +35,7 @@
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Coffee, just what I need to keep me going!"
+			"text": "Coffee... need to keep going!"
 		},
 		{
 			"character": "",
@@ -91,11 +91,21 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You chug a cup of coffee. Black, untained coffee."
+			"text": "You chug a cup of coffee, black and untained."
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"50"
+				],
+				"method_name": "adjust_alertness",
+				"target_node_path": "/root/Settings"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"choice": "The smell alone will keep me going.",
@@ -106,7 +116,7 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"event_id": "dialogic_013"

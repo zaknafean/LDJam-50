@@ -8,7 +8,34 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Maybe watching something will help keep me focused."
+			"text": "The TV box sits silently."
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0.25,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "More input. I need more input."
 		},
 		{
 			"character": "",
@@ -17,10 +44,10 @@
 
 			],
 			"portrait": "",
-			"question": "Power up this idiot box?"
+			"question": "Power up the idiot box?"
 		},
 		{
-			"choice": "It's late-night talk show time!",
+			"choice": "Just a bit won't hurt...",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -33,11 +60,6 @@
 			"event_name": "AudioEvent",
 			"file": "res://assets/sound/crowd-laugh.wav",
 			"volume": 10
-		},
-		{
-			"event_id": "dialogic_023",
-			"hide_dialogbox": false,
-			"wait_seconds": 2
 		},
 		{
 			"animation": "1-fade_in.gd",
@@ -64,7 +86,18 @@
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I'm not sure I got that joke. I'll think about it for a while."
+			"text": "It's a late-night talk show..."
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": false,
+			"wait_seconds": 3
+		},
+		{
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "They're talking about... me?"
 		},
 		{
 			"animation": "4-fade_out.gd",
@@ -102,11 +135,21 @@
 			"text": "You leave the television on and it hums behind you."
 		},
 		{
-			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"call_node": {
+				"arguments": [
+					"100"
+				],
+				"method_name": "adjust_alertness",
+				"target_node_path": "/root/Settings"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
-			"choice": "Wait, I'm not a dummy.",
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		},
+		{
+			"choice": "There's no time for that!",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -114,7 +157,7 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"event_id": "dialogic_013"
