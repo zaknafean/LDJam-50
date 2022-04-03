@@ -2,7 +2,7 @@
 
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/BlueCrateSprite.png" type="Texture" id=3]
+[ext_resource path="res://assets/curtain.png" type="Texture" id=3]
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=4]
 
 [sub_resource type="ShaderMaterial" id=1]
@@ -11,9 +11,9 @@ shader = ExtResource( 4 )
 shader_param/brightness = 1.0
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 15.5, 17 )
+extents = Vector2( 225.5, 194.5 )
 
-[node name="CoffeeClickable" instance=ExtResource( 2 )]
+[node name="CurtainsClickable" instance=ExtResource( 2 )]
 collision_layer = 1
 collision_mask = 2
 canHighlight = true
@@ -22,11 +22,15 @@ isOneShot = true
 
 [node name="Sprite" parent="." index="0"]
 material = SubResource( 1 )
+position = Vector2( 6.00024, 6.10352e-05 )
+scale = Vector2( 0.2185, 0.2185 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( 0.5, -1 )
+position = Vector2( 2.5, -15.5 )
 shape = SubResource( 2 )
 
 [node name="DialogEvent" parent="EventQueue" index="0" instance=ExtResource( 1 )]
-DIALOG = "Coffee"
+position = Vector2( 0, 233 )
+difficulty = -1
+DIALOG = "Curtains"
