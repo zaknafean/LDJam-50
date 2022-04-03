@@ -21,7 +21,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if Settings.curGameState == Settings.GAME_STATES.PLAY and !amEating:
 		VELOCITY = (playerRef.position - position).normalized() * SPEED
 		var _collision = move_and_slide(VELOCITY)
@@ -42,9 +42,9 @@ func _process(delta):
 		
 		anim_switch('run', 1)
 
+
 func anim_switch(animation, speed = 1):
 	var newanim = str(animation,'_',sprite_dir)
-	print(newanim)
 	if anim.current_animation != newanim:
 		anim.play(newanim, -1, speed)
 
