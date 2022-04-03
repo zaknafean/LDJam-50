@@ -11,10 +11,10 @@
 
 			],
 			"portrait": "",
-			"question": "This is the hallway door. Open the Door?"
+			"question": "I don't like this room. Open the Door?"
 		},
 		{
-			"choice": "Nowhere but forward.",
+			"choice": "No choice, I need to run!",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -31,18 +31,18 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": false,
-			"wait_seconds": 3
+			"wait_seconds": 2
 		},
 		{
-			"character": "",
+			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "The hallway is long and narrow. Better start walking..."
+			"text": "It's watching me again."
 		},
 		{
 			"call_node": {
 				"arguments": [
-					"hallwayroom",
+					"unlikedroom",
 					"n"
 				],
 				"method_name": "change_room",
@@ -51,7 +51,7 @@
 			"event_id": "dialogic_042"
 		},
 		{
-			"choice": "Too dangerous, not yet.",
+			"choice": "Anywhere but there...",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -67,7 +67,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1648955105.json",
-		"name": "HallwayRoomEast"
+		"file": "timeline-1648999361.json",
+		"name": "UnlikedRoomSouth"
 	}
 }
