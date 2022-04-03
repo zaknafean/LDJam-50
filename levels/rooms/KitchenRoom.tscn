@@ -121,6 +121,7 @@ position = Vector2( 453, 10 )
 
 [node name="DoorSouthClickable" parent="Interactables" index="3" instance=ExtResource( 2 )]
 position = Vector2( 567, 122 )
+z_index = 1
 canHighlight = true
 canClick = true
 
@@ -143,6 +144,7 @@ position = Vector2( 429, 447 )
 
 [node name="DoorWestClickable" parent="Interactables" index="4" instance=ExtResource( 2 )]
 position = Vector2( 499, 317 )
+z_index = 1
 canHighlight = true
 canClick = true
 
