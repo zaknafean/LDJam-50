@@ -97,6 +97,7 @@ position = Vector2( 176, 88 )
 
 [node name="DoorEastClickable" parent="Interactables" index="2" instance=ExtResource( 2 )]
 position = Vector2( 496, 14 )
+z_index = 1
 canHighlight = true
 canClick = true
 
@@ -157,6 +158,10 @@ shape = SubResource( 10 )
 
 [node name="InteractionPosition" parent="Interactables/DoorWestClickable" index="2"]
 position = Vector2( 30, 33 )
+
+[node name="DialogEvent" parent="Interactables/DoorWestClickable/EventQueue" index="0" instance=ExtResource( 5 )]
+position = Vector2( 1021, -331 )
+DIALOG = "TestZoning"
 
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 420, 471 )
