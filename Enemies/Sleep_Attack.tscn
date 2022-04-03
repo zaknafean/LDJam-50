@@ -2,7 +2,8 @@
 
 [ext_resource path="res://assets/effects/Flame.png" type="Texture" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=3]
-[ext_resource path="res://Enemies/Sleep_Attack.gd" type="Script" id=5]
+[ext_resource path="res://enemies/Sleep_Attack.gd" type="Script" id=5]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 40, 40 )
@@ -20,6 +21,7 @@ colors = PoolColorArray( 0.815686, 0.854902, 0.568627, 1, 0.458824, 0.654902, 0.
 
 [node name="Sleep_Attack" type="Sprite" groups=["attack"]]
 scale = Vector2( 0.25, 0.25 )
+z_index = 5
 texture = ExtResource( 3 )
 script = ExtResource( 5 )
 

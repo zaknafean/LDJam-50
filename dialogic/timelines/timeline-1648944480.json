@@ -75,13 +75,13 @@
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "...and that's when I decided that I really wanted to contribute to helping save..."
+			"text": "...and that's when I decided I  wanted to-"
 		},
 		{
-			"character": "",
+			"character": "character-1648996131.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Are you this boring all of the time?\nYour reflection in the mirror looks disappointed in you."
+			"text": "-It's coming. Run."
 		},
 		{
 			"animation": "4-fade_out.gd",
@@ -105,8 +105,18 @@
 			"z_index": 0
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"25"
+				],
+				"method_name": "adjust_alertness",
+				"target_node_path": "/root/Settings"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.3
 		},
 		{
 			"choice": "No, only crazy people do that.",
@@ -117,7 +127,7 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.3
 		},
 		{
 			"event_id": "dialogic_013"
