@@ -22,6 +22,8 @@ func spawn_attacks():
 	var attack = attack_instance.instance()
 	attack.position = $Stove.global_position
 	$Attacks.add_child(attack)
+	attack.connect('attack_arrived', self, '_on_attack_arrived')
+	attack.connect('attack_destroyed', self, '_on_attack_destroyed')
 
 func _on_Hit_Box_body_entered(body):
 	if (body is KinematicBody2D) and (Settings.curGameState != Settings.GAME_STATES.BATTLE) and (can_attack != false):
