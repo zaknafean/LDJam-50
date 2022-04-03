@@ -11,14 +11,15 @@ var attack_count = 0
 var attack_instance
 var targets = []
 var spot = 0
-var look_for_kills :bool = false
+var look_for_kills :bool 
 
 func _ready():
+	look_for_kills = false
 	count = 5
 	randomize()
 	$Label.visible = false
 
-func _process(delta):
+func _process(_delta):
 	if look_for_kills == true:
 		can_free_player()
 	else:
@@ -32,7 +33,7 @@ func _on_Hit_Box_body_entered(body):
 		$Label.visible = true
 		attack_position()
 
-func _on_Hit_Box_body_exited(body):
+func _on_Hit_Box_body_exited(_body):
 	$Label.visible = false
 
 func attack_position():
@@ -55,7 +56,8 @@ func insert_dead_baby_joke():
 	look_for_kills = true
 
 func can_free_player():
-	if $Attacks.get_child_count() == 0:
+	var pool = $Attacks.get_children()
+	if pool.size() == 0:
 		Settings.curGameState = Settings.GAME_STATES.PLAY
 		$AnimationPlayer.play("Dying")
 		terminator()

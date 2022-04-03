@@ -2,7 +2,7 @@
 
 [ext_resource path="res://enemies/ImAStove.gd" type="Script" id=1]
 [ext_resource path="res://utilities/attachable_tools/Hit_Box.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/StoveStandin.png" type="Texture" id=3]
+[ext_resource path="res://assets/Stove.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 23, 18.75 )
@@ -134,6 +134,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 1, 1 ), Vector2( 0, 0 ), Vector2( -1, 1 ), Vector2( 0, 0 ), Vector2( 1, 1 ), Vector2( 0, 0 ), Vector2( -1, 1 ), Vector2( 0, 0 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
 
 [sub_resource type="Animation" id=8]
 length = 0.001
@@ -161,6 +173,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Vector2( 0, 0 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
 
 [node name="ImAStove" type="Node2D"]
 script = ExtResource( 1 )
@@ -173,7 +197,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="Sprite" type="Sprite" parent="Stove"]
-scale = Vector2( 0.035, 0.035 )
+scale = Vector2( 0.45, 0.45 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stove"]
@@ -187,13 +211,15 @@ collision_mask = 2
 shape = SubResource( 6 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = -92.0
-margin_top = -56.0
-margin_right = 100.0
-margin_bottom = -25.0
-text = "I am an ANGRY STOVE!!!!
-Or maybe your hallucinating..."
+visible = false
+margin_left = -40.0
+margin_top = -101.0
+margin_right = 45.0
+margin_bottom = -24.0
+text = "Grrr....Grrr...Grrr"
 align = 1
+valign = 2
+autowrap = true
 
 [node name="Target_Locations" type="Node2D" parent="."]
 

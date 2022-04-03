@@ -2,8 +2,6 @@
 
 [ext_resource path="res://utilities/attachable_tools/Hurt_Box.gd" type="Script" id=1]
 
-
-
 [node name="Hurt_Box" type="Area2D"]
 script = ExtResource( 1 )
 __meta__ = {
