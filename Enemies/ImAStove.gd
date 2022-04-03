@@ -14,6 +14,7 @@ func spawn_attacks():
 
 func _on_Hit_Box_body_entered(body):
 	if (body is KinematicBody2D) and (Settings.curGameState != Settings.GAME_STATES.BATTLE) and (can_attack != false):
+		body.path = []
 		Settings.curGameState = Settings.GAME_STATES.BATTLE
 		$Label.visible = true
 		attack_position()
@@ -33,8 +34,12 @@ func byeeeeee():
 	$Label.visible = false
 	$AnimationPlayer.stop()
 	can_attack = false
-	$Timer.start()
-
-func _on_Timer_timeout():
-	$AnimationPlayer.play("Idle")
-	can_attack = true
+	
+	var newguy = Sprite.new()
+	newguy.position = self.global_position
+	newguy.texture = load("res://assets/StoveStandin.png")
+	newguy.scale = $Stove/Sprite.scale
+	get_parent().add_child(newguy)
+	
+	queue_free()
+	

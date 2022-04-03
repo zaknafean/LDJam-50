@@ -4,20 +4,30 @@ class_name SleepEnemies
 
 var count = 0
 
+
 var sleep_attack :NodePath = "res://enemies/Sleep_Attack.tscn"
+
 var attack_count = 0
 var attack_instance
 var targets = []
 var spot = 0
+var look_for_kills :bool = false
 
 func _ready():
 	count = 5
 	randomize()
 	$Label.visible = false
 
+func _process(delta):
+	if look_for_kills == true:
+		can_free_player()
+	else:
+		return
+
 
 func _on_Hit_Box_body_entered(body):
 	if body is KinematicBody2D and Settings.curGameState != Settings.GAME_STATES.BATTLE:
+		body.path = []
 		Settings.curGameState = Settings.GAME_STATES.BATTLE
 		$Label.visible = true
 		attack_position()
@@ -41,11 +51,15 @@ func spawn_attacks():
 	$Attacks.add_child(attack)
 	spot = spot + 1
 
+func insert_dead_baby_joke():
+	look_for_kills = true
 
 func can_free_player():
 	if $Attacks.get_child_count() == 0:
 		Settings.curGameState = Settings.GAME_STATES.PLAY
 		$AnimationPlayer.play("Dying")
+		terminator()
+
 
 func terminator():
 	$Label.text = "I'll be back Bwahahaha!!"
@@ -53,3 +67,4 @@ func terminator():
 
 func byeeeeee():
 	queue_free()
+
