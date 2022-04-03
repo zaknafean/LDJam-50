@@ -1,27 +1,16 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/effects/Flame.png" type="Texture" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://effects/AttackSuccess.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/icons/green-spiral.png" type="Texture" id=2]
 [ext_resource path="res://enemies/Sleep_Attack.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 40, 40 )
 
-[sub_resource type="Curve" id=2]
-max_value = 100.0
-_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.617647, 88.75 ), 97.1429, 97.1429, 0, 0, Vector2( 1, 100 ), 0.0, 0.0, 0, 0 ]
-
-[sub_resource type="Curve" id=3]
-_data = [ Vector2( 0, 0.323864 ), 0.0, 0.0, 0, 0, Vector2( 0.269608, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.26926 ), 0.0, 0.0, 0, 0 ]
-
-[sub_resource type="Gradient" id=4]
-offsets = PoolRealArray( 0, 0.127072, 0.248619, 0.541436, 0.646409, 0.729282, 0.906077, 1 )
-colors = PoolColorArray( 0.815686, 0.854902, 0.568627, 1, 0.458824, 0.654902, 0.262745, 1, 0.27451, 0.509804, 0.196078, 1, 0.25098, 0.152941, 0.317647, 1, 0.25098, 0.152941, 0.317647, 1, 0.635294, 0.243137, 0.54902, 1, 0.117647, 0.113725, 0.223529, 0.317647, 0, 0, 0, 0 )
-
 [node name="Sleep_Attack" type="Sprite" groups=["attack"]]
 scale = Vector2( 0.25, 0.25 )
 z_index = 5
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 script = ExtResource( 5 )
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -30,28 +19,7 @@ script = ExtResource( 5 )
 position = Vector2( -4.76837e-06, -3.57628e-06 )
 shape = SubResource( 1 )
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-emitting = false
-amount = 31
-lifetime = 0.4
-explosiveness = 0.83
-lifetime_randomness = 0.32
-texture = ExtResource( 1 )
-direction = Vector2( 0, -1 )
-spread = 180.0
-gravity = Vector2( 0, 0 )
-initial_velocity = 561.93
-initial_velocity_random = 0.46
-angular_velocity = 343.49
-angular_velocity_random = 0.56
-damping = 309.64
-damping_curve = SubResource( 2 )
-angle = 636.0
-angle_random = 1.0
-scale_amount = 1.39
-scale_amount_random = 0.49
-scale_amount_curve = SubResource( 3 )
-color_ramp = SubResource( 4 )
+[node name="CPUParticles2D" parent="." instance=ExtResource( 1 )]
 
 [node name="Tween" type="Tween" parent="."]
 playback_process_mode = 0
