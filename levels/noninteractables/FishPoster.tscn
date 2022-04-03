@@ -1,0 +1,6 @@
+[gd_scene format=2]
+
+[node name="FishPoster"]
+
+[node name="Sprite" parent="." index="0"]
+region_rect = Rect2( 196, 26, 56, 82 )
