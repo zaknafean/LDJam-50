@@ -94,6 +94,16 @@
 			"text": "You chug a cup of coffee. Black, untained coffee."
 		},
 		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "",
+				"target_node_path": "/root/Settings"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"event_id": "dialogic_022",
 			"transition_duration": 1
 		},

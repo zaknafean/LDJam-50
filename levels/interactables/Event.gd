@@ -4,8 +4,7 @@ class_name Event
 
 
 export (Settings.EVENTS) var event_type = Settings.EVENTS.DIALOG
-export (int) var quest_id = -1
-export (int) var quest_value = -1
+export (int) var difficulty = 1
 
 func _ready():
 	setup()

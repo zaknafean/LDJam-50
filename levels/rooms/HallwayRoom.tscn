@@ -101,6 +101,9 @@ shape = SubResource( 4 )
 [node name="InteractionPosition" parent="Interactables/DoorNorthClickable" index="2"]
 position = Vector2( 164, 103 )
 
+[node name="DialogEvent" parent="Interactables/DoorNorthClickable/EventQueue" index="0" instance=ExtResource( 6 )]
+DIALOG = "LivingRoomNorth"
+
 [node name="DoorEastClickable" parent="Interactables" index="2" instance=ExtResource( 5 )]
 position = Vector2( 1573, 83 )
 canHighlight = true
@@ -121,6 +124,9 @@ position = Vector2( 443, 193 )
 
 [node name="EventQueue" parent="Interactables/DoorEastClickable" index="3"]
 position = Vector2( 453, 10 )
+
+[node name="DialogEvent" parent="Interactables/DoorEastClickable/EventQueue" index="0" instance=ExtResource( 6 )]
+DIALOG = "BedRoomEast"
 
 [node name="DoorSouthClickable" parent="Interactables" index="3" instance=ExtResource( 5 )]
 position = Vector2( 447, -12 )
@@ -145,6 +151,9 @@ position = Vector2( 466, 364 )
 [node name="EventQueue" parent="Interactables/DoorSouthClickable" index="3"]
 position = Vector2( 429, 447 )
 
+[node name="DialogEvent" parent="Interactables/DoorSouthClickable/EventQueue" index="0" instance=ExtResource( 6 )]
+DIALOG = "Unopenable"
+
 [node name="DoorWestClickable" parent="Interactables" index="4" instance=ExtResource( 5 )]
 position = Vector2( 392, 227 )
 z_index = 1
@@ -164,6 +173,9 @@ shape = SubResource( 10 )
 
 [node name="InteractionPosition" parent="Interactables/DoorWestClickable" index="2"]
 position = Vector2( 30, 33 )
+
+[node name="DialogEvent" parent="Interactables/DoorWestClickable/EventQueue" index="0" instance=ExtResource( 6 )]
+DIALOG = "KitchenRoomNorth"
 
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 1913, 238 )
