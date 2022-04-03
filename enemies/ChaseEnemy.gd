@@ -47,8 +47,10 @@ func _process(_delta):
 				sprite_dir = "right"
 			else:
 				sprite_dir = "left"
-		
-		anim_switch('run', 1)
+		if VELOCITY > Vector2.ZERO:
+			anim_switch('run', 1)
+		elif VELOCITY == Vector2.ZERO and !amEating:
+			anim_switch('idle', 1)
 
 
 func activate(delay: int):
@@ -71,6 +73,7 @@ func _on_Hit_Box_body_entered(body):
 		Settings.adjust_sanity(-25)
 		eatTimer.start()
 		amEating = true
+		anim_switch('attack', 1)
 
 
 func _on_EatTimer_timeout():
