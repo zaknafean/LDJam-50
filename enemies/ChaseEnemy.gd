@@ -8,7 +8,7 @@ var delayTimer
 var VELOCITY
 var SPEED := 25.0
 var curSpeed := 25.0
-var speedBonus := 0
+var speedBonus := 0.0
 var stallCounter := 0.0
 
 var amEating = false
@@ -30,9 +30,9 @@ func _process(delta):
 	stallCounter += delta
 	
 	if stallCounter >= 10:
-		stallCounter = 0
-		speedBonus += 3
-		speedBonus = clamp(speedBonus, 0, 50)
+		stallCounter = 0.0
+		speedBonus += 3.0
+		speedBonus = clamp(speedBonus, 0.0, 50.0)
 		
 	if (Settings.curGameState == Settings.GAME_STATES.PLAY or Settings.curGameState == Settings.GAME_STATES.BATTLE or Settings.curGameState == Settings.GAME_STATES.DIALOG) and !amEating and amActive:
 		
@@ -71,14 +71,13 @@ func anim_switch(animation, speed = 1):
 
 func _on_Hit_Box_body_entered(body):
 	if body.name == "Player" and !amEating and amActive:
-
 		body.taking_damage = true
-
 		Settings.adjust_sanity(-25)
 		eatTimer.start()
 		amEating = true
-		anim_switch('attack', 1)
+		anim_switch('attack', Settings.difficulty)
 
 
 func _on_EatTimer_timeout():
 	amEating = false
+	
