@@ -1,0 +1,73 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1648902659.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This door leads to the kitchen."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Open the Door?"
+		},
+		{
+			"choice": "That's where the coffee lives!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://assets/sound/creaky-door-one.wav",
+			"volume": 0
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": false,
+			"wait_seconds": 4
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"kitchen",
+					"w"
+				],
+				"method_name": "change_room",
+				"target_node_path": "/root/ScreenGame/GameMain"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"choice": "But I'm not hungry.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1648953668.json",
+		"name": "KitchenRoomWest"
+	}
+}

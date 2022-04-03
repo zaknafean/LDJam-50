@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/lights/wall_light.png" type="Texture" id=1]
+
+[node name="Sprite" type="Sprite"]
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 81, 83 )
+texture = ExtResource( 1 )
+texture_scale = 0.16

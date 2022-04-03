@@ -1,0 +1,89 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/grunge-tileset.png" type="Texture" id=2]
+[ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=4]
+[ext_resource path="res://assets/BlueCrateSprite.png" type="Texture" id=5]
+[ext_resource path="res://levels/BaseLevel.gd" type="Script" id=6]
+[ext_resource path="res://Enemies/Whispering_Window.tscn" type="PackedScene" id=7]
+
+[sub_resource type="NavigationPolygon" id=2]
+vertices = PoolVector2Array( 1, 161, 11, 128, 573, 128, 577, 160 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 1, 161, 11, 128, 573, 128, 577, 160 ) ]
+
+[sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/brightness = 1.0
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 15.5, 23.5 )
+
+[node name="BaseLevel" type="Node2D"]
+position = Vector2( 0, 49 )
+script = ExtResource( 6 )
+
+[node name="TileMap" type="TileMap" parent="."]
+modulate = Color( 0.5, 0.5, 0.5, 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+
+[node name="Grunge-tileset" type="Sprite" parent="TileMap"]
+position = Vector2( 289, 81 )
+texture = ExtResource( 2 )
+
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+navpoly = SubResource( 2 )
+
+[node name="Interactables" type="Node2D" parent="."]
+
+[node name="SpriteClickable" parent="Interactables" instance=ExtResource( 3 )]
+position = Vector2( 245, 94 )
+canHighlight = true
+canClick = true
+
+[node name="Sprite" parent="Interactables/SpriteClickable" index="0"]
+material = SubResource( 3 )
+position = Vector2( 2, 35 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" parent="Interactables/SpriteClickable" index="1"]
+position = Vector2( 1.5, 26.5 )
+shape = SubResource( 4 )
+
+[node name="InteractionPosition" parent="Interactables/SpriteClickable" index="2"]
+position = Vector2( 1, 59 )
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 2.0
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 50, 115 )
+SPEED = 75
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="StatsLabel" type="Label" parent="CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Alert: 1000
+Sanity: 100
+Score: 0"
+
+[node name="StatsLabel" type="Label" parent="CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Alert: 1000
+Sanity: 100
+Score: 0"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Whispering_Window" parent="." instance=ExtResource( 7 )]
+position = Vector2( 328, 212 )
+
+[editable path="Interactables/SpriteClickable"]
