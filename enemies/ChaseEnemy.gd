@@ -60,6 +60,7 @@ func activate(delay: int):
 	amActive = true
 	curSpeed = SPEED + (Settings.roomsExplored * 3)
 	show()
+	$RoomEnter.emitting = true
 	#Particle effects and shizzle go here
 
 

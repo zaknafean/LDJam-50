@@ -19,7 +19,7 @@ func _ready():
 	randomize()
 	$Label.visible = false
 
-func _process(delta):
+func _process(_delta):
 	if look_for_kills == true:
 		can_free_player()
 	else:
@@ -33,7 +33,7 @@ func _on_Hit_Box_body_entered(body):
 		$Label.visible = true
 		attack_position()
 
-func _on_Hit_Box_body_exited(body):
+func _on_Hit_Box_body_exited(_body):
 	$Label.visible = false
 
 func attack_position():

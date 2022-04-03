@@ -21,6 +21,8 @@ colors = PoolColorArray( 0.975586, 0, 0, 0.101961, 0.776367, 0.121491, 0.0090980
 
 [node name="AttackEffect" type="CPUParticles2D"]
 position = Vector2( -123, 36 )
+z_index = 1
+z_as_relative = false
 amount = 4
 lifetime = 1.79
 preprocess = 98.02

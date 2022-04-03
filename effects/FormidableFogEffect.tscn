@@ -10,9 +10,8 @@ offsets = PoolRealArray( 0, 0.150877, 0.449123, 1 )
 colors = PoolColorArray( 0.576471, 0.466667, 0.733333, 0, 0.416676, 0.315025, 0.513672, 1, 0.196236, 0.195138, 0.364325, 0.536842, 0.376471, 0.0313726, 0.662745, 0 )
 
 [node name="FormidableFog" type="CPUParticles2D"]
-visible = false
 position = Vector2( 50, -33 )
-z_index = -1
+z_as_relative = false
 amount = 10
 lifetime = 9.0
 lifetime_randomness = 0.25
