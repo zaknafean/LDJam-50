@@ -32,8 +32,8 @@ func new_game():
 	roomsExplored = 0
 
 
-func adjust_alertness(value: int):
-	alertnessValue += value
+func adjust_alertness(value: String):
+	alertnessValue += int(value)
 	print('Alert Adjusted: ', alertnessValue)
 
 

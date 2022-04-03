@@ -147,7 +147,7 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "SleepEnemies",
 "language": "GDScript",
-"path": "res://enemies/Sleep_Gremlin.gd"
+"path": "res://Enemies/Sleep_Gremlin.gd"
 }, {
 "base": "Interactable",
 "class": "SpriteClickable",
