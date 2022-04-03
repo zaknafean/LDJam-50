@@ -172,19 +172,22 @@ DIALOG = "KitchenRoomNorth"
 position = Vector2( 1913, 238 )
 
 [node name="Lamp" parent="Difficulty2" index="0" instance=ExtResource( 9 )]
-position = Vector2( 687, 119 )
+position = Vector2( 788, 107 )
 
 [node name="Lamp2" parent="Difficulty2" index="1" instance=ExtResource( 9 )]
 position = Vector2( 1527, 108 )
 
 [node name="Sleep_Gremlin" parent="Difficulty3" index="0" instance=ExtResource( 8 )]
-position = Vector2( 1219, 232 )
+position = Vector2( 1222, 231 )
 
 [node name="ImAStove" parent="Difficulty3" index="1" instance=ExtResource( 10 )]
-position = Vector2( 1448, 337 )
+position = Vector2( 1780, 325 )
 
 [node name="Sleep_Gremlin2" parent="Difficulty3" index="2" instance=ExtResource( 8 )]
-position = Vector2( 837, 305 )
+position = Vector2( 785, 316 )
+
+[node name="Lamp" parent="Difficulty3" index="3" instance=ExtResource( 9 )]
+position = Vector2( 1099, 268 )
 
 [editable path="Interactables/DoorNorthClickable"]
 [editable path="Interactables/DoorEastClickable"]
