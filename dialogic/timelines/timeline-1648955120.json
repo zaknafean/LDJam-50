@@ -31,7 +31,7 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": false,
-			"wait_seconds": 3
+			"wait_seconds": 1
 		},
 		{
 			"character": "",
