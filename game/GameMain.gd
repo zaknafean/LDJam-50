@@ -19,14 +19,14 @@ func _ready():
 		D.e("Game", ["Signal game_started is already connected"])
 	if SignalMngr.connect("restart_level", self, "restart_level") != OK:
 		D.e("Game", ["Signal restart_level is already connected"])
-	#if SignalMngr.connect("next_level", self, "next_level")!= OK:
-	#	D.e("Game", ["Signal next_level is already connected"])
+	if SignalMngr.connect("next_level", self, "next_level")!= OK:
+		D.e("Game", ["Signal next_level is already connected"])
 		
 	start_level()
 
 
 func start_level():
-	#StateMngr.score.state = 0
+	Settings.new_game()
 	if curRoom:
 		remove_child(curRoom)
 		curRoom.queue_free()

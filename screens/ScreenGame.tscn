@@ -7,7 +7,6 @@
 [ext_resource path="res://addons/toolbox_project/scenes/screens/Screen.tscn" type="PackedScene" id=7]
 [ext_resource path="res://addons/toolbox_project/defaults/screens/ScreenGame.gd" type="Script" id=8]
 
-
 [node name="ScreenGame" instance=ExtResource( 7 )]
 script = ExtResource( 8 )
 show_transition_on_enter = true
@@ -17,6 +16,7 @@ play_title_song = false
 [node name="GameDialogWon" parent="." index="1" instance=ExtResource( 6 )]
 
 [node name="GameDialogLost" parent="." index="2" instance=ExtResource( 3 )]
+pauses_game_while_open = true
 
 [node name="GameDialogPause" parent="." index="3" instance=ExtResource( 4 )]
 
