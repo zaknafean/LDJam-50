@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/sleepCreepSprite.png" type="Texture" id=1]
 [ext_resource path="res://enemies/ChaseEnemy.gd" type="Script" id=2]
@@ -232,6 +232,10 @@ vframes = 6
 frame = 1
 
 [node name="FormidableFog" parent="Sprite" instance=ExtResource( 4 )]
+visible = true
+z_index = 0
+z_as_relative = false
+local_coords = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 3, 24.5 )

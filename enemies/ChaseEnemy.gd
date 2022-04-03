@@ -8,6 +8,8 @@ var delayTimer
 var VELOCITY
 var SPEED := 25.0
 var curSpeed := 25.0
+var speedBonus := 0
+var stallCounter := 0.0
 
 var amEating = false
 var amActive = false
@@ -24,30 +26,30 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func _process(delta):
+	stallCounter += delta
+	
+	if stallCounter >= 10:
+		stallCounter = 0
+		speedBonus += 3
+		speedBonus = clamp(speedBonus, 0, 50)
+		
 	if (Settings.curGameState == Settings.GAME_STATES.PLAY or Settings.curGameState == Settings.GAME_STATES.BATTLE or Settings.curGameState == Settings.GAME_STATES.DIALOG) and !amEating and amActive:
 		
 		if Settings.curGameState == Settings.GAME_STATES.BATTLE or Settings.curGameState == Settings.GAME_STATES.DIALOG:
 			curSpeed = (SPEED + (Settings.roomsExplored * 3)) / 3
 		else: 
-			curSpeed = SPEED + (Settings.roomsExplored * 3)
+			curSpeed = SPEED + (Settings.roomsExplored * 3) + speedBonus
 		VELOCITY = (playerRef.position - position).normalized() * curSpeed
 		var _collision = move_and_slide(VELOCITY)
 		var walk_dir = VELOCITY.normalized()
-		#print(walk_dir)
-		if abs(walk_dir.y) > abs(walk_dir.x):
-			if walk_dir.y > 0:
-				#sprite_dir = "down"
-				pass
-			else:
-				#sprite_dir = "up"
-				pass
+		
+		if walk_dir.x > 0.0:
+			sprite_dir = "right"
 		else:
-			if walk_dir.x > 0:
-				sprite_dir = "right"
-			else:
-				sprite_dir = "left"
-		if VELOCITY > Vector2.ZERO:
+			sprite_dir = "left"
+		
+		if abs(VELOCITY.x) > 0:
 			anim_switch('run', 1)
 		elif VELOCITY == Vector2.ZERO and !amEating:
 			anim_switch('idle', 1)
