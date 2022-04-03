@@ -7,6 +7,9 @@ onready var camera = $Player/Camera2D
 onready var playerLine := $Line2D
 onready var statLabel := $CanvasLayer/StatsLabel
 onready var tilemap : TileMap = $Navigation2D/TileMap
+onready var backmap : TileMap = $Navigation2D/BackLayerMap
+onready var alphamap : TileMap = $Navigation2D/AlphaLayerMap
+onready var enemy := $ChaseEnemy
 
 var currentEvent : Interactable = null
 var queuedEvent : Interactable = null
@@ -30,6 +33,22 @@ func _ready():
 	
 	isHighlightAll = false
 	tilemap.modulate = Color(.5, .5, .5, 1)
+	backmap.modulate = Color(.5, .5, .5, 1)
+	alphamap.modulate = Color(.5, .5, .5, .5)
+	
+	enemy.hide()
+	Settings.curGameState = Settings.GAME_STATES.PLAY
+
+
+func _set_spawns(directionFrom: String, _delay=2):
+	if directionFrom == 'w':
+		player.global_position = $Interactables/DoorEastClickable.interactionPosition
+	if directionFrom == 'e':
+		player.global_position = $Interactables/DoorWestClickable.interactionPosition
+	if directionFrom == 'n':
+		player.global_position = $Interactables/DoorSouthClickable.interactionPosition
+	if directionFrom == 's':
+		player.global_position = $Interactables/DoorNorthClickable.interactionPosition
 
 
 func _on_Area2D_mouse_entered(clickable):
@@ -106,7 +125,7 @@ func process_event(event : Interactable) -> bool:
 	return eventResult
 
 func _process(_delta):
-	statLabel.text = str('Alert: ', Settings.alertnessValue, '\n', 'Sanity: ', Settings.sanityValue, '\n', 'Score: ', Settings.score);
+	statLabel.text = str('Alert: ', Settings.alertnessValue, '\n', 'Sanity: ', Settings.sanityValue, '\n', 'Score: ', Settings.score, '\n', 'State: ', Settings.curGameState);
 	
 	if Settings.sanityValue <= 0 or Settings.alertnessValue <= 0:
 		print('you have lost')
