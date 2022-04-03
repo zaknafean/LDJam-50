@@ -14,7 +14,7 @@ func _ready():
 	count = 5
 	randomize()
 	$Label.visible = false
-	count = count * Settings.difficulty
+
 
 func _on_Hit_Box_body_entered(body):
 	if body is KinematicBody2D and Settings.curGameState != Settings.GAME_STATES.BATTLE:

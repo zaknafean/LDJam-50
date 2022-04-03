@@ -18,38 +18,26 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 7, 8, 9, 10 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "values": [ {
 "args": [  ],
-"method": "spawn_attacks"
-}, {
-"args": [  ],
 "method": "animate_spawns"
 }, {
 "args": [  ],
 "method": "spawn_attacks"
 }, {
 "args": [  ],
-"method": "animate_spawns"
+"method": "spawn_attacks"
 }, {
 "args": [  ],
 "method": "spawn_attacks"
 }, {
 "args": [  ],
-"method": "animate_spawns"
-}, {
-"args": [  ],
 "method": "spawn_attacks"
-}, {
-"args": [  ],
-"method": "animate_spawns"
 }, {
 "args": [  ],
 "method": "can_free_player"
-}, {
-"args": [  ],
-"method": "animate_spawns"
 }, {
 "args": [  ],
 "method": "can_free_player"
@@ -96,10 +84,10 @@ collision_mask = 2
 shape = SubResource( 1 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = -118.0
-margin_top = -168.0
-margin_right = 121.0
-margin_bottom = -120.0
+margin_left = -117.0
+margin_top = -124.0
+margin_right = 123.0
+margin_bottom = -76.0
 text = "Pssst...sleepy head... come over here
 and count some sheeps?  You know
 you wanna."
@@ -108,25 +96,25 @@ align = 1
 [node name="Target_Locations" type="Node2D" parent="."]
 
 [node name="Position2D1" type="Position2D" parent="Target_Locations"]
-position = Vector2( -537, 0 )
+position = Vector2( -201, 1 )
 
 [node name="Position2D2" type="Position2D" parent="Target_Locations"]
-position = Vector2( -251, -400 )
+position = Vector2( -106, -210 )
 
 [node name="Position2D3" type="Position2D" parent="Target_Locations"]
-position = Vector2( 273, -394 )
+position = Vector2( 123, -205 )
 
 [node name="Position2D4" type="Position2D" parent="Target_Locations"]
-position = Vector2( 498, 0 )
+position = Vector2( 210, 1 )
 
 [node name="Position2D5" type="Position2D" parent="Target_Locations"]
-position = Vector2( 442, -196 )
+position = Vector2( 192, -101 )
 
 [node name="Position2D6" type="Position2D" parent="Target_Locations"]
-position = Vector2( 1, -427 )
+position = Vector2( 0, -222 )
 
 [node name="Position2D7" type="Position2D" parent="Target_Locations"]
-position = Vector2( -455, -198 )
+position = Vector2( -162, -107 )
 
 [node name="Attacks" type="Node" parent="."]
 

@@ -183,7 +183,7 @@ position = Vector2( 30, 33 )
 DIALOG = "LivingRoomWest"
 
 [node name="ChaseEnemy" parent="." index="4"]
-position = Vector2( 637, 156 )
+position = Vector2( 459, 106 )
 
 [editable path="Interactables/SpriteClickable"]
 [editable path="Interactables/DoorNorthClickable"]

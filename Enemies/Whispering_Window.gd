@@ -4,10 +4,10 @@ onready var tween = $Tween
 var whodonit 
 
 func _ready():
-	count = 4
+	count = 3
 	randomize()
 	$Label.visible = false
-	count = count * Settings.difficulty
+
 
 func terminator():
 	$Label.text = "You beat me! I hope that Sleep Deamon eats you!"
@@ -19,13 +19,6 @@ func _on_Hit_Box_body_entered(body):
 		$Label.visible = true
 		whodonit = body
 		attack_position()
-
-func spawn_attacks():
-	attack_instance = load(str(sleep_attack))
-	var attack = attack_instance.instance()
-	attack.position = targets[spot].position
-	$Attacks.add_child(attack)
-	spot = spot + 1
 
 func animate_spawns():
 	var spawns = $Attacks.get_children()
