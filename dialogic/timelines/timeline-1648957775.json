@@ -1,0 +1,195 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1648902659.cfg"
+		},
+		{
+			"condition": "",
+			"definition": "1648959575-593",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The closed window still lets light spill out of your apartment."
+		},
+		{
+			"condition": "==",
+			"definition": "1648959582-704",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Close the curtains and hoard your light?"
+		},
+		{
+			"choice": "The precious light is mine!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"definition": "1648959582-704",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You sweep the curtains closed."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"choice": "Keep them open so the room doesn't feel too closed up.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You leave the curtains alone."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1648959582-704",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Open the curtains to make sure no clowns are lurking outside?"
+		},
+		{
+			"choice": "Or demons. Could be demons.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"definition": "1648959582-704",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "false"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You open the curtains wide."
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": false,
+			"wait_seconds": 3
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "There's no sign of clowns outside, yet."
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": false,
+			"wait_seconds": 2
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Or demons either. Yet."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"choice": "Better not to know.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You leave the curtains alone."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "==",
+			"definition": "1648959575-593",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "With the window open, you can't close the curtains."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1648957775.json",
+		"name": "Curtains"
+	}
+}

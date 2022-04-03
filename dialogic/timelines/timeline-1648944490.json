@@ -11,6 +11,22 @@
 			"text": "This clear area on the rug looks like a good spot to work up a quick sweat."
 		},
 		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Get your heartrate up and keep moving?"
+		},
+		{
+			"choice": "Get those juices flowing!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
 			"animation": "1-fade_in.gd",
 			"animation_length": 0.25,
 			"animation_wait": true,
@@ -22,7 +38,7 @@
 			"portrait": "Default",
 			"portrait_definition": "",
 			"position": {
-				"0": false,
+				"0": true,
 				"1": false,
 				"2": false,
 				"3": false,
@@ -35,7 +51,7 @@
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Let's get my juices flowing!\nA one, and a two..."
+			"text": "A one, and a two..."
 		},
 		{
 			"character": "",
@@ -52,6 +68,11 @@
 			"volume": 0
 		},
 		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": false,
+			"wait_seconds": 2
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -61,7 +82,7 @@
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Maybe some pushups?! Drop and give me myself twenty!"
+			"text": "Maybe some pushups?! Drop and give myself twenty!"
 		},
 		{
 			"character": "",
@@ -76,6 +97,11 @@
 			"event_name": "AudioEvent",
 			"file": "res://assets/sound/heartbeat-rapid.wav",
 			"volume": 0
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": false,
+			"wait_seconds": 6
 		},
 		{
 			"character": "character-1648902615.json",
@@ -103,6 +129,37 @@
 			},
 			"type": 1,
 			"z_index": 0
+		},
+		{
+			"choice": "I'm tired just thinking about exercising.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "...or about anything.\nMaybe I'm just tired."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"choice": "That sounds...exhausting.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
 		}
 	],
 	"metadata": {
