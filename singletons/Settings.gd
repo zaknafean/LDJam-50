@@ -13,7 +13,7 @@ enum GAME_STATES {
 
 var curGameState = GAME_STATES.PLAY
 
-var difficulty = 3
+var difficulty = 1
 var roomsExplored = 0
 var alertnessValue = 1000
 var sanityValue = 100
