@@ -57,17 +57,11 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "The cover article is about new baseball statistics."
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "It is not exciting reading."
+			"text": "The cover article is about new baseball statistics.\nIt is not exciting reading."
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"choice": "Consumer Rapports",
@@ -80,17 +74,11 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "This month's issue features reviews of vacuum cleaners."
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "They put babies to sleep; reading about them might put you to sleep."
+			"text": "This month's issue features reviews of vacuum cleaners.\nThey put babies to sleep; reading about them might put you to sleep."
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"choice": "Metropolitan",
@@ -103,29 +91,11 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You flip to the back for the quiz."
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Are you a Zoe or a Zelda?"
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "You realize you've already done the quiz."
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "In pen."
+			"text": "You flip to the back for the quiz.\nAre you a Zoe or a Zelda?\nYou realize you've already done the quiz.\nIn pen."
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"choice": "The New Yawker",
@@ -138,17 +108,11 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "The feature piece is a story about a stockbroker who retired to start a farm."
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Boring!"
+			"text": "The feature piece is a story about a stockbroker who retired to start a farm.\nBoring!"
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"choice": "Drove & Cars",
@@ -161,23 +125,11 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Opening the magazine to a random page, you find an article which is riveting."
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Sorry, ABOUT riveting. And other reinvented manufacturing techniques."
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "That's not going to keep your eyes open tonight."
+			"text": "Opening the magazine to a random page, you find an article which is riveting.\nSorry, ABOUT riveting. And other reinvented manufacturing techniques.\nThat's not going to keep your eyes open tonight."
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"event_id": "dialogic_013"

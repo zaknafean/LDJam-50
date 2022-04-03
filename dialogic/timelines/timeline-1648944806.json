@@ -11,7 +11,7 @@
 
 			],
 			"portrait": "",
-			"question": "Nothing bad comes from turning on the lights at night!"
+			"question": "Light for the waking mind."
 		},
 		{
 			"choice": "Light it up!",
@@ -29,22 +29,42 @@
 			"volume": 0
 		},
 		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "",
+				"target_node_path": ""
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": false,
-			"wait_seconds": 1
+			"wait_seconds": 0.3
 		},
 		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You turn on the light and immediately feel more awake."
+			"text": "It's too bright. But you feel a bit more alert"
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
-			"choice": "...or does it?",
+			"call_node": {
+				"arguments": [
+					"15"
+				],
+				"method_name": "adjust_sanity",
+				"target_node_path": "/root/Settings"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"choice": "I don't want to see...",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -52,7 +72,7 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"event_id": "dialogic_013"

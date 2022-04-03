@@ -63,7 +63,7 @@
 			"event_id": "dialogic_030",
 			"event_name": "AudioEvent",
 			"file": "res://assets/sound/creak-metal.wav",
-			"volume": 0
+			"volume": -20
 		},
 		{
 			"character": "",
@@ -109,7 +109,7 @@
 			"event_id": "dialogic_030",
 			"event_name": "AudioEvent",
 			"file": "res://assets/sound/creak-metal.wav",
-			"volume": 0
+			"volume": -20
 		},
 		{
 			"character": "",
@@ -166,7 +166,7 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		},
 		{
 			"event_id": "dialogic_013"
