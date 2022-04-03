@@ -27,7 +27,7 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": false,
-			"wait_seconds": 5
+			"wait_seconds": 1
 		},
 		{
 			"character": "",
