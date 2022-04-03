@@ -9,7 +9,6 @@
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=8]
 
-
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
 shader = ExtResource( 8 )
@@ -66,7 +65,6 @@ format = 1
 tile_data = PoolIntArray( -131064, 40, 0, -131059, 37, 0, -65528, 39, 0, -65527, 43, 0, -65523, 40, 0, -65522, 39, 0, -65520, 44, 0, 8, 27, 0, 9, 34, 0, 10, 33, 0, 21, 48, 0, 22, 20, 0, 23, 51, 0, 65544, 28, 0, 65545, 19, 0, 65546, 32, 0, 65558, 48, 0, 65559, 51, 0, 131080, 30, 0, 131081, 30, 0, 131082, 31, 0, 131095, 49, 0 )
 
 [node name="AlphaLayerMap" parent="Navigation2D" index="3"]
-z_index = 2
 tile_data = PoolIntArray( -196600, 41, 0, -196594, 41, 0, -196587, 41, 0, -131063, 42, 0, -131058, 40, 0, -131057, 42, 0, -131051, 40, 0, -131050, 42, 0, -65528, 45, 0, -65527, 45, 0, -65526, 44, 0, -65522, 45, 0, -65521, 43, 0, -65515, 39, 0, -65514, 43, 0, -65513, 44, 0, 6, 54, 0, 7, 46, 0, 14, 27, 0, 15, 34, 0, 16, 33, 0, 19, 27, 0, 20, 34, 0, 21, 34, 0, 22, 34, 0, 23, 33, 0, 65542, 55, 0, 65543, 47, 0, 65544, 46, 0, 65550, 28, 0, 65551, 19, 0, 65552, 32, 0, 65555, 28, 0, 65556, 19, 0, 65557, 19, 0, 65558, 19, 0, 65559, 32, 0, 131078, 56, 0, 131079, 20, 0, 131080, 47, 0, 131081, 46, 0, 131086, 29, 0, 131087, 30, 0, 131088, 31, 0, 131091, 29, 0, 131092, 30, 0, 131093, 30, 0, 131094, 30, 0, 131095, 31, 0, 196614, 67, 0, 196615, 20, 0, 196616, 20, 0, 196617, 47, 0, 196618, 46, 0, 262151, 67, 0, 262152, 20, 0, 262153, 20, 0, 262154, 47, 0, 262155, 46, 0, 327688, 67, 0, 327689, 20, 0, 327690, 20, 0, 327691, 52, 0, 327692, 45, 0, 327693, 45, 0, 327694, 45, 0, 327695, 45, 0, 327696, 45, 0, 327697, 45, 0, 327698, 45, 0, 327699, 45, 0, 327700, 45, 0, 327701, 45, 0, 327702, 45, 0, 327703, 45, 0, 327704, 45, 0, 327705, 45, 0, 327706, 45, 0, 327707, 45, 0, 327708, 45, 0, 327709, 45, 0, 327710, 45, 0, 327711, 45, 0, 327712, 45, 0, 393225, 67, 0, 393226, 20, 0, 393227, 20, 0, 393228, 27, 0, 393229, 34, 0, 393230, 34, 0, 393231, 34, 0, 393232, 34, 0, 393233, 34, 0, 393234, 34, 0, 393235, 34, 0, 393236, 34, 0, 393237, 34, 0, 393238, 34, 0, 393239, 34, 0, 393240, 34, 0, 393241, 34, 0, 393242, 34, 0, 393243, 34, 0, 393244, 34, 0, 393245, 34, 0, 393246, 34, 0, 393247, 34, 0, 393248, 33, 0, 458762, 67, 0, 458763, 20, 0, 458764, 28, 0, 458765, 19, 0, 458766, 19, 0, 458767, 19, 0, 458768, 19, 0, 458769, 19, 0, 458770, 19, 0, 458771, 19, 0, 458772, 19, 0, 458773, 19, 0, 458774, 19, 0, 458775, 19, 0, 458776, 19, 0, 458777, 19, 0, 458778, 19, 0, 458779, 19, 0, 458780, 19, 0, 458781, 19, 0, 458782, 19, 0, 458783, 19, 0, 458784, 32, 0, 524299, 66, 0, 524300, 29, 0, 524301, 30, 0, 524302, 30, 0, 524303, 30, 0, 524304, 30, 0, 524305, 30, 0, 524306, 30, 0, 524307, 30, 0, 524308, 30, 0, 524309, 30, 0, 524310, 30, 0, 524311, 30, 0, 524312, 30, 0, 524313, 30, 0, 524314, 30, 0, 524315, 30, 0, 524316, 30, 0, 524317, 30, 0, 524318, 30, 0, 524319, 30, 0, 524320, 31, 0 )
 
 [node name="Player" parent="." index="1"]
@@ -108,6 +106,9 @@ shape = SubResource( 4 )
 [node name="InteractionPosition" parent="Interactables/DoorNorthClickable" index="2"]
 position = Vector2( 164, 103 )
 
+[node name="DialogEvent" parent="Interactables/DoorNorthClickable/EventQueue" index="0" instance=ExtResource( 7 )]
+DIALOG = "HallwayRoomNorth"
+
 [node name="DoorEastClickable" parent="Interactables" index="2" instance=ExtResource( 6 )]
 position = Vector2( 1311, 54 )
 canHighlight = true
@@ -128,6 +129,9 @@ position = Vector2( 443, 193 )
 
 [node name="EventQueue" parent="Interactables/DoorEastClickable" index="3"]
 position = Vector2( 453, 10 )
+
+[node name="DialogEvent" parent="Interactables/DoorEastClickable/EventQueue" index="0" instance=ExtResource( 7 )]
+DIALOG = "BedRoomNorth"
 
 [node name="DoorSouthClickable" parent="Interactables" index="3" instance=ExtResource( 6 )]
 position = Vector2( 939, 181 )
@@ -152,6 +156,9 @@ position = Vector2( 466, 364 )
 [node name="EventQueue" parent="Interactables/DoorSouthClickable" index="3"]
 position = Vector2( 429, 447 )
 
+[node name="DialogEvent" parent="Interactables/DoorSouthClickable/EventQueue" index="0" instance=ExtResource( 7 )]
+DIALOG = "HallwayRoomSouth"
+
 [node name="DoorWestClickable" parent="Interactables" index="4" instance=ExtResource( 6 )]
 position = Vector2( 544, 296 )
 z_index = 1
@@ -171,6 +178,9 @@ shape = SubResource( 10 )
 
 [node name="InteractionPosition" parent="Interactables/DoorWestClickable" index="2"]
 position = Vector2( 30, 33 )
+
+[node name="DialogEvent" parent="Interactables/DoorWestClickable/EventQueue" index="0" instance=ExtResource( 7 )]
+DIALOG = "LivingRoomNorth"
 
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 1922, 465 )

@@ -6,18 +6,12 @@
 		},
 		{
 			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "This is the hallway door."
-		},
-		{
-			"character": "",
 			"event_id": "dialogic_010",
 			"options": [
 
 			],
 			"portrait": "",
-			"question": "Open the Door?"
+			"question": "This is the hallway door. Open the Door?"
 		},
 		{
 			"choice": "Halls well that ends well.",
@@ -43,7 +37,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "The hallway is long and narrow.\nYou can't see the end.\nBetter start walking..."
+			"text": "The hallway is long and narrow. Better start walking..."
 		},
 		{
 			"call_node": {
