@@ -16,7 +16,7 @@
 			"portrait": "Default",
 			"portrait_definition": "",
 			"position": {
-				"0": false,
+				"0": true,
 				"1": false,
 				"2": false,
 				"3": false,
@@ -38,6 +38,22 @@
 			"event_name": "AudioEvent",
 			"file": "res://assets/sound/pill-bottle.wav",
 			"volume": 0
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "One or two will help, right? One or two...handfuls?"
+		},
+		{
+			"choice": "Or maybe three handfuls!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
 		},
 		{
 			"character": "character-1648902615.json",
@@ -71,6 +87,24 @@
 			},
 			"type": 1,
 			"z_index": 0
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"choice": "That feels like a bad idea.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
 		}
 	],
 	"metadata": {

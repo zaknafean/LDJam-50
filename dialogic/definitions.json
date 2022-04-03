@@ -77,6 +77,18 @@
 			"name": "bronze key",
 			"type": 0,
 			"value": "false"
+		},
+		{
+			"id": "1648959575-593",
+			"name": "windowstatus",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1648959582-704",
+			"name": "curtainstatus",
+			"type": 0,
+			"value": "false"
 		}
 	]
 }

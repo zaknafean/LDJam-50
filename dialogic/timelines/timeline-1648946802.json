@@ -71,10 +71,56 @@
 			"text": "Wait. Did the cat just talk to you?\nYou realize the cat's shadow is that of a much...larger...thing."
 		},
 		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Did the cat just speak? Really?"
+		},
+		{
+			"choice": "You must have imagined it.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You shake your head and walk away."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"choice": "It did! It really did!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So...what's happening, cat?"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
 			"character": "character-1648910671.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Meow you will fall asleep...and your soul will be mine!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		}
 	],
 	"metadata": {

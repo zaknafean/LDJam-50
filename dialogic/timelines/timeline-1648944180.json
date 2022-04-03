@@ -22,7 +22,7 @@
 			"portrait": "Default",
 			"portrait_definition": "",
 			"position": {
-				"0": false,
+				"0": true,
 				"1": false,
 				"2": false,
 				"3": false,
@@ -38,12 +38,33 @@
 			"text": "Coffee, just what I need to keep me going!"
 		},
 		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Drink the delicious dark roast?"
+		},
+		{
+			"choice": "You're sure it tastes as good as it smells.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
 			"audio": "play",
 			"audio_bus": "Master",
 			"event_id": "dialogic_030",
 			"event_name": "AudioEvent",
 			"file": "res://assets/sound/coffee-slurp.wav",
 			"volume": 0
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": false,
+			"wait_seconds": 1
 		},
 		{
 			"animation": "4-fade_out.gd",
@@ -71,6 +92,24 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "You chug a cup of coffee. Black, untained coffee."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"choice": "The smell alone will keep me going.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
 		}
 	],
 	"metadata": {
