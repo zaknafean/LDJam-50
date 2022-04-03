@@ -3,6 +3,17 @@
 
 	],
 	"variables": [
-
+		{
+			"id": "1649026806-805",
+			"name": "windowstatus",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1649026813-185",
+			"name": "curtainstatus",
+			"type": 0,
+			"value": "false"
+		}
 	]
 }

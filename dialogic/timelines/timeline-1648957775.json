@@ -5,8 +5,20 @@
 			"set_theme": "theme-1648902659.cfg"
 		},
 		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You grab the curtains, certain that they are real."
+		},
+		{
 			"condition": "",
-			"definition": "1648959575-593",
+			"definition": "1649026806-805",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"condition": "==",
+			"definition": "1649026813-185",
 			"event_id": "dialogic_012",
 			"value": "false"
 		},
@@ -15,12 +27,6 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "The closed window still lets light spill out of your apartment."
-		},
-		{
-			"condition": "==",
-			"definition": "1648959582-704",
-			"event_id": "dialogic_012",
-			"value": "false"
 		},
 		{
 			"character": "",
@@ -39,7 +45,7 @@
 			"value": ""
 		},
 		{
-			"definition": "1648959582-704",
+			"definition": "1649026813-185",
 			"event_id": "dialogic_014",
 			"operation": "=",
 			"random_upper_limit": 100,
@@ -87,8 +93,11 @@
 			"event_id": "dialogic_013"
 		},
 		{
+			"event_id": "dialogic_013"
+		},
+		{
 			"condition": "",
-			"definition": "1648959582-704",
+			"definition": "1649026813-185",
 			"event_id": "dialogic_012",
 			"value": "true"
 		},
@@ -109,7 +118,7 @@
 			"value": ""
 		},
 		{
-			"definition": "1648959582-704",
+			"definition": "1649026813-185",
 			"event_id": "dialogic_014",
 			"operation": "=",
 			"random_upper_limit": 100,
@@ -185,11 +194,8 @@
 			"event_id": "dialogic_013"
 		},
 		{
-			"event_id": "dialogic_013"
-		},
-		{
 			"condition": "==",
-			"definition": "1648959575-593",
+			"definition": "1649026806-805",
 			"event_id": "dialogic_012",
 			"value": "true"
 		},
