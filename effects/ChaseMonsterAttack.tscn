@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/effects/gloop.png" type="Texture" id=1]
+
+[sub_resource type="Curve" id=14]
+min_value = -1.0
+_data = [ Vector2( 0, -0.188636 ), 0.0, 0.341861, 0, 0, Vector2( 0.107143, -0.225 ), 2.50526, 2.50526, 0, 0, Vector2( 0.62987, -0.00681818 ), 1.26452, 1.26452, 0, 0, Vector2( 1, 0.0363637 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Curve" id=15]
+min_value = -200.0
+max_value = 200.0
+_data = [ Vector2( 0, 1 ), 0.0, 1490.09, 0, 0, Vector2( 0.227273, 10.4545 ), -800.0, -800.0, 0, 0, Vector2( 0.993506, -113.182 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Curve" id=16]
+max_value = 2.35
+_data = [ Vector2( 0, 0.797727 ), 0.0, 7.75385, 0, 0, Vector2( 0.402597, 1.19636 ), -11.4982, -11.4982, 0, 0, Vector2( 0.496753, 0.128182 ), 0.123636, 0.123636, 0, 0, Vector2( 0.62987, 1.645 ), 44.9633, 44.9633, 0, 0, Vector2( 0.912338, 1.96545 ), -52.6402, -52.6402, 0, 0, Vector2( 1, 0.542045 ), -6.56047, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=17]
+offsets = PoolRealArray( 0.00350877, 0.221053, 0.410526, 0.533333, 0.685083, 0.828729, 0.906077, 0.928177, 1 )
+colors = PoolColorArray( 0.975586, 0, 0, 0.101961, 0.776367, 0.121491, 0.00909805, 1, 0.584961, 0.011425, 0.011425, 0.914607, 0.647059, 0.188235, 0.188235, 0.6, 0.392157, 0.0156863, 0.0156863, 0.807843, 0.117647, 0.00392157, 0.00392157, 0.333333, 0, 0, 0, 0.219608, 0.141176, 0.0352941, 0.00784314, 0.117647, 0.176471, 0.0470588, 0.0117647, 0 )
+
+[node name="AttackEffect" type="CPUParticles2D"]
+position = Vector2( -123, 36 )
+amount = 4
+lifetime = 1.79
+preprocess = 98.02
+speed_scale = 1.56
+explosiveness = 1.0
+lifetime_randomness = 0.65
+texture = ExtResource( 1 )
+emission_shape = 1
+emission_sphere_radius = 51.1
+flag_align_y = true
+direction = Vector2( 3, -3 )
+spread = 0.0
+gravity = Vector2( 30, -200 )
+initial_velocity = 0.04
+orbit_velocity_random = 0.67
+orbit_velocity_curve = SubResource( 14 )
+linear_accel_random = 0.15
+linear_accel_curve = SubResource( 15 )
+radial_accel = -250.0
+tangential_accel = -49.69
+scale_amount = 0.1
+scale_amount_random = 0.08
+scale_amount_curve = SubResource( 16 )
+color = Color( 0.803922, 0.803922, 0.803922, 1 )
+color_ramp = SubResource( 17 )
+hue_variation = 0.03
+hue_variation_random = 0.1
