@@ -22,7 +22,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 1, 1.6, 2, 2.5, 3, 3.4 ),
+"times": PoolRealArray( 1, 1.4, 1.8, 2.2, 2.6, 3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "values": [ {
 "args": [  ],
@@ -99,12 +99,9 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 3.7 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "can_you_dig_it"
-} ]
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Label:visible")
@@ -113,10 +110,10 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 1 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ true, false ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -129,9 +126,12 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 1.5 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "values": [ {
+"args": [  ],
+"method": "terminator"
+}, {
 "args": [  ],
 "method": "byeeeeee"
 } ]
@@ -287,17 +287,21 @@ shape = SubResource( 7 )
 position = Vector2( 1, -57 )
 rotation = 4.71239
 scale = Vector2( 1, 2 )
+enabled = false
 texture = ExtResource( 3 )
 energy = 2.0
 shadow_enabled = true
 
 [node name="Label" type="Label" parent="."]
 visible = false
-margin_left = -103.0
-margin_top = -60.0
-margin_right = 105.0
-margin_bottom = -46.0
+margin_left = -56.0
+margin_top = -64.0
+margin_right = 54.0
+margin_bottom = -16.0
 text = "Lampity lamp lamp sleepy head!"
+align = 1
+valign = 2
+autowrap = true
 
 [node name="Target_Locations" type="Node2D" parent="."]
 script = ExtResource( 4 )
