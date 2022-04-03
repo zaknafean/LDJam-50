@@ -20,6 +20,7 @@ colors = PoolColorArray( 0.815686, 0.854902, 0.568627, 1, 0.458824, 0.654902, 0.
 
 [node name="Sleep_Attack" type="Sprite" groups=["attack"]]
 scale = Vector2( 0.25, 0.25 )
+z_index = 5
 texture = ExtResource( 3 )
 script = ExtResource( 5 )
 

@@ -5,7 +5,6 @@
 [ext_resource path="res://utilities/attachable_tools/Hit_Box.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/effects/Flame.png" type="Texture" id=4]
 
-
 [sub_resource type="Curve" id=18]
 _data = [ Vector2( 0, 0.161364 ), 0.0, 7.875, 0, 0, Vector2( 0.103896, 0.586364 ), 2.7, 2.7, 0, 0, Vector2( 0.327922, 0.913636 ), 1.01818, 1.01818, 0, 0, Vector2( 0.987013, 0.770455 ), -1.162, 0.0, 0, 0 ]
 
@@ -149,7 +148,7 @@ script = ExtResource( 2 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 hframes = 3
-vframes = 2
+vframes = 4
 frame = 1
 
 [node name="FormidableFog" type="CPUParticles2D" parent="Sprite"]
