@@ -1,0 +1,252 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Utilities/Attachable_Tools/Hit_Box.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/I_love_lamp.png" type="Texture" id=2]
+[ext_resource path="res://assets/lights/Lightmap_Directional.png" type="Texture" id=3]
+[ext_resource path="res://Enemies/Lamp.gd" type="Script" id=4]
+[ext_resource path="res://Enemies/Target_Locations.gd" type="Script" id=5]
+
+[sub_resource type="CapsuleShape2D" id=6]
+height = 108.267
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 88.5, 90.25 )
+
+[sub_resource type="Animation" id=1]
+resource_name = "Attacking"
+length = 15.0
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "spawn_attacks"
+}, {
+"args": [  ],
+"method": "spawn_attacks"
+}, {
+"args": [  ],
+"method": "spawn_attacks"
+}, {
+"args": [  ],
+"method": "spawn_attacks"
+}, {
+"args": [  ],
+"method": "spawn_attacks"
+}, {
+"args": [  ],
+"method": "spawn_attacks"
+}, {
+"args": [  ],
+"method": "can_free_player"
+}, {
+"args": [  ],
+"method": "can_free_player"
+}, {
+"args": [  ],
+"method": "can_free_player"
+}, {
+"args": [  ],
+"method": "can_free_player"
+}, {
+"args": [  ],
+"method": "can_free_player"
+}, {
+"args": [  ],
+"method": "can_free_player"
+}, {
+"args": [  ],
+"method": "can_free_player"
+}, {
+"args": [  ],
+"method": "can_free_player"
+} ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Dying"
+
+[sub_resource type="Animation" id=3]
+resource_name = "Idle"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Moving"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.5, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.8 ), Vector2( 1, 1.2 ), Vector2( 1, 1 ), Vector2( 1, 0.8 ), Vector2( 1, 1.2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Light2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.5, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, -55 ), Vector2( 1, -50 ), Vector2( 0, -70 ), Vector2( 1, -55 ), Vector2( 1, -50 ), Vector2( 0, -70 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Light2D:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1, 0.3, 0.4, 0.5, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 275.0, 270.0, 265.0, 275.0, 270.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Light2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, -55 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Light2D:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 270.0 ]
+}
+
+[node name="Lamp" type="Node2D"]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="KinematicBody2D" parent="."]
+position = Vector2( 0, 55 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="Sprite" type="Sprite" parent="Sprite"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite"]
+shape = SubResource( 6 )
+
+[node name="Hit_Box" parent="." instance=ExtResource( 1 )]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="Hit_Box" index="0"]
+position = Vector2( 0, 55 )
+shape = SubResource( 7 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -103.0
+margin_top = -60.0
+margin_right = 105.0
+margin_bottom = -46.0
+text = "Lampity lamp lamp sleepy head!"
+
+[node name="Target_Locations" type="Node2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="Position2D1" type="Position2D" parent="Target_Locations"]
+position = Vector2( 0, -56 )
+
+[node name="Position2D2" type="Position2D" parent="Target_Locations"]
+position = Vector2( 37, -38 )
+
+[node name="Position2D3" type="Position2D" parent="Target_Locations"]
+position = Vector2( 48, 0 )
+
+[node name="Position2D4" type="Position2D" parent="Target_Locations"]
+position = Vector2( 34, 30 )
+
+[node name="Position2D5" type="Position2D" parent="Target_Locations"]
+position = Vector2( 0, 46 )
+
+[node name="Position2D6" type="Position2D" parent="Target_Locations"]
+position = Vector2( -33, 29 )
+
+[node name="Position2D7" type="Position2D" parent="Target_Locations"]
+position = Vector2( -50, 1 )
+
+[node name="Position2D8" type="Position2D" parent="Target_Locations"]
+position = Vector2( -33, -37 )
+
+[node name="Attacks" type="Node" parent="."]
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 1, -55 )
+rotation = 4.71239
+scale = Vector2( 1, 2 )
+texture = ExtResource( 3 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Attacking = SubResource( 1 )
+anims/Dying = SubResource( 2 )
+anims/Idle = SubResource( 3 )
+anims/Moving = SubResource( 4 )
+anims/RESET = SubResource( 5 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="body_entered" from="Hit_Box" to="." method="_on_Hit_Box_body_entered"]
+[connection signal="body_exited" from="Hit_Box" to="." method="_on_Hit_Box_body_exited"]
+
+[editable path="Hit_Box"]
