@@ -2,7 +2,7 @@
 
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/LSOff.png" type="Texture" id=3]
+[ext_resource path="res://assets/Bed100.png" type="Texture" id=3]
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=4]
 
 [sub_resource type="ShaderMaterial" id=1]
@@ -11,26 +11,31 @@ shader = ExtResource( 4 )
 shader_param/brightness = 1.0
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 6.25, 9 )
+extents = Vector2( 97.5, 87.5 )
 
-[node name="LightSwitchClickable" instance=ExtResource( 2 )]
+[node name="BedClickable" instance=ExtResource( 2 )]
 collision_layer = 1
 collision_mask = 2
 canHighlight = true
 canClick = true
-isOneShot = true
 
 [node name="Sprite" parent="." index="0"]
 material = SubResource( 1 )
-position = Vector2( -16, -23.2727 )
-scale = Vector2( 0.515152, 0.515152 )
+position = Vector2( 153.06, 215.603 )
+scale = Vector2( 2.0812, 2.97826 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( -17, -23 )
+position = Vector2( 151.5, 217.5 )
 shape = SubResource( 2 )
 
+[node name="InteractionPosition" parent="." index="2"]
+position = Vector2( -45, 223 )
+
+[node name="EventQueue" parent="." index="3"]
+position = Vector2( 23, -7 )
+
 [node name="DialogEvent" parent="EventQueue" index="0" instance=ExtResource( 1 )]
-position = Vector2( 3, 121 )
+position = Vector2( -12, 12 )
 difficulty = -1
-DIALOG = "Light Switch"
+DIALOG = "Bed"
