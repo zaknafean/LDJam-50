@@ -24,27 +24,27 @@ custom_constants/margin_bottom = 20
 [node name="VBoxContainer" type="VBoxContainer" parent="MenuLayer/UIBox" index="0"]
 margin_left = 80.0
 margin_top = 20.0
-margin_right = 944.0
-margin_bottom = 580.0
+margin_right = 1200.0
+margin_bottom = 700.0
 
 [node name="LabelBig" parent="MenuLayer/UIBox/VBoxContainer" index="0" instance=ExtResource( 4 )]
 anchor_right = 0.0
-margin_right = 864.0
-margin_bottom = 41.0
+margin_right = 1120.0
+margin_bottom = 70.0
 text = "CONTROLS"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MenuLayer/UIBox/VBoxContainer" index="1"]
-margin_top = 57.0
-margin_right = 864.0
-margin_bottom = 495.0
+margin_top = 86.0
+margin_right = 1120.0
+margin_bottom = 618.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 follow_focus = true
 
 [node name="ControlMenu" parent="MenuLayer/UIBox/VBoxContainer/ScrollContainer" index="0" instance=ExtResource( 5 )]
 anchor_right = 0.0
-margin_right = 798.0
-margin_bottom = 1530.0
+margin_right = 1088.0
+margin_bottom = 770.0
 pretty_action_names = {
 "game_down": "Down",
 "game_interact": "Interact",
@@ -58,21 +58,21 @@ pretty_action_names = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MenuLayer/UIBox/VBoxContainer" index="2"]
-margin_top = 511.0
-margin_right = 864.0
-margin_bottom = 560.0
+margin_top = 634.0
+margin_right = 1120.0
+margin_bottom = 680.0
 
 [node name="ResetButton" type="Button" parent="MenuLayer/UIBox/VBoxContainer/HBoxContainer" index="0"]
-margin_right = 424.0
-margin_bottom = 49.0
+margin_right = 552.0
+margin_bottom = 46.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Reset to Default"
 
 [node name="MenuButton" parent="MenuLayer/UIBox/VBoxContainer/HBoxContainer" index="1" instance=ExtResource( 6 )]
-margin_left = 440.0
-margin_right = 864.0
-margin_bottom = 49.0
+margin_left = 568.0
+margin_right = 1120.0
+margin_bottom = 46.0
 text = "Back"
 pushes_screen = false
 pops_screen = true

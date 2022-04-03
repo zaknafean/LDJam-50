@@ -20,7 +20,7 @@ _global_script_classes=[ {
 "path": "res://levels/interactables/collidable/BackgroundCollidable.gd"
 }, {
 "base": "Node2D",
-"class": "BaseLevel",
+"class": "BaseRoom",
 "language": "GDScript",
 "path": "res://levels/BaseLevel.gd"
 }, {
@@ -94,11 +94,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/dialogic/Example Assets/History/HistoryRow.gd"
 }, {
-"base": "Area2D",
-"class": "Hurt_Box",
-"language": "GDScript",
-"path": "res://Utilities/Attachable_Tools/Hurt_Box.gd"
-}, {
 "base": "Reference",
 "class": "IPC",
 "language": "GDScript",
@@ -159,7 +154,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://levels/interactables/clickable/SpriteClickable.gd"
 }, {
-"base": "",
+"base": "StreamPeerGDNative",
 "class": "StreamPeerUnix",
 "language": "NativeScript",
 "path": "res://addons/godot_editor_discord_presence/godot-unix-socket/unix-socket.gdns"
@@ -192,7 +187,7 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "BackgroundClickable": "res://assets/icons/button-finger.png",
 "BackgroundCollidable": "res://assets/icons/foot-plaster.png",
-"BaseLevel": "res://assets/icons/theater-curtains.png",
+"BaseRoom": "res://assets/icons/theater-curtains.png",
 "DTS": "",
 "Dialogic": "",
 "DialogicAnimaPropertiesHelper": "",
@@ -207,7 +202,6 @@ _global_script_class_icons={
 "DiscordRPCEnum": "",
 "Event": "",
 "HistoryRow": "",
-"Hurt_Box": "",
 "IPC": "",
 "IPCModule": "",
 "IPCPayload": "",
@@ -218,6 +212,7 @@ _global_script_class_icons={
 "RichPresenceButton": "",
 "RichPresenceModule": "",
 "Screen": "",
+"SleepEnemies": "",
 "SpriteClickable": "res://assets/icons/person.png",
 "StreamPeerUnix": "",
 "URLUtil": "",
@@ -230,7 +225,7 @@ _global_script_class_icons={
 [application]
 
 config/name="LudumDare50"
-run/main_scene="res://levels/BaseLevel.tscn"
+run/main_scene="res://screens/ScreenSplash.tscn"
 config/icon="res://icon.png"
 
 [autoload]

@@ -19,30 +19,30 @@ script = ExtResource( 7 )
 
 [node name="PanelContainer" type="PanelContainer" parent="MenuLayer/UIBox" index="0"]
 margin_left = 220.0
-margin_top = 124.0
-margin_right = 804.0
-margin_bottom = 476.0
+margin_top = 177.0
+margin_right = 1060.0
+margin_bottom = 543.0
 size_flags_vertical = 4
 
 [node name="Menu" type="GridContainer" parent="MenuLayer/UIBox/PanelContainer" index="0"]
 margin_left = 24.0
 margin_top = 24.0
-margin_right = 560.0
-margin_bottom = 328.0
+margin_right = 816.0
+margin_bottom = 342.0
 size_flags_vertical = 4
 
 [node name="LabelBig" parent="MenuLayer/UIBox/PanelContainer/Menu" index="0" instance=ExtResource( 4 )]
 anchor_right = 0.0
-margin_right = 536.0
-margin_bottom = 41.0
+margin_right = 792.0
+margin_bottom = 70.0
 text = "AUDIO"
 
 [node name="MenuSlider" parent="MenuLayer/UIBox/PanelContainer/Menu" index="1" instance=ExtResource( 6 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 57.0
-margin_right = 536.0
-margin_bottom = 107.0
+margin_top = 86.0
+margin_right = 792.0
+margin_bottom = 132.0
 caption = "Master Volume"
 persistence_uid_path = "settingsAudio.Master"
 grabs_focus = true
@@ -50,25 +50,25 @@ grabs_focus = true
 [node name="MenuSlider2" parent="MenuLayer/UIBox/PanelContainer/Menu" index="2" instance=ExtResource( 6 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 123.0
-margin_right = 536.0
-margin_bottom = 173.0
-caption = "Music Volume"
+margin_top = 148.0
+margin_right = 792.0
+margin_bottom = 194.0
+caption = "Music Volume  "
 persistence_uid_path = "settingsAudio.Music"
 
 [node name="MenuSlider3" parent="MenuLayer/UIBox/PanelContainer/Menu" index="3" instance=ExtResource( 6 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 189.0
-margin_right = 536.0
-margin_bottom = 239.0
+margin_top = 210.0
+margin_right = 792.0
+margin_bottom = 256.0
 caption = "Effects Volume"
 persistence_uid_path = "settingsAudio.Effects"
 
 [node name="MenuButton" parent="MenuLayer/UIBox/PanelContainer/Menu" index="4" instance=ExtResource( 5 )]
-margin_top = 255.0
-margin_right = 536.0
-margin_bottom = 304.0
+margin_top = 272.0
+margin_right = 792.0
+margin_bottom = 318.0
 text = "Back"
 pushes_screen = false
 pops_screen = true
