@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tilesets/EnvironmentTileset.tres" type="TileSet" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://levels/noninteractables/Dont.tscn" type="PackedScene" id=21]
 [ext_resource path="res://levels/noninteractables/SleepyGraffiti.tscn" type="PackedScene" id=22]
 [ext_resource path="res://levels/noninteractables/Click2MoveGraffiti.tscn" type="PackedScene" id=23]
+[ext_resource path="res://levels/interactables/clickable/CellphoneClickable.tscn" type="PackedScene" id=24]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -339,6 +340,9 @@ z_index = 1
 position = Vector2( 1150, 35 )
 rotation = 0.300197
 scale = Vector2( 0.7, 0.7 )
+
+[node name="CellphoneClickable" parent="." index="14" instance=ExtResource( 24 )]
+position = Vector2( 1265, 172 )
 
 [editable path="Interactables/DoorNorthClickable"]
 [editable path="Interactables/DoorEastClickable"]

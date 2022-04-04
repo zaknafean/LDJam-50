@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/cellphone.png" type="Texture" id=1]
+[ext_resource path="res://assets/effects/Flame.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 126, 126 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 126, 0, 126, 126 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 252, 0, 126, 126 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 2 ), SubResource( 3 ), SubResource( 3 ), SubResource( 3 ), SubResource( 2 ), SubResource( 2 ), SubResource( 1 ), SubResource( 1 ), SubResource( 1 ), SubResource( 1 ), SubResource( 1 ), SubResource( 1 ), SubResource( 1 ), SubResource( 1 ), SubResource( 1 ), SubResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Curve" id=5]
+max_value = 2.0
+_data = [ Vector2( 0.00974026, 0.327273 ), 0.0, 0.0, 0, 0, Vector2( 0.113636, 1.5 ), 13.6, 13.6, 0, 0, Vector2( 0.230519, 2 ), 1.06207, 1.06207, 0, 0, Vector2( 0.418831, 0 ), -30.45, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0, 0.0701754, 0.235088, 1 )
+colors = PoolColorArray( 0.388235, 0.862745, 1, 0, 0.386047, 0.886428, 0.898438, 0.690196, 0.270588, 0.831373, 0.803922, 0, 0.141176, 0.713726, 0.666667, 0 )
+
+[node name="Cellphone" type="Node2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 4 )
+frame = 4
+playing = true
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="AnimatedSprite"]
+position = Vector2( 27, 117 )
+amount = 40
+lifetime = 3.5
+explosiveness = 1.0
+lifetime_randomness = 0.16
+texture = ExtResource( 2 )
+emission_shape = 2
+emission_rect_extents = Vector2( 12, 1 )
+direction = Vector2( 0, -10 )
+spread = 60.0
+gravity = Vector2( 0, -80 )
+initial_velocity = 5.74
+linear_accel = 4.0
+radial_accel = 100.0
+radial_accel_random = 1.0
+angle = 180.0
+angle_random = 1.0
+scale_amount = 0.11
+scale_amount_curve = SubResource( 5 )
+color_ramp = SubResource( 6 )
+hue_variation = -0.11
+hue_variation_random = 0.77

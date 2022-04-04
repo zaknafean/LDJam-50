@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Tilesets/EnvironmentTileset.tres" type="TileSet" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://levels/interactables/clickable/CaffeinePillsClickable.tscn" type="PackedScene" id=17]
 [ext_resource path="res://levels/noninteractables/Dont.tscn" type="PackedScene" id=18]
 [ext_resource path="res://levels/noninteractables/FaceInGround.tscn" type="PackedScene" id=19]
+[ext_resource path="res://levels/interactables/clickable/CellphoneClickable.tscn" type="PackedScene" id=20]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -231,19 +232,19 @@ rotation = -0.71384
 scale = Vector2( 0.5, 5 )
 
 [node name="SideWallVent" parent="Difficulty2" index="8" instance=ExtResource( 13 )]
-position = Vector2( 1165, 66 )
+position = Vector2( 1199, 117 )
 
 [node name="SideWallVent3" parent="Difficulty2" index="9" instance=ExtResource( 13 )]
-position = Vector2( 1231, 100 )
+position = Vector2( 1210, 153 )
 
 [node name="SideWallVent4" parent="Difficulty2" index="10" instance=ExtResource( 13 )]
-position = Vector2( 1246, 245 )
+position = Vector2( 1247, 251 )
 
 [node name="SideWallVent6" parent="Difficulty2" index="11" instance=ExtResource( 13 )]
-position = Vector2( 1329, 243 )
+position = Vector2( 1333, 235 )
 
 [node name="SideWallVent7" parent="Difficulty2" index="12" instance=ExtResource( 13 )]
-position = Vector2( 1362, 308 )
+position = Vector2( 1370, 315 )
 
 [node name="Vent" parent="Difficulty2" index="13" instance=ExtResource( 14 )]
 position = Vector2( 474, 349 )
@@ -309,16 +310,19 @@ position = Vector2( 1029, 572 )
 position = Vector2( 1744, 862 )
 
 [node name="SideWallVent2" parent="Difficulty3" index="11" instance=ExtResource( 13 )]
-position = Vector2( 1177, 126 )
+position = Vector2( 1174, 139 )
 
 [node name="SideWallVent5" parent="Difficulty3" index="12" instance=ExtResource( 13 )]
 position = Vector2( 1392, 294 )
 
 [node name="SideWallVent8" parent="Difficulty3" index="13" instance=ExtResource( 13 )]
-position = Vector2( 1422, 415 )
+position = Vector2( 1421, 413 )
 
 [node name="FaceInGround" parent="Difficulty3" index="14" instance=ExtResource( 19 )]
 position = Vector2( 1347, 690 )
+
+[node name="CellphoneClickable" parent="Difficulty3" index="15" instance=ExtResource( 20 )]
+position = Vector2( 771, 497 )
 
 [node name="SleepyGraffiti" parent="." index="8" instance=ExtResource( 12 )]
 position = Vector2( 759, 31 )

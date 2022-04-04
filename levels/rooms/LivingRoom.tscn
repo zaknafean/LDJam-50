@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://levels/interactables/clickable/TelevisionClickable.tscn" type="PackedScene" id=11]
 [ext_resource path="res://levels/interactables/clickable/FloorLampClickable.tscn" type="PackedScene" id=12]
 [ext_resource path="res://levels/interactables/clickable/CoffeeTableClickable.tscn" type="PackedScene" id=13]
+[ext_resource path="res://levels/interactables/clickable/CellphoneClickable.tscn" type="PackedScene" id=14]
 [ext_resource path="res://levels/noninteractables/FloorRug.tscn" type="PackedScene" id=15]
 [ext_resource path="res://levels/noninteractables/Click2MoveGraffiti.tscn" type="PackedScene" id=16]
 [ext_resource path="res://levels/noninteractables/CardboardBox.tscn" type="PackedScene" id=17]
@@ -241,35 +242,37 @@ position = Vector2( 690, 343 )
 position = Vector2( 304, -107 )
 z_index = 1
 
-[node name="CardboardBox" parent="." index="9" instance=ExtResource( 17 )]
-position = Vector2( -31, 113 )
-
-[node name="FloorRug" parent="." index="10" instance=ExtResource( 15 )]
+[node name="FloorRug" parent="." index="9" instance=ExtResource( 15 )]
 position = Vector2( 808, 542 )
 
-[node name="Node2D2" parent="." index="11" instance=ExtResource( 18 )]
+[node name="Node2D2" parent="." index="10" instance=ExtResource( 18 )]
 position = Vector2( 438, 394 )
 
-[node name="Vent" parent="." index="12" instance=ExtResource( 20 )]
+[node name="Vent" parent="." index="11" instance=ExtResource( 20 )]
 position = Vector2( 470, -153 )
 z_index = 1
 
-[node name="WallJunk" parent="." index="13" instance=ExtResource( 21 )]
+[node name="WallJunk" parent="." index="12" instance=ExtResource( 21 )]
 position = Vector2( 637, -116 )
 z_index = 1
 
-[node name="SideWallBookshelf" parent="." index="14" instance=ExtResource( 19 )]
+[node name="SideWallBookshelf" parent="." index="13" instance=ExtResource( 19 )]
 position = Vector2( 1099, 287 )
 
-[node name="CupJunk" parent="." index="15" instance=ExtResource( 23 )]
+[node name="CupJunk" parent="." index="14" instance=ExtResource( 23 )]
 position = Vector2( 1139, 379 )
 
-[node name="SpacePoster" parent="." index="16" instance=ExtResource( 22 )]
+[node name="SpacePoster" parent="." index="15" instance=ExtResource( 22 )]
 position = Vector2( 89, 108 )
 
-[node name="CardboardBox" parent="." index="17" instance=ExtResource( 17 )]
-position = Vector2( -107, 173 )
+[node name="CardboardBox" parent="." index="16" instance=ExtResource( 17 )]
+position = Vector2( -27, 173 )
 scale = Vector2( 0.3, 0.3 )
+
+[node name="CellphoneClickable" parent="." index="17" instance=ExtResource( 14 )]
+position = Vector2( 1016, 238 )
+collision_layer = 3
+collision_mask = 3
 
 [editable path="Interactables/DoorNorthClickable"]
 [editable path="Interactables/DoorEastClickable"]
