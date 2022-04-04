@@ -11,8 +11,14 @@
 			"text": "Your window looks out onto the silent, peaceful night."
 		},
 		{
+			"condition": "",
+			"definition": "1649026813-185",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
 			"condition": "==",
-			"definition": "1648959575-593",
+			"definition": "1649026806-805",
 			"event_id": "dialogic_012",
 			"value": "false"
 		},
@@ -26,23 +32,6 @@
 			"question": "Open the window and let the cool night air in?"
 		},
 		{
-			"choice": "It might let in some demons if I do.",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Better to keep it closed."
-		},
-		{
-			"event_id": "dialogic_022",
-			"transition_duration": 1
-		},
-		{
 			"choice": "Fresh air sounds lovely!",
 			"condition": "",
 			"definition": "",
@@ -50,7 +39,7 @@
 			"value": ""
 		},
 		{
-			"definition": "1648959575-593",
+			"definition": "1649026806-805",
 			"event_id": "dialogic_014",
 			"operation": "=",
 			"random_upper_limit": 100,
@@ -73,7 +62,24 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
+		},
+		{
+			"choice": "It might let in some demons if I do.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Better to keep it closed."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
 		},
 		{
 			"event_id": "dialogic_013"
@@ -83,7 +89,7 @@
 		},
 		{
 			"condition": "",
-			"definition": "1648959575-593",
+			"definition": "1649026806-805",
 			"event_id": "dialogic_012",
 			"value": "true"
 		},
@@ -118,7 +124,7 @@
 			"text": "The window scrapes closed."
 		},
 		{
-			"definition": "1648959575-593",
+			"definition": "1649026806-805",
 			"event_id": "dialogic_014",
 			"operation": "=",
 			"random_upper_limit": 100,
@@ -170,6 +176,28 @@
 		},
 		{
 			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1649026813-185",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You can't see what waits beyond the curtains."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
 		},
 		{
 			"event_id": "dialogic_013"

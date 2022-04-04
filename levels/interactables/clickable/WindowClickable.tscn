@@ -11,7 +11,7 @@ shader = ExtResource( 4 )
 shader_param/brightness = 1.0
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 52.5, 29.5 )
+extents = Vector2( 61.75, 32.75 )
 
 [node name="WindowClickable" instance=ExtResource( 2 )]
 position = Vector2( 2, 1 )
@@ -23,16 +23,16 @@ canClick = true
 
 [node name="Sprite" parent="." index="0"]
 material = SubResource( 1 )
-position = Vector2( -1, 1 )
-scale = Vector2( 0.0897499, 0.0897499 )
+position = Vector2( 7.43756, 6.62505 )
+scale = Vector2( 0.0953749, 0.0953749 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( -3, 18 )
+position = Vector2( 6.25, 21.25 )
 shape = SubResource( 2 )
 
 [node name="InteractionPosition" parent="." index="2"]
-position = Vector2( -3, 109 )
+position = Vector2( 7, 132 )
 
 [node name="EventQueue" parent="." index="3"]
 position = Vector2( 25, -5 )
