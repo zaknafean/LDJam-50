@@ -108,7 +108,7 @@ var DEFAULT_OPTIONS_VIDEO = {}
 # LOGGING
 
 # Global switch for debug logs
-var SHOW_LOG = true
+var SHOW_LOG = false
 
 # All LogCategories are shown by default. Add true to this Dictionary to
 # prevent showing  Logs of this LogCategory

@@ -26,6 +26,7 @@ func _on_ShowScoresButton_pressed():
 		yield(get_tree().create_timer(0.1), "timeout")
 		yield(SilentWolf.Scores.get_high_scores(10, leaderboard), "sw_scores_received")
 		scores = SilentWolf.Scores.scores
+		Settings.lastScoreUpdate = OS.get_unix_time()
 		statusLabel.bbcode_text = str("[center][color=green]Showing most recent scores![/color][/center]")
 		#print('Got new scores!')
 	elif scores.size() != 0:

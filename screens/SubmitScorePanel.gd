@@ -30,7 +30,8 @@ func _on_SubmitScoreButton_pressed():
 	#var name = str(initials, ':',Settings.my_id)
 	
 	var metadata = {
-		"name": str(initials)
+		"name": str(initials),
+		"time": str(OS.get_unix_time())
 	}
 	
 	var newScore = Settings.score
@@ -45,6 +46,7 @@ func _on_SubmitScoreButton_pressed():
 		newMessage = str("[center][color=green]Score recieved successfully\nYour rank would be ",position,"![/color][/center]")
 	message.visible = true
 	message.bbcode_text = newMessage
+	Settings.lastScoreUpdate = 0
 	$MarginContainer/VBoxContainer/SubmitScoreButton.disabled = true
 	#scoreSubmitPopup.get_node("MarginContainer/VBoxContainer/InitialsLabel").editable = false
 	
@@ -121,8 +123,9 @@ func _on_SubmitScorePanel_about_to_show():
 
 	score.bbcode_text = str("[center][color=white]Immortalize your work...[/color][/center]\n[center][color=green]",int(Settings.score),"[/color][/center]")
 
-	get_tree().paused = true
+	#get_tree().paused = true
 
 
 func _on_SubmitScorePanel_popup_hide():
-	get_tree().paused = false
+	#get_tree().paused = false
+	pass

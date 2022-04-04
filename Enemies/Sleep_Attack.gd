@@ -7,8 +7,17 @@ onready var tween = $Tween
 
 export var Can_Click :bool
 
+var sprite_face
+var sprite_texture
+
+var target_sprites = ['beetrap', 'bobboar', 'chumpanzee', 'gouse', 'muck', 'parrilla', 'spidersheep', 'sporkupine', 'squirrk', 'zebrear']
 
 func _ready():
+	randomize()
+	var sprite_pick =randi() % target_sprites.size()
+	sprite_texture = target_sprites[sprite_pick]
+	sprite_face = load('res://assets/icons/attackIcons/'+sprite_texture+'.png')
+	$Sprite.texture = sprite_face
 	tween.connect("tween_all_completed", self, '_on_tween_all_completed')
 	yield(get_tree().create_timer(0.1), "timeout")
 	emit_signal("attack_arrived")

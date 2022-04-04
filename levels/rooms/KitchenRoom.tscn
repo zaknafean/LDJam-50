@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://levels/noninteractables/CupJunk.tscn" type="PackedScene" id=21]
 [ext_resource path="res://levels/noninteractables/Table.tscn" type="PackedScene" id=22]
 [ext_resource path="res://levels/noninteractables/Counter.tscn" type="PackedScene" id=23]
+[ext_resource path="res://levels/interactables/clickable/CellphoneClickable.tscn" type="PackedScene" id=24]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -89,6 +90,7 @@ shape = SubResource( 4 )
 position = Vector2( 176, 88 )
 
 [node name="DialogEvent" parent="Interactables/DoorNorthClickable/EventQueue" index="0" instance=ExtResource( 7 )]
+difficulty = 1
 DIALOG = "Unopenable"
 
 [node name="DialogEvent2" parent="Interactables/DoorNorthClickable/EventQueue" index="1" instance=ExtResource( 7 )]
@@ -121,6 +123,7 @@ position = Vector2( 450, 190 )
 position = Vector2( 453, 10 )
 
 [node name="DialogEvent" parent="Interactables/DoorEastClickable/EventQueue" index="0" instance=ExtResource( 7 )]
+difficulty = 1
 DIALOG = "LivingRoomEast"
 
 [node name="DialogEvent2" parent="Interactables/DoorEastClickable/EventQueue" index="1" instance=ExtResource( 7 )]
@@ -155,6 +158,7 @@ position = Vector2( 466, 364 )
 position = Vector2( 429, 447 )
 
 [node name="DialogEvent" parent="Interactables/DoorSouthClickable/EventQueue" index="0" instance=ExtResource( 7 )]
+difficulty = 1
 DIALOG = "HallwayRoomEast"
 
 [node name="DialogEvent2" parent="Interactables/DoorSouthClickable/EventQueue" index="1" instance=ExtResource( 7 )]
@@ -186,6 +190,7 @@ shape = SubResource( 10 )
 position = Vector2( 30, 33 )
 
 [node name="DialogEvent" parent="Interactables/DoorWestClickable/EventQueue" index="0" instance=ExtResource( 7 )]
+difficulty = 1
 DIALOG = "Unopenable"
 
 [node name="DialogEvent2" parent="Interactables/DoorWestClickable/EventQueue" index="1" instance=ExtResource( 7 )]
@@ -205,14 +210,20 @@ position = Vector2( 294, 187 )
 [node name="LightSwitchClickable" parent="Interactables" index="6" instance=ExtResource( 12 )]
 position = Vector2( 733, 84 )
 
+[node name="CellphoneClickable" parent="Interactables" index="7" instance=ExtResource( 24 )]
+position = Vector2( 805, 39 )
+
+[node name="CellphoneClickable2" parent="Interactables" index="8" instance=ExtResource( 24 )]
+position = Vector2( 820, 226 )
+
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 723, 402 )
 
 [node name="ImAStove" parent="Difficulty2" index="0" instance=ExtResource( 10 )]
-position = Vector2( 849, 36 )
+position = Vector2( 872, 132 )
 
 [node name="Lamp" parent="Difficulty2" index="1" instance=ExtResource( 9 )]
-position = Vector2( 727, 328 )
+position = Vector2( 805, 172 )
 
 [node name="Sleep_Gremlin" parent="Difficulty3" index="0" instance=ExtResource( 8 )]
 position = Vector2( 625, 158 )

@@ -27,6 +27,8 @@ func _ready():
 
 func start_level():
 	Settings.new_game()
+	$Diff2Music.stop()
+	$Diff3Music.stop()
 	if curRoom:
 		remove_child(curRoom)
 		curRoom.queue_free()

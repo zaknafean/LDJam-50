@@ -1,6 +1,6 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://utilities/Attachable_Tools/Hit_Box.tscn" type="PackedScene" id=1]
+[ext_resource path="res://utilities/attachable_tools/Hit_Box.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/LampHop3.png" type="Texture" id=2]
 [ext_resource path="res://assets/lights/Lightmap_Directional.png" type="Texture" id=3]
 [ext_resource path="res://enemies/Target_Locations.gd" type="Script" id=4]
@@ -12,7 +12,7 @@
 height = 108.267
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 42.625, 69.5156 )
+extents = Vector2( 36.3125, 41.2578 )
 
 [sub_resource type="DynamicFont" id=8]
 font_data = ExtResource( 6 )
@@ -256,21 +256,6 @@ tracks/4/keys = {
 "values": [ true, true ]
 }
 
-[sub_resource type="Animation" id=9]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("AmbientNoise:playing")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ false ]
-}
-
 [node name="Lamp" type="Node2D"]
 script = ExtResource( 5 )
 __meta__ = {
@@ -297,7 +282,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" parent="Hit_Box" index="0"]
-position = Vector2( 1, 8 )
+position = Vector2( 0, 36.258 )
 shape = SubResource( 7 )
 
 [node name="Light2D" type="Light2D" parent="."]
@@ -352,7 +337,6 @@ position = Vector2( -33, -37 )
 anims/Attacking = SubResource( 1 )
 anims/Dying = SubResource( 2 )
 anims/Moving = SubResource( 4 )
-anims/RESET = SubResource( 9 )
 
 [node name="Tween" type="Tween" parent="."]
 

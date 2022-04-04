@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://game/GameMain.gd" type="Script" id=1]
 [ext_resource path="res://assets/sound/ambient-hum.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/sound/ambient-whispers.wav" type="AudioStream" id=3]
 
 [node name="GameMain" type="Node2D"]
 script = ExtResource( 1 )
@@ -10,3 +11,4 @@ script = ExtResource( 1 )
 stream = ExtResource( 2 )
 
 [node name="Diff3Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )

@@ -4,5 +4,3 @@
 
 [node name="DialogEvent" type="Node2D" groups=["events"]]
 script = ExtResource( 1 )
-quest_id = null
-quest_value = null

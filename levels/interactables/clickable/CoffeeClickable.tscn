@@ -65,7 +65,6 @@ shape = SubResource( 2 )
 
 [node name="DialogEvent" parent="EventQueue" index="0" instance=ExtResource( 1 )]
 position = Vector2( -12, 12 )
-difficulty = -1
 DIALOG = "Coffee"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]

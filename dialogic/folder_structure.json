@@ -20,7 +20,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": false
+				"folded": true
 			}
 		},
 		"Definitions": {
@@ -33,21 +33,22 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": false
+				"folded": true
 			}
 		},
 		"Themes": {
 			"files": [
 				"default-theme.cfg",
 				"theme-1648902659.cfg",
-				"theme-1648948398.cfg"
+				"theme-1648948398.cfg",
+				"theme-1649078042.cfg"
 			],
 			"folders": {
 
 			},
 			"metadata": {
 				"color": null,
-				"folded": true
+				"folded": false
 			}
 		},
 		"Timelines": {
@@ -93,7 +94,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"Lighting": {
@@ -117,7 +118,25 @@
 						"timeline-1648957760.json",
 						"timeline-1648957775.json",
 						"timeline-1648957806.json",
-						"timeline-1649014906.json"
+						"timeline-1649014906.json",
+						"timeline-1649045389.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": true
+					}
+				},
+				"Random Work": {
+					"files": [
+						"timeline-1649077433.json",
+						"timeline-1649077481.json",
+						"timeline-1649077499.json",
+						"timeline-1649077508.json",
+						"timeline-1649077518.json",
+						"timeline-1649077639.json"
 					],
 					"folders": {
 

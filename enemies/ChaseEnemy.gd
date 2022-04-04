@@ -35,7 +35,7 @@ func _process(delta):
 		speedBonus += 3.0
 		speedBonus = clamp(speedBonus, 0.0, 50.0)
 		
-	if (Settings.curGameState == Settings.GAME_STATES.PLAY or Settings.curGameState == Settings.GAME_STATES.BATTLE or Settings.curGameState == Settings.GAME_STATES.DIALOG) and !amEating and amActive:
+	if (Settings.curGameState == Settings.GAME_STATES.PLAY or Settings.curGameState == Settings.GAME_STATES.BATTLE or Settings.curGameState == Settings.GAME_STATES.DIALOG) and !amEating and amActive and Settings.gameOver == false:
 		
 		if Settings.curGameState == Settings.GAME_STATES.BATTLE or Settings.curGameState == Settings.GAME_STATES.DIALOG:
 			curSpeed = (SPEED + (Settings.roomsExplored * 3)) / 3
@@ -43,6 +43,8 @@ func _process(delta):
 			curSpeed = SPEED + (Settings.roomsExplored * 3) + speedBonus
 		VELOCITY = (playerRef.position - position).normalized() * curSpeed
 		var _collision = move_and_slide(VELOCITY)
+		if position.distance_to(playerRef.position) < 25:
+			_on_EatTimer_timeout()
 		var walk_dir = VELOCITY.normalized()
 		
 		if walk_dir.x > 0.0:
@@ -74,7 +76,7 @@ func anim_switch(animation, speed = 1):
 func _on_Hit_Box_body_entered(body):
 	if body.name == "Player" and !amEating and amActive:
 		body.taking_damage = true
-		Settings.adjust_sanity(-25)
+		Settings.adjust_sanity("-25")
 		eatTimer.start()
 		amEating = true
 		$AttackNoise.play()

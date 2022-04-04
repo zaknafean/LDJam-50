@@ -18,11 +18,11 @@
 [ext_resource path="res://levels/noninteractables/SpacePoster.tscn" type="PackedScene" id=16]
 [ext_resource path="res://levels/noninteractables/Ottoman.tscn" type="PackedScene" id=17]
 [ext_resource path="res://levels/noninteractables/Sleep.tscn" type="PackedScene" id=18]
-[ext_resource path="res://levels/interactables/clickable/CaffeinePillsClickable.tscn" type="PackedScene" id=19]
 [ext_resource path="res://levels/noninteractables/SideWallPhoto.tscn" type="PackedScene" id=20]
 [ext_resource path="res://levels/noninteractables/Dont.tscn" type="PackedScene" id=21]
 [ext_resource path="res://levels/noninteractables/SleepyGraffiti.tscn" type="PackedScene" id=22]
 [ext_resource path="res://levels/noninteractables/Click2MoveGraffiti.tscn" type="PackedScene" id=23]
+[ext_resource path="res://levels/interactables/clickable/CellphoneClickable.tscn" type="PackedScene" id=24]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -96,6 +96,7 @@ shape = SubResource( 4 )
 position = Vector2( 164, 103 )
 
 [node name="DialogEvent" parent="Interactables/DoorNorthClickable/EventQueue" index="0" instance=ExtResource( 7 )]
+difficulty = 1
 DIALOG = "HallwayRoomNorth"
 
 [node name="DialogEvent2" parent="Interactables/DoorNorthClickable/EventQueue" index="1" instance=ExtResource( 7 )]
@@ -128,6 +129,7 @@ position = Vector2( 443, 193 )
 position = Vector2( 453, 10 )
 
 [node name="DialogEvent" parent="Interactables/DoorEastClickable/EventQueue" index="0" instance=ExtResource( 7 )]
+difficulty = 1
 DIALOG = "BedRoomNorth"
 
 [node name="DialogEvent2" parent="Interactables/DoorEastClickable/EventQueue" index="1" instance=ExtResource( 7 )]
@@ -162,6 +164,7 @@ position = Vector2( 466, 364 )
 position = Vector2( 429, 447 )
 
 [node name="DialogEvent" parent="Interactables/DoorSouthClickable/EventQueue" index="0" instance=ExtResource( 7 )]
+difficulty = 1
 DIALOG = "HallwayRoomSouth"
 
 [node name="DialogEvent2" parent="Interactables/DoorSouthClickable/EventQueue" index="1" instance=ExtResource( 7 )]
@@ -193,6 +196,7 @@ shape = SubResource( 10 )
 position = Vector2( 30, 33 )
 
 [node name="DialogEvent" parent="Interactables/DoorWestClickable/EventQueue" index="0" instance=ExtResource( 7 )]
+difficulty = 1
 DIALOG = "LivingRoomNorth"
 
 [node name="DialogEvent2" parent="Interactables/DoorWestClickable/EventQueue" index="1" instance=ExtResource( 7 )]
@@ -202,6 +206,18 @@ DIALOG = "LivingRoomNorth"
 [node name="DialogEvent3" parent="Interactables/DoorWestClickable/EventQueue" index="2" instance=ExtResource( 7 )]
 difficulty = 3
 DIALOG = "RandomRoom"
+
+[node name="CellphoneClickable" parent="Interactables" index="4" instance=ExtResource( 24 )]
+position = Vector2( 1293, 369 )
+
+[node name="CellphoneClickable2" parent="Interactables" index="5" instance=ExtResource( 24 )]
+position = Vector2( 1033, 64 )
+
+[node name="CellphoneClickable3" parent="Interactables" index="6" instance=ExtResource( 24 )]
+position = Vector2( 709, 87 )
+
+[node name="CellphoneClickable4" parent="Interactables" index="7" instance=ExtResource( 24 )]
+position = Vector2( 1479, 65 )
 
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 1922, 465 )
@@ -265,61 +281,58 @@ position = Vector2( 967, 164 )
 [node name="Sleep_Gremlin2" parent="Difficulty3" index="6" instance=ExtResource( 9 )]
 position = Vector2( 656, 165 )
 
-[node name="CaffeinePillsClickable" parent="Difficulty3" index="7" instance=ExtResource( 19 )]
-position = Vector2( 962, 16 )
-
-[node name="LightSwitchClickable" parent="Difficulty3" index="8" instance=ExtResource( 16 )]
+[node name="LightSwitchClickable" parent="Difficulty3" index="7" instance=ExtResource( 16 )]
 position = Vector2( 469, 142 )
 
-[node name="Click2MoveGraffiti" parent="Difficulty3" index="9" instance=ExtResource( 23 )]
+[node name="Click2MoveGraffiti" parent="Difficulty3" index="8" instance=ExtResource( 23 )]
 position = Vector2( 832, 297 )
 
-[node name="Click2MoveGraffiti2" parent="Difficulty3" index="10" instance=ExtResource( 23 )]
+[node name="Click2MoveGraffiti2" parent="Difficulty3" index="9" instance=ExtResource( 23 )]
 position = Vector2( 953, 286 )
 
-[node name="Click2MoveGraffiti3" parent="Difficulty3" index="11" instance=ExtResource( 23 )]
+[node name="Click2MoveGraffiti3" parent="Difficulty3" index="10" instance=ExtResource( 23 )]
 position = Vector2( 856, 415 )
 
-[node name="SpacePoster" parent="Difficulty3" index="12" instance=ExtResource( 16 )]
+[node name="SpacePoster" parent="Difficulty3" index="11" instance=ExtResource( 16 )]
 position = Vector2( 770, 261 )
 
-[node name="SpacePoster2" parent="Difficulty3" index="13" instance=ExtResource( 16 )]
+[node name="SpacePoster2" parent="Difficulty3" index="12" instance=ExtResource( 16 )]
 position = Vector2( 781, 300 )
 
-[node name="SpacePoster3" parent="Difficulty3" index="14" instance=ExtResource( 16 )]
+[node name="SpacePoster3" parent="Difficulty3" index="13" instance=ExtResource( 16 )]
 position = Vector2( 845, 255 )
 
-[node name="SpacePoster4" parent="Difficulty3" index="15" instance=ExtResource( 16 )]
+[node name="SpacePoster4" parent="Difficulty3" index="14" instance=ExtResource( 16 )]
 position = Vector2( 919, 247 )
 
-[node name="SpacePoster5" parent="Difficulty3" index="16" instance=ExtResource( 16 )]
+[node name="SpacePoster5" parent="Difficulty3" index="15" instance=ExtResource( 16 )]
 position = Vector2( 851, 283 )
 
-[node name="SpacePoster6" parent="Difficulty3" index="17" instance=ExtResource( 16 )]
+[node name="SpacePoster6" parent="Difficulty3" index="16" instance=ExtResource( 16 )]
 position = Vector2( 850, 241 )
 
-[node name="SpacePoster7" parent="Difficulty3" index="18" instance=ExtResource( 16 )]
+[node name="SpacePoster7" parent="Difficulty3" index="17" instance=ExtResource( 16 )]
 position = Vector2( 971, 232 )
 
-[node name="SpacePoster8" parent="Difficulty3" index="19" instance=ExtResource( 16 )]
+[node name="SpacePoster8" parent="Difficulty3" index="18" instance=ExtResource( 16 )]
 position = Vector2( 943, 273 )
 
-[node name="Dont" parent="Difficulty3" index="20" instance=ExtResource( 21 )]
+[node name="Dont" parent="Difficulty3" index="19" instance=ExtResource( 21 )]
 position = Vector2( 586, -134 )
 
-[node name="Dont2" parent="Difficulty3" index="21" instance=ExtResource( 21 )]
+[node name="Dont2" parent="Difficulty3" index="20" instance=ExtResource( 21 )]
 position = Vector2( 968, -153 )
 
-[node name="Dont3" parent="Difficulty3" index="22" instance=ExtResource( 21 )]
+[node name="Dont3" parent="Difficulty3" index="21" instance=ExtResource( 21 )]
 position = Vector2( 1429, -159 )
 
-[node name="SpacePoster9" parent="Difficulty3" index="23" instance=ExtResource( 16 )]
+[node name="SpacePoster9" parent="Difficulty3" index="22" instance=ExtResource( 16 )]
 position = Vector2( 791, 391 )
 
-[node name="SpacePoster10" parent="Difficulty3" index="24" instance=ExtResource( 16 )]
+[node name="SpacePoster10" parent="Difficulty3" index="23" instance=ExtResource( 16 )]
 position = Vector2( 849, 374 )
 
-[node name="SpacePoster11" parent="Difficulty3" index="25" instance=ExtResource( 16 )]
+[node name="SpacePoster11" parent="Difficulty3" index="24" instance=ExtResource( 16 )]
 position = Vector2( 849, 406 )
 
 [node name="Vent" parent="." index="8" instance=ExtResource( 14 )]
