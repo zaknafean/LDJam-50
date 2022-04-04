@@ -5,6 +5,7 @@
 [ext_resource path="res://assets/doorNorthBlueClosed.png" type="Texture" id=3]
 [ext_resource path="res://assets/doorEastBlueClosed.png" type="Texture" id=4]
 [ext_resource path="res://levels/noninteractables/Ottoman.tscn" type="PackedScene" id=5]
+[ext_resource path="res://levels/noninteractables/Vent.tscn" type="PackedScene" id=5]
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=6]
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=8]
@@ -23,6 +24,12 @@
 [ext_resource path="res://levels/noninteractables/Rug.tscn" type="PackedScene" id=21]
 [ext_resource path="res://levels/noninteractables/SpacePoster.tscn" type="PackedScene" id=22]
 [ext_resource path="res://levels/noninteractables/Click2MoveGraffiti.tscn" type="PackedScene" id=23]
+[ext_resource path="res://levels/noninteractables/SleepyGraffiti.tscn" type="PackedScene" id=12]
+[ext_resource path="res://levels/noninteractables/PhotoPortrait.tscn" type="PackedScene" id=13]
+[ext_resource path="res://levels/noninteractables/Rug.tscn" type="PackedScene" id=14]
+[ext_resource path="res://levels/noninteractables/SideWallBookshelf.tscn" type="PackedScene" id=15]
+[ext_resource path="res://levels/noninteractables/SpacePoster.tscn" type="PackedScene" id=16]
+[ext_resource path="res://levels/noninteractables/Ottoman.tscn" type="PackedScene" id=17]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -57,7 +64,6 @@ shader_param/brightness = 1.0
 extents = Vector2( 25, 85.625 )
 
 [node name="UnknownRoom" instance=ExtResource( 1 )]
-position = Vector2( 151, 164 )
 
 [node name="TileMap" parent="Navigation2D" index="0"]
 tile_data = PoolIntArray( -262137, 35, 0, -262136, 26, 0, -262135, 26, 0, -262134, 26, 0, -262133, 46, 0, -262131, 35, 0, -262130, 26, 0, -262129, 26, 0, -262128, 46, 0, -262124, 35, 0, -262120, 58, 0, -196601, 36, 0, -196600, 27, 0, -196599, 34, 0, -196598, 33, 0, -196597, 47, 0, -196596, 46, 0, -196595, 36, 0, -196594, 34, 0, -196593, 34, 0, -196592, 54, 0, -196591, 46, 0, -196588, 36, 0, -196584, 54, 0, -196583, 58, 0, -131065, 37, 0, -131064, 28, 0, -131063, 19, 0, -131062, 32, 0, -131061, 20, 0, -131060, 47, 0, -131059, 46, 0, -131058, 28, 0, -131057, 32, 0, -131055, 47, 0, -131054, 46, 0, -131052, 37, 0, -131048, 55, 0, -131047, 52, 0, -131046, 58, 0, -65531, 21, 0, -65530, 26, 0, -65529, 38, 0, -65525, 56, 0, -65524, 20, 0, -65523, 47, 0, -65522, 29, 0, -65521, 31, 0, -65518, 47, 0, -65517, 45, 0, -65516, 38, 0, -65512, 56, 0, -65510, 52, 0, -65509, 58, 0, 5, 22, 0, 6, 27, 0, 7, 34, 0, 8, 0, 0, 9, 1, 0, 10, 1, 0, 11, 4, 0, 12, 20, 0, 13, 51, 0, 14, 0, 0, 15, 1, 0, 16, 4, 0, 21, 0, 0, 22, 1, 0, 23, 1, 0, 24, 4, 0, 27, 52, 0, 28, 58, 0, 65541, 23, 0, 65542, 28, 0, 65543, 19, 0, 65544, 11, 0, 65545, 5, 0, 65546, 6, 0, 65547, 6, 0, 65548, 4, 0, 65549, 51, 0, 65550, 9, 0, 65551, 5, 0, 65552, 6, 0, 65553, 4, 0, 65557, 9, 0, 65558, 5, 0, 65559, 6, 0, 65560, 6, 0, 65561, 4, 0, 65564, 52, 0, 65565, 58, 0, 131077, 24, 0, 131078, 29, 0, 131079, 30, 0, 131081, 9, 0, 131082, 5, 0, 131083, 6, 0, 131084, 6, 0, 131085, 4, 0, 131087, 9, 0, 131088, 5, 0, 131089, 6, 0, 131090, 4, 0, 131094, 9, 0, 131095, 5, 0, 131096, 6, 0, 131097, 6, 0, 131098, 4, 0, 131101, 52, 0, 131102, 58, 0, 196613, 25, 0, 196614, 0, 0, 196615, 1, 0, 196616, 1, 0, 196617, 1, 0, 196618, 1, 0, 196619, 6, 0, 196620, 6, 0, 196621, 6, 0, 196622, 6, 0, 196623, 6, 0, 196624, 6, 0, 196625, 6, 0, 196626, 6, 0, 196627, 6, 0, 196628, 6, 0, 196629, 6, 0, 196630, 6, 0, 196631, 6, 0, 196632, 6, 0, 196633, 6, 0, 196634, 6, 0, 196635, 4, 0, 196638, 52, 0, 196639, 58, 0, 262150, 9, 0, 262151, 5, 0, 262152, 6, 0, 262153, 6, 0, 262154, 6, 0, 262155, 6, 0, 262156, 6, 0, 262157, 6, 0, 262158, 6, 0, 262159, 6, 0, 262160, 6, 0, 262161, 6, 0, 262162, 6, 0, 262163, 6, 0, 262164, 6, 0, 262165, 6, 0, 262166, 6, 0, 262167, 6, 0, 262168, 6, 0, 262169, 6, 0, 262170, 6, 0, 262171, 6, 0, 262172, 4, 0, 262175, 52, 0, 262176, 58, 0, 327687, 9, 0, 327688, 5, 0, 327689, 6, 0, 327690, 6, 0, 327691, 6, 0, 327692, 6, 0, 327693, 6, 0, 327694, 6, 0, 327695, 6, 0, 327696, 6, 0, 327697, 6, 0, 327698, 6, 0, 327699, 6, 0, 327700, 6, 0, 327701, 6, 0, 327702, 6, 0, 327703, 6, 0, 327704, 6, 0, 327705, 6, 0, 327706, 6, 0, 327707, 6, 0, 327708, 6, 0, 327709, 4, 0, 327712, 52, 0, 327713, 58, 0, 393224, 9, 0, 393225, 5, 0, 393226, 6, 0, 393227, 6, 0, 393228, 6, 0, 393229, 6, 0, 393230, 6, 0, 393231, 6, 0, 393232, 6, 0, 393233, 6, 0, 393234, 6, 0, 393235, 6, 0, 393236, 6, 0, 393237, 6, 0, 393238, 6, 0, 393239, 6, 0, 393240, 6, 0, 393241, 6, 0, 393242, 6, 0, 393243, 6, 0, 393244, 6, 0, 393245, 6, 0, 393246, 4, 0, 393249, 60, 0, 458761, 9, 0, 458762, 5, 0, 458763, 6, 0, 458764, 6, 0, 458765, 6, 0, 458766, 6, 0, 458767, 6, 0, 458768, 6, 0, 458769, 6, 0, 458770, 6, 0, 458771, 6, 0, 458772, 6, 0, 458773, 6, 0, 458774, 6, 0, 458775, 6, 0, 458776, 6, 0, 458777, 6, 0, 458778, 6, 0, 458779, 6, 0, 458780, 6, 0, 458781, 6, 0, 458782, 6, 0, 458783, 4, 0, 458785, 61, 0, 524298, 9, 0, 524299, 5, 0, 524300, 6, 0, 524301, 6, 0, 524302, 6, 0, 524303, 6, 0, 524304, 6, 0, 524305, 6, 0, 524306, 6, 0, 524307, 6, 0, 524308, 6, 0, 524309, 6, 0, 524310, 6, 0, 524311, 6, 0, 524312, 6, 0, 524313, 6, 0, 524314, 6, 0, 524315, 6, 0, 524316, 6, 0, 524317, 6, 0, 524318, 6, 0, 524319, 6, 0, 524320, 4, 0, 524321, 62, 0, 589835, 9, 0, 589836, 16, 0, 589837, 16, 0, 589838, 16, 0, 589839, 16, 0, 589840, 16, 0, 589841, 16, 0, 589842, 16, 0, 589843, 16, 0, 589844, 16, 0, 589845, 16, 0, 589846, 16, 0, 589847, 16, 0, 589848, 16, 0, 589849, 16, 0, 589850, 16, 0, 589851, 16, 0, 589852, 16, 0, 589853, 16, 0, 589854, 16, 0, 589855, 16, 0, 589856, 16, 0, 589857, 63, 0 )
@@ -269,6 +275,7 @@ position = Vector2( 967, 164 )
 [node name="Sleep_Gremlin2" parent="Difficulty3" index="6" instance=ExtResource( 9 )]
 position = Vector2( 656, 165 )
 
+
 [node name="Dont" parent="Difficulty3" index="7" instance=ExtResource( 17 )]
 position = Vector2( 619, -148 )
 
@@ -316,6 +323,36 @@ position = Vector2( 971, 232 )
 
 [node name="SpacePoster8" parent="Difficulty3" index="22" instance=ExtResource( 22 )]
 position = Vector2( 943, 273 )
+
+[node name="Vent" parent="." index="8" instance=ExtResource( 5 )]
+position = Vector2( 653, -147 )
+z_index = 1
+
+[node name="SpacePoster" parent="." index="9" instance=ExtResource( 16 )]
+position = Vector2( 1467, 93 )
+z_index = 2
+
+[node name="SideWallBookshelf" parent="." index="10" instance=ExtResource( 15 )]
+position = Vector2( 1871, 285 )
+
+[node name="PeekingRug" parent="." index="11" instance=ExtResource( 14 )]
+position = Vector2( 1047, 248 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="SideWallBookshelf2" parent="." index="12" instance=ExtResource( 15 )]
+position = Vector2( 1638, 52 )
+
+[node name="Ottoman" parent="." index="13" instance=ExtResource( 17 )]
+position = Vector2( 1227, 497 )
+
+[node name="PhotoPortrait" parent="." index="14" instance=ExtResource( 13 )]
+position = Vector2( 1502, -115 )
+z_index = 1
+
+[node name="SleepyGraffiti" parent="." index="15" instance=ExtResource( 12 )]
+position = Vector2( 1150, 35 )
+rotation = 0.300197
+scale = Vector2( 0.7, 0.7 )
 
 [editable path="Interactables/DoorNorthClickable"]
 [editable path="Interactables/DoorEastClickable"]

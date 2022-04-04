@@ -18,6 +18,8 @@
 [ext_resource path="res://levels/noninteractables/SideWallVent.tscn" type="PackedScene" id=16]
 [ext_resource path="res://levels/interactables/clickable/CaffeinePillsClickable.tscn" type="PackedScene" id=17]
 [ext_resource path="res://levels/noninteractables/Dont.tscn" type="PackedScene" id=18]
+[ext_resource path="res://levels/noninteractables/SideWallVent.tscn" type="PackedScene" id=13]
+[ext_resource path="res://levels/noninteractables/SideWallJunk.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -326,6 +328,39 @@ position = Vector2( 306, 427 )
 [node name="Click2MoveGraffiti3" parent="." index="10" instance=ExtResource( 11 )]
 position = Vector2( 687, 429 )
 rotation = 2.29336
+
+[node name="SleepyGraffiti" parent="." index="8" instance=ExtResource( 12 )]
+position = Vector2( 759, 31 )
+
+[node name="SleepyGraffiti2" parent="." index="9" instance=ExtResource( 12 )]
+position = Vector2( 698, 54 )
+rotation = 0.00523599
+scale = Vector2( 0.66, 0.66 )
+
+[node name="SleepyGraffiti3" parent="." index="10" instance=ExtResource( 12 )]
+position = Vector2( 807, 16 )
+rotation = 0.0244346
+scale = Vector2( 0.44, 0.44 )
+
+[node name="Click2MoveGraffiti" parent="." index="11" instance=ExtResource( 11 )]
+position = Vector2( 126, 398 )
+rotation = 0.677188
+scale = Vector2( 0.6, 0.6 )
+z_index = 1
+
+[node name="Click2MoveGraffiti2" parent="." index="12" instance=ExtResource( 11 )]
+position = Vector2( 274, 411 )
+
+[node name="Click2MoveGraffiti3" parent="." index="13" instance=ExtResource( 11 )]
+position = Vector2( 666, 416 )
+rotation = 0.486947
+
+[node name="SideWallJunk" parent="." index="14" instance=ExtResource( 14 )]
+position = Vector2( 1159, 84 )
+scale = Vector2( 1.4, 1.4 )
+
+[node name="SideWallVent" parent="." index="15" instance=ExtResource( 13 )]
+position = Vector2( 1209, 213 )
 
 [editable path="Interactables/DoorNorthClickable"]
 [editable path="Interactables/DoorEastClickable"]

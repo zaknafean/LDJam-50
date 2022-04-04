@@ -36,13 +36,12 @@ func start_level():
 		pass
 	add_child(curRoom)
 	yield(get_tree(), "idle_frame")
-	curRoom._set_spawns('s')
+	curRoom._set_spawns('s', 4)
 
 
 func random_room():
 	randomize()
 	var randValue = randi() % 5 + 1
-	print(randValue)
 	
 	if curRoom:
 		remove_child(curRoom)
@@ -125,6 +124,13 @@ func change_room(newRoom: String, directionFrom: String, _delay=2):
 	add_child(curRoom)
 	yield(get_tree(), "idle_frame")
 	curRoom._set_spawns(directionFrom, newDelay)
+
+
+func _process(delta):
+	if Settings.difficulty == 2 and $Diff2Music.playing == false:
+		$Diff2Music.play()
+	elif Settings.difficulty == 3 and $Diff3Music.playing == false:
+		$Diff2Music.play()
 
 
 func _on_game_started():
