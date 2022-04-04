@@ -2,7 +2,7 @@
 
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/I_love_lamp.png" type="Texture" id=3]
+[ext_resource path="res://assets/LampHop3.png" type="Texture" id=3]
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=4]
 
 [sub_resource type="ShaderMaterial" id=1]
@@ -11,7 +11,7 @@ shader = ExtResource( 4 )
 shader_param/brightness = 1.0
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 22, 82 )
+extents = Vector2( 14, 59 )
 
 [node name="FloorLampClickable" instance=ExtResource( 2 )]
 collision_layer = 1
@@ -21,21 +21,21 @@ canClick = true
 
 [node name="Sprite" parent="." index="0"]
 material = SubResource( 1 )
-position = Vector2( -28.8125, 79.2156 )
-scale = Vector2( 0.137666, 0.137666 )
+scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 3 )
+hframes = 6
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( -29, 79 )
+position = Vector2( 2, 11 )
 shape = SubResource( 2 )
 
 [node name="InteractionPosition" parent="." index="2"]
-position = Vector2( -34, 183 )
+position = Vector2( -5, 83 )
 
 [node name="EventQueue" parent="." index="3"]
-position = Vector2( 32, -16 )
+position = Vector2( 1, -8 )
 
 [node name="DialogEvent" parent="EventQueue" index="0" instance=ExtResource( 1 )]
-position = Vector2( -3, 198 )
+position = Vector2( 1, 35 )
 difficulty = -1
 DIALOG = "Floor Lamp"
