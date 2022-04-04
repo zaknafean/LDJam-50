@@ -225,6 +225,7 @@ position = Vector2( 249, -54 )
 
 [node name="CurtainsClickable" parent="Interactables" index="8" instance=ExtResource( 13 )]
 position = Vector2( 253, -60 )
+z_index = 1
 
 [node name="CoffeeTableClickable" parent="Interactables" index="9" instance=ExtResource( 20 )]
 position = Vector2( 434, 542 )
