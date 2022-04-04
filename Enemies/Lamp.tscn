@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://utilities/attachable_tools/Hit_Box.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/LampHop3.png" type="Texture" id=2]
@@ -256,21 +256,6 @@ tracks/4/keys = {
 "values": [ true, true ]
 }
 
-[sub_resource type="Animation" id=9]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("AmbientNoise:playing")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ false ]
-}
-
 [node name="Lamp" type="Node2D"]
 script = ExtResource( 5 )
 __meta__ = {
@@ -352,7 +337,6 @@ position = Vector2( -33, -37 )
 anims/Attacking = SubResource( 1 )
 anims/Dying = SubResource( 2 )
 anims/Moving = SubResource( 4 )
-anims/RESET = SubResource( 9 )
 
 [node name="Tween" type="Tween" parent="."]
 

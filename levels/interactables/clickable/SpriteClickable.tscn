@@ -10,6 +10,7 @@ shader = ExtResource( 4 )
 shader_param/brightness = 1.0
 
 [node name="SpriteClickable" instance=ExtResource( 1 )]
+collision_layer = 3
 script = ExtResource( 2 )
 
 [node name="Sprite" parent="." index="0"]
