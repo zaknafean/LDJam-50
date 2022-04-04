@@ -7,6 +7,8 @@ config_dialog_song = "DIALOG_WON_SONG"
 pauses_game_while_open = true
 signal_to_open_to = "level_won"
 
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
 [node name="VBoxContainer" parent="CenterContainer/Popup" index="0"]
 visible = true
 margin_right = 400.0
