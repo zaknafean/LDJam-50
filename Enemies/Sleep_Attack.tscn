@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://effects/AttackSuccess.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/icons/white-spiral.png" type="Texture" id=2]
 [ext_resource path="res://assets/icons/attackIcons/beetrap.png" type="Texture" id=3]
+[ext_resource path="res://assets/sound/bees.wav" type="AudioStream" id=4]
 [ext_resource path="res://enemies/Sleep_Attack.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -29,6 +30,12 @@ shape = SubResource( 1 )
 
 [node name="Tween" type="Tween" parent="."]
 playback_process_mode = 0
+
+[node name="AmbientNoise" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -20.0
+autoplay = true
+bus = "Effects"
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_Area2D_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_Area2D_mouse_exited"]
