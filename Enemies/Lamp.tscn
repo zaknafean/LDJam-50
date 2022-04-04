@@ -7,7 +7,7 @@
 [ext_resource path="res://enemies/Lamp.gd" type="Script" id=5]
 [ext_resource path="res://assets/fonts/Love_Ya_Like_A_Sister/LoveYaLikeASister-Regular.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://assets/sound/light-switch-on-lamp.wav" type="AudioStream" id=7]
-[ext_resource path="res://assets/Bed100.png" type="Texture" id=8]
+[ext_resource path="res://enemies/EscapePrompt.tscn" type="PackedScene" id=9]
 
 [sub_resource type="CapsuleShape2D" id=6]
 height = 108.267
@@ -349,10 +349,10 @@ volume_db = 12.0
 max_distance = 550.0
 bus = "Effects"
 
-[node name="Tutorial" type="Sprite" parent="."]
+[node name="EscapePrompt" parent="." instance=ExtResource( 9 )]
 visible = false
-position = Vector2( 91, -19 )
-texture = ExtResource( 8 )
+position = Vector2( 75, -111 )
+scale = Vector2( 0.5, 0.5 )
 
 [connection signal="body_entered" from="Hit_Box" to="." method="_on_Hit_Box_body_entered"]
 [connection signal="body_exited" from="Hit_Box" to="." method="_on_Hit_Box_body_exited"]

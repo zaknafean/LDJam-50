@@ -15,7 +15,7 @@ func attack_position():
 		var cur_target = get_node('Target_Locations/Position2D'+str(pick))
 		targets.append(cur_target)
 	$Label.text = "I'm an ANGRY stove...Or you're hallucinating!"
-	$Tutorial.visible = true
+	$EscapePrompt.visible = true
 	$Stove/Atk_Sprite/AtkSpritePlayer.play("Attack")
 	$AnimationPlayer.play("Attacking")
 	
@@ -65,6 +65,6 @@ func byeeeeee():
 	if Settings.sanityValue > 5:
 		Settings.adjust_sanity(str(-5))
 	
-	$Tutorial.queue_free()
+	$EscapePrompt.queue_free()
 	queue_free()
 	
