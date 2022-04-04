@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tilesets/EnvironmentTileset.tres" type="TileSet" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://levels/noninteractables/Dont.tscn" type="PackedScene" id=21]
 [ext_resource path="res://levels/noninteractables/SleepyGraffiti.tscn" type="PackedScene" id=22]
 [ext_resource path="res://levels/noninteractables/Click2MoveGraffiti.tscn" type="PackedScene" id=23]
+[ext_resource path="res://levels/interactables/clickable/CellphoneClickable.tscn" type="PackedScene" id=24]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -221,7 +222,7 @@ rotation = -0.143117
 scale = Vector2( 9, 3 )
 
 [node name="SideWallBookshelf" parent="Difficulty2" index="4" instance=ExtResource( 13 )]
-position = Vector2( 833, 81 )
+position = Vector2( 639, -76 )
 
 [node name="SideWallPhoto" parent="Difficulty2" index="5" instance=ExtResource( 20 )]
 position = Vector2( 1798, 97 )
@@ -230,7 +231,7 @@ position = Vector2( 1798, 97 )
 position = Vector2( 2071, 509 )
 
 [node name="PeekingRug" parent="Difficulty2" index="7" instance=ExtResource( 5 )]
-position = Vector2( 1394, 219 )
+position = Vector2( 1407, 231 )
 
 [node name="CoffeeTableClickable" parent="Difficulty2" index="8" instance=ExtResource( 15 )]
 position = Vector2( 613, 30 )
@@ -323,7 +324,7 @@ position = Vector2( 849, 374 )
 position = Vector2( 849, 406 )
 
 [node name="Vent" parent="." index="8" instance=ExtResource( 14 )]
-position = Vector2( 653, -147 )
+position = Vector2( 961, -105 )
 z_index = 1
 
 [node name="SideWallBookshelf" parent="." index="9" instance=ExtResource( 15 )]
@@ -343,6 +344,9 @@ z_index = 1
 position = Vector2( 1150, 35 )
 rotation = 0.300197
 scale = Vector2( 0.7, 0.7 )
+
+[node name="CellphoneClickable" parent="." index="14" instance=ExtResource( 24 )]
+position = Vector2( 1267, 169 )
 
 [editable path="Interactables/DoorNorthClickable"]
 [editable path="Interactables/DoorEastClickable"]
