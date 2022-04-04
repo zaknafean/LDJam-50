@@ -147,6 +147,8 @@ func process_event(event : Interactable) -> bool:
 func _process(_delta):
 	statLabel.text = str('Room: ', name, '\n', 'Alert: ', Settings.alertnessValue, '\n', 'Sanity: ', Settings.sanityValue, '\n', 'Score: ', Settings.score, '\n', 'State: ', Settings.curGameState, '\n', 'Rooms: ', Settings.roomsExplored, '\n', 'Difficulty: ', Settings.difficulty);
 	
+	$CanvasLayer/MarginContainer/ProgressBar.value = Settings.alertnessValue
+	
 	if Settings.alertnessValue <= 0 and Settings.gameOver == false:
 		Settings.gameOver = true
 		Settings.curGameState = Settings.GAME_STATES.MENU

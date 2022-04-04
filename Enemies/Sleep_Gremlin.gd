@@ -81,7 +81,7 @@ func terminator():
 
 func byeeeeee():
 	var score_value = 50 * Settings.difficulty
-	Settings.adjust_score('score_value')
+	Settings.adjust_score(str(score_value))
 	if Settings.sanityValue > 5:
 		Settings.adjust_sanity('-5')
 	queue_free()
