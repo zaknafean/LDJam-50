@@ -295,6 +295,11 @@ scale = Vector2( 1, 2 )
 texture = ExtResource( 3 )
 shadow_enabled = true
 
+[node name="EscapePrompt" parent="." instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 76, 2 )
+scale = Vector2( 0.5, 0.5 )
+
 [node name="Label" type="Label" parent="."]
 visible = false
 margin_left = -55.0
@@ -348,11 +353,6 @@ stream = ExtResource( 7 )
 volume_db = 8.0
 max_distance = 550.0
 bus = "Effects"
-
-[node name="EscapePrompt" parent="." instance=ExtResource( 9 )]
-visible = false
-position = Vector2( 75, -111 )
-scale = Vector2( 0.5, 0.5 )
 
 [connection signal="body_entered" from="Hit_Box" to="." method="_on_Hit_Box_body_entered"]
 [connection signal="body_exited" from="Hit_Box" to="." method="_on_Hit_Box_body_exited"]
