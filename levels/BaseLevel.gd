@@ -10,6 +10,7 @@ onready var tilemap : TileMap = $Navigation2D/TileMap
 onready var backmap : TileMap = $Navigation2D/BackLayerMap
 onready var alphamap : TileMap = $Navigation2D/AlphaLayerMap
 onready var enemy := $ChaseEnemy
+onready var bgSprite := $ParallaxBackground/ParallaxLayer/Sprite
 
 var currentEvent : Interactable = null
 var queuedEvent : Interactable = null
@@ -41,12 +42,14 @@ func _ready():
 	Settings.curGameState = Settings.GAME_STATES.PLAY
 	
 	if Settings.difficulty == 1:
+		bgSprite.texture = load('res://assets/bg01.png')
 		$Difficulty2.queue_free()
 		$Difficulty3.queue_free()
 	elif Settings.difficulty == 2:
+		bgSprite.texture = load('res://assets/bg02.png')
 		$Difficulty3.queue_free()
 	elif Settings.difficulty == 3:
-		pass
+		bgSprite.texture = load('res://assets/bg03.png')
 
 
 func _set_spawns(directionFrom: String, delay=2):
@@ -143,7 +146,11 @@ func process_event(event : Interactable) -> bool:
 
 func _process(_delta):
 	statLabel.text = str('Room: ', name, '\n', 'Alert: ', Settings.alertnessValue, '\n', 'Sanity: ', Settings.sanityValue, '\n', 'Score: ', Settings.score, '\n', 'State: ', Settings.curGameState, '\n', 'Rooms: ', Settings.roomsExplored, '\n', 'Difficulty: ', Settings.difficulty);
-
+	
+	if Settings.alertnessValue <= 0 and Settings.gameOver == false:
+		Settings.gameOver = true
+		Settings.curGameState = Settings.GAME_STATES.MENU
+		SignalMngr.emit_signal("level_won")
 
 func _unhandled_input(event):
 	if freezeInput or Settings.curGameState != Settings.GAME_STATES.PLAY:

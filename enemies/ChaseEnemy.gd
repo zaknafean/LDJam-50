@@ -77,6 +77,7 @@ func _on_Hit_Box_body_entered(body):
 	if body.name == "Player" and !amEating and amActive:
 		body.taking_damage = true
 		Settings.adjust_sanity("-25")
+		Settings.adjust_alertness("50")
 		eatTimer.start()
 		amEating = true
 		$AttackNoise.play()

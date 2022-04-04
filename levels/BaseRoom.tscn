@@ -61,5 +61,8 @@ Score: 0"
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 1.2, 1.2 )
+motion_offset = Vector2( 1280, 720 )
+motion_mirroring = Vector2( 1280, 720 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
