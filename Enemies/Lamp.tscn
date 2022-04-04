@@ -1,25 +1,25 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://utilities/Attachable_Tools/Hit_Box.tscn" type="PackedScene" id=1]
+[ext_resource path="res://utilities/attachable_tools/Hit_Box.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/LampHop3.png" type="Texture" id=2]
 [ext_resource path="res://assets/lights/Lightmap_Directional.png" type="Texture" id=3]
 [ext_resource path="res://enemies/Target_Locations.gd" type="Script" id=4]
 [ext_resource path="res://enemies/Lamp.gd" type="Script" id=5]
 [ext_resource path="res://assets/fonts/Love_Ya_Like_A_Sister/LoveYaLikeASister-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/sound/light-switch-on-lamp.wav" type="AudioStream" id=7]
 
 [sub_resource type="CapsuleShape2D" id=6]
 height = 108.267
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 88.5, 90.25 )
+extents = Vector2( 42.625, 69.5156 )
 
-[sub_resource type="DynamicFont" id=9]
-size = 15
+[sub_resource type="DynamicFont" id=8]
 font_data = ExtResource( 6 )
 
 [sub_resource type="Animation" id=1]
 resource_name = "Attacking"
-length = 15.0
+length = 6.1
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
 tracks/0/interp = 1
@@ -27,8 +27,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 1, 1.4, 1.8, 2.2, 2.6, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "values": [ {
 "args": [  ],
 "method": "spawn_attacks"
@@ -47,30 +47,6 @@ tracks/0/keys = {
 }, {
 "args": [  ],
 "method": "spawn_attacks"
-}, {
-"args": [  ],
-"method": "can_free_player"
-}, {
-"args": [  ],
-"method": "can_free_player"
-}, {
-"args": [  ],
-"method": "can_free_player"
-}, {
-"args": [  ],
-"method": "can_free_player"
-}, {
-"args": [  ],
-"method": "can_free_player"
-}, {
-"args": [  ],
-"method": "can_free_player"
-}, {
-"args": [  ],
-"method": "can_free_player"
-}, {
-"args": [  ],
-"method": "can_free_player"
 } ]
 }
 tracks/1/type = "value"
@@ -80,10 +56,69 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 3, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("lampity/Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Light2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, -57 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Light2D:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 270.0 ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Label:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -96,7 +131,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.1, 1.5 ),
+"times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "values": [ {
 "args": [  ],
@@ -113,69 +148,118 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.3, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ false ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "Moving"
-length = 0.8
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.5, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 0.8 ), Vector2( 1, 1.2 ), Vector2( 1, 1 ), Vector2( 1, 0.8 ), Vector2( 1, 1.2 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Light2D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.5, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1, -55 ), Vector2( 1, -50 ), Vector2( 0, -70 ), Vector2( 1, -55 ), Vector2( 1, -50 ), Vector2( 0, -70 ) ]
+"values": [ false, true, false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Light2D:rotation_degrees")
+tracks/2/path = NodePath("lampity/Sprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.1, 0.3, 0.4, 0.5, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 275.0, 270.0, 265.0, 275.0, 270.0 ]
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Light2D:enabled")
+tracks/3/path = NodePath("Light2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ true, false, true, false ]
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, -57 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Light2D:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 270.0 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=4]
+resource_name = "Moving"
+length = 1.2
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Light2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4, 0.8, 1.05, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, -57 ), Vector2( 1, -57 ), Vector2( -47, 16 ), Vector2( -47, 16 ), Vector2( 1, -57 ), Vector2( 1, -57 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Light2D:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4, 0.8, 1.05, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 270.0, 270.0, 230.0, 230.0, 270.0, 270.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Light2D:enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.15, 0.4, 0.8, 0.85, 1.05, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, true, false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("lampity/Sprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4, 0.8, 0.9, 1.05 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 2, 5, 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AmbientNoise:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.15, 0.85 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+
+[sub_resource type="Animation" id=9]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Label:visible")
+tracks/0/path = NodePath("AmbientNoise:playing")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -220,18 +304,16 @@ shape = SubResource( 7 )
 position = Vector2( 1, -57 )
 rotation = 4.71239
 scale = Vector2( 1, 2 )
-enabled = false
 texture = ExtResource( 3 )
 energy = 2.0
 shadow_enabled = true
 
 [node name="Label" type="Label" parent="."]
-visible = false
-margin_left = -56.0
-margin_top = -64.0
-margin_right = 54.0
-margin_bottom = -16.0
-custom_fonts/font = SubResource( 9 )
+margin_left = -55.0
+margin_top = -71.0
+margin_right = 55.0
+margin_bottom = -2.0
+custom_fonts/font = SubResource( 8 )
 text = "Lampity lamp lamp sleepy head!"
 align = 1
 valign = 2
@@ -270,9 +352,15 @@ position = Vector2( -33, -37 )
 anims/Attacking = SubResource( 1 )
 anims/Dying = SubResource( 2 )
 anims/Moving = SubResource( 4 )
-anims/RESET = SubResource( 8 )
+anims/RESET = SubResource( 9 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="AmbientNoise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+volume_db = -15.0
+max_distance = 1250.0
+bus = "Effects"
 
 [connection signal="body_entered" from="Hit_Box" to="." method="_on_Hit_Box_body_entered"]
 [connection signal="body_exited" from="Hit_Box" to="." method="_on_Hit_Box_body_exited"]

@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 onready var eatTimer := $EatTimer
 onready var anim := $AnimationPlayer
+onready var hitbox := $Hit_Box
 
 var playerRef
 var delayTimer
@@ -61,7 +62,7 @@ func activate(delay: int):
 	curSpeed = SPEED + (Settings.roomsExplored * 3.5)
 	show()
 	$RoomEnter.emitting = true
-	#Particle effects and shizzle go here
+	$AmbientNoise.play()
 
 
 func anim_switch(animation, speed = 1):
@@ -76,9 +77,14 @@ func _on_Hit_Box_body_entered(body):
 		Settings.adjust_sanity(-25)
 		eatTimer.start()
 		amEating = true
+		$AttackNoise.play()
 		anim_switch('attack', Settings.difficulty)
 
 
 func _on_EatTimer_timeout():
 	amEating = false
+	var overlaps = hitbox.get_overlapping_bodies()
+	
+	for overlap in overlaps:
+		_on_Hit_Box_body_entered(overlap)
 	

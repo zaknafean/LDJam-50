@@ -6,8 +6,9 @@ var margin = 1
 
 var path : = PoolVector2Array()
 onready var anim = $AnimationPlayer
+onready var dangerNoise = $DangerSound
 
-var sprite_dir = "down"			#where we are actually facing. A string for anim
+var sprite_dir = "right"			#where we are actually facing. A string for anim
 var facing_dir = Vector2.DOWN	#where we are facing in vector notation
 var move_dir = Vector2.ZERO		#where we want to go
 var taking_damage = false
@@ -16,6 +17,19 @@ signal arrived
 
 
 func _process(delta):
+	if Settings.sanityValue < 25:
+		dangerNoise.volume_db = 15
+		if dangerNoise.playing == false:
+			dangerNoise.play()
+	elif Settings.sanityValue < 50:
+		dangerNoise.volume_db = 0
+		if dangerNoise.playing == false:
+			dangerNoise.play()
+	elif Settings.sanityValue < 75:
+		dangerNoise.volume_db = -15
+		if dangerNoise.playing == false:
+			dangerNoise.play()
+	
 	# Calculate the movement distance for this frame
 	var distance_to_walk = SPEED * delta
 	if taking_damage and (!anim.current_animation =='hit_left' or anim.current_animation =='hit_right'):
