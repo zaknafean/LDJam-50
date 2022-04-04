@@ -30,7 +30,7 @@ script = ExtResource( 6 )
 margin_left = 220.0
 margin_top = 80.0
 margin_right = 1060.0
-margin_bottom = 640.0
+margin_bottom = 703.0
 size_flags_horizontal = 3
 custom_constants/separation = 50
 __meta__ = {
@@ -97,3 +97,10 @@ text = "Quit Game"
 pushes_screen = false
 screen_to_push_in_config = ""
 quits_game = true
+
+[node name="Label3" type="Label" parent="MenuLayer/UIBox/VBoxContainer" index="3"]
+margin_top = 577.0
+margin_right = 840.0
+margin_bottom = 623.0
+text = "Epilepsy Warning: Features Strobing Lights"
+align = 1
