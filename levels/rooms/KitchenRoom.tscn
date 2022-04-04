@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://levels/noninteractables/Table.tscn" type="PackedScene" id=22]
 [ext_resource path="res://levels/noninteractables/Counter.tscn" type="PackedScene" id=23]
 [ext_resource path="res://levels/interactables/clickable/CellphoneClickable.tscn" type="PackedScene" id=24]
+[ext_resource path="res://levels/CatLampTalk.tscn" type="PackedScene" id=25]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -215,6 +216,9 @@ position = Vector2( 805, 39 )
 
 [node name="CellphoneClickable2" parent="Interactables" index="8" instance=ExtResource( 24 )]
 position = Vector2( 820, 226 )
+
+[node name="CatLampTalk" parent="Interactables" index="9" instance=ExtResource( 25 )]
+position = Vector2( 283, 148 )
 
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 723, 402 )

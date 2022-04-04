@@ -50,10 +50,6 @@
 			"text": "Turning on table lamps always cheers you up."
 		},
 		{
-			"event_id": "dialogic_022",
-			"transition_duration": 0.5
-		},
-		{
 			"call_node": {
 				"arguments": [
 					"20"
@@ -62,6 +58,10 @@
 				"target_node_path": "/root/Settings"
 			},
 			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
 		},
 		{
 			"choice": "Reminds me of that cat...",

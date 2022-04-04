@@ -44,8 +44,8 @@
 			"portrait_definition": "",
 			"position": {
 				"0": false,
-				"1": true,
-				"2": false,
+				"1": false,
+				"2": true,
 				"3": false,
 				"4": false
 			},
@@ -65,15 +65,16 @@
 			"text": "...meow."
 		},
 		{
-			"animation": "4-fade_out.gd",
+			"animation": "heartbeat.gd",
 			"animation_length": 0.75,
 			"animation_wait": true,
 			"change_mirror_portrait": false,
+			"change_position": false,
 			"change_z_index": false,
 			"character": "character-1648910671.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
-			"portrait": "",
+			"portrait": "(Don't change)",
 			"portrait_definition": "",
 			"position": {
 				"0": false,
@@ -82,14 +83,18 @@
 				"3": false,
 				"4": false
 			},
-			"type": 1,
+			"type": 2,
 			"z_index": 0
 		},
 		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Your cat stalks away, leaving you alone."
+			"call_node": {
+				"arguments": [
+					"15"
+				],
+				"method_name": "adjust_score",
+				"target_node_path": "/root/Settings"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
 			"event_id": "dialogic_022",

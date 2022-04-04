@@ -65,10 +65,6 @@
 			"text": "How many years have you been saying that.\nI wonder what kind of problems one could find underneath YOUR rugs."
 		},
 		{
-			"event_id": "dialogic_022",
-			"transition_duration": 0.5
-		},
-		{
 			"call_node": {
 				"arguments": [
 					"-50"
@@ -97,6 +93,10 @@
 				"target_node_path": "/root/Settings"
 			},
 			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
 		}
 	],
 	"metadata": {

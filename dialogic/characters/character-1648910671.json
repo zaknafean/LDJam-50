@@ -1,21 +1,21 @@
 {
-	"color": "#ffffffff",
+	"color": "#ff7b0f0f",
 	"description": "Lamp Cat Hates You",
 	"display_name": "",
 	"display_name_bool": false,
 	"id": "character-1648910671.json",
-	"mirror_portraits": false,
+	"mirror_portraits": true,
 	"name": "Lamp Cat",
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
-	"offset_y": 0,
+	"offset_y": -350,
 	"portraits": [
 		{
 			"name": "Default",
-			"path": ""
+			"path": "res://levels/CatHead.tscn"
 		}
 	],
-	"scale": 100,
+	"scale": 300,
 	"theme": "theme-1648948398.cfg"
 }
