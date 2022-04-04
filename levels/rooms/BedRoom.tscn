@@ -23,7 +23,8 @@
 [ext_resource path="res://levels/interactables/clickable/CaffeinePillsClickable.tscn" type="PackedScene" id=21]
 [ext_resource path="res://levels/noninteractables/SideTable.tscn" type="PackedScene" id=22]
 [ext_resource path="res://levels/interactables/clickable/CellphoneClickable.tscn" type="PackedScene" id=23]
-[ext_resource path="res://enemies/Sleep_Gremlin.tscn" type="PackedScene" id=24]
+[ext_resource path="res://levels/CatLampTalk.tscn" type="PackedScene" id=24]
+
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -243,6 +244,9 @@ position = Vector2( 646, 265 )
 
 [node name="CellphoneClickable2" parent="Interactables" index="12" instance=ExtResource( 23 )]
 position = Vector2( 1316, 219 )
+
+[node name="CatLampTalk" parent="Interactables" index="13" instance=ExtResource( 24 )]
+position = Vector2( 1080, 199 )
 
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 419, 169 )

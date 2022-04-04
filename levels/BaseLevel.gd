@@ -5,7 +5,6 @@ class_name BaseRoom, "res://assets/icons/theater-curtains.png"
 onready var player := $Player
 onready var camera = $Player/Camera2D
 onready var playerLine := $Line2D
-onready var statLabel := $CanvasLayer/StatsLabel
 onready var tilemap : TileMap = $Navigation2D/TileMap
 onready var backmap : TileMap = $Navigation2D/BackLayerMap
 onready var alphamap : TileMap = $Navigation2D/AlphaLayerMap

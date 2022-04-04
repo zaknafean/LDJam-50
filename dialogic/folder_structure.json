@@ -20,7 +20,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": true
+				"folded": false
 			}
 		},
 		"Definitions": {
@@ -48,17 +48,12 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": false
+				"folded": true
 			}
 		},
 		"Timelines": {
 			"files": [
-				"timeline-1649041547.json",
-				"timeline-1649041558.json",
-				"timeline-1649041565.json",
-				"timeline-1649041574.json",
-				"timeline-1649041579.json",
-				"timeline-1649041585.json"
+				"timeline-1648946773.json"
 			],
 			"folders": {
 				"Aggy Dialog": {
@@ -70,7 +65,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"Doors": {
@@ -161,7 +156,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"Stimulants": {
@@ -178,16 +173,12 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"The Cat": {
 					"files": [
-						"timeline-1648946765.json",
 						"timeline-1648946773.json",
-						"timeline-1648946779.json",
-						"timeline-1648946791.json",
-						"timeline-1648946802.json",
 						"timeline-1649010068.json",
 						"timeline-1649010125.json",
 						"timeline-1649041553.json",
@@ -203,7 +194,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				}
 			},

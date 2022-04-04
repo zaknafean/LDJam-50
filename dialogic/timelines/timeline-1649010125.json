@@ -29,9 +29,7 @@
 			"character": "character-1648910671.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-
 			"text": "There was some coffee here, I spilt it though.\nYou could lick it off the floor, if you'd like.\nI'll even show you where to go."
-
 		},
 		{
 			"animation": "1-fade_in.gd",
@@ -58,21 +56,13 @@
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-
 			"text": "I don't have time for that!\nWhat do you want from me!?"
-
 		},
 		{
 			"character": "character-1648910671.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-
-			"text": "The same thing I've always wanted, Aggy.\nI want you to close your eyes forever."
-
-		},
-		{
-			"event_id": "dialogic_022",
-			"transition_duration": 0.5
+			"text": "The same thing I've always wanted, Aggy.\nI want you to close your eyes."
 		},
 		{
 			"call_node": {
@@ -103,6 +93,10 @@
 				"target_node_path": "/root/Settings"
 			},
 			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
 		}
 	],
 	"metadata": {
