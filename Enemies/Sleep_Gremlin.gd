@@ -2,9 +2,9 @@ extends Node2D
 
 class_name SleepEnemies
 
+onready var pool = $Attacks.get_children()
+
 var count = 0
-
-
 var sleep_attack :NodePath = "res://enemies/Sleep_Attack.tscn"
 
 var attack_count = 0
@@ -69,8 +69,7 @@ func insert_dead_baby_joke():
 	pass
 
 func can_free_player():
-	var pool = $Attacks.get_children()
-	if pool.size() == 0:
+	if (pool != null) and (pool.size() == 0):
 		Settings.curGameState = Settings.GAME_STATES.PLAY
 		$AnimationPlayer.play("Dying")
 		terminator()

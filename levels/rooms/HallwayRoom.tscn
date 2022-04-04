@@ -219,6 +219,9 @@ position = Vector2( 1784, 93 )
 rotation = -0.376991
 scale = Vector2( 0.924, 0.924 )
 
+[node name="Sleep_Gremlin" parent="Difficulty2" index="3" instance=ExtResource( 8 )]
+position = Vector2( 1411, 347 )
+
 [node name="Sleep_Gremlin" parent="Difficulty3" index="0" instance=ExtResource( 8 )]
 position = Vector2( 1222, 231 )
 

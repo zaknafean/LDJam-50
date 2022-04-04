@@ -35,12 +35,10 @@ func attack_position():
 
 
 func can_free_player():
-	var pool = $Attacks.get_children()
-	if pool.size() == 0:
+	if (pool != null) and (pool.size() == 0):
 		Settings.curGameState = Settings.GAME_STATES.PLAY
 		$AnimationPlayer.play("Dying")
-	else:
-		pass
+
 
 func spawn_attacks():
 	attack_instance = load(str(sleep_attack))
