@@ -95,6 +95,7 @@ func adjust_sanity(value: String):
 func adjust_score(value: String):
 	score += int(value)
 	print('Sanity Adjusted: ', score)
+	
 
 
 func _process(delta):

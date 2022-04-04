@@ -94,11 +94,9 @@ position = Vector2( 164, 103 )
 DIALOG = "LivingRoomNorth"
 
 [node name="DialogEvent2" parent="Interactables/DoorNorthClickable/EventQueue" index="1" instance=ExtResource( 7 )]
-difficulty = 2
 DIALOG = "LivingRoomNorth"
 
 [node name="DialogEvent3" parent="Interactables/DoorNorthClickable/EventQueue" index="2" instance=ExtResource( 7 )]
-difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="DoorEastClickable" parent="Interactables" index="1" instance=ExtResource( 6 )]
@@ -126,11 +124,9 @@ position = Vector2( 453, 10 )
 DIALOG = "LivingRoomEast"
 
 [node name="DialogEvent2" parent="Interactables/DoorEastClickable/EventQueue" index="1" instance=ExtResource( 7 )]
-difficulty = 2
 DIALOG = "Unopenable"
 
 [node name="DialogEvent3" parent="Interactables/DoorEastClickable/EventQueue" index="2" instance=ExtResource( 7 )]
-difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="DoorSouthClickable" parent="Interactables" index="2" instance=ExtResource( 6 )]
@@ -160,11 +156,9 @@ position = Vector2( 429, 447 )
 DIALOG = "LivingRoomNorth"
 
 [node name="DialogEvent2" parent="Interactables/DoorSouthClickable/EventQueue" index="1" instance=ExtResource( 7 )]
-difficulty = 2
 DIALOG = "LivingRoomNorth"
 
 [node name="DialogEvent3" parent="Interactables/DoorSouthClickable/EventQueue" index="2" instance=ExtResource( 7 )]
-difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="DoorWestClickable" parent="Interactables" index="3" instance=ExtResource( 6 )]
@@ -191,14 +185,31 @@ position = Vector2( 30, 33 )
 DIALOG = "LivingRoomEast"
 
 [node name="DialogEvent2" parent="Interactables/DoorWestClickable/EventQueue" index="1" instance=ExtResource( 7 )]
-difficulty = 2
 DIALOG = "Unopenable"
 
-[node name="CaffeinePillsClickable" parent="Interactables" index="4" groups=["interactables"] instance=ExtResource( 17 )]
+[node name="CaffeinePillsClickable" parent="Interactables" index="4" instance=ExtResource( 17 )]
 position = Vector2( 2332, 1284 )
 
-[node name="CoffeeTableClickable" parent="Interactables" index="5" groups=["interactables"] instance=ExtResource( 15 )]
+[node name="CoffeeTableClickable" parent="Interactables" index="5" instance=ExtResource( 15 )]
 position = Vector2( 250, 726 )
+
+[node name="CellphoneClickable" parent="Interactables" index="6" instance=ExtResource( 20 )]
+position = Vector2( 1074, 551 )
+
+[node name="CellphoneClickable2" parent="Interactables" index="7" instance=ExtResource( 20 )]
+position = Vector2( 753, 171 )
+
+[node name="CellphoneClickable3" parent="Interactables" index="8" instance=ExtResource( 20 )]
+position = Vector2( 455, 563 )
+
+[node name="CellphoneClickable4" parent="Interactables" index="9" instance=ExtResource( 20 )]
+position = Vector2( 1286, 862 )
+
+[node name="CellphoneClickable5" parent="Interactables" index="10" instance=ExtResource( 20 )]
+position = Vector2( 1674, 849 )
+
+[node name="CellphoneClickable6" parent="Interactables" index="11" instance=ExtResource( 20 )]
+position = Vector2( 1449, 555 )
 
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 1073, 404 )
@@ -320,9 +331,6 @@ position = Vector2( 1421, 413 )
 
 [node name="FaceInGround" parent="Difficulty3" index="14" instance=ExtResource( 19 )]
 position = Vector2( 1347, 690 )
-
-[node name="CellphoneClickable" parent="Difficulty3" index="15" instance=ExtResource( 20 )]
-position = Vector2( 771, 497 )
 
 [node name="SleepyGraffiti" parent="." index="8" instance=ExtResource( 12 )]
 position = Vector2( 759, 31 )

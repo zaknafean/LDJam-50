@@ -107,11 +107,9 @@ position = Vector2( 164, 103 )
 DIALOG = "Unopenable"
 
 [node name="DialogEvent2" parent="Interactables/DoorNorthClickable/EventQueue" index="1" instance=ExtResource( 7 )]
-difficulty = 2
 DIALOG = "UnknownRoomNorth"
 
 [node name="DialogEvent3" parent="Interactables/DoorNorthClickable/EventQueue" index="2" instance=ExtResource( 7 )]
-difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="DoorEastClickable" parent="Interactables" index="1" instance=ExtResource( 6 )]
@@ -139,11 +137,9 @@ position = Vector2( 453, 10 )
 DIALOG = "Unopenable"
 
 [node name="DialogEvent2" parent="Interactables/DoorEastClickable/EventQueue" index="1" instance=ExtResource( 7 )]
-difficulty = 2
 DIALOG = "UnlikedRoomEast"
 
 [node name="DialogEvent3" parent="Interactables/DoorEastClickable/EventQueue" index="2" instance=ExtResource( 7 )]
-difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="DoorSouthClickable" parent="Interactables" index="2" instance=ExtResource( 6 )]
@@ -173,11 +169,9 @@ position = Vector2( 429, 447 )
 DIALOG = "HallwayRoomWest"
 
 [node name="DialogEvent2" parent="Interactables/DoorSouthClickable/EventQueue" index="1" instance=ExtResource( 7 )]
-difficulty = 2
 DIALOG = "HallwayRoomWest"
 
 [node name="DialogEvent3" parent="Interactables/DoorSouthClickable/EventQueue" index="2" instance=ExtResource( 7 )]
-difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="DoorWestClickable" parent="Interactables" index="3" instance=ExtResource( 6 )]
@@ -204,11 +198,9 @@ position = Vector2( 30, 33 )
 DIALOG = "LivingRoomWest"
 
 [node name="DialogEvent4" parent="Interactables/DoorWestClickable/EventQueue" index="1" instance=ExtResource( 7 )]
-difficulty = 2
 DIALOG = "LivingRoomWest"
 
 [node name="DialogEvent3" parent="Interactables/DoorWestClickable/EventQueue" index="2" instance=ExtResource( 7 )]
-difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="BedClickable" parent="Interactables" index="4" instance=ExtResource( 5 )]
@@ -232,6 +224,12 @@ position = Vector2( 434, 542 )
 
 [node name="CaffeinePillsClickable" parent="Interactables" index="10" instance=ExtResource( 21 )]
 position = Vector2( 445, 507 )
+
+[node name="CellphoneClickable" parent="Interactables" index="11" instance=ExtResource( 23 )]
+position = Vector2( 646, 265 )
+
+[node name="CellphoneClickable2" parent="Interactables" index="12" instance=ExtResource( 23 )]
+position = Vector2( 1316, 219 )
 
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 419, 169 )

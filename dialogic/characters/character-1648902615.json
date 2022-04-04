@@ -5,7 +5,7 @@
 	"display_name_bool": false,
 	"id": "character-1648902615.json",
 	"mirror_portraits": false,
-	"name": "I Am Awake",
+	"name": "Aggy",
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
@@ -13,9 +13,9 @@
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://icon.png"
+			"path": "res://player/AggyHead.tscn"
 		}
 	],
-	"scale": 125,
+	"scale": 400,
 	"theme": "default-theme.cfg"
 }

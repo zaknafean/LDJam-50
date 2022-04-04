@@ -93,11 +93,9 @@ position = Vector2( 176, 88 )
 DIALOG = "Unopenable"
 
 [node name="DialogEvent2" parent="Interactables/DoorNorthClickable/EventQueue" index="1" instance=ExtResource( 7 )]
-difficulty = 2
 DIALOG = "UnlikedRoomNorth"
 
 [node name="DialogEvent3" parent="Interactables/DoorNorthClickable/EventQueue" index="2" instance=ExtResource( 7 )]
-difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="DoorEastClickable" parent="Interactables" index="1" instance=ExtResource( 2 )]
@@ -125,11 +123,9 @@ position = Vector2( 453, 10 )
 DIALOG = "LivingRoomEast"
 
 [node name="DialogEvent2" parent="Interactables/DoorEastClickable/EventQueue" index="1" instance=ExtResource( 7 )]
-difficulty = 2
 DIALOG = "LivingRoomEast"
 
 [node name="DialogEvent3" parent="Interactables/DoorEastClickable/EventQueue" index="2" instance=ExtResource( 7 )]
-difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="DoorSouthClickable" parent="Interactables" index="2" instance=ExtResource( 2 )]
@@ -159,11 +155,9 @@ position = Vector2( 429, 447 )
 DIALOG = "HallwayRoomEast"
 
 [node name="DialogEvent2" parent="Interactables/DoorSouthClickable/EventQueue" index="1" instance=ExtResource( 7 )]
-difficulty = 2
 DIALOG = "Unopenable"
 
 [node name="DialogEvent3" parent="Interactables/DoorSouthClickable/EventQueue" index="2" instance=ExtResource( 7 )]
-difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="DoorWestClickable" parent="Interactables" index="3" instance=ExtResource( 2 )]
@@ -190,11 +184,9 @@ position = Vector2( 30, 33 )
 DIALOG = "Unopenable"
 
 [node name="DialogEvent2" parent="Interactables/DoorWestClickable/EventQueue" index="1" instance=ExtResource( 7 )]
-difficulty = 2
 DIALOG = "UnknownRoomWest"
 
 [node name="DialogEvent3" parent="Interactables/DoorWestClickable/EventQueue" index="2" instance=ExtResource( 7 )]
-difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="Oven(Non-Monstrous)Clickable" parent="Interactables" index="4" instance=ExtResource( 4 )]
@@ -206,6 +198,12 @@ position = Vector2( 294, 187 )
 [node name="LightSwitchClickable" parent="Interactables" index="6" instance=ExtResource( 12 )]
 position = Vector2( 733, 84 )
 
+[node name="CellphoneClickable" parent="Interactables" index="7" instance=ExtResource( 24 )]
+position = Vector2( 805, 39 )
+
+[node name="CellphoneClickable2" parent="Interactables" index="8" instance=ExtResource( 24 )]
+position = Vector2( 820, 226 )
+
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 723, 402 )
 
@@ -213,10 +211,7 @@ position = Vector2( 723, 402 )
 position = Vector2( 849, 36 )
 
 [node name="Lamp" parent="Difficulty2" index="1" instance=ExtResource( 9 )]
-position = Vector2( 727, 328 )
-
-[node name="CellphoneClickable" parent="Difficulty2" index="2" instance=ExtResource( 24 )]
-position = Vector2( 1199, 301 )
+position = Vector2( 805, 172 )
 
 [node name="Sleep_Gremlin" parent="Difficulty3" index="0" instance=ExtResource( 8 )]
 position = Vector2( 625, 158 )

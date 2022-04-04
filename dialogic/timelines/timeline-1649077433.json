@@ -1,10 +1,6 @@
 {
 	"events": [
 		{
-			"event_id": "dialogic_024",
-			"set_theme": "theme-1648902659.cfg"
-		},
-		{
 			"animation": "1-fade_in.gd",
 			"animation_length": 0.25,
 			"animation_wait": true,
@@ -52,13 +48,19 @@
 			"event_id": "dialogic_042"
 		},
 		{
-			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1649078042.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Email responded to!"
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1649045389.json",
-		"name": "Cellphone (Collectible)"
+		"file": "timeline-1649077433.json",
+		"name": "random-work-1"
 	}
 }

@@ -40,14 +40,15 @@
 			"files": [
 				"default-theme.cfg",
 				"theme-1648902659.cfg",
-				"theme-1648948398.cfg"
+				"theme-1648948398.cfg",
+				"theme-1649078042.cfg"
 			],
 			"folders": {
 
 			},
 			"metadata": {
 				"color": null,
-				"folded": true
+				"folded": false
 			}
 		},
 		"Timelines": {
@@ -125,7 +126,24 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
+					}
+				},
+				"Random Work": {
+					"files": [
+						"timeline-1649077433.json",
+						"timeline-1649077481.json",
+						"timeline-1649077499.json",
+						"timeline-1649077508.json",
+						"timeline-1649077518.json",
+						"timeline-1649077639.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": true
 					}
 				},
 				"Stimulants": {
@@ -142,7 +160,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"The Cat": {
@@ -167,7 +185,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				}
 			},

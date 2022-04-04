@@ -38,7 +38,7 @@ colors = PoolColorArray( 0.388235, 0.862745, 1, 0, 0.386047, 0.886428, 0.898438,
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 4 )
-frame = 4
+frame = 13
 playing = true
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="AnimatedSprite"]
