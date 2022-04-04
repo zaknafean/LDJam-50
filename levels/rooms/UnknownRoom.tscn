@@ -232,19 +232,16 @@ position = Vector2( 2071, 509 )
 [node name="PeekingRug" parent="Difficulty2" index="7" instance=ExtResource( 5 )]
 position = Vector2( 1394, 219 )
 
-[node name="Ottoman" parent="Difficulty2" index="8" instance=ExtResource( 14 )]
-position = Vector2( 815, 509 )
-
-[node name="CoffeeTableClickable" parent="Difficulty2" index="9" instance=ExtResource( 15 )]
+[node name="CoffeeTableClickable" parent="Difficulty2" index="8" instance=ExtResource( 15 )]
 position = Vector2( 613, 30 )
 
-[node name="CupJunk" parent="Difficulty2" index="10" instance=ExtResource( 12 )]
+[node name="CupJunk" parent="Difficulty2" index="9" instance=ExtResource( 12 )]
 position = Vector2( 1417, 12 )
 
-[node name="Vent2" parent="Difficulty2" index="11" instance=ExtResource( 14 )]
+[node name="Vent2" parent="Difficulty2" index="10" instance=ExtResource( 14 )]
 position = Vector2( 461, 34 )
 
-[node name="Vent" parent="Difficulty2" index="12" instance=ExtResource( 14 )]
+[node name="Vent" parent="Difficulty2" index="11" instance=ExtResource( 14 )]
 position = Vector2( 990, 169 )
 
 [node name="ImAStove" parent="Difficulty3" index="0" instance=ExtResource( 11 )]
@@ -329,24 +326,20 @@ position = Vector2( 849, 406 )
 position = Vector2( 653, -147 )
 z_index = 1
 
-[node name="SpacePoster" parent="." index="9" instance=ExtResource( 16 )]
-position = Vector2( 1467, 93 )
-z_index = 2
-
-[node name="SideWallBookshelf" parent="." index="10" instance=ExtResource( 15 )]
+[node name="SideWallBookshelf" parent="." index="9" instance=ExtResource( 15 )]
 position = Vector2( 1871, 285 )
 
-[node name="SideWallBookshelf2" parent="." index="11" instance=ExtResource( 15 )]
+[node name="SideWallBookshelf2" parent="." index="10" instance=ExtResource( 15 )]
 position = Vector2( 1638, 52 )
 
-[node name="Ottoman" parent="." index="12" instance=ExtResource( 17 )]
-position = Vector2( 1227, 497 )
+[node name="Ottoman" parent="." index="11" instance=ExtResource( 17 )]
+position = Vector2( 1101, 516 )
 
-[node name="PhotoPortrait" parent="." index="13" instance=ExtResource( 13 )]
+[node name="PhotoPortrait" parent="." index="12" instance=ExtResource( 13 )]
 position = Vector2( 1502, -115 )
 z_index = 1
 
-[node name="SleepyGraffiti" parent="." index="14" instance=ExtResource( 22 )]
+[node name="SleepyGraffiti" parent="." index="13" instance=ExtResource( 22 )]
 position = Vector2( 1150, 35 )
 rotation = 0.300197
 scale = Vector2( 0.7, 0.7 )
