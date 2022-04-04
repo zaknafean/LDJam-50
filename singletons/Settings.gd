@@ -79,6 +79,8 @@ func load_settings():
 func adjust_alertness(value: String):
 	alertnessValue += int(value)
 	print('Alert Adjusted: ', alertnessValue)
+	var fct = get_parent().get_node('ScreenGame/GameMain/').get_child(2).get_node('Player/Floating_Text_Manager')
+	fct.show_value(value, 1)
 	if alertnessValue <= 0 and gameOver == false:
 		gameOver = true
 		curGameState = GAME_STATES.MENU
@@ -88,6 +90,8 @@ func adjust_alertness(value: String):
 func adjust_sanity(value: String):
 	sanityValue += int(value)
 	print('Sanity Adjusted: ', sanityValue)
+	var fct = get_parent().get_node('ScreenGame/GameMain/').get_child(2).get_node('Player/Floating_Text_Manager')
+	fct.show_value(value, 2)
 	if sanityValue <= 0 and gameOver == false:
 		gameOver = true
 		curGameState = GAME_STATES.MENU
@@ -96,6 +100,8 @@ func adjust_sanity(value: String):
 
 func adjust_score(value: String):
 	score += int(value)
+	var fct = get_parent().get_node('ScreenGame/GameMain/').get_child(2).get_node('Player/Floating_Text_Manager')
+	fct.show_value(value, 0)
 	print('Sanity Adjusted: ', score)
 	
 
