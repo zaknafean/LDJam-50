@@ -11,6 +11,9 @@ onready var backmap : TileMap = $Navigation2D/BackLayerMap
 onready var alphamap : TileMap = $Navigation2D/AlphaLayerMap
 onready var enemy := $ChaseEnemy
 onready var bgSprite := $ParallaxBackground/ParallaxLayer/Sprite
+onready var progressbar := $CanvasLayer/MarginContainer/VBoxContainer/ProgressBar
+onready var sanity_value := $CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/SanityPanel/CenterContainer/HBoxContainer/Sanity_Value
+onready var score_value := $CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/ScorePanel/CenterContainer/HBoxContainer/Score_Value
 
 var currentEvent : Interactable = null
 var queuedEvent : Interactable = null
@@ -147,7 +150,10 @@ func process_event(event : Interactable) -> bool:
 func _process(_delta):
 	statLabel.text = str('Room: ', name, '\n', 'Alert: ', Settings.alertnessValue, '\n', 'Sanity: ', Settings.sanityValue, '\n', 'Score: ', Settings.score, '\n', 'State: ', Settings.curGameState, '\n', 'Rooms: ', Settings.roomsExplored, '\n', 'Difficulty: ', Settings.difficulty);
 	
-	$CanvasLayer/MarginContainer/ProgressBar.value = Settings.alertnessValue
+	if progressbar != null:
+		progressbar.value = Settings.alertnessValue
+		sanity_value.text = str(int(Settings.sanityValue))
+		score_value.text = str(int(Settings.score))
 	
 	if Settings.alertnessValue <= 0 and Settings.gameOver == false:
 		Settings.gameOver = true
