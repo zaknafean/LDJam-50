@@ -29,7 +29,9 @@
 			"character": "character-1648910671.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Become accostomed to your new... situation, yet?\nAll you need to do is sleep and this all goes away."
+
+			"text": "I would say the clock is ticking... but we both know you're out of time."
+
 		},
 		{
 			"animation": "1-fade_in.gd",
@@ -56,13 +58,16 @@
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "No! You don't know anything, Lamp Cat.\nEverything will be okay if I just don't sleep!"
+
+			"text": "I don't understand.\nIf I just stay awake, everything will be okay."
+
 		},
 		{
 			"character": "character-1648910671.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Oh, Aggy... You can't run forever."
+			"text": "You still believe that, do you?\nGood luck."
+
 		},
 		{
 			"event_id": "dialogic_022",

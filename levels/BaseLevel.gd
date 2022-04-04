@@ -63,7 +63,8 @@ func _set_spawns(directionFrom: String, delay=2):
 		player.global_position = $Interactables/DoorNorthClickable.interactionPosition
 		enemy.global_position = $Interactables/DoorNorthClickable.interactionPosition
 	
-	enemy.activate(delay)
+	if Settings.gameStarted:
+		enemy.activate(delay)
 
 
 func _on_Area2D_mouse_entered(clickable):
@@ -160,6 +161,11 @@ func _unhandled_input(event):
 		return
 	
 	if event.is_action_pressed("ui_primaryclick"):
+		if Settings.gameStarted == false:
+			Settings.gameStarted = true
+			enemy.activate(3)
+			print('starting it up')
+			
 		if currentEvent != null:
 			var isComplete = process_event(currentEvent)
 			

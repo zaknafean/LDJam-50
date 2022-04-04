@@ -29,9 +29,7 @@
 			"character": "character-1648910671.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-
-			"text": "There was some coffee here, I spilt it though.\nYou could lick it off the floor, if you'd like.\nI'll even show you where to go."
-
+			"text": "How many times have you come through here now? There's not long now."
 		},
 		{
 			"animation": "1-fade_in.gd",
@@ -58,17 +56,13 @@
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-
-			"text": "I don't have time for that!\nWhat do you want from me!?"
-
+			"text": "Why are you doing this to me?!"
 		},
 		{
 			"character": "character-1648910671.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-
-			"text": "The same thing I've always wanted, Aggy.\nI want you to close your eyes forever."
-
+			"text": "Is that what you think is going on here?\nNo Aggy, every single horrible thing you've ever experienced has been at your own hands.\nYou simply do not deserve to be happy."
 		},
 		{
 			"event_id": "dialogic_022",
@@ -107,7 +101,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1649010125.json",
-		"name": "D1 R2"
+		"file": "timeline-1649043751.json",
+		"name": "D2 R2"
 	}
 }
