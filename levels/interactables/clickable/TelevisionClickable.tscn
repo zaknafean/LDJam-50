@@ -12,7 +12,7 @@ shader = ExtResource( 4 )
 shader_param/brightness = 1.0
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 82, 19 )
+extents = Vector2( 82, 57 )
 
 [sub_resource type="Animation" id=3]
 length = 6.0
@@ -62,7 +62,7 @@ texture = ExtResource( 3 )
 hframes = 27
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( 41, -5 )
+position = Vector2( 41, -43 )
 shape = SubResource( 2 )
 
 [node name="InteractionPosition" parent="." index="2"]
@@ -73,7 +73,6 @@ position = Vector2( 76, 53 )
 
 [node name="DialogEvent" parent="EventQueue" index="0" instance=ExtResource( 1 )]
 position = Vector2( 9, 50 )
-difficulty = -1
 DIALOG = "Television"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]

@@ -1,0 +1,36 @@
+{
+	"events": [
+		{
+			"animation": "3-fade_in_up_big.gd",
+			"animation_length": 0.25,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1648902615.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So much to do still... I just don't have the time for everything.\nI'll just try to finish up a few more things tonight...\nI should find my phone."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1649090996.json",
+		"name": "Opening"
+	}
+}
