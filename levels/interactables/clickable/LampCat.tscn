@@ -11,11 +11,12 @@ shader = ExtResource( 4 )
 shader_param/brightness = 1.0
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 18.875, 17.25 )
+
+extents = Vector2( 58.375, 44.125 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "CoffeeAnimation"
-length = 0.8
+
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
@@ -24,7 +25,9 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+
+"times": PoolRealArray( 0, 0.2, 0.6, 0.8 ),
+
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3 ]
@@ -45,7 +48,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[node name="CoffeeClickable" instance=ExtResource( 2 )]
+
 collision_layer = 1
 collision_mask = 2
 canHighlight = true
@@ -58,15 +61,9 @@ texture = ExtResource( 3 )
 hframes = 4
 
 [node name="CollisionShape2D" parent="." index="1"]
-visible = false
-position = Vector2( 0.125, 1 )
+
+position = Vector2( 7.625, 7.875 )
 shape = SubResource( 2 )
-
-[node name="InteractionPosition" parent="." index="2"]
-position = Vector2( 17, 23 )
-
-[node name="EventQueue" parent="." index="3"]
-position = Vector2( 5, -7 )
 
 [node name="DialogEvent" parent="EventQueue" index="0" instance=ExtResource( 1 )]
 position = Vector2( -12, 12 )
