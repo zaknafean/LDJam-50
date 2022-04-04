@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://levels/noninteractables/LeaningBroom.tscn" type="PackedScene" id=19]
 [ext_resource path="res://levels/noninteractables/SpacePoster.tscn" type="PackedScene" id=20]
 [ext_resource path="res://levels/noninteractables/CupJunk.tscn" type="PackedScene" id=21]
+[ext_resource path="res://levels/noninteractables/Table.tscn" type="PackedScene" id=22]
+[ext_resource path="res://levels/noninteractables/Counter.tscn" type="PackedScene" id=23]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -229,20 +231,24 @@ position = Vector2( 1279, 358 )
 position = Vector2( 790, 102 )
 
 [node name="FloorRug" parent="." index="9" instance=ExtResource( 13 )]
-position = Vector2( 676, 161 )
+position = Vector2( 685, 167 )
 
 [node name="LeaningBroom" parent="." index="10" instance=ExtResource( 19 )]
 position = Vector2( 1044, 116 )
 
+[node name="Table" parent="LeaningBroom" index="2" instance=ExtResource( 22 )]
+position = Vector2( -60, -28 )
+scale = Vector2( 0.6, 0.6 )
+
 [node name="PhotoPortrait" parent="." index="11" instance=ExtResource( 17 )]
-position = Vector2( 533, 42 )
+position = Vector2( 534, 32 )
 
 [node name="Vent" parent="." index="12" instance=ExtResource( 14 )]
 position = Vector2( 826, -131 )
 z_index = 1
 
 [node name="WallJunk" parent="." index="13" instance=ExtResource( 16 )]
-position = Vector2( 960, -55 )
+position = Vector2( 1213, 197 )
 z_index = 1
 
 [node name="SleepyGraffiti" parent="." index="14" instance=ExtResource( 18 )]
@@ -254,6 +260,10 @@ z_index = 1
 
 [node name="SpacePoster" parent="." index="16" instance=ExtResource( 20 )]
 position = Vector2( 377, 32 )
+
+[node name="Counter" parent="." index="17" instance=ExtResource( 23 )]
+position = Vector2( 506, 102 )
+scale = Vector2( 0.3, 0.3 )
 
 [editable path="Interactables/DoorNorthClickable"]
 [editable path="Interactables/DoorEastClickable"]
