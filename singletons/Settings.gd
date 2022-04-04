@@ -50,10 +50,13 @@ func adjust_alertness(value: String):
 	print('Alert Adjusted: ', alertnessValue)
 
 
-func adjust_sanity(value: int):
-	sanityValue += value
+func adjust_sanity(value: String):
+	sanityValue += int(value)
 	print('Sanity Adjusted: ', sanityValue)
 
+func adjust_score(value: String):
+	score += int(value)
+	print('Sanity Adjusted: ', score)
 
 func _process(delta):
 	score += delta
