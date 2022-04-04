@@ -214,7 +214,6 @@ anims/Attack = SubResource( 9 )
 
 [node name="AtkAudio" type="AudioStreamPlayer2D" parent="Stove/Atk_Sprite"]
 stream = ExtResource( 8 )
-volume_db = 8.0
 pitch_scale = 0.4
 bus = "Effects"
 

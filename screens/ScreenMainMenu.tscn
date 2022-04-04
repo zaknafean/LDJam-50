@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://addons/toolbox_project/scenes/screens/Screen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/toolbox_project/scenes/ui/components/UIBox.tscn" type="PackedScene" id=2]
@@ -17,6 +17,97 @@ font_data = ExtResource( 9 )
 size = 50
 font_data = ExtResource( 4 )
 
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("MenuLayer/UIBox/VBoxContainer/Label:self_modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("MenuLayer/UIBox/VBoxContainer/Label:self_modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("MenuLayer/UIBox/VBoxContainer/Label:self_modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("MenuLayer/UIBox/VBoxContainer/Label:self_modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "sleep"
+length = 3.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("MenuLayer/UIBox/VBoxContainer/Label:self_modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 3 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("MenuLayer/UIBox/VBoxContainer/Label:self_modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 3 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("MenuLayer/UIBox/VBoxContainer/Label:self_modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 3 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("MenuLayer/UIBox/VBoxContainer/Label:self_modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3 )
+}
+
 [node name="ScreenMainMenu" instance=ExtResource( 1 )]
 script = ExtResource( 6 )
 
@@ -25,14 +116,16 @@ script = ExtResource( 6 )
 [node name="MenuLayer" type="CanvasLayer" parent="." index="1"]
 
 [node name="UIBox" parent="MenuLayer" index="0" instance=ExtResource( 2 )]
+custom_constants/margin_top = 60
+custom_constants/margin_bottom = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MenuLayer/UIBox" index="0"]
 margin_left = 220.0
-margin_top = 80.0
+margin_top = 60.0
 margin_right = 1060.0
-margin_bottom = 640.0
+margin_bottom = 719.0
 size_flags_horizontal = 3
-custom_constants/separation = 50
+custom_constants/separation = -1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -45,55 +138,78 @@ text = "Somnipathy"
 align = 1
 
 [node name="Label" type="Label" parent="MenuLayer/UIBox/VBoxContainer" index="1"]
-margin_top = 210.0
+margin_top = 260.0
 margin_right = 840.0
-margin_bottom = 273.0
+margin_bottom = 323.0
+size_flags_vertical = 6
 theme = ExtResource( 8 )
 custom_fonts/font = SubResource( 1 )
-text = "Need...to...stay...awake..."
+text = "Don't... fall... asleep"
 align = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="MenuLayer/UIBox/VBoxContainer" index="2"]
-margin_top = 323.0
+[node name="Control" type="Control" parent="MenuLayer/UIBox/VBoxContainer" index="2"]
+margin_top = 424.0
 margin_right = 840.0
-margin_bottom = 527.0
+margin_bottom = 554.0
+rect_min_size = Vector2( 0, 130 )
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuLayer/UIBox/VBoxContainer" index="3"]
+margin_top = 553.0
+margin_right = 840.0
+margin_bottom = 628.0
 
 [node name="PanelContainer" type="PanelContainer" parent="MenuLayer/UIBox/VBoxContainer/MarginContainer" index="0"]
 margin_right = 840.0
-margin_bottom = 204.0
+margin_bottom = 75.0
 
 [node name="Menu" type="GridContainer" parent="MenuLayer/UIBox/VBoxContainer/MarginContainer/PanelContainer" index="0"]
 margin_left = 24.0
 margin_top = 24.0
 margin_right = 816.0
-margin_bottom = 180.0
+margin_bottom = 51.0
+columns = 4
 
 [node name="BtnStart" parent="MenuLayer/UIBox/VBoxContainer/MarginContainer/PanelContainer/Menu" index="0" instance=ExtResource( 5 )]
-margin_right = 792.0
+self_modulate = Color( 1, 1, 1, 0.882353 )
+margin_right = 186.0
 margin_bottom = 27.0
-size_flags_horizontal = 1
 text = "Start Game"
 
 [node name="BtnScore" parent="MenuLayer/UIBox/VBoxContainer/MarginContainer/PanelContainer/Menu" index="1" instance=ExtResource( 5 )]
-margin_top = 43.0
-margin_right = 792.0
-margin_bottom = 70.0
-size_flags_horizontal = 1
+self_modulate = Color( 1, 1, 1, 0.882353 )
+margin_left = 202.0
+margin_right = 388.0
+margin_bottom = 27.0
 text = "Leaderboards"
 screen_to_push_in_config = "SCREEN_SCORE"
 
 [node name="BtnSettings" parent="MenuLayer/UIBox/VBoxContainer/MarginContainer/PanelContainer/Menu" index="2" instance=ExtResource( 5 )]
-margin_top = 86.0
-margin_right = 792.0
-margin_bottom = 113.0
+self_modulate = Color( 1, 1, 1, 0.882353 )
+margin_left = 404.0
+margin_right = 590.0
+margin_bottom = 27.0
 text = "Settings"
 screen_to_push_in_config = "SCREEN_OPTIONS_MENU"
 
 [node name="BtnQuit" parent="MenuLayer/UIBox/VBoxContainer/MarginContainer/PanelContainer/Menu" index="3" instance=ExtResource( 5 )]
-margin_top = 129.0
+self_modulate = Color( 1, 1, 1, 0.882353 )
+margin_left = 606.0
 margin_right = 792.0
-margin_bottom = 156.0
+margin_bottom = 27.0
 text = "Quit Game"
 pushes_screen = false
 screen_to_push_in_config = ""
 quits_game = true
+
+[node name="Label3" type="Label" parent="MenuLayer/UIBox/VBoxContainer" index="4"]
+margin_top = 627.0
+margin_right = 840.0
+margin_bottom = 659.0
+custom_fonts/font = SubResource( 3 )
+text = "Epilepsy Warning: Features Strobing Lights"
+align = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+autoplay = "sleep"
+anims/RESET = SubResource( 4 )
+anims/sleep = SubResource( 5 )

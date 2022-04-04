@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://addons/toolbox_project/scenes/screens/Screen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/toolbox_project/scenes/ui/components/UIBox.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/fonts/Love_Ya_Like_A_Sister/LoveYaLikeASister-Regular.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://assets/LudumDareLogo.png" type="Texture" id=8]
 [ext_resource path="res://player/AggyHead.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/City.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=2]
 size = 60
@@ -21,7 +22,18 @@ font_data = ExtResource( 7 )
 [node name="ScreenSplash" instance=ExtResource( 1 )]
 script = ExtResource( 4 )
 
-[node name="UI" type="CanvasLayer" parent="." index="0"]
+[node name="BaseBackground" parent="." index="0" instance=ExtResource( 5 )]
+
+[node name="TextureRect" type="TextureRect" parent="." index="1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1280.0
+margin_bottom = 720.0
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 1
+
+[node name="UI" type="CanvasLayer" parent="." index="2"]
 
 [node name="UIBox" parent="UI" index="0" instance=ExtResource( 2 )]
 margin_left = -1.0
@@ -54,17 +66,19 @@ margin_bottom = 46.0
 text = "Made with Godot"
 
 [node name="TextureRect" type="TextureRect" parent="UI/UIBox/VBoxContainer/MarginContainer/Label" index="0"]
-margin_left = 505.0
+margin_left = 504.0
 margin_top = -7.0
-margin_right = 829.0
+margin_right = 828.0
 margin_bottom = 57.0
 texture = ExtResource( 8 )
 
 [node name="TextureRect2" type="TextureRect" parent="UI/UIBox/VBoxContainer/MarginContainer/Label" index="1"]
-margin_left = 279.0
-margin_top = -10.0
-margin_right = 343.0
-margin_bottom = 54.0
+self_modulate = Color( 1, 1, 1, 0.784314 )
+show_behind_parent = true
+margin_left = 270.0
+margin_top = -24.0
+margin_right = 526.0
+margin_bottom = 232.0
 texture = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="UI/UIBox/VBoxContainer" index="2"]
@@ -88,14 +102,12 @@ text = "Warning:
 This game may not be safe for some people with epilepsy. "
 align = 1
 
-[node name="BaseBackground" parent="." index="1" instance=ExtResource( 5 )]
-
-[node name="Timer" type="Timer" parent="." index="2"]
+[node name="Timer" type="Timer" parent="." index="3"]
 wait_time = 1.8
 one_shot = true
 autostart = true
 
-[node name="AggyHead" parent="." index="4" instance=ExtResource( 9 )]
+[node name="AggyHead" parent="." index="5" instance=ExtResource( 9 )]
 position = Vector2( 619, 295 )
 scale = Vector2( 2, 2 )
 

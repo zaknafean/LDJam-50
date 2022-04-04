@@ -23,16 +23,16 @@ script = ExtResource( 7 )
 
 [node name="PanelContainer" type="PanelContainer" parent="MenuLayer/UIBox" index="0"]
 margin_left = 220.0
-margin_top = 176.0
+margin_top = 186.0
 margin_right = 1060.0
-margin_bottom = 543.0
+margin_bottom = 534.0
 size_flags_vertical = 4
 
 [node name="Menu" type="GridContainer" parent="MenuLayer/UIBox/PanelContainer" index="0"]
 margin_left = 24.0
 margin_top = 24.0
 margin_right = 816.0
-margin_bottom = 343.0
+margin_bottom = 324.0
 size_flags_vertical = 4
 
 [node name="Label" type="Label" parent="MenuLayer/UIBox/PanelContainer/Menu" index="0"]
@@ -73,7 +73,7 @@ persistence_uid_path = "settingsAudio.Effects"
 [node name="MenuButton" parent="MenuLayer/UIBox/PanelContainer/Menu" index="4" instance=ExtResource( 5 )]
 margin_top = 273.0
 margin_right = 792.0
-margin_bottom = 319.0
+margin_bottom = 300.0
 text = "Back"
 pushes_screen = false
 pops_screen = true

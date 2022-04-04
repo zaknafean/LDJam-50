@@ -226,7 +226,7 @@ _global_script_class_icons={
 
 config/name="LudumDare50"
 run/main_scene="res://screens/ScreenSplash.tscn"
-config/icon="res://icon.png"
+config/icon="res://aggy_icon.png"
 
 [audio]
 

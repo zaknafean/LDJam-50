@@ -52,6 +52,14 @@
 			"set_theme": "theme-1649078042.cfg"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://assets/sound/interactable-located.wav",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
