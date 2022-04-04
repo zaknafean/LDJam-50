@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/aggySprite.png" type="Texture" id=1]
 [ext_resource path="res://player/Player.gd" type="Script" id=2]
 [ext_resource path="res://assets/lights/basic_light_circle.png" type="Texture" id=3]
 [ext_resource path="res://assets/lights/glow_ring.png" type="Texture" id=4]
 [ext_resource path="res://assets/sound/heartbeat-rapid.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/sound/footsteps-rapid.wav" type="AudioStream" id=6]
 
 [sub_resource type="Animation" id=4]
 length = 0.001
@@ -102,6 +103,20 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 1 ]
 }
+tracks/1/type = "audio"
+tracks/1/path = NodePath("WalkSound")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 6 )
+} ],
+"times": PoolRealArray( 0 )
+}
 
 [sub_resource type="Animation" id=6]
 resource_name = "walk_right"
@@ -118,6 +133,20 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 9, 10, 11, 10 ]
+}
+tracks/1/type = "audio"
+tracks/1/path = NodePath("WalkSound")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 6 )
+} ],
+"times": PoolRealArray( 0 )
 }
 
 [sub_resource type="RectangleShape2D" id=3]
@@ -165,5 +194,7 @@ energy = 0.6
 stream = ExtResource( 5 )
 volume_db = -15.0
 bus = "Effects"
+
+[node name="WalkSound" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
