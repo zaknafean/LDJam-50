@@ -35,13 +35,12 @@ func runEvent():
 	myEvents = $EventQueue.get_children()
 	for event in myEvents:
 		if event.difficulty == Settings.difficulty or event.difficulty == -1:
-			if event.event_type == Settings.EVENTS.DIALOG:
-				Settings.curGameState = Settings.GAME_STATES.DIALOG
-				var new_dialog = Dialogic.start(event.DIALOG)
-				add_child(new_dialog)
-				new_dialog.connect("dialogic_signal", self, 'signal_router')
-				new_dialog.connect('timeline_end', self, 'after_dialog')
-				antiSpam = true
+			Settings.curGameState = Settings.GAME_STATES.DIALOG
+			var new_dialog = Dialogic.start(event.DIALOG)
+			add_child(new_dialog)
+			new_dialog.connect("dialogic_signal", self, 'signal_router')
+			new_dialog.connect('timeline_end', self, 'after_dialog')
+			antiSpam = true
 		
 	emit_signal("events_done")
 

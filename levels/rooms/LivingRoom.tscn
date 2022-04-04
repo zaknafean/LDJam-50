@@ -86,12 +86,15 @@ shape = SubResource( 4 )
 position = Vector2( 176, 88 )
 
 [node name="DialogEvent" parent="Interactables/DoorNorthClickable/EventQueue" index="0" instance=ExtResource( 5 )]
+difficulty = 1
 DIALOG = "Unopenable"
 
 [node name="DialogEvent2" parent="Interactables/DoorNorthClickable/EventQueue" index="1" instance=ExtResource( 5 )]
+difficulty = 2
 DIALOG = "UnknownRoomNorth"
 
 [node name="DialogEvent3" parent="Interactables/DoorNorthClickable/EventQueue" index="2" instance=ExtResource( 5 )]
+difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="DoorEastClickable" parent="Interactables" index="1" instance=ExtResource( 2 )]
@@ -116,12 +119,15 @@ position = Vector2( 450, 190 )
 position = Vector2( 358, -55 )
 
 [node name="DialogEvent" parent="Interactables/DoorEastClickable/EventQueue" index="0" instance=ExtResource( 5 )]
+difficulty = 1
 DIALOG = "BedRoomEast"
 
 [node name="DialogEvent2" parent="Interactables/DoorEastClickable/EventQueue" index="1" instance=ExtResource( 5 )]
+difficulty = 2
 DIALOG = "BedRoomEast"
 
 [node name="DialogEvent3" parent="Interactables/DoorEastClickable/EventQueue" index="2" instance=ExtResource( 5 )]
+difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="DoorSouthClickable" parent="Interactables" index="2" instance=ExtResource( 2 )]
@@ -148,12 +154,15 @@ position = Vector2( 466, 364 )
 position = Vector2( 386, 468 )
 
 [node name="DialogEvent" parent="Interactables/DoorSouthClickable/EventQueue" index="0" instance=ExtResource( 5 )]
+difficulty = 1
 DIALOG = "HallwayRoomSouth"
 
 [node name="DialogEvent2" parent="Interactables/DoorSouthClickable/EventQueue" index="1" instance=ExtResource( 5 )]
+difficulty = 2
 DIALOG = "HallwayRoomSouth"
 
 [node name="DialogEvent3" parent="Interactables/DoorSouthClickable/EventQueue" index="2" instance=ExtResource( 5 )]
+difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="DoorWestClickable" parent="Interactables" index="3" instance=ExtResource( 2 )]
@@ -178,14 +187,17 @@ position = Vector2( 30, 33 )
 
 [node name="DialogEvent" parent="Interactables/DoorWestClickable/EventQueue" index="0" instance=ExtResource( 5 )]
 position = Vector2( 1021, -331 )
+difficulty = 1
 DIALOG = "KitchenRoomWest"
 
 [node name="DialogEvent2" parent="Interactables/DoorWestClickable/EventQueue" index="1" instance=ExtResource( 5 )]
 position = Vector2( 1021, -331 )
+difficulty = 2
 DIALOG = "KitchenRoomWest"
 
 [node name="DialogEvent3" parent="Interactables/DoorWestClickable/EventQueue" index="2" instance=ExtResource( 5 )]
 position = Vector2( 1021, -331 )
+difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="CoffeeClickable" parent="Interactables" index="4" instance=ExtResource( 3 )]

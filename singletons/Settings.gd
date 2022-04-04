@@ -3,7 +3,8 @@ extends Node
 const UUID = preload("res://addons/silent_wolf/utils/UUID.gd")
 var settings_file = "user://sonipathy.save"
 var lastScoreUpdate := 0
-enum EVENTS {DIALOG, SCENE_CHANGE, ITEM}
+
+#enum EVENTS {DIALOG, SCENE_CHANGE, ITEM}
 
 enum GAME_STATES {
 	PAUSE,
@@ -24,6 +25,7 @@ var sanityValue = 100
 var score = 0
 
 var gameOver = false
+
 
 func _ready():
 	load_settings()
