@@ -172,3 +172,5 @@ func _unhandled_input(event):
 			playerLine.points = path
 			playerLine.default_color =  Color( 0.13, 0.66, .9, 1 )
 			player.path = path
+
+
