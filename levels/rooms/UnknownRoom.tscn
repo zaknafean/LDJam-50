@@ -4,8 +4,7 @@
 [ext_resource path="res://assets/tilesets/EnvironmentTileset.tres" type="TileSet" id=2]
 [ext_resource path="res://assets/doorNorthBlueClosed.png" type="Texture" id=3]
 [ext_resource path="res://assets/doorEastBlueClosed.png" type="Texture" id=4]
-[ext_resource path="res://levels/noninteractables/Ottoman.tscn" type="PackedScene" id=5]
-[ext_resource path="res://levels/noninteractables/Vent.tscn" type="PackedScene" id=5]
+[ext_resource path="res://levels/noninteractables/Rug.tscn" type="PackedScene" id=5]
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=6]
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=8]
@@ -13,23 +12,17 @@
 [ext_resource path="res://enemies/Lamp.tscn" type="PackedScene" id=10]
 [ext_resource path="res://enemies/ImAStove.tscn" type="PackedScene" id=11]
 [ext_resource path="res://levels/noninteractables/CupJunk.tscn" type="PackedScene" id=12]
-[ext_resource path="res://levels/noninteractables/SideWallBookshelf.tscn" type="PackedScene" id=13]
-[ext_resource path="res://levels/noninteractables/Vent.tscn" type="PackedScene" id=14]
-[ext_resource path="res://levels/interactables/clickable/CoffeeTableClickable.tscn" type="PackedScene" id=15]
-[ext_resource path="res://levels/interactables/clickable/LightSwitchClickable.tscn" type="PackedScene" id=16]
-[ext_resource path="res://levels/noninteractables/Dont.tscn" type="PackedScene" id=17]
-[ext_resource path="res://levels/noninteractables/Sleep.tscn" type="PackedScene" id=18]
-[ext_resource path="res://levels/interactables/clickable/CaffeinePillsClickable.tscn" type="PackedScene" id=19]
-[ext_resource path="res://levels/noninteractables/SideWallPhoto.tscn" type="PackedScene" id=20]
-[ext_resource path="res://levels/noninteractables/Rug.tscn" type="PackedScene" id=21]
-[ext_resource path="res://levels/noninteractables/SpacePoster.tscn" type="PackedScene" id=22]
-[ext_resource path="res://levels/noninteractables/Click2MoveGraffiti.tscn" type="PackedScene" id=23]
-[ext_resource path="res://levels/noninteractables/SleepyGraffiti.tscn" type="PackedScene" id=12]
 [ext_resource path="res://levels/noninteractables/PhotoPortrait.tscn" type="PackedScene" id=13]
-[ext_resource path="res://levels/noninteractables/Rug.tscn" type="PackedScene" id=14]
+[ext_resource path="res://levels/noninteractables/Vent.tscn" type="PackedScene" id=14]
 [ext_resource path="res://levels/noninteractables/SideWallBookshelf.tscn" type="PackedScene" id=15]
 [ext_resource path="res://levels/noninteractables/SpacePoster.tscn" type="PackedScene" id=16]
 [ext_resource path="res://levels/noninteractables/Ottoman.tscn" type="PackedScene" id=17]
+[ext_resource path="res://levels/noninteractables/Sleep.tscn" type="PackedScene" id=18]
+[ext_resource path="res://levels/interactables/clickable/CaffeinePillsClickable.tscn" type="PackedScene" id=19]
+[ext_resource path="res://levels/noninteractables/SideWallPhoto.tscn" type="PackedScene" id=20]
+[ext_resource path="res://levels/noninteractables/Dont.tscn" type="PackedScene" id=21]
+[ext_resource path="res://levels/noninteractables/SleepyGraffiti.tscn" type="PackedScene" id=22]
+[ext_resource path="res://levels/noninteractables/Click2MoveGraffiti.tscn" type="PackedScene" id=23]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -236,23 +229,23 @@ position = Vector2( 1798, 97 )
 [node name="SideWallPhoto2" parent="Difficulty2" index="6" instance=ExtResource( 20 )]
 position = Vector2( 2071, 509 )
 
-[node name="Vent" parent="Difficulty2" index="7" instance=ExtResource( 14 )]
-position = Vector2( 994, 177 )
-
-[node name="Vent2" parent="Difficulty2" index="8" instance=ExtResource( 14 )]
-position = Vector2( 450, 31 )
-
-[node name="PeekingRug" parent="Difficulty2" index="9" instance=ExtResource( 21 )]
+[node name="PeekingRug" parent="Difficulty2" index="7" instance=ExtResource( 5 )]
 position = Vector2( 1394, 219 )
 
-[node name="Ottoman" parent="Difficulty2" index="10" instance=ExtResource( 5 )]
+[node name="Ottoman" parent="Difficulty2" index="8" instance=ExtResource( 14 )]
 position = Vector2( 815, 509 )
 
-[node name="CupJunk" parent="Difficulty2" index="11" instance=ExtResource( 12 )]
-position = Vector2( 1437, 25 )
-
-[node name="CoffeeTableClickable" parent="Difficulty2" index="12" instance=ExtResource( 15 )]
+[node name="CoffeeTableClickable" parent="Difficulty2" index="9" instance=ExtResource( 15 )]
 position = Vector2( 613, 30 )
+
+[node name="CupJunk" parent="Difficulty2" index="10" instance=ExtResource( 12 )]
+position = Vector2( 1417, 12 )
+
+[node name="Vent2" parent="Difficulty2" index="11" instance=ExtResource( 14 )]
+position = Vector2( 461, 34 )
+
+[node name="Vent" parent="Difficulty2" index="12" instance=ExtResource( 14 )]
+position = Vector2( 990, 169 )
 
 [node name="ImAStove" parent="Difficulty3" index="0" instance=ExtResource( 11 )]
 position = Vector2( 1550, 71 )
@@ -275,56 +268,64 @@ position = Vector2( 967, 164 )
 [node name="Sleep_Gremlin2" parent="Difficulty3" index="6" instance=ExtResource( 9 )]
 position = Vector2( 656, 165 )
 
-
-[node name="Dont" parent="Difficulty3" index="7" instance=ExtResource( 17 )]
-position = Vector2( 619, -148 )
-
-[node name="Dont2" parent="Difficulty3" index="8" instance=ExtResource( 17 )]
-position = Vector2( 967, -157 )
-
-[node name="Dont3" parent="Difficulty3" index="9" instance=ExtResource( 17 )]
-position = Vector2( 1446, -154 )
-
-[node name="CaffeinePillsClickable" parent="Difficulty3" index="10" instance=ExtResource( 19 )]
+[node name="CaffeinePillsClickable" parent="Difficulty3" index="7" instance=ExtResource( 19 )]
 position = Vector2( 962, 16 )
 
-[node name="LightSwitchClickable" parent="Difficulty3" index="11" instance=ExtResource( 16 )]
+[node name="LightSwitchClickable" parent="Difficulty3" index="8" instance=ExtResource( 16 )]
 position = Vector2( 469, 142 )
 
-[node name="Click2MoveGraffiti" parent="Difficulty3" index="12" instance=ExtResource( 23 )]
+[node name="Click2MoveGraffiti" parent="Difficulty3" index="9" instance=ExtResource( 23 )]
 position = Vector2( 832, 297 )
 
-[node name="Click2MoveGraffiti2" parent="Difficulty3" index="13" instance=ExtResource( 23 )]
+[node name="Click2MoveGraffiti2" parent="Difficulty3" index="10" instance=ExtResource( 23 )]
 position = Vector2( 953, 286 )
 
-[node name="Click2MoveGraffiti3" parent="Difficulty3" index="14" instance=ExtResource( 23 )]
+[node name="Click2MoveGraffiti3" parent="Difficulty3" index="11" instance=ExtResource( 23 )]
 position = Vector2( 856, 415 )
 
-[node name="SpacePoster" parent="Difficulty3" index="15" instance=ExtResource( 22 )]
+[node name="SpacePoster" parent="Difficulty3" index="12" instance=ExtResource( 16 )]
 position = Vector2( 770, 261 )
 
-[node name="SpacePoster2" parent="Difficulty3" index="16" instance=ExtResource( 22 )]
+[node name="SpacePoster2" parent="Difficulty3" index="13" instance=ExtResource( 16 )]
 position = Vector2( 781, 300 )
 
-[node name="SpacePoster3" parent="Difficulty3" index="17" instance=ExtResource( 22 )]
+[node name="SpacePoster3" parent="Difficulty3" index="14" instance=ExtResource( 16 )]
 position = Vector2( 845, 255 )
 
-[node name="SpacePoster4" parent="Difficulty3" index="18" instance=ExtResource( 22 )]
+[node name="SpacePoster4" parent="Difficulty3" index="15" instance=ExtResource( 16 )]
 position = Vector2( 919, 247 )
 
-[node name="SpacePoster5" parent="Difficulty3" index="19" instance=ExtResource( 22 )]
+[node name="SpacePoster5" parent="Difficulty3" index="16" instance=ExtResource( 16 )]
 position = Vector2( 851, 283 )
 
-[node name="SpacePoster6" parent="Difficulty3" index="20" instance=ExtResource( 22 )]
+[node name="SpacePoster6" parent="Difficulty3" index="17" instance=ExtResource( 16 )]
 position = Vector2( 850, 241 )
 
-[node name="SpacePoster7" parent="Difficulty3" index="21" instance=ExtResource( 22 )]
+[node name="SpacePoster7" parent="Difficulty3" index="18" instance=ExtResource( 16 )]
 position = Vector2( 971, 232 )
 
-[node name="SpacePoster8" parent="Difficulty3" index="22" instance=ExtResource( 22 )]
+[node name="SpacePoster8" parent="Difficulty3" index="19" instance=ExtResource( 16 )]
 position = Vector2( 943, 273 )
 
-[node name="Vent" parent="." index="8" instance=ExtResource( 5 )]
+[node name="Dont" parent="Difficulty3" index="20" instance=ExtResource( 21 )]
+position = Vector2( 586, -134 )
+
+[node name="Dont2" parent="Difficulty3" index="21" instance=ExtResource( 21 )]
+position = Vector2( 968, -153 )
+
+[node name="Dont3" parent="Difficulty3" index="22" instance=ExtResource( 21 )]
+position = Vector2( 1429, -159 )
+
+[node name="SpacePoster9" parent="Difficulty3" index="23" instance=ExtResource( 16 )]
+position = Vector2( 791, 391 )
+
+[node name="SpacePoster10" parent="Difficulty3" index="24" instance=ExtResource( 16 )]
+position = Vector2( 849, 374 )
+
+[node name="SpacePoster11" parent="Difficulty3" index="25" instance=ExtResource( 16 )]
+position = Vector2( 849, 406 )
+
+[node name="Vent" parent="." index="8" instance=ExtResource( 14 )]
 position = Vector2( 653, -147 )
 z_index = 1
 
@@ -335,21 +336,17 @@ z_index = 2
 [node name="SideWallBookshelf" parent="." index="10" instance=ExtResource( 15 )]
 position = Vector2( 1871, 285 )
 
-[node name="PeekingRug" parent="." index="11" instance=ExtResource( 14 )]
-position = Vector2( 1047, 248 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="SideWallBookshelf2" parent="." index="12" instance=ExtResource( 15 )]
+[node name="SideWallBookshelf2" parent="." index="11" instance=ExtResource( 15 )]
 position = Vector2( 1638, 52 )
 
-[node name="Ottoman" parent="." index="13" instance=ExtResource( 17 )]
+[node name="Ottoman" parent="." index="12" instance=ExtResource( 17 )]
 position = Vector2( 1227, 497 )
 
-[node name="PhotoPortrait" parent="." index="14" instance=ExtResource( 13 )]
+[node name="PhotoPortrait" parent="." index="13" instance=ExtResource( 13 )]
 position = Vector2( 1502, -115 )
 z_index = 1
 
-[node name="SleepyGraffiti" parent="." index="15" instance=ExtResource( 12 )]
+[node name="SleepyGraffiti" parent="." index="14" instance=ExtResource( 22 )]
 position = Vector2( 1150, 35 )
 rotation = 0.300197
 scale = Vector2( 0.7, 0.7 )
