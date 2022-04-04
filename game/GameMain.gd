@@ -27,6 +27,7 @@ func _ready():
 
 func start_level():
 	Settings.new_game()
+	$Diff1Music.play()
 	$Diff2Music.stop()
 	$Diff3Music.stop()
 	if curRoom:
@@ -43,7 +44,7 @@ func start_level():
 
 func random_room():
 	randomize()
-	var randValue = randi() % 5 + 1
+	var randValue = randi() % 6 + 1
 	
 	if curRoom:
 		remove_child(curRoom)
@@ -62,7 +63,7 @@ func random_room():
 		curRoom = kitchenRoom.instance()
 	elif randValue == 4:
 		curRoom = unknownRoom.instance()
-	elif randValue == 5:
+	else:
 		curRoom = unlikedRoom.instance()
 	
 	var randValue2 = randi() % 4 + 1
@@ -131,8 +132,10 @@ func change_room(newRoom: String, directionFrom: String, _delay=2):
 func _process(_delta):
 	if Settings.difficulty == 2 and $Diff2Music.playing == false:
 		$Diff2Music.play()
+		$DiffChangeBell.play()
 	elif Settings.difficulty == 3 and $Diff3Music.playing == false:
 		$Diff3Music.play()
+		$DiffChangeBell.play()
 
 
 func _on_game_started():
