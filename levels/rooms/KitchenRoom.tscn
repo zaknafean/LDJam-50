@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/interactables/clickable/SpriteClickable.tscn" type="PackedScene" id=2]
@@ -12,6 +12,13 @@
 [ext_resource path="res://enemies/ImAStove.tscn" type="PackedScene" id=10]
 [ext_resource path="res://levels/interactables/clickable/CoffeeClickable.tscn" type="PackedScene" id=11]
 [ext_resource path="res://levels/interactables/clickable/LightSwitchClickable.tscn" type="PackedScene" id=12]
+[ext_resource path="res://levels/noninteractables/SideWallVent.tscn" type="PackedScene" id=13]
+[ext_resource path="res://levels/noninteractables/PhotoPortrait.tscn" type="PackedScene" id=14]
+[ext_resource path="res://levels/noninteractables/Counter.tscn" type="PackedScene" id=15]
+[ext_resource path="res://levels/noninteractables/Table.tscn" type="PackedScene" id=16]
+[ext_resource path="res://levels/noninteractables/LeaningBroom.tscn" type="PackedScene" id=17]
+[ext_resource path="res://levels/noninteractables/SideWallJunk.tscn" type="PackedScene" id=18]
+[ext_resource path="res://levels/noninteractables/FloorRug.tscn" type="PackedScene" id=19]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -185,7 +192,7 @@ difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="Oven(Non-Monstrous)Clickable" parent="Interactables" index="4" instance=ExtResource( 4 )]
-position = Vector2( 828, -12 )
+position = Vector2( 824, -12 )
 
 [node name="CoffeeClickable" parent="Interactables" index="5" instance=ExtResource( 11 )]
 position = Vector2( 257, 147 )
@@ -197,7 +204,7 @@ position = Vector2( 733, 84 )
 position = Vector2( 723, 402 )
 
 [node name="ImAStove" parent="Difficulty2" index="0" instance=ExtResource( 10 )]
-position = Vector2( 849, 36 )
+position = Vector2( 858, 43 )
 
 [node name="Lamp" parent="Difficulty2" index="1" instance=ExtResource( 9 )]
 position = Vector2( 727, 328 )
@@ -213,6 +220,32 @@ position = Vector2( 402, 157 )
 
 [node name="Lamp" parent="Difficulty3" index="3" instance=ExtResource( 9 )]
 position = Vector2( 1279, 358 )
+
+[node name="Counter" parent="." index="8" instance=ExtResource( 15 )]
+position = Vector2( 509, 102 )
+scale = Vector2( 0.35, 0.35 )
+z_index = 1
+
+[node name="Table" parent="." index="9" instance=ExtResource( 16 )]
+position = Vector2( 1014, 114 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="LeaningBroom" parent="." index="10" instance=ExtResource( 17 )]
+position = Vector2( 1048, 136 )
+
+[node name="PhotoPortrait" parent="." index="11" instance=ExtResource( 14 )]
+position = Vector2( 504, 11 )
+
+[node name="SideWallJunk" parent="." index="12" instance=ExtResource( 18 )]
+position = Vector2( 1197, 193 )
+scale = Vector2( 1.4, 1.4 )
+
+[node name="SideWallVent" parent="." index="13" instance=ExtResource( 13 )]
+position = Vector2( 934, -115 )
+z_index = 1
+
+[node name="FloorRug" parent="." index="14" instance=ExtResource( 19 )]
+position = Vector2( 651, 370 )
 
 [editable path="Interactables/DoorNorthClickable"]
 [editable path="Interactables/DoorEastClickable"]
