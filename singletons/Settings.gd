@@ -112,7 +112,7 @@ func adjust_score(value: String):
 
 func _process(delta):
 	score += delta
-	if roomsExplored >= 3 and roomsExplored < 10:
+	if roomsExplored >= 3 and roomsExplored < 10 and difficulty == 1:
 		difficulty = 2
 	elif roomsExplored >= 8:
 		difficulty = 3
