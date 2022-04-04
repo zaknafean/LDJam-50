@@ -34,12 +34,6 @@
 			"wait_seconds": 1
 		},
 		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "The hallway is long and narrow. Better start walking..."
-		},
-		{
 			"call_node": {
 				"arguments": [
 					"hallwayroom",
