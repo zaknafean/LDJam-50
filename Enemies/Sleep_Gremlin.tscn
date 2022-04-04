@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://utilities/attachable_tools/Hit_Box.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/sleepGremlin.png" type="Texture" id=2]
 [ext_resource path="res://enemies/Sleep_Gremlin.gd" type="Script" id=3]
 [ext_resource path="res://effects/DustExplode.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/fonts/Love_Ya_Like_A_Sister/LoveYaLikeASister-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/sound/scrape-two.wav" type="AudioStream" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 21.0
@@ -206,13 +207,12 @@ __meta__ = {
 }
 
 [node name="Gremlin" type="KinematicBody2D" parent="."]
-position = Vector2( 1.25913, -1.25913 )
-rotation = 0.0549398
 
 [node name="Sprite" type="Sprite" parent="Gremlin"]
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 hframes = 4
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gremlin"]
 light_mask = 2
@@ -226,10 +226,10 @@ collision_mask = 2
 shape = SubResource( 3 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = -65.0
-margin_top = -126.0
-margin_right = 60.0
-margin_bottom = -44.0
+margin_left = -64.0
+margin_top = -154.0
+margin_right = 61.0
+margin_bottom = -72.0
 custom_fonts/font = SubResource( 8 )
 text = "Be-Boop ... Be-Doop-Boop"
 align = 1
@@ -264,6 +264,10 @@ anims/Idle = SubResource( 7 )
 [node name="RoomEnter" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, 0 )
 scale = Vector2( 0.5, 0.5 )
+
+[node name="AmbientNoise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+bus = "Effects"
 
 [connection signal="body_entered" from="Hit_Box" to="." method="_on_Hit_Box_body_entered"]
 [connection signal="body_exited" from="Hit_Box" to="." method="_on_Hit_Box_body_exited"]

@@ -20,7 +20,6 @@ func _on_Hit_Box_body_entered(body):
 	if (body is KinematicBody2D) and (Settings.curGameState != Settings.GAME_STATES.BATTLE) and (can_attack != false):
 		body.path = []
 		Settings.curGameState = Settings.GAME_STATES.BATTLE
-		print(Settings.curGameState, 'lamp state')
 		$Label.visible = true
 		attack_position()
 
@@ -39,7 +38,6 @@ func can_free_player():
 	if pool.size() == 0:
 		Settings.curGameState = Settings.GAME_STATES.PLAY
 		$AnimationPlayer.play("Dying")
-		print('free player')
 	else:
 		pass
 

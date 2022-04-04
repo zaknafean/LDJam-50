@@ -29,6 +29,7 @@ func _process(_delta):
 
 func _on_Hit_Box_body_entered(body):
 	if body is KinematicBody2D and Settings.curGameState != Settings.GAME_STATES.BATTLE:
+		$AmbientNoise.play()
 		body.path = []
 		Settings.curGameState = Settings.GAME_STATES.BATTLE
 		$Label.visible = true
@@ -57,12 +58,10 @@ func spawn_attacks():
 	spot = spot + 1
 
 func _on_attack_arrived():
-	print('arrived')
 	look_for_kills = true
 	kill_items = kill_items + 1
 
 func _on_attack_destroyed():
-	print('killed')
 	kill_count = kill_count + 1
 
 func insert_dead_baby_joke():
