@@ -16,7 +16,9 @@ func attack_position():
 		targets.append(cur_target)
 	$Label.text = "I'm an ANGRY stove...Or you're hallucinating!"
 	$Tutorial.visible = true
+	$Stove/Atk_Sprite/AtkSpritePlayer.play("Attack")
 	$AnimationPlayer.play("Attacking")
+	
 
 func spawn_attacks():
 	attack_instance = load(str(sleep_attack))
@@ -32,6 +34,8 @@ func _on_Hit_Box_body_entered(body):
 		body.path = []
 		Settings.curGameState = Settings.GAME_STATES.BATTLE
 		$Label.visible = true
+		$Stove/Atk_Sprite/AtkAudio.play()
+		yield(get_tree(), "idle_frame")
 		attack_position()
 
 func animate_spawns():

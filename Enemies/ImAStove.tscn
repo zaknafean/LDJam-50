@@ -1,14 +1,45 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://enemies/ImAStove.gd" type="Script" id=1]
 [ext_resource path="res://utilities/attachable_tools/Hit_Box.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Stove.png" type="Texture" id=3]
 [ext_resource path="res://assets/fonts/Love_Ya_Like_A_Sister/LoveYaLikeASister-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://assets/sound/wobbling-oven.wav" type="AudioStream" id=5]
-[ext_resource path="res://assets/Bed100.png" type="Texture" id=6]
+[ext_resource path="res://assets/escapePrompt.png" type="Texture" id=6]
+[ext_resource path="res://assets/OvenAttk01.png" type="Texture" id=7]
+[ext_resource path="res://assets/sound/demon-laugh.wav" type="AudioStream" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 23, 18.75 )
+
+[sub_resource type="Animation" id=9]
+resource_name = "Attack"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 49, 39.625 )
@@ -64,12 +95,21 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.38 ),
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Stove/Sprite:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "insert_dead_baby_joke"
-} ]
+"update": 1,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -173,6 +213,21 @@ texture = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stove"]
 shape = SubResource( 1 )
 
+[node name="Atk_Sprite" type="Sprite" parent="Stove"]
+position = Vector2( 0, -5 )
+scale = Vector2( 0.45, 0.45 )
+texture = ExtResource( 7 )
+hframes = 6
+
+[node name="AtkSpritePlayer" type="AnimationPlayer" parent="Stove/Atk_Sprite"]
+anims/Attack = SubResource( 9 )
+
+[node name="AtkAudio" type="AudioStreamPlayer2D" parent="Stove/Atk_Sprite"]
+stream = ExtResource( 8 )
+volume_db = 12.0
+pitch_scale = 0.4
+bus = "Effects"
+
 [node name="Hit_Box" parent="." instance=ExtResource( 2 )]
 collision_layer = 0
 collision_mask = 2
@@ -238,8 +293,10 @@ bus = "Effects"
 
 [node name="Tutorial" type="Sprite" parent="."]
 visible = false
-position = Vector2( 76, -61 )
+position = Vector2( 92, -60 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 6 )
+hframes = 4
 
 [connection signal="body_entered" from="Hit_Box" to="." method="_on_Hit_Box_body_entered"]
 
