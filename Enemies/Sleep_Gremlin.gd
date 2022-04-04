@@ -24,8 +24,6 @@ func _ready():
 func _process(_delta):
 	if (look_for_kills == true) and (kill_items == kill_count):
 		can_free_player()
-	else:
-		return
 
 func _on_Hit_Box_body_entered(body):
 	if body is KinematicBody2D and Settings.curGameState != Settings.GAME_STATES.BATTLE:
