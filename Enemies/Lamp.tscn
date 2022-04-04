@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://utilities/attachable_tools/Hit_Box.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/LampHop3.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://enemies/Lamp.gd" type="Script" id=5]
 [ext_resource path="res://assets/fonts/Love_Ya_Like_A_Sister/LoveYaLikeASister-Regular.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://assets/sound/light-switch-on-lamp.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/Bed100.png" type="Texture" id=8]
 
 [sub_resource type="CapsuleShape2D" id=6]
 height = 108.267
@@ -15,6 +16,8 @@ height = 108.267
 extents = Vector2( 36.3125, 41.2578 )
 
 [sub_resource type="DynamicFont" id=8]
+outline_size = 1
+outline_color = Color( 0.00392157, 0.00392157, 0.00392157, 1 )
 font_data = ExtResource( 6 )
 
 [sub_resource type="Animation" id=1]
@@ -290,10 +293,10 @@ position = Vector2( 1, -57 )
 rotation = 4.71239
 scale = Vector2( 1, 2 )
 texture = ExtResource( 3 )
-energy = 2.0
 shadow_enabled = true
 
 [node name="Label" type="Label" parent="."]
+visible = false
 margin_left = -55.0
 margin_top = -71.0
 margin_right = 55.0
@@ -342,9 +345,14 @@ anims/Moving = SubResource( 4 )
 
 [node name="AmbientNoise" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
-volume_db = -15.0
-max_distance = 1250.0
+volume_db = 12.0
+max_distance = 550.0
 bus = "Effects"
+
+[node name="Tutorial" type="Sprite" parent="."]
+visible = false
+position = Vector2( 91, -19 )
+texture = ExtResource( 8 )
 
 [connection signal="body_entered" from="Hit_Box" to="." method="_on_Hit_Box_body_entered"]
 [connection signal="body_exited" from="Hit_Box" to="." method="_on_Hit_Box_body_exited"]

@@ -30,6 +30,7 @@ func attack_position():
 		pick = randi() % count + 1
 		var cur_target = get_node('Target_Locations/Position2D'+str(pick))
 		targets.append(cur_target)
+	$Tutorial.visible = true
 	$AnimationPlayer.play("Attacking")
 
 
@@ -71,10 +72,14 @@ func byeeeeee():
 	newguy.scale = $lampity/Sprite.scale
 	get_parent().add_child(newguy)
 	
+
+
 	var score_value = 100 * Settings.difficulty
 	Settings.adjust_score('score_value')
 	if Settings.sanityValue > 5:
 		Settings.adjust_sanity('-5')
 	
+
+	$Tutorial.queue_free()
 	queue_free()
 
