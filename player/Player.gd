@@ -8,7 +8,7 @@ var path : = PoolVector2Array()
 onready var anim = $AnimationPlayer
 onready var dangerNoise = $DangerSound
 
-var sprite_dir = "down"			#where we are actually facing. A string for anim
+var sprite_dir = "right"			#where we are actually facing. A string for anim
 var facing_dir = Vector2.DOWN	#where we are facing in vector notation
 var move_dir = Vector2.ZERO		#where we want to go
 var taking_damage = false
