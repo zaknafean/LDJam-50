@@ -51,7 +51,7 @@ func _on_SubmitScoreButton_pressed():
 	#MarginContainer/VBoxContainer/HBoxContainer/SendScoresButton.disabled = true
 
 
-func _process(delta):
+func _process(_delta):
 	score.bbcode_text = str("[center][color=white]Immortalize your work...[/color][/center]\n[center][color=green]",int(Settings.score),"[/color][/center]")
 
 

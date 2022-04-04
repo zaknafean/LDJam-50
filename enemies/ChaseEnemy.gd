@@ -61,6 +61,7 @@ func activate(delay: int):
 	curSpeed = SPEED + (Settings.roomsExplored * 3.5)
 	show()
 	$RoomEnter.emitting = true
+	$AudioStreamPlayer2D.play()
 	#Particle effects and shizzle go here
 
 
