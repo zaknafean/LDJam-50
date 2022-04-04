@@ -21,7 +21,6 @@
 [ext_resource path="res://levels/noninteractables/SideWallBookshelf.tscn" type="PackedScene" id=19]
 [ext_resource path="res://levels/interactables/clickable/CoffeeTableClickable.tscn" type="PackedScene" id=20]
 [ext_resource path="res://levels/interactables/clickable/CaffeinePillsClickable.tscn" type="PackedScene" id=21]
-[ext_resource path="res://levels/noninteractables/SleepyGraffiti.tscn" type="PackedScene" id=22]
 [ext_resource path="res://levels/noninteractables/SideTable.tscn" type="PackedScene" id=22]
 
 [sub_resource type="ShaderMaterial" id=3]

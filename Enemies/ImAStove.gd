@@ -14,7 +14,7 @@ func attack_position():
 		pick = randi() % count + 1
 		var cur_target = get_node('Target_Locations/Position2D'+str(pick))
 		targets.append(cur_target)
-	$Label.text = "I'm an ANGRY stove...Or your hallucinating!"
+	$Label.text = "I'm an ANGRY stove...Or you're hallucinating!"
 	$AnimationPlayer.play("Attacking")
 
 func spawn_attacks():
@@ -27,6 +27,7 @@ func spawn_attacks():
 
 func _on_Hit_Box_body_entered(body):
 	if (body is KinematicBody2D) and (Settings.curGameState != Settings.GAME_STATES.BATTLE) and (can_attack != false):
+		$AmbientNoise.stop()
 		body.path = []
 		Settings.curGameState = Settings.GAME_STATES.BATTLE
 		$Label.visible = true
