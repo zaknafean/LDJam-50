@@ -229,6 +229,9 @@ position = Vector2( 872, 132 )
 [node name="Lamp" parent="Difficulty2" index="1" instance=ExtResource( 9 )]
 position = Vector2( 805, 172 )
 
+[node name="Sleep_Gremlin" parent="Difficulty2" index="2" instance=ExtResource( 8 )]
+position = Vector2( 631, 246 )
+
 [node name="Sleep_Gremlin" parent="Difficulty3" index="0" instance=ExtResource( 8 )]
 position = Vector2( 625, 158 )
 
