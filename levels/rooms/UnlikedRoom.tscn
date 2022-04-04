@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Tilesets/EnvironmentTileset.tres" type="TileSet" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://enemies/ImAStove.tscn" type="PackedScene" id=10]
 [ext_resource path="res://levels/noninteractables/Click2MoveGraffiti.tscn" type="PackedScene" id=11]
 [ext_resource path="res://levels/noninteractables/SleepyGraffiti.tscn" type="PackedScene" id=12]
+[ext_resource path="res://levels/noninteractables/SideWallVent.tscn" type="PackedScene" id=13]
+[ext_resource path="res://levels/noninteractables/SideWallJunk.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -235,26 +237,37 @@ position = Vector2( 1276, 725 )
 position = Vector2( 1744, 862 )
 
 [node name="SleepyGraffiti" parent="." index="8" instance=ExtResource( 12 )]
-position = Vector2( 755, 21 )
+position = Vector2( 759, 31 )
 
 [node name="SleepyGraffiti2" parent="." index="9" instance=ExtResource( 12 )]
-position = Vector2( 562, 27 )
-rotation = 1.28456
+position = Vector2( 698, 54 )
+rotation = 0.00523599
+scale = Vector2( 0.66, 0.66 )
 
 [node name="SleepyGraffiti3" parent="." index="10" instance=ExtResource( 12 )]
-position = Vector2( 988, 27 )
-rotation = -0.427606
+position = Vector2( 807, 16 )
+rotation = 0.0244346
+scale = Vector2( 0.44, 0.44 )
 
 [node name="Click2MoveGraffiti" parent="." index="11" instance=ExtResource( 11 )]
-position = Vector2( 192, 414 )
+position = Vector2( 126, 398 )
+rotation = 0.677188
+scale = Vector2( 0.6, 0.6 )
 z_index = 1
 
 [node name="Click2MoveGraffiti2" parent="." index="12" instance=ExtResource( 11 )]
-position = Vector2( 306, 427 )
+position = Vector2( 274, 411 )
 
 [node name="Click2MoveGraffiti3" parent="." index="13" instance=ExtResource( 11 )]
-position = Vector2( 687, 429 )
-rotation = 2.29336
+position = Vector2( 666, 416 )
+rotation = 0.486947
+
+[node name="SideWallJunk" parent="." index="14" instance=ExtResource( 14 )]
+position = Vector2( 1159, 84 )
+scale = Vector2( 1.4, 1.4 )
+
+[node name="SideWallVent" parent="." index="15" instance=ExtResource( 13 )]
+position = Vector2( 1209, 213 )
 
 [editable path="Interactables/DoorNorthClickable"]
 [editable path="Interactables/DoorEastClickable"]
