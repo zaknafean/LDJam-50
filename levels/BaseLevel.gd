@@ -173,7 +173,6 @@ func _unhandled_input(event):
 		if Settings.gameStarted == false:
 			Settings.gameStarted = true
 			enemy.activate(3)
-			print('starting it up')
 			
 		if currentEvent != null:
 			var isComplete = process_event(currentEvent)
