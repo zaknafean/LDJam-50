@@ -67,7 +67,6 @@ func _on_attack_destroyed():
 
 func insert_dead_baby_joke():
 	pass
-	#look_for_kills = true
 
 func can_free_player():
 	var pool = $Attacks.get_children()
@@ -81,6 +80,9 @@ func terminator():
 	$Label.visible = true
 
 func byeeeeee():
-	Settings.score += 25 * Settings.difficulty
+	var score_value = 50 * Settings.difficulty
+	Settings.adjust_score('score_value')
+	if Settings.sanityValue > 5:
+		Settings.adjust_sanity('-5')
 	queue_free()
 

@@ -13,7 +13,7 @@
 height = 108.267
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 42.625, 69.5156 )
+extents = Vector2( 36.3125, 41.2578 )
 
 [sub_resource type="DynamicFont" id=8]
 outline_size = 1
@@ -285,7 +285,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" parent="Hit_Box" index="0"]
-position = Vector2( 1, 8 )
+position = Vector2( 0, 36.258 )
 shape = SubResource( 7 )
 
 [node name="Light2D" type="Light2D" parent="."]

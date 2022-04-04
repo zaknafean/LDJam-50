@@ -72,7 +72,14 @@ func byeeeeee():
 	newguy.scale = $lampity/Sprite.scale
 	get_parent().add_child(newguy)
 	
-	Settings.score += 35 * Settings.difficulty
+
+
+	var score_value = 100 * Settings.difficulty
+	Settings.adjust_score('score_value')
+	if Settings.sanityValue > 5:
+		Settings.adjust_sanity('-5')
+	
+
 	$Tutorial.queue_free()
 	queue_free()
 
