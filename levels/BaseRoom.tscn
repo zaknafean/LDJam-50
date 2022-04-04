@@ -57,3 +57,9 @@ Score: 0"
 [node name="Difficulty2" type="Node2D" parent="."]
 
 [node name="Difficulty3" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]

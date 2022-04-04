@@ -20,11 +20,12 @@ var curGameState = GAME_STATES.PLAY
 
 var difficulty = 1
 var roomsExplored = 0
-var alertnessValue = 1000
+var alertnessValue = 500
 var sanityValue = 100
 var score = 0
 
 var gameOver = false
+var gameStarted = false
 
 
 func _ready():
@@ -47,12 +48,15 @@ func _ready():
 
 
 func new_game():
-	alertnessValue = 1000
+	alertnessValue = 500
 	sanityValue = 100
 	score = 0
 	difficulty = 1
 	roomsExplored = 0
 	gameOver = false
+	gameStarted = false
+	var dialog = Dialogic.start('Opening')
+	add_child(dialog)
 
 
 func save_settings():
