@@ -30,7 +30,7 @@ func attack_position():
 		pick = randi() % count + 1
 		var cur_target = get_node('Target_Locations/Position2D'+str(pick))
 		targets.append(cur_target)
-	$Tutorial.visible = true
+	$EscapePrompt.visible = true
 	$AnimationPlayer.play("Attacking")
 
 
@@ -80,6 +80,6 @@ func byeeeeee():
 		Settings.adjust_sanity('-5')
 	
 
-	$Tutorial.queue_free()
+	$EscapePrompt.queue_free()
 	queue_free()
 
