@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://enemies/ImAStove.gd" type="Script" id=1]
 [ext_resource path="res://utilities/attachable_tools/Hit_Box.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Stove.png" type="Texture" id=3]
 [ext_resource path="res://assets/fonts/Love_Ya_Like_A_Sister/LoveYaLikeASister-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://assets/sound/wobbling-oven.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/Bed100.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 23, 18.75 )
@@ -13,6 +14,8 @@ extents = Vector2( 23, 18.75 )
 extents = Vector2( 49, 39.625 )
 
 [sub_resource type="DynamicFont" id=8]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 4 )
 
 [sub_resource type="Animation" id=4]
@@ -153,6 +156,7 @@ tracks/2/keys = {
 }
 
 [node name="ImAStove" type="Node2D"]
+position = Vector2( 1, 0 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -227,10 +231,15 @@ playback_process_mode = 0
 
 [node name="AmbientNoise" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
-volume_db = 10.0
+volume_db = 12.0
 autoplay = true
-max_distance = 1250.0
+max_distance = 550.0
 bus = "Effects"
+
+[node name="Tutorial" type="Sprite" parent="."]
+visible = false
+position = Vector2( 76, -61 )
+texture = ExtResource( 6 )
 
 [connection signal="body_entered" from="Hit_Box" to="." method="_on_Hit_Box_body_entered"]
 

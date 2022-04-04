@@ -15,6 +15,7 @@ func attack_position():
 		var cur_target = get_node('Target_Locations/Position2D'+str(pick))
 		targets.append(cur_target)
 	$Label.text = "I'm an ANGRY stove...Or you're hallucinating!"
+	$Tutorial.visible = true
 	$AnimationPlayer.play("Attacking")
 
 func spawn_attacks():
@@ -57,5 +58,6 @@ func byeeeeee():
 	
 	Settings.score += 15 * Settings.difficulty
 	
+	$Tutorial.queue_free()
 	queue_free()
 	

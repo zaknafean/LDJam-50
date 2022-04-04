@@ -30,6 +30,7 @@ func attack_position():
 		pick = randi() % count + 1
 		var cur_target = get_node('Target_Locations/Position2D'+str(pick))
 		targets.append(cur_target)
+	$Tutorial.visible = true
 	$AnimationPlayer.play("Attacking")
 
 
@@ -72,6 +73,6 @@ func byeeeeee():
 	get_parent().add_child(newguy)
 	
 	Settings.score += 35 * Settings.difficulty
-	
+	$Tutorial.queue_free()
 	queue_free()
 

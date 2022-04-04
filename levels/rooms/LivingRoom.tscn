@@ -282,6 +282,15 @@ position = Vector2( 89, 108 )
 position = Vector2( -27, 173 )
 scale = Vector2( 0.3, 0.3 )
 
+[node name="Lamp" parent="." index="17" instance=ExtResource( 9 )]
+position = Vector2( 400, 199 )
+
+[node name="Sleep_Gremlin" parent="." index="18" instance=ExtResource( 8 )]
+position = Vector2( 647, 273 )
+
+[node name="ImAStove" parent="." index="19" instance=ExtResource( 10 )]
+position = Vector2( 881, 319 )
+
 [editable path="Interactables/DoorNorthClickable"]
 [editable path="Interactables/DoorEastClickable"]
 [editable path="Interactables/DoorSouthClickable"]
