@@ -54,17 +54,19 @@ margin_bottom = 46.0
 text = "Made with Godot"
 
 [node name="TextureRect" type="TextureRect" parent="UI/UIBox/VBoxContainer/MarginContainer/Label" index="0"]
-margin_left = 505.0
+margin_left = 504.0
 margin_top = -7.0
-margin_right = 829.0
+margin_right = 828.0
 margin_bottom = 57.0
 texture = ExtResource( 8 )
 
 [node name="TextureRect2" type="TextureRect" parent="UI/UIBox/VBoxContainer/MarginContainer/Label" index="1"]
-margin_left = 279.0
-margin_top = -10.0
-margin_right = 343.0
-margin_bottom = 54.0
+self_modulate = Color( 1, 1, 1, 0.784314 )
+show_behind_parent = true
+margin_left = 281.0
+margin_top = -55.0
+margin_right = 537.0
+margin_bottom = 201.0
 texture = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="UI/UIBox/VBoxContainer" index="2"]
