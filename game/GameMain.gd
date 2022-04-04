@@ -126,11 +126,11 @@ func change_room(newRoom: String, directionFrom: String, _delay=2):
 	curRoom._set_spawns(directionFrom, newDelay)
 
 
-func _process(delta):
+func _process(_delta):
 	if Settings.difficulty == 2 and $Diff2Music.playing == false:
 		$Diff2Music.play()
 	elif Settings.difficulty == 3 and $Diff3Music.playing == false:
-		$Diff2Music.play()
+		$Diff3Music.play()
 
 
 func _on_game_started():
