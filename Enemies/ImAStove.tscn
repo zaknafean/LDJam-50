@@ -214,6 +214,7 @@ texture = ExtResource( 3 )
 shape = SubResource( 1 )
 
 [node name="Atk_Sprite" type="Sprite" parent="Stove"]
+visible = false
 position = Vector2( 0, -5 )
 scale = Vector2( 0.45, 0.45 )
 texture = ExtResource( 7 )
