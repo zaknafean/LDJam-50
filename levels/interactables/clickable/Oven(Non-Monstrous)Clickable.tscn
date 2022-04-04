@@ -11,7 +11,7 @@ shader = ExtResource( 4 )
 shader_param/brightness = 1.0
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 15.5, 17 )
+extents = Vector2( 43.5, 38.5 )
 
 [node name="Oven(Non-Monstrous)Clickable" instance=ExtResource( 2 )]
 collision_layer = 1
@@ -26,7 +26,6 @@ scale = Vector2( 0.978261, 0.978261 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( 0.5, -1 )
 shape = SubResource( 2 )
 
 [node name="InteractionPosition" parent="." index="2"]
