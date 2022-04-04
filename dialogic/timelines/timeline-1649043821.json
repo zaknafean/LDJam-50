@@ -29,7 +29,7 @@
 			"character": "character-1648910671.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I would say the clock is ticking... but we both know you're out of time."
+			"text": "Not long now.\nYou can barely keep your eyes open."
 		},
 		{
 			"animation": "1-fade_in.gd",
@@ -56,13 +56,13 @@
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I don't understand.\nIf I just stay awake, everything will be okay."
+			"text": "Leave me alone Lamp Cat!\nI need to get out of here!"
 		},
 		{
 			"character": "character-1648910671.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You still believe that, do you?\nGood luck."
+			"text": "Do you even know where to go anymore?!\nDo you even care?"
 		},
 		{
 			"event_id": "dialogic_022",
@@ -101,7 +101,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1649041553.json",
-		"name": "D2 R1"
+		"file": "timeline-1649043821.json",
+		"name": "D3 R1"
 	}
 }

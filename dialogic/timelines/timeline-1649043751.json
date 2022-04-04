@@ -29,7 +29,7 @@
 			"character": "character-1648910671.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I would say the clock is ticking... but we both know you're out of time."
+			"text": "How many times have you come through here now? There's not long now."
 		},
 		{
 			"animation": "1-fade_in.gd",
@@ -56,13 +56,13 @@
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I don't understand.\nIf I just stay awake, everything will be okay."
+			"text": "Why are you doing this to me?!"
 		},
 		{
 			"character": "character-1648910671.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You still believe that, do you?\nGood luck."
+			"text": "Is that what you think is going on here?\nNo Aggy, every single horrible thing you've ever experienced has been at your own hands.\nYou simply do not deserve to be happy."
 		},
 		{
 			"event_id": "dialogic_022",
@@ -101,7 +101,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1649041553.json",
-		"name": "D2 R1"
+		"file": "timeline-1649043751.json",
+		"name": "D2 R2"
 	}
 }

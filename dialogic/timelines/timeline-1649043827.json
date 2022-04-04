@@ -29,7 +29,7 @@
 			"character": "character-1648910671.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I would say the clock is ticking... but we both know you're out of time."
+			"text": "Ha-ha. Ha-ha. Ha-ha.\nI just thought of a joke. \nWould you like to know what happened to your family?"
 		},
 		{
 			"animation": "1-fade_in.gd",
@@ -56,13 +56,13 @@
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I don't understand.\nIf I just stay awake, everything will be okay."
+			"text": "I'm not listening to you anymore!"
 		},
 		{
 			"character": "character-1648910671.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You still believe that, do you?\nGood luck."
+			"text": "If you ever listened to me, you would have done the right thing.\nGo to sleep, Aggy. I promise we'll use all of the parts."
 		},
 		{
 			"event_id": "dialogic_022",
@@ -101,7 +101,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1649041553.json",
-		"name": "D2 R1"
+		"file": "timeline-1649043827.json",
+		"name": "D3 R2"
 	}
 }
