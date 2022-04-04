@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/doorNorthBlueClosed.png" type="Texture" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://levels/noninteractables/FloorRug.tscn" type="PackedScene" id=16]
 [ext_resource path="res://levels/noninteractables/Boots.tscn" type="PackedScene" id=17]
 [ext_resource path="res://levels/interactables/clickable/CellphoneClickable.tscn" type="PackedScene" id=18]
+[ext_resource path="res://levels/CatLampTalk.tscn" type="PackedScene" id=19]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -205,6 +206,9 @@ position = Vector2( 1768, 255 )
 [node name="CellphoneClickable2" parent="Interactables" index="5" instance=ExtResource( 18 )]
 position = Vector2( 628, 267 )
 
+[node name="CatLampTalk" parent="Interactables" index="6" instance=ExtResource( 19 )]
+position = Vector2( 909, 244 )
+
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 1913, 238 )
 
@@ -218,6 +222,9 @@ position = Vector2( 1527, 108 )
 position = Vector2( 1784, 93 )
 rotation = -0.376991
 scale = Vector2( 0.924, 0.924 )
+
+[node name="Sleep_Gremlin" parent="Difficulty2" index="3" instance=ExtResource( 8 )]
+position = Vector2( 1411, 347 )
 
 [node name="Sleep_Gremlin" parent="Difficulty3" index="0" instance=ExtResource( 8 )]
 position = Vector2( 1222, 231 )

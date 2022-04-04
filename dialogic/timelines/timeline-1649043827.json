@@ -62,11 +62,7 @@
 			"character": "character-1648910671.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "If you ever listened to me, you would have done the right thing.\nGo to sleep, Aggy. I promise we'll use all of the parts."
-		},
-		{
-			"event_id": "dialogic_022",
-			"transition_duration": 0.5
+			"text": "If you ever listened to me, you would have done the right thing.\nGo to sleep, Aggy. I promise it'll be better in the end."
 		},
 		{
 			"call_node": {
@@ -97,6 +93,10 @@
 				"target_node_path": "/root/Settings"
 			},
 			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
 		}
 	],
 	"metadata": {

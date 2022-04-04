@@ -26,7 +26,7 @@ var score = 0
 
 var gameOver = false
 var gameStarted = false
-
+var firstCat = false
 
 func _ready():
 	load_settings()
@@ -55,6 +55,7 @@ func new_game():
 	roomsExplored = 0
 	gameOver = false
 	gameStarted = false
+	firstCat = false
 	var dialog = Dialogic.start('Opening')
 	add_child(dialog)
 

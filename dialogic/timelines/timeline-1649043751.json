@@ -65,10 +65,6 @@
 			"text": "Is that what you think is going on here?\nNo Aggy, every single horrible thing you've ever experienced has been at your own hands.\nYou simply do not deserve to be happy."
 		},
 		{
-			"event_id": "dialogic_022",
-			"transition_duration": 0.5
-		},
-		{
 			"call_node": {
 				"arguments": [
 					"-50"
@@ -97,6 +93,10 @@
 				"target_node_path": "/root/Settings"
 			},
 			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
 		}
 	],
 	"metadata": {
