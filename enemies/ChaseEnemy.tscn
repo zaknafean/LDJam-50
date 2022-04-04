@@ -13,7 +13,7 @@
 extents = Vector2( 49, 31.5 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 68.5, 44 )
+extents = Vector2( 73, 59 )
 
 [sub_resource type="Animation" id=9]
 length = 0.001
@@ -379,7 +379,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" parent="Hit_Box" index="0"]
-position = Vector2( -4.5, 28 )
+position = Vector2( 0, 13 )
 shape = SubResource( 6 )
 
 [node name="EatTimer" type="Timer" parent="."]

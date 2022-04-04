@@ -143,8 +143,9 @@ func process_event(event : Interactable) -> bool:
 func _process(_delta):
 	statLabel.text = str('Room: ', name, '\n', 'Alert: ', Settings.alertnessValue, '\n', 'Sanity: ', Settings.sanityValue, '\n', 'Score: ', Settings.score, '\n', 'State: ', Settings.curGameState, '\n', 'Rooms: ', Settings.roomsExplored, '\n', 'Difficulty: ', Settings.difficulty);
 	
-	if Settings.sanityValue <= 0 or Settings.alertnessValue <= 0:
-		SignalMngr.emit_signal("level_won")
+	#if (!Settings.sanityValue <= 0 or Settings.alertnessValue <= 0) and Settings.gameOver == false:
+	#	Settings.gameOver = true
+	#	SignalMngr.emit_signal("level_won")
 
 
 func _unhandled_input(event):
@@ -153,7 +154,11 @@ func _unhandled_input(event):
 		
 	if event.is_echo():
 		return
-		
+	
+	if event.is_action_pressed("game_pause") and Settings.curGameState != Settings.GAME_STATES.MENU:
+		SignalMngr.emit_signal("game_paused", true)
+		return
+	
 	if event.is_action_pressed("ui_secondaryclick"):
 		toggleHighlightAll()
 		return

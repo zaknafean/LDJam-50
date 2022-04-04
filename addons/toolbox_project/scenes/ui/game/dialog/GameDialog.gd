@@ -51,6 +51,7 @@ func _on_level_started(level):
 	__hide()
 	
 func _on_open():
+	Settings.curGameState = Settings.GAME_STATES.MENU
 	__show()
 		
 func _on_open_or_close(open):
@@ -74,6 +75,8 @@ func __show(show=true):
 		get_tree().paused = is_open
 		
 	if show:
+		if has_node("EyeClose/AnimationPlayer"):
+			$EyeClose/AnimationPlayer.play("rest")
 		for btn in root_btns.get_children():
 			if btn is Button and btn.visible:
 				btn.grab_focus()
@@ -81,6 +84,9 @@ func __show(show=true):
 
 func __hide():
 	__show(false)
+	Settings.curGameState = Settings.GAME_STATES.PLAY
+	if has_node("EyeClose/AnimationPlayer"):
+			$EyeClose/AnimationPlayer.play("RESET")
 
 #############################################################
 # BUTTON HANDLERS
