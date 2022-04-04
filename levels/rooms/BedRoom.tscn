@@ -25,6 +25,7 @@
 [ext_resource path="res://levels/interactables/clickable/CellphoneClickable.tscn" type="PackedScene" id=23]
 [ext_resource path="res://levels/CatLampTalk.tscn" type="PackedScene" id=24]
 
+
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
 shader = ExtResource( 8 )
@@ -251,23 +252,23 @@ position = Vector2( 1080, 199 )
 position = Vector2( 419, 169 )
 
 [node name="Lamp" parent="Difficulty2" index="0" instance=ExtResource( 10 )]
-position = Vector2( 334, 296 )
+position = Vector2( 848, 40 )
 
-[node name="Lamp2" parent="Difficulty2" index="1" instance=ExtResource( 10 )]
-position = Vector2( 765, 90 )
-
-[node name="CellphoneClickable" parent="Difficulty2" index="2" instance=ExtResource( 23 )]
+[node name="CellphoneClickable" parent="Difficulty2" index="1" instance=ExtResource( 23 )]
 position = Vector2( 395, -15 )
 
-[node name="SleepyGraffiti" parent="Difficulty2" index="3" instance=ExtResource( 22 )]
+[node name="SleepyGraffiti" parent="Difficulty2" index="2" instance=ExtResource( 22 )]
 position = Vector2( -8, 71 )
 scale = Vector2( -1, -1 )
 
+[node name="Sleep_Gremlin" parent="Difficulty2" index="3" instance=ExtResource( 24 )]
+position = Vector2( 384, 340 )
+
 [node name="ImAStove" parent="Difficulty3" index="0" instance=ExtResource( 11 )]
-position = Vector2( 278, 148 )
+position = Vector2( 935, 340 )
 
 [node name="Lamp" parent="Difficulty3" index="1" instance=ExtResource( 10 )]
-position = Vector2( 1103, 303 )
+position = Vector2( 357, 120 )
 
 [node name="PeekingRug" parent="." index="8" instance=ExtResource( 18 )]
 position = Vector2( 530, 94 )
