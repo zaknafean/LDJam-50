@@ -43,7 +43,7 @@ func _on_SubmitScoreButton_pressed():
 	var position = SilentWolf.Scores.position
 	var newMessage = str("[center][color=red]Sorry unknown error has occured![/color][/center]")
 	if position > 0:
-		newMessage = str("[center][color=green]Score recieved successfully\nYour rank would be ",position,"![/color][/center]")
+		newMessage = str("[center][color=green]Score recieved successfully\nEstimated position ",position,"![/color][/center]")
 	message.visible = true
 	message.bbcode_text = newMessage
 	Settings.lastScoreUpdate = 0

@@ -201,37 +201,29 @@ position = Vector2( 1021, -331 )
 difficulty = 3
 DIALOG = "RandomRoom"
 
-[node name="CoffeeClickable" parent="Interactables" index="4" groups=["interactables"] instance=ExtResource( 3 )]
+[node name="CoffeeClickable" parent="Interactables" index="4" instance=ExtResource( 3 )]
 position = Vector2( -199, 208 )
 
-[node name="TelevisionClickable2" parent="Interactables" index="5" groups=["interactables"] instance=ExtResource( 11 )]
+[node name="TelevisionClickable2" parent="Interactables" index="5" instance=ExtResource( 11 )]
 position = Vector2( 590, 1 )
 
-[node name="FloorLampClickable" parent="Interactables" index="6" groups=["interactables"] instance=ExtResource( 12 )]
+[node name="FloorLampClickable" parent="Interactables" index="6" instance=ExtResource( 12 )]
 position = Vector2( 1163, 367 )
 
-[node name="CoffeeTableClickable" parent="Interactables" index="7" groups=["interactables"] instance=ExtResource( 13 )]
+[node name="CoffeeTableClickable" parent="Interactables" index="7" instance=ExtResource( 13 )]
 position = Vector2( 685, 86 )
 
-[node name="CellphoneClickable" parent="Interactables" index="8" groups=["interactables"] instance=ExtResource( 14 )]
+[node name="CellphoneClickable" parent="Interactables" index="8" instance=ExtResource( 14 )]
 position = Vector2( 809, 329 )
-collision_layer = 3
-collision_mask = 3
 
-[node name="CellphoneClickable2" parent="Interactables" index="9" groups=["interactables"] instance=ExtResource( 14 )]
+[node name="CellphoneClickable2" parent="Interactables" index="9" instance=ExtResource( 14 )]
 position = Vector2( 698, 44 )
-collision_layer = 3
-collision_mask = 3
 
-[node name="CellphoneClickable3" parent="Interactables" index="10" groups=["interactables"] instance=ExtResource( 14 )]
+[node name="CellphoneClickable3" parent="Interactables" index="10" instance=ExtResource( 14 )]
 position = Vector2( 63, 297 )
-collision_layer = 3
-collision_mask = 3
 
-[node name="CatLampTalk" parent="Interactables" index="11" groups=["interactables"] instance=ExtResource( 24 )]
+[node name="CatLampTalk" parent="Interactables" index="11" instance=ExtResource( 24 )]
 position = Vector2( 634, 220 )
-collision_layer = 3
-collision_mask = 3
 
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 670, 337 )
