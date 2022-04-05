@@ -224,7 +224,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="LudumDare50"
+config/name="Somnipathy"
 run/main_scene="res://screens/ScreenSplash.tscn"
 config/icon="res://aggy_icon.png"
 
