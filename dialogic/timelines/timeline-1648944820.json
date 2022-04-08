@@ -54,7 +54,7 @@
 				"arguments": [
 					"25"
 				],
-				"method_name": "adjust_sanity",
+				"method_name": "adjust_alertness",
 				"target_node_path": "/root/Settings"
 			},
 			"event_id": "dialogic_042"

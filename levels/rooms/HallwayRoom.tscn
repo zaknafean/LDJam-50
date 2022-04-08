@@ -71,21 +71,21 @@ tile_data = PoolIntArray( 5, 54, 0, 6, 46, 0, 65541, 55, 0, 65542, 47, 0, 65543,
 position = Vector2( 1679, 297 )
 
 [node name="DoorNorthClickable" parent="Interactables" index="0" instance=ExtResource( 5 )]
-position = Vector2( 1062, 112 )
+position = Vector2( 1210, 191 )
 canHighlight = true
 canClick = true
 
 [node name="Sprite" parent="Interactables/DoorNorthClickable" index="0"]
 material = SubResource( 3 )
-position = Vector2( 160, 12 )
+position = Vector2( 4, -62 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" parent="Interactables/DoorNorthClickable" index="1"]
-position = Vector2( 159, 11 )
+position = Vector2( 3, -63 )
 shape = SubResource( 4 )
 
 [node name="InteractionPosition" parent="Interactables/DoorNorthClickable" index="2"]
-position = Vector2( 164, 103 )
+position = Vector2( 5, 9 )
 
 [node name="DialogEvent" parent="Interactables/DoorNorthClickable/EventQueue" index="0" instance=ExtResource( 6 )]
 difficulty = 1

@@ -301,7 +301,6 @@ position = Vector2( 76, 2 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Label" type="Label" parent="."]
-visible = false
 margin_left = -55.0
 margin_top = -184.0
 margin_right = 55.0

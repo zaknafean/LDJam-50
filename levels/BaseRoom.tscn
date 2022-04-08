@@ -59,18 +59,19 @@ tile_set = ExtResource( 2 )
 format = 1
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 289, 342 )
-SPEED = 75
+position = Vector2( 164, 311 )
+SPEED = 85
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( 3, -44 )
 current = true
 zoom = Vector2( 0.75, 0.75 )
+smoothing_enabled = true
 
 [node name="Floating_Text_Manager" parent="Player" instance=ExtResource( 4 )]
 position = Vector2( -3, -151 )
 
-[node name="Interactables" type="Node2D" parent="."]
+[node name="Interactables" type="YSort" parent="."]
 
 [node name="Line2D" type="Line2D" parent="."]
 width = 2.0

@@ -13,8 +13,8 @@
 size = 50
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=1]
-size = 30
+[sub_resource type="DynamicFont" id=3]
+size = 32
 font_data = ExtResource( 8 )
 
 [node name="ScreenMainMenu" instance=ExtResource( 1 )]
@@ -36,46 +36,226 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="ScrollContainer" parent="MenuLayer/UIBox/VBoxContainer" index="0"]
+[node name="Label" type="Label" parent="MenuLayer/UIBox/VBoxContainer" index="0"]
+margin_right = 840.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 2 )
+text = "Created by  the Tearcell studios"
+align = 1
+
+[node name="Panel" type="ScrollContainer" parent="MenuLayer/UIBox/VBoxContainer" index="1"]
+margin_top = 67.0
 margin_right = 840.0
 margin_bottom = 517.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MenuLayer/UIBox/VBoxContainer/Panel" index="0"]
-margin_right = 750.0
-margin_bottom = 679.0
+margin_right = 824.0
+margin_bottom = 446.0
 rect_min_size = Vector2( 750, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="MenuLayer/UIBox/VBoxContainer/Panel/VBoxContainer" index="0"]
-margin_right = 750.0
-margin_bottom = 51.0
-custom_fonts/font = SubResource( 2 )
-text = "Created by  the Tearcell studios"
-align = 1
-
-[node name="Label2" type="Label" parent="MenuLayer/UIBox/VBoxContainer/Panel/VBoxContainer" index="1"]
-margin_top = 67.0
-margin_right = 750.0
-margin_bottom = 679.0
+[node name="Credits" type="RichTextLabel" parent="MenuLayer/UIBox/VBoxContainer/Panel/VBoxContainer" index="0"]
+margin_right = 824.0
+margin_bottom = 446.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 7 )
-custom_fonts/font = SubResource( 1 )
-text = "Meet the Team (scroll for more):
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+bbcode_text = "[center][u]Darius de Jesús[/u][/center]
+Lead Coding
+Team Leader and Founder
+Sound Design
+Project Management
+[url=\"https://tearcell.com\"]Website[/url]
+[url=\"https://tearcell.com\"]Itch.io Page[/url]
 
-The Tearcell Founder, Primary Gameplay Designer, and Lead Programmer: Darius DeJesus (tearcell.com)
-Programers: PickyBurrito49, HighVoltageCatfish (@HVCPHD), and Pnutbutterprincess
-Visual Art Design and Composition: Minkies @VixenMink, Ryan (Ryan@scorchedmountaingames@gmail.com), and Pnutbutterprincess
-UI/UX Design: Babs
-Writing Team: MTBVibe & HighVoltageCatfish (@HVCPHD)
-Sound Design: MTBVibe
-For Additional Attributions, please vist the game page on Itch.io!"
-align = 1
-valign = 1
-autowrap = true
+[center][u]Pickyburrito49[/u][/center]
+Additional Coding, 
+Community Relations
+[url=\"pickyburrito49.itch.io\"]Itch.io Page[/url]
 
-[node name="BtnBack" parent="MenuLayer/UIBox/VBoxContainer" index="1" instance=ExtResource( 5 )]
+[center][u]Whiskeybadger[/u][/center]
+Character Design, 
+Visual Design, 
+Art Direction, 
+Art Assets, 
+Animation
+Email - Ryan@scorchedmountaingames@gmail.com
+
+[center][u]Minkies[/u][/center]
+Visual Design, 
+Art Assets, 
+Animation, 
+Community Relations
+@VixenMink
+[url=\"https://www.instagram.com/vixenmink/\"]Instagram[/url]
+[url=\"https://vixenmink.wordpress.com/vm_portfolio/\"]Website[/url]
+
+[center][u]Pnutbutterprincess[/u][/center]
+Additional Coding, 
+Additional Art Assets
+
+[center][u]HighVoltageCatfish[/u][/center]
+Level Design, 
+Writing, 
+Godot Key Animation, 
+Data Repository Manager
+[url=\"https://psyenproject.com/\"]Website[/url]
+Twitter - @HVCPHD
+
+[center][u]MTBVibe[/u][/center]
+Sound Design, 
+Writing,
+Data Repository Manager
+[url=\"twitch.tv/mtbvibe\"]Twitch[/url]
+
+[center][u]Babs[/u][/center]
+UI/UX Design
+
+
+[u]Sound Attributions[/u]
+Somnipathy uses the following sounds from freesound under [url=\"https://creativecommons.org/licenses/by/3.0/legalcode]CC BY 3.0[/url]. These sounds may have been adapted, edited, remixed, adjusted for in-engine use, or some/all of the above
+  
+[url=\"https://freesound.org/people/columbia23/sounds/395395/]Spider Voice.wav[/url] by [url=\"https://freesound.org/people/columbia23/]columbia23[/url];
+[url=\"https://freesound.org/people/GioMilko/sounds/344690/]Atonal Electric Guitar Riff[/url] by [url=\"https://freesound.org/people/GioMilko/]GioMilko[/url];
+[url=\"https://freesound.org/people/GlennM/sounds/386530/]breathing_heavy.wav[/url] by [url=\"https://freesound.org/people/GlennM/]GlennM[/url];
+[url=\"https://freesound.org/people/kelsey_w/sounds/467042/]Crowd Laugh.wav[/url] by [url=\"https://freesound.org/people/kelsey_w/]kelsey_w[/url];
+[url=\"https://freesound.org/people/lonce/sounds/200426/]CreakyDoorFast.wav[/url] by [url=\"https://freesound.org/people/lonce/]lonce[/url];
+[url=\"https://freesound.org/people/michaelkoehler/sounds/201952/]Castanets clapping[/url] by [url=\"https://freesound.org/people/michaelkoehler/]michaelkoehler[/url];
+[url=\"https://freesound.org/people/mkoenig/sounds/78469/]Slurping Sound.wav 6066.wav[/url] by [url=\"https://freesound.org/people/mkoenig/]mkoenig[/url];
+[url=\"https://freesound.org/people/sinatra314/sounds/58454/]footsteps wooden floor loop.wav[/url] by [url=\"https://freesound.org/people/sinatra314/]sinatra314[/url];
+[url=\"https://freesound.org/people/sjturia/sounds/370914/]door_opening_creaky.wav[/url] by [url=\"https://freesound.org/people/sjturia/]sjturia[/url];
+[url=\"https://freesound.org/people/SophieMezaM/sounds/446083/]whispers.wav[/url] by [url=\"https://freesound.org/people/SophieMezaM/]SophieMezaM[/url];
+[url=\"https://freesound.org/people/test_sound/sounds/464268/]Metal Light Switch.wav[/url] by [url=\"https://freesound.org/people/test_sound/]test_sound[/url]; 
+and [url=\"https://freesound.org/people/zerolagtime/sounds/106607/]drum8.wav[/url] by [url=\"https://freesound.org/people/zerolagtime/]zerolagtime[/url]
+  
+Somnipathy uses the following sounds from freesound under [url=\"https://creativecommons.org/licenses/by-nc/3.0/legalcode]CC BY-NC 3.0[/url]. These sounds may have been adapted, edited, remixed, adjusted for in-engine use, or some/all of the above
+[url=\"https://freesound.org/people/Joao_Janz/sounds/485213/]Wood Surface Hit 1_4[/url] by [url=\"https://freesound.org/people/Joao_Janz/]Joao_Janz[/url];
+[url=\"https://freesound.org/people/Mega-X-stream/sounds/546278/]Futuristic Woosh sound[/url] by [url=\"https://freesound.org/people/Mega-X-stream/]Mega-X-stream[/url]; 
+and [url=\"https://freesound.org/people/zagi2/sounds/505293/]Incubus.wav[/url] by [url=\"https://freesound.org/people/zagi2/]zagi2[/url].
+  
+Somnipathy also uses a number of other sounds accessed via freesound that are available under [url=\"https://creativecommons.org/publicdomain/zero/1.0/legalcode]CC0[/url]. Please visit [url=\"https://freesound.org/]freesound[/url] to learn more about how awesome a resource it is for projects like this one. Those sounds also may have been adapted, edited, remixed, or adjusted for in-engine use, or some/all of the above.
+
+The following fonts were used within Somnipathy
+[u]Rubik Glitch[/u]
+Copyright 2020 The Rubik Filtered Project Authors (https://https://github.com/NaN-xyz/Rubik-Filtered)
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+
+[u]Love ya like a sister[/u]
+Copyright (c) 2010, Kimberly Geswein (kimberlygeswein.com)
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+
+[u]Sofija[/u]
+Sofija is licensed under the 1001Fonts Free For Commercial Use License (FFC)
+
+
+Somnipathy was programmed in the Godot engine and used the following plugins
+[url=\"https://github.com/MakovWait/improved_resource_picker\"]Improved Resource[/url] Picker by MakovWait
+[url=\"https://github.com/3ddelano/godot-editor-discord-presence\"]Godot Editor Presence[/url] by 3ddelano
+[url=\"https://github.com/coppolaemilio/dialogic\"]Dialogic[/url] by Emillio Coppola
+[url=\"https://github.com/AnJ95/godot-toolbox-project\"]The Godot Toolbox Project[/url] by AnJ95
+[url=\"https://silentwolf.com/\"]SilentWolf Backend Services[/url]"
+text = "Darius de Jesús
+Lead Coding
+Team Leader and Founder
+Sound Design
+Project Management
+Website
+Itch.io Page
+
+Pickyburrito49
+Additional Coding, 
+Community Relations
+Itch.io Page
+
+Whiskeybadger
+Character Design, 
+Visual Design, 
+Art Direction, 
+Art Assets, 
+Animation
+Email - Ryan@scorchedmountaingames@gmail.com
+
+Minkies
+Visual Design, 
+Art Assets, 
+Animation, 
+Community Relations
+@VixenMink
+Instagram
+Website
+
+Pnutbutterprincess
+Additional Coding, 
+Additional Art Assets
+
+HighVoltageCatfish
+Level Design, 
+Writing, 
+Godot Key Animation, 
+Data Repository Manager
+Website
+Twitter - @HVCPHD
+
+MTBVibe
+Sound Design, 
+Writing,
+Data Repository Manager
+Twitch
+
+Babs
+UI/UX Design
+
+
+Sound Attributions
+Somnipathy uses the following sounds from freesound under CC BY 3.0. These sounds may have been adapted, edited, remixed, adjusted for in-engine use, or some/all of the above
+  
+Spider Voice.wav by columbia23;
+Atonal Electric Guitar Riff by GioMilko;
+breathing_heavy.wav by GlennM;
+Crowd Laugh.wav by kelsey_w;
+CreakyDoorFast.wav by lonce;
+Castanets clapping by michaelkoehler;
+Slurping Sound.wav 6066.wav by mkoenig;
+footsteps wooden floor loop.wav by sinatra314;
+door_opening_creaky.wav by sjturia;
+whispers.wav by SophieMezaM;
+Metal Light Switch.wav by test_sound; 
+and drum8.wav by zerolagtime
+  
+Somnipathy uses the following sounds from freesound under CC BY-NC 3.0. These sounds may have been adapted, edited, remixed, adjusted for in-engine use, or some/all of the above
+Wood Surface Hit 1_4 by Joao_Janz;
+Futuristic Woosh sound by Mega-X-stream; 
+and Incubus.wav by zagi2.
+  
+Somnipathy also uses a number of other sounds accessed via freesound that are available under CC0. Please visit freesound to learn more about how awesome a resource it is for projects like this one. Those sounds also may have been adapted, edited, remixed, or adjusted for in-engine use, or some/all of the above.
+
+The following fonts were used within Somnipathy
+Rubik Glitch
+Copyright 2020 The Rubik Filtered Project Authors (https://https://github.com/NaN-xyz/Rubik-Filtered)
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+
+Love ya like a sister
+Copyright (c) 2010, Kimberly Geswein (kimberlygeswein.com)
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+
+Sofija
+Sofija is licensed under the 1001Fonts Free For Commercial Use License (FFC)
+
+
+Somnipathy was programmed in the Godot engine and used the following plugins
+Improved Resource Picker by MakovWait
+Godot Editor Presence by 3ddelano
+Dialogic by Emillio Coppola
+The Godot Toolbox Project by AnJ95
+SilentWolf Backend Services"
+
+[node name="BtnBack" parent="MenuLayer/UIBox/VBoxContainer" index="2" instance=ExtResource( 5 )]
 margin_top = 533.0
 margin_right = 840.0
 margin_bottom = 560.0
@@ -84,3 +264,5 @@ pushes_screen = false
 screen_to_push_in_config = ""
 pops_screen = true
 grabs_focus = true
+
+[connection signal="meta_clicked" from="MenuLayer/UIBox/VBoxContainer/Panel/VBoxContainer/Credits" to="." method="_on_Credits_meta_clicked"]

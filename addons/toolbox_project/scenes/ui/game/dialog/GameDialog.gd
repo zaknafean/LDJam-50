@@ -77,10 +77,15 @@ func __show(show=true):
 	if show:
 		if has_node("EyeClose/AnimationPlayer"):
 			$EyeClose/AnimationPlayer.play("rest")
-		for btn in root_btns.get_children():
-			if btn is Button and btn.visible:
-				btn.grab_focus()
-				break
+		if Settings.sanityValue <= 0:
+			$CenterContainer/Popup/VBoxContainer/GameOverLabel.text = "Your sanity hit 0, but..."
+		else:
+			$CenterContainer/Popup/VBoxContainer/GameOverLabel.text = "Your alertness hit 0, but..."
+		
+		#for btn in root_btns.get_children():
+		#	if btn is Button and btn.visible:
+		#		btn.grab_focus()
+		#		break
 
 func __hide():
 	__show(false)
@@ -123,4 +128,5 @@ func _on_BtnSettings_pressed():
 	ScreenMngr.push_screen(C.SCREEN_OPTIONS_MENU)
 
 func _on_BtnScore_pressed():
+	SoundMngr.play_ui_sound(C.UI_SELECT)
 	$SubmitScorePanel.popup()

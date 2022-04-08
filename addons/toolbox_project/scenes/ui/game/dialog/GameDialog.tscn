@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://addons/toolbox_project/assets/theme.tres" type="Theme" id=1]
 [ext_resource path="res://addons/toolbox_project/scenes/ui/components/LabelBig.tscn" type="PackedScene" id=2]
 [ext_resource path="res://addons/toolbox_project/scenes/ui/game/dialog/GameDialog.gd" type="Script" id=3]
 [ext_resource path="res://screens/SubmitScorePanel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/fonts/sofija.regular.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+outline_size = 1
+outline_color = Color( 0.0666667, 0.364706, 0.509804, 1 )
+font_data = ExtResource( 5 )
 
 [node name="GameDialog" type="CanvasLayer"]
 pause_mode = 2
@@ -46,6 +53,13 @@ size_flags_vertical = 4
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="GameOverLabel" type="Label" parent="CenterContainer/Popup/VBoxContainer"]
+visible = false
+margin_right = 40.0
+margin_bottom = 46.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
 
 [node name="LabelBig" parent="CenterContainer/Popup/VBoxContainer" instance=ExtResource( 2 )]
 anchor_right = 0.0
@@ -98,7 +112,6 @@ text = "Quit game"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="SubmitScorePanel" parent="." instance=ExtResource( 4 )]
-visible = false
 
 [connection signal="pressed" from="InvisibleWall" to="." method="_on_InvisibleWall_pressed"]
 [connection signal="pressed" from="CenterContainer/Popup/VBoxContainer/BtnResume" to="." method="_on_BtnResume_pressed"]

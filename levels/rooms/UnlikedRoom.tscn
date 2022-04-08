@@ -195,9 +195,13 @@ position = Vector2( 30, 33 )
 difficulty = 1
 DIALOG = "LivingRoomEast"
 
-[node name="DialogEvent2" parent="Interactables/DoorWestClickable/EventQueue" index="1" instance=ExtResource( 7 )]
+[node name="DialogEvent3" parent="Interactables/DoorWestClickable/EventQueue" index="1" instance=ExtResource( 7 )]
 difficulty = 2
 DIALOG = "Unopenable"
+
+[node name="DialogEvent2" parent="Interactables/DoorWestClickable/EventQueue" index="2" instance=ExtResource( 7 )]
+difficulty = 3
+DIALOG = "RandomRoom"
 
 [node name="CaffeinePillsClickable" parent="Interactables" index="4" instance=ExtResource( 17 )]
 position = Vector2( 2332, 1284 )
