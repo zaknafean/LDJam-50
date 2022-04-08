@@ -215,8 +215,10 @@ position = Vector2( 933, 42 )
 position = Vector2( 733, 84 )
 
 [node name="CellphoneClickable" parent="Interactables" index="8" instance=ExtResource( 24 )]
+
 position = Vector2( 979, 72 )
 z_index = 1
+
 
 [node name="CellphoneClickable2" parent="Interactables" index="9" instance=ExtResource( 24 )]
 position = Vector2( 820, 226 )
