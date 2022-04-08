@@ -248,20 +248,20 @@ position = Vector2( 1316, 219 )
 [node name="CatLampTalk" parent="Interactables" index="13" instance=ExtResource( 24 )]
 position = Vector2( 1080, 199 )
 
+[node name="CellphoneClickable3" parent="Interactables" index="14" instance=ExtResource( 23 )]
+position = Vector2( 270, 72 )
+
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 419, 169 )
 
 [node name="Lamp" parent="Difficulty2" index="0" instance=ExtResource( 10 )]
 position = Vector2( 848, 40 )
 
-[node name="CellphoneClickable" parent="Difficulty2" index="1" instance=ExtResource( 23 )]
-position = Vector2( 395, -15 )
-
-[node name="SleepyGraffiti" parent="Difficulty2" index="2" instance=ExtResource( 22 )]
+[node name="SleepyGraffiti" parent="Difficulty2" index="1" instance=ExtResource( 22 )]
 position = Vector2( -8, 71 )
 scale = Vector2( -1, -1 )
 
-[node name="Sleep_Gremlin" parent="Difficulty2" index="3" instance=ExtResource( 25 )]
+[node name="Sleep_Gremlin" parent="Difficulty2" index="2" instance=ExtResource( 25 )]
 position = Vector2( 412, 372 )
 
 [node name="ImAStove" parent="Difficulty3" index="0" instance=ExtResource( 11 )]

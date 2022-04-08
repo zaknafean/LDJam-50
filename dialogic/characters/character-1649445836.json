@@ -1,0 +1,21 @@
+{
+	"color": "#ff0f4ea7",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1649445836.json",
+	"mirror_portraits": false,
+	"name": "We love '1 man, 6 bullets'",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -175,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://assets/shoutouts/1Man6BulletsChar.png"
+		}
+	],
+	"scale": 75,
+	"theme": ""
+}

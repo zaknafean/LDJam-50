@@ -208,7 +208,7 @@ position = Vector2( 590, 1 )
 position = Vector2( 1156, 431 )
 
 [node name="FloorLampClickable2" parent="Interactables" index="7" instance=ExtResource( 12 )]
-position = Vector2( 727, 558 )
+position = Vector2( 690, 522 )
 
 [node name="CoffeeTableClickable" parent="Interactables" index="8" instance=ExtResource( 13 )]
 position = Vector2( 685, 86 )

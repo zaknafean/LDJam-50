@@ -61,6 +61,16 @@
 			"text": "The window scrapes open."
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"15"
+				],
+				"method_name": "adjust_alertness",
+				"target_node_path": "/root/Settings"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"event_id": "dialogic_022",
 			"transition_duration": 0.5
 		},
