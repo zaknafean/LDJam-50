@@ -70,7 +70,7 @@
 			"volume": 0
 		},
 		{
-			"character": "",
+			"character": "character-1649448009.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Reddit post commented!"

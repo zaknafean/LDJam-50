@@ -215,7 +215,10 @@ position = Vector2( 933, 42 )
 position = Vector2( 733, 84 )
 
 [node name="CellphoneClickable" parent="Interactables" index="8" instance=ExtResource( 24 )]
-position = Vector2( 805, 39 )
+
+position = Vector2( 979, 72 )
+z_index = 1
+
 
 [node name="CellphoneClickable2" parent="Interactables" index="9" instance=ExtResource( 24 )]
 position = Vector2( 820, 226 )
@@ -236,7 +239,8 @@ position = Vector2( 805, 172 )
 position = Vector2( 631, 246 )
 
 [node name="Sleep_Gremlin" parent="Difficulty3" index="0" instance=ExtResource( 8 )]
-position = Vector2( 625, 158 )
+position = Vector2( 595, 128 )
+z_index = 1
 
 [node name="ImAStove" parent="Difficulty3" index="1" instance=ExtResource( 10 )]
 position = Vector2( 998, 331 )

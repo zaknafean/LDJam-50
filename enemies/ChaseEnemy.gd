@@ -55,7 +55,7 @@ func _process(delta):
 			curSpeed = SPEED + (Settings.roomsExplored * 3) + speedBonus
 		VELOCITY = (playerRef.position - position).normalized() * curSpeed
 		var _collision = move_and_slide(VELOCITY)
-		if position.distance_to(playerRef.position) < 25:
+		if position.distance_to(playerRef.position) < 55:
 			_on_EatTimer_timeout()
 		var walk_dir = VELOCITY.normalized()
 		

@@ -70,15 +70,57 @@
 			"volume": 0
 		},
 		{
-			"character": "character-1649448009.json",
+			"animation": "back_in_down.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1649445836.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "pulse.gd",
+			"animation_length": 0.5,
+			"animation_repeat": 10,
+			"change_mirror_portrait": false,
+			"change_position": false,
+			"change_z_index": false,
+			"character": "character-1649445836.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "(Don't change)",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 2,
+			"z_index": 0
+		},
+		{
+			"character": "character-1649445836.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Photo liked!"
+			"text": "Played a Ludum Dare 50 game... Reached the bottom of the new [color=red]1 man, 6 bullets[/color] leaderboard..."
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1649077508.json",
-		"name": "random-work-4"
+		"file": "timeline-1649444043.json",
+		"name": "random-work-8"
 	}
 }
