@@ -89,21 +89,21 @@ tile_data = PoolIntArray( -196609, 68, 0, 786657, 68, 0 )
 position = Vector2( 876, 239 )
 
 [node name="DoorNorthClickable" parent="Interactables" index="0" instance=ExtResource( 6 )]
-position = Vector2( 339, -18 )
+position = Vector2( 518, 57 )
 canHighlight = true
 canClick = true
 
 [node name="Sprite" parent="Interactables/DoorNorthClickable" index="0"]
 material = SubResource( 3 )
-position = Vector2( 160, 12 )
+position = Vector2( -4, -58 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" parent="Interactables/DoorNorthClickable" index="1"]
-position = Vector2( 161, 19 )
+position = Vector2( -4, -59 )
 shape = SubResource( 4 )
 
 [node name="InteractionPosition" parent="Interactables/DoorNorthClickable" index="2"]
-position = Vector2( 164, 103 )
+position = Vector2( 9, 18 )
 
 [node name="DialogEvent" parent="Interactables/DoorNorthClickable/EventQueue" index="0" instance=ExtResource( 7 )]
 difficulty = 1
@@ -118,22 +118,22 @@ difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="DoorEastClickable" parent="Interactables" index="1" instance=ExtResource( 6 )]
-position = Vector2( 512, -94 )
+position = Vector2( 988, 82 )
 canHighlight = true
 canClick = true
 
 [node name="Sprite" parent="Interactables/DoorEastClickable" index="0"]
 material = SubResource( 5 )
-position = Vector2( 476, 124 )
+position = Vector2( 4, -51 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" parent="Interactables/DoorEastClickable" index="1"]
-position = Vector2( 475.25, 120.313 )
+position = Vector2( 3, -57 )
 shape = SubResource( 6 )
 
 [node name="InteractionPosition" parent="Interactables/DoorEastClickable" index="2"]
-position = Vector2( 443, 193 )
+position = Vector2( -22, 18 )
 
 [node name="EventQueue" parent="Interactables/DoorEastClickable" index="3"]
 position = Vector2( 453, 10 )
@@ -218,7 +218,7 @@ difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="BedClickable" parent="Interactables" index="4" instance=ExtResource( 5 )]
-position = Vector2( 1042, -74 )
+position = Vector2( 1168, 230 )
 
 [node name="LightSwitchClickable" parent="Interactables" index="5" instance=ExtResource( 14 )]
 position = Vector2( 873, 6 )
@@ -272,8 +272,6 @@ position = Vector2( 357, 120 )
 
 [node name="PeekingRug" parent="." index="8" instance=ExtResource( 18 )]
 position = Vector2( 530, 94 )
-scale = Vector2( 0.75, 0.75 )
-z_index = 1
 
 [node name="FishPoster" parent="." index="9" instance=ExtResource( 16 )]
 position = Vector2( 707, -28 )

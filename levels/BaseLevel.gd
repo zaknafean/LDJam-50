@@ -26,6 +26,7 @@ export (bool) var freezeInput = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Settings.curGameState = Settings.GAME_STATES.LOADING
 	var clickables = $Interactables.get_children()
 	var _err = player.connect("arrived", self, '_on_player_arrived')
 	
@@ -41,8 +42,6 @@ func _ready():
 		var bgValue = .6 - Settings.difficulty / 10.0
 		child.modulate = Color(rValue, bgValue, bgValue, child.modulate.a)
 	
-	Settings.curGameState = Settings.GAME_STATES.PLAY
-	
 	if Settings.difficulty == 1:
 		bgSprite.texture = load('res://assets/bg01.png')
 		$Difficulty2.queue_free()
@@ -52,6 +51,8 @@ func _ready():
 		$Difficulty3.queue_free()
 	elif Settings.difficulty == 3:
 		bgSprite.texture = load('res://assets/bg03.png')
+		
+	Settings.curGameState = Settings.GAME_STATES.PLAY
 
 
 func _set_spawns(directionFrom: String, delay=2):
@@ -72,7 +73,10 @@ func _set_spawns(directionFrom: String, delay=2):
 		enemy.activate(delay)
 
 
+
 func _on_Area2D_mouse_entered(clickable):
+	if clickable == null:
+		return
 	if clickable != currentEvent:
 		_on_Area2D_mouse_exited(currentEvent)
 	if clickable.canClick:
@@ -138,6 +142,8 @@ func _on_player_arrived():
 
 func process_event(event : Interactable) -> bool: 
 	var eventResult = false
+	if event == null:
+		return eventResult
 	
 	if player.global_position.distance_to(event.interactionPosition) < gapMargin or event.reroute_after_dialog:
 		event.runEvent()
@@ -157,6 +163,7 @@ func _process(_delta):
 		Settings.curGameState = Settings.GAME_STATES.MENU
 		SignalMngr.emit_signal("level_won")
 
+
 func _unhandled_input(event):
 	if freezeInput or Settings.curGameState != Settings.GAME_STATES.PLAY:
 		return
@@ -173,8 +180,10 @@ func _unhandled_input(event):
 		return
 	
 	if event.is_action_pressed("ui_primaryclick"):
+		# First click of a new game has to start a bunch of stuff
 		if Settings.gameStarted == false:
 			Settings.gameStarted = true
+			enemy.global_position = Vector2(203, 223)
 			enemy.activate(3)
 			
 		if currentEvent != null:

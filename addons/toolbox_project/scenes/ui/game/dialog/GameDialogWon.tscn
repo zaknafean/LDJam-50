@@ -65,7 +65,7 @@ signal_to_open_to = "level_won"
 
 [node name="EyeClose" type="Sprite" parent="." index="0"]
 visible = false
-scale = Vector2( 0.426049, 0.429164 )
+scale = Vector2( 0.45, 0.429 )
 texture = ExtResource( 2 )
 centered = false
 hframes = 4
@@ -80,43 +80,45 @@ anims/rest = SubResource( 2 )
 margin_right = 495.0
 margin_bottom = 412.0
 
-[node name="LabelBig" parent="CenterContainer/Popup/VBoxContainer" index="0"]
-margin_right = 471.0
-margin_bottom = 216.0
+[node name="GameOverLabel" parent="CenterContainer/Popup/VBoxContainer" index="0"]
+visible = true
+align = 1
+
+[node name="LabelBig" parent="CenterContainer/Popup/VBoxContainer" index="1"]
 text = "You've won!
-its ok to slow down 
+Its ok to slow down 
 sometimes"
 
-[node name="BtnResume" parent="CenterContainer/Popup/VBoxContainer" index="1"]
+[node name="BtnResume" parent="CenterContainer/Popup/VBoxContainer" index="2"]
 visible = false
 
-[node name="BtnScore" parent="CenterContainer/Popup/VBoxContainer" index="2"]
+[node name="BtnScore" parent="CenterContainer/Popup/VBoxContainer" index="3"]
 margin_top = 232.0
 margin_right = 471.0
 margin_bottom = 259.0
 
-[node name="BtnRetry" parent="CenterContainer/Popup/VBoxContainer" index="3"]
+[node name="BtnRetry" parent="CenterContainer/Popup/VBoxContainer" index="4"]
 margin_top = 275.0
 margin_right = 471.0
 margin_bottom = 302.0
 
-[node name="BtnNext" parent="CenterContainer/Popup/VBoxContainer" index="4"]
+[node name="BtnNext" parent="CenterContainer/Popup/VBoxContainer" index="5"]
 visible = false
 margin_top = 129.0
 margin_right = 376.0
 margin_bottom = 156.0
 
-[node name="BtnSettings" parent="CenterContainer/Popup/VBoxContainer" index="5"]
+[node name="BtnSettings" parent="CenterContainer/Popup/VBoxContainer" index="6"]
 visible = false
 margin_top = 122.0
 margin_bottom = 171.0
 
-[node name="BtnMenu" parent="CenterContainer/Popup/VBoxContainer" index="6"]
+[node name="BtnMenu" parent="CenterContainer/Popup/VBoxContainer" index="7"]
 margin_top = 318.0
 margin_right = 471.0
 margin_bottom = 345.0
 
-[node name="BtnQuit" parent="CenterContainer/Popup/VBoxContainer" index="7"]
+[node name="BtnQuit" parent="CenterContainer/Popup/VBoxContainer" index="8"]
 margin_top = 361.0
 margin_right = 471.0
 margin_bottom = 388.0

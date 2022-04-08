@@ -51,6 +51,10 @@
 			"event_id": "dialogic_042"
 		},
 		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
 			"choice": "I'm trying NOT to sleep.",
 			"condition": "",
 			"definition": "",

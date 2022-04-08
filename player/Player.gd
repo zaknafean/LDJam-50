@@ -60,10 +60,11 @@ func _process(delta):
 		# Update the distance to walk
 		distance_to_walk -= distance_to_next_point
 	
-	if Settings.alertnessValue > 0 and path.size() == 0:
-		Settings.alertnessValue -= delta * 5
-	elif Settings.alertnessValue > 0:
-		Settings.alertnessValue -= delta * 1
+	if (Settings.curGameState == Settings.GAME_STATES.PLAY or Settings.curGameState == Settings.GAME_STATES.BATTLE) and Settings.gameStarted:
+		if Settings.alertnessValue > 0 and path.size() == 0:
+			Settings.alertnessValue -= delta * 5.5
+		elif Settings.alertnessValue > 0:
+			Settings.alertnessValue -= delta * 1.5
 
 
 func anim_switch(animation, speed = 1):

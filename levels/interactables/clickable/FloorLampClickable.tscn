@@ -21,21 +21,21 @@ canClick = true
 
 [node name="Sprite" parent="." index="0"]
 material = SubResource( 1 )
+position = Vector2( 0, -69 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 3 )
 hframes = 6
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( 2, 11 )
+position = Vector2( 1, -56 )
 shape = SubResource( 2 )
 
 [node name="InteractionPosition" parent="." index="2"]
-position = Vector2( -5, 83 )
+position = Vector2( 4, 30 )
 
 [node name="EventQueue" parent="." index="3"]
 position = Vector2( 1, -8 )
 
 [node name="DialogEvent" parent="EventQueue" index="0" instance=ExtResource( 1 )]
 position = Vector2( 1, 35 )
-difficulty = -1
 DIALOG = "Floor Lamp"

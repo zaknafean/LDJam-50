@@ -30,9 +30,9 @@
 		{
 			"call_node": {
 				"arguments": [
-					"-50"
+					"-1"
 				],
-				"method_name": "adjust_alertness",
+				"method_name": "adjust_sanity",
 				"target_node_path": "/root/Settings"
 			},
 			"event_id": "dialogic_042"
@@ -43,6 +43,16 @@
 					"50"
 				],
 				"method_name": "adjust_score",
+				"target_node_path": "/root/Settings"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"-10"
+				],
+				"method_name": "adjust_alertness",
 				"target_node_path": "/root/Settings"
 			},
 			"event_id": "dialogic_042"

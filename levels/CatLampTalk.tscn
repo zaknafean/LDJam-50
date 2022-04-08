@@ -15,7 +15,6 @@ shader_param/brightness = 1.0
 extents = Vector2( 35.5, 43.5 )
 
 [node name="CatLampTalk" instance=ExtResource( 1 )]
-z_index = 2
 script = ExtResource( 5 )
 canHighlight = true
 canClick = true
@@ -23,10 +22,15 @@ isOneShot = true
 
 [node name="Sprite" parent="." index="0"]
 material = SubResource( 2 )
+position = Vector2( 1, -44 )
 scale = Vector2( 0.05, 0.05 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 1, -43 )
 shape = SubResource( 1 )
+
+[node name="InteractionPosition" parent="." index="2"]
+position = Vector2( 0, 6 )
 
 [node name="DialogEvent" parent="EventQueue" index="0" instance=ExtResource( 4 )]

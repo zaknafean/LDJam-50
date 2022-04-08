@@ -83,6 +83,7 @@ func random_room():
 
 
 func change_room(newRoom: String, directionFrom: String, _delay=2):
+	
 	var doorLocation
 	if directionFrom == 'w':
 		doorLocation = curRoom.get_node("Interactables/DoorWestClickable").interactionPosition
@@ -125,6 +126,7 @@ func change_room(newRoom: String, directionFrom: String, _delay=2):
 	Settings.roomsExplored += 1
 	curRoomString = newRoom
 	add_child(curRoom)
+	
 	yield(get_tree(), "idle_frame")
 	curRoom._set_spawns(directionFrom, newDelay)
 

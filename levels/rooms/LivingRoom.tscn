@@ -70,21 +70,21 @@ modulate = Color( 1, 1, 1, 0.3 )
 tile_data = PoolIntArray( 65531, 47, 0, 65532, 46, 0, 131067, 20, 0, 131068, 47, 0, 131069, 46, 0, 196603, 55, 0, 196604, 20, 0, 196605, 47, 0, 196606, 46, 0, 262139, 48, 0, 262140, 20, 0, 262141, 20, 0, 262142, 47, 0, 262143, 26, 0, 196608, 26, 0, 196609, 26, 0, 196610, 45, 0, 196611, 46, 0, 327676, 48, 0, 327677, 20, 0, 327678, 20, 0, 327679, 27, 0, 262144, 34, 0, 262145, 34, 0, 262146, 33, 0, 262147, 47, 0, 262148, 46, 0, 393213, 48, 0, 393214, 20, 0, 393215, 28, 0, 327680, 19, 0, 327681, 19, 0, 327682, 32, 0, 327683, 55, 0, 327684, 47, 0, 327685, 26, 0, 327686, 26, 0, 327687, 26, 0, 327688, 26, 0, 327689, 26, 0, 327690, 26, 0, 327691, 26, 0, 327692, 26, 0, 327693, 26, 0, 327694, 26, 0, 327695, 26, 0, 327696, 26, 0, 327697, 26, 0, 327698, 26, 0, 327699, 26, 0, 327700, 45, 0, 458750, 49, 0, 458751, 29, 0, 393216, 30, 0, 393217, 30, 0, 393218, 31, 0, 393219, 55, 0, 393220, 51, 0, 393221, 27, 0, 393222, 34, 0, 393223, 34, 0, 393224, 34, 0, 393225, 34, 0, 393226, 34, 0, 393227, 34, 0, 393228, 34, 0, 393229, 34, 0, 393230, 34, 0, 393231, 34, 0, 393232, 34, 0, 393233, 34, 0, 393234, 34, 0, 393235, 34, 0, 393236, 33, 0, 458755, 48, 0, 458756, 51, 0, 458757, 28, 0, 458758, 19, 0, 458759, 19, 0, 458760, 19, 0, 458761, 19, 0, 458762, 19, 0, 458763, 19, 0, 458764, 19, 0, 458765, 19, 0, 458766, 19, 0, 458767, 19, 0, 458768, 19, 0, 458769, 19, 0, 458770, 19, 0, 458771, 19, 0, 458772, 32, 0, 524292, 49, 0, 524293, 29, 0, 524294, 30, 0, 524295, 30, 0, 524296, 30, 0, 524297, 30, 0, 524298, 30, 0, 524299, 30, 0, 524300, 30, 0, 524301, 30, 0, 524302, 30, 0, 524303, 30, 0, 524304, 30, 0, 524305, 30, 0, 524306, 30, 0, 524307, 30, 0, 524308, 31, 0 )
 
 [node name="DoorNorthClickable" parent="Interactables" index="0" instance=ExtResource( 2 )]
-position = Vector2( 313, -69 )
+position = Vector2( 468, 2 )
 canHighlight = true
 canClick = true
 
 [node name="Sprite" parent="Interactables/DoorNorthClickable" index="0"]
 material = SubResource( 3 )
-position = Vector2( 160, 12 )
+position = Vector2( 0, -66 )
 texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" parent="Interactables/DoorNorthClickable" index="1"]
-position = Vector2( 159, 11 )
+position = Vector2( -1, -68 )
 shape = SubResource( 4 )
 
 [node name="InteractionPosition" parent="Interactables/DoorNorthClickable" index="2"]
-position = Vector2( 176, 88 )
+position = Vector2( 0, 12 )
 
 [node name="DialogEvent" parent="Interactables/DoorNorthClickable/EventQueue" index="0" instance=ExtResource( 5 )]
 difficulty = 1
@@ -99,25 +99,22 @@ difficulty = 3
 DIALOG = "RandomRoom"
 
 [node name="DoorEastClickable" parent="Interactables" index="1" instance=ExtResource( 2 )]
-position = Vector2( 496, 14 )
+position = Vector2( 961, 187 )
 canHighlight = true
 canClick = true
 
 [node name="Sprite" parent="Interactables/DoorEastClickable" index="0"]
 material = SubResource( 5 )
-position = Vector2( 476, 124 )
+position = Vector2( 2, -60 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" parent="Interactables/DoorEastClickable" index="1"]
-position = Vector2( 475.25, 120.313 )
+position = Vector2( 4, -74 )
 shape = SubResource( 6 )
 
 [node name="InteractionPosition" parent="Interactables/DoorEastClickable" index="2"]
-position = Vector2( 450, 190 )
-
-[node name="EventQueue" parent="Interactables/DoorEastClickable" index="3"]
-position = Vector2( 358, -55 )
+position = Vector2( -20, 20 )
 
 [node name="DialogEvent" parent="Interactables/DoorEastClickable/EventQueue" index="0" instance=ExtResource( 5 )]
 difficulty = 1
@@ -208,25 +205,28 @@ position = Vector2( -199, 208 )
 position = Vector2( 590, 1 )
 
 [node name="FloorLampClickable" parent="Interactables" index="6" instance=ExtResource( 12 )]
-position = Vector2( 1163, 367 )
+position = Vector2( 1156, 431 )
 
-[node name="CoffeeTableClickable" parent="Interactables" index="7" instance=ExtResource( 13 )]
+[node name="FloorLampClickable2" parent="Interactables" index="7" instance=ExtResource( 12 )]
+position = Vector2( 727, 558 )
+
+[node name="CoffeeTableClickable" parent="Interactables" index="8" instance=ExtResource( 13 )]
 position = Vector2( 685, 86 )
 
-[node name="CellphoneClickable" parent="Interactables" index="8" instance=ExtResource( 14 )]
+[node name="CellphoneClickable" parent="Interactables" index="9" instance=ExtResource( 14 )]
 position = Vector2( 809, 329 )
 
-[node name="CellphoneClickable2" parent="Interactables" index="9" instance=ExtResource( 14 )]
+[node name="CellphoneClickable2" parent="Interactables" index="10" instance=ExtResource( 14 )]
 position = Vector2( 698, 44 )
 
-[node name="CellphoneClickable3" parent="Interactables" index="10" instance=ExtResource( 14 )]
+[node name="CellphoneClickable3" parent="Interactables" index="11" instance=ExtResource( 14 )]
 position = Vector2( 63, 297 )
 
-[node name="CatLampTalk" parent="Interactables" index="11" instance=ExtResource( 24 )]
+[node name="CatLampTalk" parent="Interactables" index="12" instance=ExtResource( 24 )]
 position = Vector2( 634, 220 )
 
 [node name="ChaseEnemy" parent="." index="4"]
-position = Vector2( 670, 337 )
+position = Vector2( 203, 223 )
 
 [node name="Lamp" parent="Difficulty2" index="0" instance=ExtResource( 9 )]
 position = Vector2( 369, 117 )
@@ -238,7 +238,7 @@ position = Vector2( 744, -80 )
 position = Vector2( 1258, 434 )
 
 [node name="Sleep_Gremlin" parent="Difficulty2" index="3" instance=ExtResource( 8 )]
-position = Vector2( 659, 241 )
+position = Vector2( 780, 451 )
 
 [node name="Sleep_Gremlin" parent="Difficulty3" index="0" instance=ExtResource( 8 )]
 position = Vector2( 304, 19 )

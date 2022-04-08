@@ -6,6 +6,7 @@
 [sub_resource type="DynamicFont" id=1]
 size = 25
 outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
 [node name="Floating_Text" type="Position2D"]
@@ -15,6 +16,7 @@ script = ExtResource( 1 )
 margin_right = 40.0
 margin_bottom = 14.0
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Placeholder"
 

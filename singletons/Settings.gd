@@ -108,11 +108,11 @@ func adjust_score(value: String):
 	var fct = get_parent().get_node('ScreenGame/GameMain/').get_child(4).get_node('Player/Floating_Text_Manager')
 	fct.show_value(value, 0)
 	print('Sanity Adjusted: ', score)
-	
 
 
 func _process(delta):
-	score += delta
+	if (curGameState == GAME_STATES.PLAY or curGameState == GAME_STATES.BATTLE) and gameStarted:
+		score += delta
 	if roomsExplored >= 3 and roomsExplored < 10 and difficulty == 1:
 		difficulty = 2
 	elif roomsExplored >= 8:

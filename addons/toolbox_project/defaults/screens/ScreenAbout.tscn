@@ -19,16 +19,16 @@ script = ExtResource( 6 )
 [node name="VBoxContainer" type="VBoxContainer" parent="MenuLayer/UIBox" index="0"]
 margin_left = 220.0
 margin_top = 80.0
-margin_right = 804.0
-margin_bottom = 520.0
+margin_right = 1060.0
+margin_bottom = 640.0
 size_flags_horizontal = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Panel" type="Panel" parent="MenuLayer/UIBox/VBoxContainer" index="0"]
-margin_right = 584.0
-margin_bottom = 375.0
+margin_right = 840.0
+margin_bottom = 517.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -37,20 +37,17 @@ anchor_left = 0.1
 anchor_top = 0.1
 anchor_right = 0.9
 anchor_bottom = 0.9
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="LabelBig" parent="MenuLayer/UIBox/VBoxContainer/Panel/VBoxContainer" index="0" instance=ExtResource( 4 )]
 anchor_right = 0.0
-margin_right = 467.0
-margin_bottom = 41.0
+margin_right = 672.0
+margin_bottom = 70.0
 text = "Created by"
 
 [node name="Label2" type="Label" parent="MenuLayer/UIBox/VBoxContainer/Panel/VBoxContainer" index="1"]
-margin_top = 57.0
-margin_right = 467.0
-margin_bottom = 89.0
+margin_top = 86.0
+margin_right = 672.0
+margin_bottom = 132.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Tommy Wiseau"
@@ -58,15 +55,15 @@ valign = 1
 
 [node name="LabelBig2" parent="MenuLayer/UIBox/VBoxContainer/Panel/VBoxContainer" index="2" instance=ExtResource( 4 )]
 anchor_right = 0.0
-margin_top = 105.0
-margin_right = 467.0
-margin_bottom = 146.0
+margin_top = 148.0
+margin_right = 672.0
+margin_bottom = 218.0
 text = "Sprites by"
 
 [node name="Label3" type="Label" parent="MenuLayer/UIBox/VBoxContainer/Panel/VBoxContainer" index="3"]
-margin_top = 162.0
-margin_right = 467.0
-margin_bottom = 194.0
+margin_top = 234.0
+margin_right = 672.0
+margin_bottom = 280.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Tommy Wiseau"
@@ -74,24 +71,24 @@ valign = 1
 
 [node name="LabelBig3" parent="MenuLayer/UIBox/VBoxContainer/Panel/VBoxContainer" index="4" instance=ExtResource( 4 )]
 anchor_right = 0.0
-margin_top = 210.0
-margin_right = 467.0
-margin_bottom = 251.0
+margin_top = 296.0
+margin_right = 672.0
+margin_bottom = 366.0
 text = "Sounds by"
 
 [node name="Label5" type="Label" parent="MenuLayer/UIBox/VBoxContainer/Panel/VBoxContainer" index="5"]
-margin_top = 267.0
-margin_right = 467.0
-margin_bottom = 300.0
+margin_top = 382.0
+margin_right = 672.0
+margin_bottom = 428.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Tommy Wiseau"
 valign = 1
 
 [node name="BtnBack" parent="MenuLayer/UIBox/VBoxContainer" index="1" instance=ExtResource( 5 )]
-margin_top = 391.0
-margin_right = 584.0
-margin_bottom = 440.0
+margin_top = 533.0
+margin_right = 840.0
+margin_bottom = 560.0
 text = "Back"
 pushes_screen = false
 screen_to_push_in_config = ""
