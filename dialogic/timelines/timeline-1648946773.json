@@ -5,16 +5,12 @@
 			"set_theme": "theme-1648902659.cfg"
 		},
 		{
-			"animation": "1-fade_in.gd",
-			"animation_length": 0.25,
-			"animation_wait": true,
-			"change_mirror_portrait": false,
-			"change_z_index": false,
+			"animation": "[Default]",
+			"animation_length": 0.5,
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
-			"portrait_definition": "",
 			"position": {
 				"0": true,
 				"1": false,
@@ -32,16 +28,12 @@
 			"text": "It's your cat. It loves you...right?"
 		},
 		{
-			"animation": "1-fade_in.gd",
-			"animation_length": 0.25,
-			"animation_wait": true,
-			"change_mirror_portrait": false,
-			"change_z_index": false,
+			"animation": "[Default]",
+			"animation_length": 0.5,
 			"character": "character-1648910671.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
-			"portrait_definition": "",
 			"position": {
 				"0": false,
 				"1": false,
@@ -73,9 +65,8 @@
 			"text": "...meow."
 		},
 		{
-			"animation": "heartbeat.gd",
-			"animation_length": 0.75,
-			"animation_wait": true,
+			"animation": "back_out_right.gd",
+			"animation_length": 0.5,
 			"change_mirror_portrait": false,
 			"change_position": false,
 			"change_z_index": false,
@@ -83,7 +74,6 @@
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "(Don't change)",
-			"portrait_definition": "",
 			"position": {
 				"0": false,
 				"1": false,
@@ -91,7 +81,7 @@
 				"3": false,
 				"4": false
 			},
-			"type": 2,
+			"type": 1,
 			"z_index": 0
 		},
 		{

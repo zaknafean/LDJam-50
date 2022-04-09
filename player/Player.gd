@@ -34,6 +34,7 @@ func _process(delta):
 	var distance_to_walk = SPEED * delta
 	if taking_damage and (!anim.current_animation =='hit_left' or anim.current_animation =='hit_right'):
 		anim_switch('hit', 1)
+	
 	# Move the player along the path until he has run out of movement or the path ends.
 	while distance_to_walk > 0 and path.size() > 0:
 		var distance_to_next_point = position.distance_to(path[0])

@@ -47,7 +47,7 @@ func random_room():
 	var randValue = randi() % 6 + 1
 	
 	if curRoom:
-		remove_child(curRoom)
+		call_deferred('remove_child', curRoom)
 		curRoom.queue_free()
 	else:
 		print("Error: curRoom doesn't exist whith shouldn't be possible")
@@ -79,11 +79,13 @@ func random_room():
 	
 	add_child(curRoom)
 	yield(get_tree(), "idle_frame")
-	curRoom._set_spawns(directionFrom, 2)
+	if is_instance_valid(curRoom):
+		curRoom._set_spawns(directionFrom, 2)
+	else:
+		print('Critical Error Room Reference lost random_room: ', randValue)
 
 
 func change_room(newRoom: String, directionFrom: String, _delay=2):
-	
 	var doorLocation
 	if directionFrom == 'w':
 		doorLocation = curRoom.get_node("Interactables/DoorWestClickable").interactionPosition
@@ -102,7 +104,7 @@ func change_room(newRoom: String, directionFrom: String, _delay=2):
 		return
 	
 	if curRoom:
-		remove_child(curRoom)
+		call_deferred('remove_child', curRoom)
 		curRoom.queue_free()
 	else:
 		print("Error: curRoom doesn't exist whith shouldn't be possible")
@@ -125,10 +127,14 @@ func change_room(newRoom: String, directionFrom: String, _delay=2):
 	
 	Settings.roomsExplored += 1
 	curRoomString = newRoom
-	add_child(curRoom)
+	#add_child(curRoom)
+	call_deferred('add_child', curRoom)
 	
 	yield(get_tree(), "idle_frame")
-	curRoom._set_spawns(directionFrom, newDelay)
+	if is_instance_valid(curRoom):
+		curRoom._set_spawns(directionFrom, newDelay)
+	else:
+		print('Critical Error Room Reference lost change_room: ', newRoom)
 
 
 func _process(_delta):
@@ -141,7 +147,8 @@ func _process(_delta):
 
 
 func _on_game_started():
-	start_level()
+	#start_level()
+	pass
 	
 func restart_level():
 	start_level()

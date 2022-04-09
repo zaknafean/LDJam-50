@@ -10,9 +10,10 @@ onready var backmap : TileMap = $Navigation2D/BackLayerMap
 onready var alphamap : TileMap = $Navigation2D/AlphaLayerMap
 onready var enemy := $ChaseEnemy
 onready var bgSprite := $ParallaxBackground/ParallaxLayer/Sprite
-onready var progressbar := $CanvasLayer/MarginContainer/VBoxContainer/ProgressBar
-onready var sanity_value := $CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/SanityPanel/CenterContainer/HBoxContainer/Sanity_Value
-onready var score_value := $CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/ScorePanel/CenterContainer/HBoxContainer/Score_Value
+onready var progressbar := $HudLayer/MarginContainer/VBoxContainer/ProgressBar
+onready var sanity_value := $HudLayer/MarginContainer/VBoxContainer/HBoxContainer/SanityPanel/CenterContainer/HBoxContainer/Sanity_Value
+onready var score_value := $HudLayer/MarginContainer/VBoxContainer/HBoxContainer/ScorePanel/CenterContainer/HBoxContainer/Score_Value
+onready var interactables := $Interactables
 
 var currentEvent : Interactable = null
 var queuedEvent : Interactable = null
@@ -27,7 +28,7 @@ export (bool) var freezeInput = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Settings.curGameState = Settings.GAME_STATES.LOADING
-	var clickables = $Interactables.get_children()
+	var clickables = interactables.get_children()
 	var _err = player.connect("arrived", self, '_on_player_arrived')
 	
 	for event in clickables:
@@ -95,7 +96,7 @@ func _on_Area2D_mouse_exited(clickable):
 
 
 func toggleHighlightAll():
-	var clickables = $Interactables.get_children()
+	var clickables = interactables.get_children()
 	
 	for event in clickables:
 		if event == currentEvent:

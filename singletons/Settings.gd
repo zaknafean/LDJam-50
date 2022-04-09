@@ -4,6 +4,9 @@ const UUID = preload("res://addons/silent_wolf/utils/UUID.gd")
 var settings_file = "user://sonipathy.save"
 var lastScoreUpdate := 0
 
+var difficultyTwoThreshold = 3
+var difficultyThreeThreshold = 8
+
 #enum EVENTS {DIALOG, SCENE_CHANGE, ITEM}
 
 enum GAME_STATES {
@@ -83,7 +86,7 @@ func load_settings():
 
 func adjust_alertness(value: String):
 	alertnessValue += int(value)
-	print('Alert Adjusted: ', alertnessValue)
+	#print('Alert Adjusted: ', alertnessValue)
 	var fct = get_parent().get_node('ScreenGame/GameMain/').get_child(4).get_node('Player/Floating_Text_Manager')
 	fct.show_value(value, 1)
 	if alertnessValue <= 0 and gameOver == false:
@@ -94,7 +97,7 @@ func adjust_alertness(value: String):
 
 func adjust_sanity(value: String):
 	sanityValue += int(value)
-	print('Sanity Adjusted: ', sanityValue)
+	#print('Sanity Adjusted: ', sanityValue)
 	var fct = get_parent().get_node('ScreenGame/GameMain/').get_child(4).get_node('Player/Floating_Text_Manager')
 	fct.show_value(value, 2)
 	if sanityValue <= 0 and gameOver == false:
@@ -107,13 +110,13 @@ func adjust_score(value: String):
 	score += int(value)
 	var fct = get_parent().get_node('ScreenGame/GameMain/').get_child(4).get_node('Player/Floating_Text_Manager')
 	fct.show_value(value, 0)
-	print('Sanity Adjusted: ', score)
+	#print('Sanity Adjusted: ', score)
 
 
 func _process(delta):
 	if (curGameState == GAME_STATES.PLAY or curGameState == GAME_STATES.BATTLE) and gameStarted:
 		score += delta
-	if roomsExplored >= 3 and roomsExplored < 10 and difficulty == 1:
+	if roomsExplored >= difficultyTwoThreshold and roomsExplored < difficultyThreeThreshold and difficulty == 1:
 		difficulty = 2
-	elif roomsExplored >= 8:
+	elif roomsExplored >= difficultyThreeThreshold and difficulty == 2:
 		difficulty = 3

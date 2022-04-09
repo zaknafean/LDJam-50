@@ -1,16 +1,12 @@
 {
 	"events": [
 		{
-			"animation": "1-fade_in.gd",
-			"animation_length": 0.25,
-			"animation_wait": true,
-			"change_mirror_portrait": false,
-			"change_z_index": false,
+			"animation": "[Default]",
+			"animation_length": 0.5,
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
-			"portrait_definition": "",
 			"position": {
 				"0": true,
 				"1": false,
@@ -70,15 +66,12 @@
 			"volume": 0
 		},
 		{
-			"animation": "back_in_down.gd",
-			"animation_length": 0,
-			"change_mirror_portrait": false,
-			"change_z_index": false,
+			"animation": "[Default]",
+			"animation_length": 0.5,
 			"character": "character-1649445836.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
-			"portrait_definition": "",
 			"position": {
 				"0": false,
 				"1": false,
@@ -90,17 +83,12 @@
 			"z_index": 0
 		},
 		{
-			"animation": "pulse.gd",
+			"animation": "[Default]",
 			"animation_length": 0.5,
-			"animation_repeat": 10,
-			"change_mirror_portrait": false,
-			"change_position": false,
-			"change_z_index": false,
 			"character": "character-1649445836.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "(Don't change)",
-			"portrait_definition": "",
 			"position": {
 				"0": false,
 				"1": false,
@@ -108,7 +96,7 @@
 				"3": false,
 				"4": false
 			},
-			"type": 2,
+			"type": 0,
 			"z_index": 0
 		},
 		{
