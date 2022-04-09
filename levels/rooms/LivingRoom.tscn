@@ -23,7 +23,7 @@
 [ext_resource path="res://levels/noninteractables/WallJunk.tscn" type="PackedScene" id=21]
 [ext_resource path="res://levels/noninteractables/SpacePoster.tscn" type="PackedScene" id=22]
 [ext_resource path="res://levels/noninteractables/CupJunk.tscn" type="PackedScene" id=23]
-[ext_resource path="res://levels/CatLampTalk.tscn" type="PackedScene" id=24]
+[ext_resource path="res://levels/interactables/clickable/CatLampTalk.tscn" type="PackedScene" id=24]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -209,7 +209,6 @@ position = Vector2( 1156, 431 )
 
 [node name="FloorLampClickable2" parent="Interactables" index="7" instance=ExtResource( 12 )]
 position = Vector2( 690, 522 )
-
 
 [node name="CoffeeTableClickable" parent="Interactables" index="8" instance=ExtResource( 13 )]
 position = Vector2( 685, 86 )

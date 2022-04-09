@@ -55,6 +55,7 @@ func _process(delta):
 			curSpeed = SPEED + (Settings.roomsExplored * 3) + speedBonus
 		VELOCITY = (playerRef.position - position).normalized() * curSpeed
 		var _collision = move_and_slide(VELOCITY)
+		
 		if position.distance_to(playerRef.position) < 55:
 			_on_EatTimer_timeout()
 		var walk_dir = VELOCITY.normalized()
@@ -82,14 +83,15 @@ func anim_switch(animation, speed = 1):
 
 
 func _on_Hit_Box_body_entered(body):
-	if body.name == "Player" and !amEating and amActive:
-		body.taking_damage = true
-		Settings.adjust_sanity("-25")
-		Settings.adjust_alertness("50")
-		eatTimer.start()
-		amEating = true
-		$AttackNoise.play()
-		anim_switch('attack', Settings.difficulty)
+	if Settings.curGameState == Settings.GAME_STATES.PLAY or Settings.curGameState == Settings.GAME_STATES.BATTLE:
+		if body.name == "Player" and !amEating and amActive:
+			body.taking_damage = true
+			Settings.adjust_sanity("-25")
+			Settings.adjust_alertness("50")
+			eatTimer.start()
+			amEating = true
+			$AttackNoise.play()
+			anim_switch('attack', Settings.difficulty)
 
 
 func _on_EatTimer_timeout():

@@ -37,7 +37,7 @@
 			"call_node": {
 				"arguments": [
 					"hallwayroom",
-					"n"
+					"w"
 				],
 				"method_name": "change_room",
 				"target_node_path": "/root/ScreenGame/GameMain"

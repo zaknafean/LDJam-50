@@ -128,4 +128,5 @@ func _on_SubmitScorePanel_about_to_show():
 
 func _on_SubmitScorePanel_popup_hide():
 	#get_tree().paused = false
+	$MarginContainer/VBoxContainer/SubmitScoreButton.disabled = false
 	pass

@@ -18,7 +18,7 @@
 [ext_resource path="res://levels/noninteractables/FloorRug.tscn" type="PackedScene" id=16]
 [ext_resource path="res://levels/noninteractables/Boots.tscn" type="PackedScene" id=17]
 [ext_resource path="res://levels/interactables/clickable/CellphoneClickable.tscn" type="PackedScene" id=18]
-[ext_resource path="res://levels/CatLampTalk.tscn" type="PackedScene" id=19]
+[ext_resource path="res://levels/interactables/clickable/CatLampTalk.tscn" type="PackedScene" id=19]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -122,11 +122,11 @@ position = Vector2( 453, 10 )
 
 [node name="DialogEvent" parent="Interactables/DoorEastClickable/EventQueue" index="0" instance=ExtResource( 6 )]
 difficulty = 1
-DIALOG = "BedRoomEast"
+DIALOG = "BedRoomNorth"
 
 [node name="DialogEvent2" parent="Interactables/DoorEastClickable/EventQueue" index="1" instance=ExtResource( 6 )]
 difficulty = 2
-DIALOG = "BedRoomEast"
+DIALOG = "BedRoomNorth"
 
 [node name="DialogEvent3" parent="Interactables/DoorEastClickable/EventQueue" index="2" instance=ExtResource( 6 )]
 difficulty = 3

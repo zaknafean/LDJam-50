@@ -36,16 +36,12 @@
 			"text": "...monstrous?"
 		},
 		{
-			"animation": "1-fade_in.gd",
-			"animation_length": 0.25,
-			"animation_wait": true,
-			"change_mirror_portrait": false,
-			"change_z_index": false,
+			"animation": "[Default]",
+			"animation_length": 0.5,
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
-			"portrait_definition": "",
 			"position": {
 				"0": true,
 				"1": false,
@@ -69,15 +65,12 @@
 			"text": "There's no way my oven is turning into a monster."
 		},
 		{
-			"animation": "4-fade_out.gd",
-			"animation_length": 0.75,
-			"change_mirror_portrait": false,
-			"change_z_index": false,
+			"animation": "[Default]",
+			"animation_length": 0.5,
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
-			"portrait": "",
-			"portrait_definition": "",
+			"portrait": "Default",
 			"position": {
 				"0": false,
 				"1": false,
@@ -85,7 +78,7 @@
 				"3": false,
 				"4": false
 			},
-			"type": 1,
+			"type": 0,
 			"z_index": 0
 		},
 		{

@@ -5,16 +5,12 @@
 			"set_theme": "theme-1648948398.cfg"
 		},
 		{
-			"animation": "1-fade_in.gd",
-			"animation_length": 0.25,
-			"animation_wait": true,
-			"change_mirror_portrait": false,
-			"change_z_index": false,
+			"animation": "[Default]",
+			"animation_length": 0.5,
 			"character": "character-1648910671.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
-			"portrait_definition": "",
 			"position": {
 				"0": false,
 				"1": false,
@@ -40,16 +36,12 @@
 			"text": "I would say the clock is ticking... but we both know you're out of time."
 		},
 		{
-			"animation": "1-fade_in.gd",
-			"animation_length": 0.25,
-			"animation_wait": true,
-			"change_mirror_portrait": false,
-			"change_z_index": false,
+			"animation": "[Default]",
+			"animation_length": 0.5,
 			"character": "character-1648902615.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
-			"portrait_definition": "",
 			"position": {
 				"0": true,
 				"1": false,
@@ -71,6 +63,26 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "You still believe that, do you?\nGood luck."
+		},
+		{
+			"animation": "back_out_right.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_position": false,
+			"change_z_index": false,
+			"character": "character-1648910671.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "(Don't change)",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
 		},
 		{
 			"call_node": {

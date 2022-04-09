@@ -24,7 +24,8 @@
 [ext_resource path="res://levels/noninteractables/Table.tscn" type="PackedScene" id=22]
 [ext_resource path="res://levels/noninteractables/Counter.tscn" type="PackedScene" id=23]
 [ext_resource path="res://levels/interactables/clickable/CellphoneClickable.tscn" type="PackedScene" id=24]
-[ext_resource path="res://levels/CatLampTalk.tscn" type="PackedScene" id=25]
+[ext_resource path="res://levels/interactables/clickable/CatLampTalk.tscn" type="PackedScene" id=25]
+
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
