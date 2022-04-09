@@ -1,14 +1,14 @@
 [gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://assets/sleepCreepSprite.png" type="Texture" id=1]
-[ext_resource path="res://enemies/ChaseEnemy.gd" type="Script" id=2]
-[ext_resource path="res://utilities/attachable_tools/Hit_Box.tscn" type="PackedScene" id=3]
-[ext_resource path="res://effects/FormidableFogEffect.tscn" type="PackedScene" id=4]
-[ext_resource path="res://effects/DustExplode.tscn" type="PackedScene" id=5]
-[ext_resource path="res://effects/ChaseMonsterAttack.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/sound/spider-demon-noise.wav" type="AudioStream" id=7]
-[ext_resource path="res://assets/sound/brain-slurp.wav" type="AudioStream" id=8]
-[ext_resource path="res://assets/sound/spider-footsteps.wav" type="AudioStream" id=9]
+[ext_resource path="res://effects/FormidableFogEffect.tscn" type="PackedScene" id=1]
+[ext_resource path="res://effects/DustExplode.tscn" type="PackedScene" id=2]
+[ext_resource path="res://effects/ChaseMonsterAttack.tscn" type="PackedScene" id=3]
+[ext_resource path="res://tools/Hit_Box.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/sound/spider-demon-noise.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/sound/brain-slurp.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/sleepCreepSprite.png" type="Texture" id=7]
+[ext_resource path="res://assets/sound/spider-footsteps.wav" type="AudioStream" id=8]
+[ext_resource path="res://npcs/ChaseEnemy.gd" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 49, 21.75 )
@@ -313,7 +313,7 @@ tracks/3/keys = {
 "clips": [ {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource( 9 )
+"stream": ExtResource( 8 )
 } ],
 "times": PoolRealArray( 0 )
 }
@@ -368,7 +368,7 @@ tracks/3/keys = {
 "clips": [ {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource( 9 )
+"stream": ExtResource( 8 )
 } ],
 "times": PoolRealArray( 0 )
 }
@@ -376,23 +376,23 @@ tracks/3/keys = {
 [node name="ChaseEnemy" type="KinematicBody2D"]
 collision_layer = 4
 collision_mask = 0
-script = ExtResource( 2 )
+script = ExtResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 10, -73 )
-texture = ExtResource( 1 )
+texture = ExtResource( 7 )
 hframes = 3
 vframes = 6
 frame = 1
 
-[node name="FormidableFog" parent="Sprite" instance=ExtResource( 4 )]
+[node name="FormidableFog" parent="Sprite" instance=ExtResource( 1 )]
 local_coords = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -23.25 )
 shape = SubResource( 5 )
 
-[node name="Hit_Box" parent="." instance=ExtResource( 3 )]
+[node name="Hit_Box" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, -49 )
 collision_layer = 0
 collision_mask = 2
@@ -412,22 +412,22 @@ anims/idle_right = SubResource( 8 )
 anims/run_left = SubResource( 10 )
 anims/run_right = SubResource( 11 )
 
-[node name="RoomEnter" parent="." instance=ExtResource( 5 )]
+[node name="RoomEnter" parent="." instance=ExtResource( 2 )]
 
-[node name="AttackEffect" parent="." instance=ExtResource( 6 )]
+[node name="AttackEffect" parent="." instance=ExtResource( 3 )]
 position = Vector2( 123, 36 )
 
 [node name="AmbientNoise" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 7 )
+stream = ExtResource( 5 )
 volume_db = -15.0
 bus = "Effects"
 
 [node name="AttackNoise" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 8 )
+stream = ExtResource( 6 )
 bus = "Effects"
 
 [node name="FeetsNoise" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 9 )
+stream = ExtResource( 8 )
 max_distance = 1800.0
 bus = "Effects"
 

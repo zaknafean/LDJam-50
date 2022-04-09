@@ -112,8 +112,6 @@ func change_room(newRoom: String, directionFrom: String, _delay=2):
 	
 	if newRoom == 'livingroom':
 		curRoom = livingRoom.instance()
-	elif newRoom == 'bathroom':
-		curRoom = bathRoom.instance()
 	elif newRoom == 'bedroom':
 		curRoom = bedRoom.instance()
 	elif newRoom == 'hallwayroom':
