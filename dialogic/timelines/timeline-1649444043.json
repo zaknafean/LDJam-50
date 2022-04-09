@@ -83,23 +83,6 @@
 			"z_index": 0
 		},
 		{
-			"animation": "[Default]",
-			"animation_length": 0.5,
-			"character": "character-1649445836.json",
-			"event_id": "dialogic_002",
-			"mirror_portrait": false,
-			"portrait": "(Don't change)",
-			"position": {
-				"0": false,
-				"1": false,
-				"2": false,
-				"3": false,
-				"4": false
-			},
-			"type": 0,
-			"z_index": 0
-		},
-		{
 			"character": "character-1649445836.json",
 			"event_id": "dialogic_001",
 			"portrait": "",

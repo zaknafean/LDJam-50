@@ -1,7 +1,7 @@
 [gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://levels/BaseRoom.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/tilesets/EnvironmentTileset.tres" type="TileSet" id=2]
+[ext_resource path="res://assets/tiles/EnvironmentTileset.tres" type="TileSet" id=2]
 [ext_resource path="res://assets/doorNorthBlueClosed.png" type="Texture" id=3]
 [ext_resource path="res://assets/doorEastBlueClosed.png" type="Texture" id=4]
 [ext_resource path="res://levels/interactables/clickable/BedClickable.tscn" type="PackedScene" id=5]
@@ -9,8 +9,8 @@
 [ext_resource path="res://levels/interactables/events/DialogEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/shaders/sprite_uv_control.shader" type="Shader" id=8]
 [ext_resource path="res://levels/interactables/clickable/WindowClickable.tscn" type="PackedScene" id=9]
-[ext_resource path="res://enemies/Lamp.tscn" type="PackedScene" id=10]
-[ext_resource path="res://enemies/ImAStove.tscn" type="PackedScene" id=11]
+[ext_resource path="res://npcs/Lamp.tscn" type="PackedScene" id=10]
+[ext_resource path="res://npcs/ImAStove.tscn" type="PackedScene" id=11]
 [ext_resource path="res://levels/interactables/clickable/FloorLampClickable.tscn" type="PackedScene" id=12]
 [ext_resource path="res://levels/interactables/clickable/CurtainsClickable.tscn" type="PackedScene" id=13]
 [ext_resource path="res://levels/interactables/clickable/LightSwitchClickable.tscn" type="PackedScene" id=14]
@@ -24,7 +24,7 @@
 [ext_resource path="res://levels/noninteractables/SideTable.tscn" type="PackedScene" id=22]
 [ext_resource path="res://levels/interactables/clickable/CellphoneClickable.tscn" type="PackedScene" id=23]
 [ext_resource path="res://levels/interactables/clickable/CatLampTalk.tscn" type="PackedScene" id=24]
-[ext_resource path="res://enemies/Sleep_Gremlin.tscn" type="PackedScene" id=25]
+[ext_resource path="res://npcs/Sleep_Gremlin.tscn" type="PackedScene" id=25]
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
