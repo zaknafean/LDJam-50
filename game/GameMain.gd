@@ -44,7 +44,7 @@ func start_level():
 
 func random_room():
 	randomize()
-	var randValue = randi() % 6 + 1
+	var randValue = randi() % 7 + 1
 	
 	if curRoom:
 		call_deferred('remove_child', curRoom)
