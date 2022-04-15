@@ -86,8 +86,8 @@ align = 1
 
 [node name="LabelBig" parent="CenterContainer/Popup/VBoxContainer" index="1"]
 text = "You've won!
-Its ok to slow down 
-sometimes"
+It's okay to slow down 
+sometimes."
 
 [node name="BtnResume" parent="CenterContainer/Popup/VBoxContainer" index="2"]
 visible = false
