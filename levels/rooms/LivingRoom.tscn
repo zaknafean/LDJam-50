@@ -200,6 +200,8 @@ DIALOG = "RandomRoom"
 
 [node name="CoffeeClickable" parent="Interactables" index="4" instance=ExtResource( 3 )]
 position = Vector2( -199, 208 )
+canHighlight = false
+canClick = false
 
 [node name="TelevisionClickable2" parent="Interactables" index="5" instance=ExtResource( 11 )]
 position = Vector2( 590, 1 )
