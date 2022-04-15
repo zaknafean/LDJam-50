@@ -235,6 +235,8 @@ z_index = 1
 
 [node name="CoffeeTableClickable" parent="Interactables" index="9" instance=ExtResource( 20 )]
 position = Vector2( 434, 542 )
+canHighlight = false
+canClick = false
 
 [node name="CaffeinePillsClickable" parent="Interactables" index="10" instance=ExtResource( 21 )]
 position = Vector2( 445, 507 )

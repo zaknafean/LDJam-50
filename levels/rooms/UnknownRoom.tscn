@@ -220,6 +220,9 @@ position = Vector2( 709, 87 )
 [node name="CellphoneClickable4" parent="Interactables" index="7" instance=ExtResource( 24 )]
 position = Vector2( 1479, 65 )
 
+[node name="CatLampTalk" parent="Interactables" index="8" instance=ExtResource( 19 )]
+position = Vector2( 779, 150 )
+
 [node name="ChaseEnemy" parent="." index="4"]
 position = Vector2( 1922, 465 )
 
@@ -357,12 +360,6 @@ z_index = 1
 position = Vector2( 1150, 35 )
 rotation = 0.300197
 scale = Vector2( 0.7, 0.7 )
-
-[node name="CatLampTalk" parent="." index="15" instance=ExtResource( 19 )]
-position = Vector2( 769, 73 )
-
-[node name="CatLampTalk2" parent="." index="16" instance=ExtResource( 19 )]
-position = Vector2( 1098, 457 )
 
 [editable path="Interactables/DoorNorthClickable"]
 [editable path="Interactables/DoorEastClickable"]

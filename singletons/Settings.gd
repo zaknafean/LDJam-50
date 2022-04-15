@@ -4,8 +4,8 @@ const UUID = preload("res://addons/silent_wolf/utils/UUID.gd")
 var settings_file = "user://sonipathy.save"
 var lastScoreUpdate := 0
 
-var difficultyTwoThreshold = 3
-var difficultyThreeThreshold = 8
+var difficultyTwoThreshold = 2
+var difficultyThreeThreshold = 7
 
 #enum EVENTS {DIALOG, SCENE_CHANGE, ITEM}
 
