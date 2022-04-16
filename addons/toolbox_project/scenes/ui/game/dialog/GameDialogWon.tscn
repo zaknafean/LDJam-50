@@ -65,7 +65,8 @@ signal_to_open_to = "level_won"
 
 [node name="EyeClose" type="Sprite" parent="." index="0"]
 visible = false
-scale = Vector2( 0.45, 0.429 )
+position = Vector2( -7, 6 )
+scale = Vector2( 0.432045, 0.425608 )
 texture = ExtResource( 2 )
 centered = false
 hframes = 4

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://addons/toolbox_project/scenes/screens/Screen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/toolbox_project/scenes/ui/components/UIBox.tscn" type="PackedScene" id=2]
@@ -12,6 +12,14 @@
 [sub_resource type="DynamicFont" id=2]
 size = 50
 font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 0.431373 )
+border_width_left = 2
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_blend = true
 
 [sub_resource type="DynamicFont" id=3]
 size = 32
@@ -49,17 +57,20 @@ margin_right = 840.0
 margin_bottom = 517.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_styles/bg = SubResource( 4 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MenuLayer/UIBox/VBoxContainer/Panel" index="0"]
-margin_right = 824.0
-margin_bottom = 446.0
+margin_left = 2.0
+margin_top = 1.0
+margin_right = 839.0
+margin_bottom = 449.0
 rect_min_size = Vector2( 750, 0 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Credits" type="RichTextLabel" parent="MenuLayer/UIBox/VBoxContainer/Panel/VBoxContainer" index="0"]
-margin_right = 824.0
-margin_bottom = 446.0
+margin_right = 837.0
+margin_bottom = 448.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 7 )
