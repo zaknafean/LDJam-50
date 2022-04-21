@@ -77,7 +77,10 @@ theme = ExtResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = true
-bbcode_text = "[center][u]Darius de Jesús[/u][/center]
+bbcode_text = "[center]Interested in futher developments?[/center]
+[center] Join our [url=\"https://discord.gg/X99yEtAZAJ\"]Discord[/url][/center]
+
+[center][u]Darius de Jesús[/u][/center]
 Lead Coding
 Team Leader and Founder
 Sound Design
@@ -172,7 +175,10 @@ Somnipathy was programmed in the Godot engine and used the following plugins
 [url=\"https://github.com/coppolaemilio/dialogic\"]Dialogic[/url] by Emillio Coppola
 [url=\"https://github.com/AnJ95/godot-toolbox-project\"]The Godot Toolbox Project[/url] by AnJ95
 [url=\"https://silentwolf.com/\"]SilentWolf Backend Services[/url]"
-text = "Darius de Jesús
+text = "Interested in futher developments?
+ Join our Discord
+
+Darius de Jesús
 Lead Coding
 Team Leader and Founder
 Sound Design
