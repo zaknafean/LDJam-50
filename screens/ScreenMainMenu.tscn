@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://addons/toolbox_project/scenes/screens/Screen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/toolbox_project/scenes/ui/components/UIBox.tscn" type="PackedScene" id=2]
@@ -6,8 +6,11 @@
 [ext_resource path="res://assets/fonts/Love_Ya_Like_A_Sister/LoveYaLikeASister-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://addons/toolbox_project/scenes/ui/menu/MenuButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://addons/toolbox_project/defaults/screens/ScreenMainMenu.gd" type="Script" id=6]
+[ext_resource path="res://assets/Discord-Logo+Wordmark-White.png" type="Texture" id=7]
 [ext_resource path="res://addons/toolbox_project/assets/theme.tres" type="Theme" id=8]
 [ext_resource path="res://assets/fonts/sofija.regular.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://new_styleboxflatnormal.tres" type="StyleBox" id=10]
+[ext_resource path="res://screens/BtnDiscord.gd" type="Script" id=11]
 
 [sub_resource type="DynamicFont" id=2]
 size = 160
@@ -138,9 +141,9 @@ text = "Somnipathy"
 align = 1
 
 [node name="Label" type="Label" parent="MenuLayer/UIBox/VBoxContainer" index="1"]
-margin_top = 260.0
+margin_top = 239.0
 margin_right = 840.0
-margin_bottom = 323.0
+margin_bottom = 302.0
 size_flags_vertical = 6
 theme = ExtResource( 8 )
 custom_fonts/font = SubResource( 1 )
@@ -148,25 +151,25 @@ text = "Don't... fall... asleep"
 align = 1
 
 [node name="Control" type="Control" parent="MenuLayer/UIBox/VBoxContainer" index="2"]
-margin_top = 424.0
+margin_top = 381.0
 margin_right = 840.0
-margin_bottom = 554.0
+margin_bottom = 511.0
 rect_min_size = Vector2( 0, 130 )
 
 [node name="MarginContainer" type="MarginContainer" parent="MenuLayer/UIBox/VBoxContainer" index="3"]
-margin_top = 553.0
+margin_top = 510.0
 margin_right = 840.0
 margin_bottom = 628.0
 
 [node name="PanelContainer" type="PanelContainer" parent="MenuLayer/UIBox/VBoxContainer/MarginContainer" index="0"]
 margin_right = 840.0
-margin_bottom = 75.0
+margin_bottom = 118.0
 
 [node name="Menu" type="GridContainer" parent="MenuLayer/UIBox/VBoxContainer/MarginContainer/PanelContainer" index="0"]
 margin_left = 24.0
 margin_top = 24.0
 margin_right = 816.0
-margin_bottom = 51.0
+margin_bottom = 94.0
 columns = 4
 
 [node name="BtnStart" parent="MenuLayer/UIBox/VBoxContainer/MarginContainer/PanelContainer/Menu" index="0" instance=ExtResource( 5 )]
@@ -201,6 +204,37 @@ pushes_screen = false
 screen_to_push_in_config = ""
 quits_game = true
 
+[node name="BtnDiscord" type="LinkButton" parent="MenuLayer/UIBox/VBoxContainer/MarginContainer/PanelContainer/Menu" index="4"]
+margin_top = 43.0
+margin_right = 186.0
+margin_bottom = 70.0
+mouse_default_cursor_shape = 0
+theme = ExtResource( 8 )
+action_mode = 0
+script = ExtResource( 11 )
+
+[node name="Panel" type="Panel" parent="MenuLayer/UIBox/VBoxContainer/MarginContainer/PanelContainer/Menu/BtnDiscord" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+custom_styles/panel = ExtResource( 10 )
+
+[node name="TextureRect" type="TextureRect" parent="MenuLayer/UIBox/VBoxContainer/MarginContainer/PanelContainer/Menu/BtnDiscord/Panel" index="0"]
+anchor_left = 0.139785
+anchor_top = -0.111111
+anchor_right = 0.846237
+anchor_bottom = 1.22222
+margin_right = 744.6
+margin_bottom = 204.0
+rect_scale = Vector2( 0.15, 0.15 )
+size_flags_horizontal = 5
+size_flags_vertical = 5
+texture = ExtResource( 7 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
 [node name="Label3" type="Label" parent="MenuLayer/UIBox/VBoxContainer" index="4"]
 margin_top = 627.0
 margin_right = 840.0
@@ -213,3 +247,5 @@ align = 1
 autoplay = "sleep"
 anims/RESET = SubResource( 4 )
 anims/sleep = SubResource( 5 )
+
+[connection signal="pressed" from="MenuLayer/UIBox/VBoxContainer/MarginContainer/PanelContainer/Menu/BtnDiscord" to="MenuLayer/UIBox/VBoxContainer/MarginContainer/PanelContainer/Menu/BtnDiscord" method="_on_BtnDiscord_pressed"]
